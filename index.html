@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Appliance Group Official</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <!-- <link rel="stylesheet" href="./css/swiper.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: white;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: white;
+      }
+
+      .swiper-button-next-promo,
+      .swiper-button-prev-promo {
+        color: #cd002e;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div class="min-h-screen w-full flex flex-col justify-start items-center">
+
+      <!-- Nav Header -->
+      <header class="w-full max-w-screen-2xl bg-white shadow-lg" aria-label="Site header">
+        <div class="max-w-screen-2xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+          <!-- Logo -->
+          <a href="/" aria-label="Homepage" class="flex items-center shrink-0">
+            <img src="./images/logo.webp" alt="Quality Appliance Logo" class="w-48 sm:w-56 object-contain" />
+          </a>
+          <!-- Search -->
+          <div class="relative w-full max-w-lg flex-grow">
+            <input type="search" id="search" name="search" placeholder="Search appliances, brands, or models" aria-label="Search appliances" class="w-full bg-gray-100 focus:bg-white px-4 py-3 pl-4 pr-12 rounded-xl border border-gray-300 focus:outline-none transition" />
+            <button type="submit" class="absolute inset-y-0 right-3 flex items-center text-gray-600 hover:text-brand" aria-label="Submit search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="11" cy="11" r="8" stroke-width="2" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2" />
+              </svg>
+            </button>
+          </div>
+          <!-- User Actions -->
+          <div class="flex items-center gap-3 shrink-0 text-sm text-gray-800" role="group" aria-label="User actions">
+            <a href="#login" class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" aria-label="Login to your account">Login</a>
+            <a href="#register" class="hover:text-brand transition" aria-label="Create a new account">Register</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Primary Navigation -->
+      <nav class="w-full max-w-screen-2xl bg-brand text-white shadow-lg rounded-b-xl" aria-label="Primary navigation">
+        <div class="max-w-screen-2xl mx-auto px-4">
+          <ul class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-sm py-3">
+            <li>
+              <a href="#home" class="hover:underline" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#categories" class="hover:underline" aria-current="page">Categories</a>
+            </li>
+            <li>
+              <a href="#about" class="hover:underline">About</a>
+            </li>
+            <li>
+              <a href="#careers" class="hover:underline">Careers</a>
+            </li>
+            <li>
+              <a href="#promos" class="hover:underline">Promo</a>
+            </li>
+            <li>
+              <a href="#contact-us" class="hover:underline">Contact Us</a>
+            </li>
+            <li>
+              <a href="#stores" class="hover:underline">Stores</a>
+            </li>
+            <li>
+              <a href="#installment" class="hover:underline">Installment Guide</a>
+            </li>
+            <li>
+              <a href="#application" class="hover:underline">Application Portal</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <main class="w-full max-w-screen-2xl my-4 p-4 bg-white/70 backdrop-blur-sm rounded-xl shadow-lg">
+        <div class="flex flex-col sm:flex-row w-full h-[400px] overflow-hidden gap-3 ">
+          <!-- Hero Swiper -->
+          <div class="swiper-hero swiper h-[60%] sm:h-full w-full sm:w-[70%]">
+            <div class="swiper-wrapper h-full">
+              <div class="swiper-slide h-full">
+                <img src="./images/hero/hero-1.webp" alt="Hero 1" class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" />
+              </div>
+              <div class="swiper-slide h-full">
+                <img src="./images/hero/hero-2.webp" alt="Hero 2" class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" />
+              </div>
+              <div class="swiper-slide h-full">
+                <img src="./images/hero/hero-3.webp" alt="Hero 3" class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" />
+              </div>
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- Sub Hero Section -->
+          <div class="h-[40%] sm:h-full w-full sm:w-[50%] flex flex-col gap-2">
+            <img src="./images/hero/sub-hero-1.webp" alt="Sub 1" class="object-cover h-1/2 w-full shadow-sm rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" />
+            <img src="./images/hero/sub-hero-2.webp" alt="Sub 2" class="object-cover h-1/2 w-full shadow-sm rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" />
+          </div>
+        </div>
+      </main>
+
+      <!-- Categories -->
+      <section class="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white my-4 shadow-lg rounded-xl bg-white/70 backdrop-blur-sm">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">Browse by Category</h2>
+          <p class="mt-2 text-base text-gray-500">Explore our wide range of appliances</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-6">
+          <!-- Category Card -->
+          <div class="flex flex-col items-center text-center p-4 rounded-xl  hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="w-24 h-24 flex items-center justify-center p-2">
+              <img src="./images/categories/TV.webp" alt="TV" class="max-h-full max-w-full object-cover object-center">
+            </div>
+            <p class="mt-3 text-sm font-medium text-gray-800">TV</p>
+          </div>
+          <div class="flex flex-col items-center text-center  p-4 rounded-xl  hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="w-24 h-24 flex items-center justify-center p-2">
+              <img src="./images/categories/refridgerators.webp" alt="Refrigerators" class="max-h-full max-w-full object-cover object-center">
+            </div>
+            <p class="mt-3 text-sm font-medium text-gray-800">Refrigerators</p>
+          </div>
+          <div class="flex flex-col items-center text-center  p-4 rounded-xl  hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="w-24 h-24 flex items-center justify-center p-2">
+              <img src="./images/categories/washing-machine.webp" alt="Washing Machine" class="max-h-full max-w-full object-cover object-center">
+            </div>
+            <p class="mt-3 text-sm font-medium text-gray-800">Washing Machine</p>
+          </div>
+          <div class="flex flex-col items-center text-center  p-4 rounded-xl  hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="w-24 h-24 flex items-center justify-center p-2">
+              <img src="./images/categories/air-conditioner.webp" alt="Air Conditioner" class="max-h-full max-w-full object-cover object-center">
+            </div>
+            <p class="mt-3 text-sm font-medium text-gray-800">Air Conditioner</p>
+          </div>
+          <div class="flex flex-col items-center text-center  p-4 rounded-xl  hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="w-24 h-24 flex items-center justify-center p-2">
+              <img src="./images/categories/sound-device.webp" alt="Sound Device" class="max-h-full max-w-full object-cover object-center">
+            </div>
+            <p class="mt-3 text-sm font-medium text-gray-800">Sound Device</p>
+          </div>
+          <div class="flex flex-col items-center text-center  p-4 rounded-xl  hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="w-24 h-24 flex items-center justify-center p-2">
+              <img src="./images/categories/microwave.webp" alt="Microwave" class="max-h-full max-w-full object-cover object-center">
+            </div>
+            <p class="mt-3 text-sm font-medium text-gray-800">Microwave</p>
+          </div>
+          <div class="flex flex-col items-center text-center  p-4 rounded-xl  hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="w-24 h-24 flex items-center justify-center p-2">
+              <img src="./images/categories/water-heater.webp" alt="Water Heater" class="max-h-full max-w-full object-cover object-center">
+            </div>
+            <p class="mt-3 text-sm font-medium text-gray-800">Water Heater</p>
+          </div>
+        </div>
+      </section>
+      <section class="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 my-4 bg-white shadow-lg rounded-xl">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">Top Products</h2>
+          <p class="mt-2 text-base text-gray-500">Our most popular picks loved by customers</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Product Card -->
+          <div class="flex flex-col rounded-xl hover:shadow-lg  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <img src="./images/top/top-1.webp" alt="Top Product 1" loading="lazy" class="h-80 w-full object-contain bg-white rounded-t-xl p-4">
+            <button class="w-full bg-brand text-white text-sm font-semibold py-3 rounded-b-xl hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+          </div>
+          <div class="flex flex-col rounded-xl hover:shadow-lg  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <img src="./images/top/top-2.webp" alt="Top Product 2" loading="lazy" class="h-80 w-full object-contain bg-white rounded-t-xl p-4">
+            <button class="w-full bg-brand text-white text-sm font-semibold py-3 rounded-b-xl hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+          </div>
+          <div class="flex flex-col rounded-xl hover:shadow-lg  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <img src="./images/top/top-3.webp" alt="Top Product 3" loading="lazy" class="h-80 w-full object-contain bg-white rounded-t-xl p-4">
+            <button class="w-full bg-brand text-white text-sm font-semibold py-3 rounded-b-xl hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+          </div>
+          <div class="flex flex-col rounded-xl hover:shadow-lg  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <img src="./images/top/top-4.webp" alt="Top Product 4" loading="lazy" class="h-80 w-full object-contain bg-white rounded-t-xl p-4">
+            <button class="w-full bg-brand text-white text-sm font-semibold py-3 rounded-b-xl hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+          </div>
+          <div class="flex flex-col rounded-xl border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <img src="./images/top/top-5.webp" alt="Top Product 4" loading="lazy" class="h-80 w-full object-contain bg-white rounded-t-xl p-4">
+            <button class="w-full bg-brand text-white text-sm font-semibold py-3 rounded-b-xl hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+          </div>
+          <div class="flex flex-col rounded-xl hover:shadow-lg border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <img src="./images/top/top-6.webp" alt="Top Product 6" loading="lazy" class="h-80 w-full object-contain bg-white rounded-t-xl p-4">
+            <button class="w-full bg-brand text-white text-sm font-semibold py-3 rounded-b-xl hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 my-4 bg-white/90 backdrop-blur-sm shadow-lg rounded-xl">
+        <!-- Section Header -->
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-gray-900">Promotions</h2>
+          <p class="mt-2 text-base text-gray-500">Explore our latest deals and exclusive offers</p>
+        </div>
+        <!-- Swiper Container -->
+        <div class="swiper swiper-promo relative">
+          <div class="swiper-wrapper">
+            <!-- Promo Slide -->
+            <div class="swiper-slide flex flex-col overflow-hidden rounded-xl  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95">
+              <img src="./images/promo/promo-1.webp" alt="Promo: Smart TV Sale" loading="lazy" class="h-64 w-full object-cover" />
+              <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+            </div>
+            <div class="swiper-slide flex flex-col overflow-hidden rounded-xl  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 ">
+              <img src="./images/promo/promo-2.webp" alt="Promo: Refrigerator Offer" loading="lazy" class="h-64 w-full object-cover" />
+              <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+            </div>
+            <div class="swiper-slide flex flex-col overflow-hidden rounded-xl  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 ">
+              <img src="./images/promo/promo-3.webp" alt="Promo: Washing Machine Discount" loading="lazy" class="h-64 w-full object-cover" />
+              <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+            </div>
+            <div class="swiper-slide flex flex-col overflow-hidden rounded-xl  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 ">
+              <img src="./images/promo/promo-3.webp" alt="Promo: Washing Machine Discount" loading="lazy" class="h-64 w-full object-cover" />
+              <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+            </div>
+            <div class="swiper-slide flex flex-col overflow-hidden rounded-xl  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 ">
+              <img src="./images/promo/promo-3.webp" alt="Promo: Washing Machine Discount" loading="lazy" class="h-64 w-full object-cover" />
+              <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+            </div>
+            <div class="swiper-slide flex flex-col overflow-hidden rounded-xl  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 ">
+              <img src="./images/promo/promo-3.webp" alt="Promo: Washing Machine Discount" loading="lazy" class="h-64 w-full object-cover" />
+              <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+            </div>
+            <div class="swiper-slide flex flex-col overflow-hidden rounded-xl  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 ">
+              <img src="./images/promo/promo-3.webp" alt="Promo: Washing Machine Discount" loading="lazy" class="h-64 w-full object-cover" />
+              <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+            </div>
+            <div class="swiper-slide flex flex-col overflow-hidden rounded-xl  border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95 ">
+              <img src="./images/promo/promo-3.webp" alt="Promo: Washing Machine Discount" loading="lazy" class="h-64 w-full object-cover" />
+              <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
+            </div>
+          </div>
+          <!-- Swiper Controls -->
+          <div class="swiper-pagination swiper-pagination-promo mt-4"></div>
+          <div class="swiper-button-prev swiper-button-prev-promo absolute top-1/2 -left-4 transform -translate-y-1/2 z-10"></div>
+          <div class="swiper-button-next swiper-button-next-promo absolute top-1/2 -right-4 transform -translate-y-1/2 z-10"></div>
+        </div>
+      </section>
+
+      <section class="w-full max-w-screen-2xl mx-auto px-4 py-12 my-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl">
+        <!-- Section Header -->
+        <div class="text-center mb-10">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">🎁 Freebies Just for You</h2>
+          <p class="mt-3 text-gray-500 text-sm sm:text-base">Enjoy a complimentary appliance — yours to keep with every eligible purchase!</p>
+        </div>
+        <!-- Freebie Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Main Freebie Display -->
+          <div class="flex items-center justify-center rounded-xl overflow-hidden border border-gray-200  bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <img src="./images/freebies/freebie.webp" alt="Primary Freebie Offer" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <!-- Secondary Freebie Grid -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl border border-gray-100 shadow-xs overflow-hidden bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <img src="./images/freebies/freebie-1.webp" alt="Bonus Blender" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="rounded-xl border border-gray-100 shadow-xs overflow-hidden bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <img src="./images/freebies/freebie-2.webp" alt="Bonus Microwave" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="rounded-xl border border-gray-100 shadow-xs overflow-hidden bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <img src="./images/freebies/freebie-3.webp" alt="Bonus Electric Kettle" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="rounded-xl border border-gray-100 shadow-xs overflow-hidden bg-white transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <img src="./images/freebies/freebie-4.webp" alt="Bonus Air Fryer" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brands Section -->
+      <section class="w-full max-w-screen-2xl p-6 my-4 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Shop by Brand</h2>
+          <p class="mt-2 text-sm text-gray-500">Explore products from brands you trust.</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <!-- Brands -->
+          <a href="/brands/samsung" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200  transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="h-24 w-24 flex items-center justify-center p-2 bg-white rounded-lg">
+              <img src="./images/brands/samsung.webp" alt="Samsung" class="max-h-full max-w-full object-contain" loading="lazy">
+            </div>
+          </a>
+          <a href="/brands/lg" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200  transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="h-24 w-24 flex items-center justify-center p-2 bg-white rounded-lg">
+              <img src="./images/brands/lg.webp" alt="LG" class="max-h-full max-w-full object-contain" loading="lazy">
+            </div>
+          </a>
+          <a href="/brands/panasonic" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200  transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="h-24 w-24 flex items-center justify-center p-2 bg-white rounded-lg">
+              <img src="./images/brands/panasonic.webp" alt="Panasonic" class="max-h-full max-w-full object-contain" loading="lazy">
+            </div>
+          </a>
+          <a href="/brands/sharp" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200  transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="h-24 w-24 flex items-center justify-center p-2 bg-white rounded-lg">
+              <img src="./images/brands/sharp.webp" alt="Sharp" class="max-h-full max-w-full object-contain" loading="lazy">
+            </div>
+          </a>
+          <a href="/brands/sony" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200  transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="h-24 w-24 flex items-center justify-center p-2 bg-white rounded-lg">
+              <img src="./images/brands/sony.webp" alt="Sony" class="max-h-full max-w-full object-contain" loading="lazy">
+            </div>
+          </a>
+          <a href="/brands/haier" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200  transition-transform duration-100 hover:brightness-95 hover:scale-105">
+            <div class="h-24 w-24 flex items-center justify-center p-2 bg-white rounded-lg">
+              <img src="./images/brands/haier.webp" alt="Haier" class="max-h-full max-w-full object-contain" loading="lazy">
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="relative w-full max-w-screen-2xl my-4 bg-white/90 backdrop-blur-sm py-20 px-4 sm:px-6 lg:px-8 shadow-lg rounded-xl">
+        <div class="max-w-screen-2xl mx-auto flex flex-col items-center text-center space-y-6">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-800 max-w-3xl leading-tight"> Upgrade Your Home with Quality Appliances </h2>
+          <p class="text-lg sm:text-xl text-gray-600 max-w-2xl"> Discover reliable, efficient appliances that fit your life. Made to work hard and made to last. </p>
+          <div class="flex flex-wrap justify-center gap-4 pt-2">
+            <button class="bg-brand text-white px-6 py-3 rounded-md text-sm font-semibold shadow cursor-pointer hover:opacity-75 transition duration-100 ease-in-out"> Inquire Now </button>
+            <button class="text-sm font-medium text-brand hover:underline transition cursor-pointer"> Learn More </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Official Channel Section -->
+      <section class="w-full max-w-screen-2xl bg-white/90 backdrop-blur-sm py-16 my-4 shadow-lg rounded-xl">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Heading -->
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold text-gray-900">Official Channels</h2>
+            <p class="mt-2 text-base text-gray-500">Reach us on your preferred platforms.</p>
+          </div>
+          <!-- Contact Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+            <!-- Card Template -->
+            <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
+                <img src="./images/socials/facebook.png" alt="Facebook" class="h-6 w-6 object-contain" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-900">Shop on Facebook</h3>
+                <a href="https://www.facebook.com/qualityappliancegroup" target="_blank" class="text-xs hover:underline break-all"> fb.com/qualityappliancegroup </a>
+              </div>
+            </div>
+            <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
+                <img src="./images/icon-big.png" alt="In-store" class="h-6 w-6 object-contain" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-900">Shop In-Store</h3>
+                <p class="text-xs text-gray-600">40 Branches Nationwide</p>
+              </div>
+            </div>
+            <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
+                <img src="./images/socials/viber.png" alt="Viber" class="h-6 w-6 object-contain" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-900">Viber</h3>
+                <p class="text-xs text-gray-600">+63 8632342</p>
+              </div>
+            </div>
+            <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
+                <img src="./images/socials/telegram.png" alt="Telegram" class="h-6 w-6 object-contain" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-900">Telegram</h3>
+                <p class="text-xs text-gray-600">+63 8632342</p>
+              </div>
+            </div>
+            <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
+                <img src="./images/socials/telephone.png" alt="Call" class="h-6 w-6 object-contain" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-900">Call Us</h3>
+                <p class="text-xs text-gray-600">097734232</p>
+              </div>
+            </div>
+            <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-105">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
+                <img src="./images/socials/telephone.png" alt="Call" class="h-6 w-6 object-contain" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-900">Hotline</h3>
+                <p class="text-xs text-gray-600">#9845-2323</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="w-full max-w-screen-2xl bg-white/90 backdrop-blur-sm py-16 my-4 shadow-lg rounded-xl">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Heading -->
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold text-gray-900">Offered Services</h2>
+            <p class="mt-2 text-base text-gray-500">Enjoy benefits like free shipping, professional setup, customer support, and warranty coverage.</p>
+          </div>
+          <!-- Service Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Card Template 1 -->
+            <div class="bg-white hover:brightness-95 hover:scale-105 transition-transform duration-100 flex flex-col items-center justify-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100">
+              <img src="./images/services/box.webp" alt="" class="h-24 w-auto object-cover object-center ">
+              <h3 class="text-sm font-medium text-gray-800">Free Shipping</h3>
+              <p class="text-xs text-gray-400 text-center">Enjoy free delivery on all your orders, no minimum required.</p>
+            </div>
+            <!-- Card Template 2 -->
+            <div class="bg-white hover:brightness-95 hover:scale-105 transition-transform duration-100 flex flex-col items-center justify-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100">
+              <img src="./images/services/wrench.webp" alt="" class="h-24 w-auto object-cover object-center ">
+              <h3 class="text-sm font-medium text-gray-800">Free Installation</h3>
+              <p class="text-xs text-gray-400 text-center">Get professional setup services at no extra cost.</p>
+            </div>
+            <!-- Card Template 3 -->
+            <div class="bg-white hover:brightness-95 hover:scale-105 transition-transform duration-100 flex flex-col items-center justify-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100">
+              <img src="./images/services/support.webp" alt="" class="h-24 w-auto object-cover object-center ">
+              <h3 class="text-sm font-medium text-gray-800">Customer Support</h3>
+              <p class="text-xs text-gray-400 text-center">Our team is available 24/7 to assist you with any issues.</p>
+            </div>
+            <!-- Card Template 4 -->
+            <div class="bg-white hover:brightness-95 hover:scale-105 transition-transform duration-100 flex flex-col items-center justify-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100">
+              <img src="./images/services/warranty.webp" alt="" class="h-24 w-auto object-cover object-center ">
+              <h3 class="text-sm font-medium text-gray-800">Warranty Coverage</h3>
+              <p class="text-xs text-gray-400 text-center">Enjoy peace of mind with our comprehensive warranty protection.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Discover Section -->
+      <section class="w-full max-w-screen-2xl bg-white/90 backdrop-blur-sm py-12 p-4 shadow-lg rounded-xl my-4">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Header -->
+          <div class="mb-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Discover</h2>
+            <p class="mt-2 text-sm text-gray-500">Explore our top picks and best deals on quality appliances.</p>
+          </div>
+          <!-- Image Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <!-- Image Card -->
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-1.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-2.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-3.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-4.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-5.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-1.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-2.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-3.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-4.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
+              <img src="./images/discover/discover-5.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full max-w-screen-2xl mx-auto px-4 py-12 my-4 bg-white/90 backdrop-blur-sm shadow-lg rounded-xl">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">In Partnership With</h2>
+          <p class="mt-2 text-sm text-gray-500">We work alongside trusted brands to bring you even more value and convenience.</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+          <img src="./images/partners/partner-1.webp" alt="Partner 1" class="h-12 object-cover  transition duration-300" loading="lazy" />
+          <img src="./images/partners/partner-2.webp" alt="Partner 2" class="h-12 object-cover  transition duration-300" loading="lazy" />
+          <img src="./images/partners/partner-3.webp" alt="Partner 3" class="h-12 object-cover  transition duration-300" loading="lazy" />
+          <img src="./images/partners/partner-4.webp" alt="Partner 4" class="h-12 object-cover  transition duration-300" loading="lazy" />
+          <img src="./images/partners/partner-5.webp" alt="Partner 5" class="h-12 object-cover  transition duration-300" loading="lazy" />
+          <img src="./images/partners/partner-6.webp" alt="Partner 5" class="h-12 object-cover  transition duration-300" loading="lazy" />
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="w-full bg-white/90 backdrop-blur-sm border-t border-gray-200 mt-20 text-gray-600 text-sm shadow-lg">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 py-16">
+          <!-- Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+            <!-- Column 1: Brand -->
+            <div class="lg:col-span-3">
+              <img src="./images/logo.webp" alt="" class="h-16 w-auto object-cover object-center">
+              <p class="mb-4 text-xs leading-relaxed"> We provide durable, high-quality appliances for every home. Trusted by thousands, backed by excellent support, and guided by our mission of service excellence. </p>
+            </div>
+            <!-- Column 2: Links Group 1 -->
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-gray-800 mb-3">Company</h3>
+              <ul class="space-y-2 text-xs">
+                <li>
+                  <a href="#" class="hover:text-brand">About Us</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Why Choose Us</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Careers</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Vision & Mission</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Our Stores</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Column 3: Policies -->
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-gray-800 mb-3">Policies</h3>
+              <ul class="space-y-2 text-xs">
+                <li>
+                  <a href="#" class="hover:text-brand">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Returns & Refunds</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Shipping Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Warranty Info</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Column 4: Support -->
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-gray-800 mb-3">Customer Support</h3>
+              <ul class="space-y-2 text-xs">
+                <li>
+                  <a href="#" class="hover:text-brand">Installation Guide</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Order Tracking</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">FAQs</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-brand">Feedback</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Column 5: Contact + Newsletter -->
+            <div class="lg:col-span-3">
+              <h3 class="text-sm font-semibold text-gray-800 mb-3">Get in Touch</h3>
+              <ul class="text-xs space-y-2 mb-5">
+                <li>📞 Tel: <a href="tel:893402230" class="hover:text-brand">893402-230</a>
+                </li>
+                <li>📱 Mobile: <a href="tel:0924235352" class="hover:text-brand">0924235352</a>
+                </li>
+                <li>🌍 Overseas: <a href="tel:0938534823" class="hover:text-brand">0938534823</a>
+                </li>
+                <li>📧 Email: <a href="mailto:support@qualityappliance.com" class="hover:text-brand">support@qualityappliance.com</a>
+                </li>
+              </ul>
+              <form class="flex flex-col sm:flex-row items-center gap-2">
+                <input type="email" placeholder="Your email address" class="w-full px-3 py-2 border rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-brand" />
+                <button type="submit" class="px-4 py-2 text-xs bg-brand text-white rounded-md hover:bg-brand-dark transition"> Subscribe </button>
+              </form>
+            </div>
+          </div>
+          <!-- Footer base -->
+          <div class="mt-16 border-t border-gray-100 pt-6 text-center text-xs text-gray-500">
+            <div class="flex justify-center items-center gap-4 mb-3">
+              <!-- You can use actual payment or certification logos -->
+              <span class="inline-block bg-gray-200 px-3 py-1 rounded">SSL Secured</span>
+              <span class="inline-block bg-gray-200 px-3 py-1 rounded">Trusted Seller</span>
+              <span class="inline-block bg-gray-200 px-3 py-1 rounded">Secure Checkout</span>
+            </div>
+            <p>© 2025 <span class="font-semibold text-brand">Quality Appliance Group</span>. All rights reserved. </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+      <!-- <script src="./js/swiper.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        const heroSwiper = new Swiper('.swiper-hero', {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination-hero',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          scrollbar: {
+            el: '.swiper-scrollbar-hero',
+          },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+        });
+        const promoSwiper = new Swiper('.swiper-promo', {
+          loop: true,
+          slidesPerView: 4,
+          spaceBetween: 20,
+          pagination: {
+            el: '.swiper-pagination-promo',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next-promo',
+            prevEl: '.swiper-button-prev-promo',
+          },
+          scrollbar: {
+            el: '.swiper-scrollbar-promo',
+          },
+        });
+      </script>
+
+  </body>
+</html>
