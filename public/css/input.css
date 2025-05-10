@@ -1,0 +1,29 @@
+@import url('https://fonts.bunny.net/css?family=poppins:300,400,400i,500,500i,600,600i,700,700i,800,800i,900');
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #D60024;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+  font-family: 'gilmer-bold';
+  src:url('../gilmer-font/gilmer-bold.otf');
+}
+
+@font-face {
+  font-family: 'gilmer-regular';
+  src:url('../gilmer-font/gilmer-regular.otf');
+}
+
+.gilmer-heading {
+  font-family: 'gilmer-bold', sans-serif;
+}
+
+.gilmer-regular {
+  font-family: 'gilmer-regular', sans-serif;
+}
