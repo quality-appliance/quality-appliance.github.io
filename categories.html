@@ -654,13 +654,36 @@
                     <input type="checkbox" class=" accent-brand cursor-pointer" id="oven" aria-label="Filter by Oven">
                     <label for="oven" class="text-gray-600 select-none cursor-pointer flex-1">Oven</label>
                   </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="range-hood" aria-label="Filter by Range Hood">
-                    <label for="range-hood" class="text-gray-600 select-none cursor-pointer flex-1">Range Hood</label>
+                <details open class="group" aria-label="Range Hood subcategories">
+                  <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
+                    <input type="checkbox" class="accent-brand" id="range-hood" aria-label="Filter by Range Hood" />
+                    <span class="text-gray-600">Range Hood</span>
+                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                    </svg>
+                  </summary>
+                  <div class="ml-6 space-y-1" role="group" aria-label="Range Hood Sub Types">
+                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
+                      <input type="checkbox" class="accent-brand" id="desk" aria-label="Filter by Desk" />
+                      <span class="text-gray-600">Island</span>
+                    </label>
+                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
+                      <input type="checkbox" class="accent-brand" id="stand" aria-label="Filter by stand" />
+                      <span class="text-gray-600">Chimney</span>
+                    </label>
                   </div>
+                </details>
                   <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
                     <input type="checkbox" class=" accent-brand cursor-pointer" id="dishwasher" aria-label="Filter by Dishwasher">
                     <label for="dishwasher" class="text-gray-600 select-none cursor-pointer flex-1">Dishwasher</label>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                    <input type="checkbox" class=" accent-brand cursor-pointer" id="sterilizer" aria-label="Filter by Sterilizer">
+                    <label for="sterilizer" class="text-gray-600 select-none cursor-pointer flex-1">Sterilizer</label>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                    <input type="checkbox" class=" accent-brand cursor-pointer" id="water-dispenser" aria-label="Filter by Water Dispenser">
+                    <label for="water-dispenser" class="text-gray-600 select-none cursor-pointer flex-1">Water Dispenser</label>
                   </div>
                 </div>
               </details>
