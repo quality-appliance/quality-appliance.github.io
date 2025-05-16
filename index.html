@@ -45,177 +45,46 @@
   <body class="bg-gray-50">
     <!-- Main Container -->
     <div class="min-h-screen w-full flex flex-col justify-start items-center">
-      <!-- ===== HEADER SECTION ===== -->
       <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
         <div class="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
-          
-          <!-- Logo -->
           <a href="/" aria-label="Homepage" class="flex items-start shrink-0">
-            <img 
-              src="./images/qapi-logo.webp" 
-              alt="Quality Appliance Logo" class="h-auto w-48 sm:w-56 object-contain"
-            >
+            <img src="./images/qapi-logo.webp" alt="Quality Appliance Logo" class="h-auto w-48 sm:w-56 object-contain">
           </a>
-      
-          <!-- ===== SEARCH BAR ===== -->
           <div class="relative w-full max-w-lg flex-grow">
-            <input 
-              type="search" 
-              id="search" 
-              name="search" 
-              placeholder="Search appliances, brands, or models" 
-              aria-label="Search appliances" 
-              class="w-full bg-gray-100 focus:bg-white px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:outline-none transition focus:ring-2 focus:ring-brand"
-            >
-            
-            <!-- ===== SEARCH DROPDOWN EXAMPLE START===== -->
-            <!-- <ul class="hidden absolute top-full left-0 mt-1 w-full bg-white z-50 rounded-xl shadow-lg border border-gray-200 overflow-hidden overflow-y-auto">
-              
-              <li>
-                <a href="#" class="flex gap-4 items-center px-4 py-3 hover:bg-gray-100 transition">
-                  <img src="./images/categories/category-refridgerators.webp" alt="Refrigerator" class="w-16 h-16 object-contain flex-shrink-0">
-                  <div class="flex flex-col">
-                    <span class="text-sm font-medium text-gray-800 truncate">Samsung RT38K501J8DX/TC</span>
-                    <span class="text-sm text-brand font-semibold">₱ 32,990</span>
-                  </div>
-                </a>
-              </li>
-      
-              <li>
-                <a href="#" class="flex gap-4 items-center px-4 py-3 hover:bg-gray-100 transition">
-                  <img src="./images/categories/category-airConditioner.webp" alt="Air Conditioner" class="w-16 h-16 object-contain flex-shrink-0">
-                  <div class="flex flex-col">
-                    <span class="text-sm font-medium text-gray-800 truncate">Carrier XPower 1.5HP</span>
-                    <span class="text-sm text-brand font-semibold">₱ 28,450</span>
-                  </div>
-                </a>
-              </li>
-      
-              <li>
-                <a href="#" class="flex gap-4 items-center px-4 py-3 hover:bg-gray-100 transition">
-                  <img src="./images/categories/category-microwave.webp" alt="Microwave" class="w-16 h-16 object-contain flex-shrink-0">
-                  <div class="flex flex-col">
-                    <span class="text-sm font-medium text-gray-800 truncate">Sharp R-21MT(S)</span>
-                    <span class="text-sm text-brand font-semibold">₱ 8,990</span>
-                  </div>
-                </a>
-              </li>
-      
-              <li>
-                <a href="#" class="flex gap-4 items-center px-4 py-3 hover:bg-gray-100 transition">
-                  <img src="./images/categories/category-soundDevice.webp" alt="Sound System" class="w-16 h-16 object-contain flex-shrink-0">
-                  <div class="flex flex-col">
-                    <span class="text-sm font-medium text-gray-800 truncate">Sony MHC-V13D</span>
-                    <span class="text-sm text-brand font-semibold">₱ 15,990</span>
-                  </div>
-                </a>
-              </li>
-      
-              <li>
-                <a href="#" class="flex gap-4 items-center px-4 py-3 hover:bg-gray-100 transition">
-                  <img src="./images/categories/category-tv.webp" alt="TV" class="w-16 h-16 object-contain flex-shrink-0">
-                  <div class="flex flex-col">
-                    <span class="text-sm font-medium text-gray-800 truncate">LG 55&quot; 4K Smart TV</span>
-                    <span class="text-sm text-brand font-semibold">₱ 42,990</span>
-                  </div>
-                </a>
-              </li>
-      
-              <li>
-                <a href="#" class="flex gap-4 items-center px-4 py-3 hover:bg-gray-100 transition">
-                  <img src="./images/categories/category-waterHeater.webp" alt="Water Heater" class="w-16 h-16 object-contain flex-shrink-0">
-                  <div class="flex flex-col">
-                    <span class="text-sm font-medium text-gray-800 truncate">Ariston Andris 15L</span>
-                    <span class="text-sm text-brand font-semibold">₱ 12,990</span>
-                  </div>
-                </a>
-              </li>
-            </ul> -->
-            <!-- ===== SEARCH DROPDOWN EXAMPLE END===== -->
-      
-            <!-- Search Button Icon -->
-            <button 
-              type="submit" 
-              class="absolute inset-y-0 right-3 flex items-center text-gray-600 hover:text-brand transition" 
-              aria-label="Submit search"
-            >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                class="w-5 h-5" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <circle cx="11" cy="11" r="8" stroke-width="2" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2" />
+            <input type="search" id="search" name="search" placeholder="Search appliances, brands, or models" aria-label="Search appliances" class="w-full bg-gray-100 focus:bg-white px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:outline-none transition focus:ring-2 focus:ring-brand">
+            <button type="submit" class="absolute inset-y-0 right-3 flex items-center text-gray-600 hover:text-brand transition" aria-label="Submit search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" stroke-width="2"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/>
               </svg>
             </button>
           </div>
-      
-          <!-- User Actions -->
           <div class="flex items-center gap-3 shrink-0 text-sm text-gray-800 px-4" role="group" aria-label="User actions">
-            <a 
-              href="#login" 
-              class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" 
-              aria-label="Login to your account"
-            >
-              Login
-            </a>
-            <a 
-              href="#register" 
-              class="hover:text-brand transition" 
-              aria-label="Create a new account"
-            >
-              Register
-            </a>
+            <a href="#login" class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" aria-label="Login to your account">Login</a>
+            <a href="#register" class="hover:text-brand transition" aria-label="Create a new account">Register</a>
           </div>
         </div>
       </header>
 
-      <!-- ===== PRIMARY NAVIGATION ===== -->
-      <nav 
-        class="w-full max-w-screen-xl bg-brand text-white shadow-lg rounded-b-xl" 
-        aria-label="Primary navigation"
-      >
+      <nav class="w-full max-w-screen-xl bg-brand text-white shadow-lg rounded-b-xl" aria-label="Primary navigation">
         <div class="w-full max-w-screen-xl flex justify-start items-center gap-5">
           <div class="h-full shrink-0 px-2">
             <img src="./images/menu-stripe.png" alt="M-stripe" class="w-48 h-full object-contain">
           </div>
           <ul class="flex justify-center items-center gap-4 sm:gap-6 text-sm">
-            <li>
-              <a href="#home" class="hover:underline" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="./categories.html" class="hover:underline" aria-current="page">Categories</a>
-            </li>
-            <li>
-              <a href="#about" class="hover:underline">About</a>
-            </li>
-            <li>
-              <a href="#products" class="hover:underline">Products</a>
-            </li>
-            <li>
-              <a href="#careers" class="hover:underline">Careers</a>
-            </li>
-            <li>
-              <a href="#promos" class="hover:underline">Promo</a>
-            </li>
-            <li>
-              <a href="#contact-us" class="hover:underline">Contact Us</a>
-            </li>
-            <li>
-              <a href="#stores" class="hover:underline">Stores</a>
-            </li>
-            <li>
-              <a href="#installment" class="hover:underline">Installment Guide</a>
-            </li>
-            <li>
-              <a href="#application" class="hover:underline">Application Portal</a>
-            </li>
+            <li><a href="/" class="hover:underline" aria-current="page">Home</a></li>
+            <li><a href="./categories.html" class="hover:underline" aria-current="page">Categories</a></li>
+            <li><a href="#about" class="hover:underline">About</a></li>
+            <li><a href="#products" class="hover:underline">Products</a></li>
+            <li><a href="#careers" class="hover:underline">Careers</a></li>
+            <li><a href="#promos" class="hover:underline">Promo</a></li>
+            <li><a href="#contact-us" class="hover:underline">Contact Us</a></li>
+            <li><a href="#stores" class="hover:underline">Stores</a></li>
+            <li><a href="#installment" class="hover:underline">Installment Guide</a></li>
+            <li><a href="#application" class="hover:underline">Application Portal</a></li>
           </ul>
         </div>
-      </nav>
+      </nav> 
 
       <!-- ===== HERO SECTION ===== -->
       <main class="w-full max-w-screen-xl my-4 p-4 bg-white/70 backdrop-blur-sm rounded-xl shadow-lg">
@@ -224,89 +93,44 @@
           <div class="swiper-hero swiper h-[60%] sm:h-full w-full sm:w-[50%]">
             <div class="swiper-wrapper h-full">
               <div class="swiper-slide h-full">
-                <img 
-                  src="./images/hero/hero-1.webp" 
-                  alt="Hero 1" 
-                  class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" 
-                  loading="lazy"
-                  width="800"
-                  height="400"
-                >
+                <img src="./images/hero/hero-1.webp" alt="Hero 1" class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" width="800" height="400">
               </div>
               <div class="swiper-slide h-full">
-                <img 
-                  src="./images/hero/hero-2.webp" 
-                  alt="Hero 2" 
-                  class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" 
-                  loading="lazy"
-                  width="800"
-                  height="400"
-                >
+                <img src="./images/hero/hero-2.webp" alt="Hero 2" class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" width="800" height="400">
               </div>
               <div class="swiper-slide h-full">
-                <img 
-                  src="./images/hero/hero-3.webp" 
-                  alt="Hero 3" 
-                  class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" 
-                  loading="lazy"
-                  width="800"
-                  height="400"
-                >
+                <img src="./images/hero/hero-3.webp" alt="Hero 3" class="object-cover object-center h-full w-full rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" width="800" height="400">
               </div>
             </div>
-            <!-- Hero Slider Navigation -->
             <div class="swiper-button-prev" aria-label="Previous slide"></div>
             <div class="swiper-button-next" aria-label="Next slide"></div>
           </div>
 
           <!-- Sub Hero Images -->
           <div class="h-[40%] sm:h-full w-full sm:w-[50%] flex flex-col gap-2">
-            <img 
-              src="./images/hero/sub-hero-1.webp" 
-              alt="Sub 1" 
-              class="object-cover h-1/2 w-full shadow-sm rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" 
-              loading="lazy"
-              width="400"
-              height="200"
-            >
-            <img 
-              src="./images/hero/sub-hero-2.webp" 
-              alt="Sub 2" 
-              class="object-cover h-1/2 w-full shadow-sm rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" 
-              loading="lazy"
-              width="400"
-              height="200"
-            >
+            <img src="./images/hero/sub-hero-1.webp" alt="Sub 1" class="object-cover h-1/2 w-full shadow-sm rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" width="400" height="200">
+            <img src="./images/hero/sub-hero-2.webp" alt="Sub 2" class="object-cover h-1/2 w-full shadow-sm rounded-lg cursor-pointer shadow-sm transition-transform duration-100 hover:scale-95" loading="lazy" width="400" height="200">
           </div>
         </div>
       </main>
 
       <!-- ===== CATEGORIES SECTION ===== -->
       <section class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white my-4 shadow-lg rounded-xl bg-white/70 backdrop-blur-sm">
-        <!-- Section Header -->
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900">Browse by Category</h2>
           <p class="text-base text-gray-500">Explore our wide range of appliances</p>
         </div>
 
-        <!-- Category Grid -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-6">
-          <!-- Category Cards -->
           <a href="./categories.html" class="flex flex-col items-center text-center p-4 rounded-xl hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-95">
             <div class="w-24 h-24 flex items-center justify-center p-2">
-              <img 
-                src="./images/categories/category-refridgerators.webp" 
-                alt="Refrigerators" 
-                class="max-h-full max-w-full object-cover object-center"
-                width="96"
-                height="96"
-              >
+              <img src="./images/categories/category-refridgerators.webp" alt="Refrigerators" class="max-h-full max-w-full object-cover object-center" width="96" height="96">
             </div>
             <p class="mt-3 text-sm font-medium text-gray-800">Refrigerators</p>
           </a>
           <a href="./categories.html" class="flex flex-col items-center text-center p-4 rounded-xl hover:shadow-md bg-white transition-transform duration-100 hover:brightness-95 hover:scale-95">
-            <div class="w-24 h-24 flex items-center justify-center p-2 ">
-              <img src="./images/categories/category-washingMachine.webp" alt="Washing Machine" class="max-h-full max-w-full object-cover object-center ">
+            <div class="w-24 h-24 flex items-center justify-center p-2">
+              <img src="./images/categories/category-washingMachine.webp" alt="Washing Machine" class="max-h-full max-w-full object-cover object-center">
             </div>
             <p class="mt-3 text-sm font-medium text-gray-800">Washing Machine</p>
           </a>
@@ -335,28 +159,25 @@
             <p class="mt-3 text-sm font-medium text-gray-800">Water Heater</p>
           </a>
         </div>
-      <!-- View Categories Button -->
-      <div class="flex justify-center mt-12">
-        <a href="./categories.html" class="bg-brand text-white px-6 py-3 rounded-xl hover:bg-brand-dark transition-transform duration-100 hover:scale-95 flex items-center gap-2 text-sm font-medium shadow-sm">
-           View All Categories
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
+
+        <div class="flex justify-center mt-12">
+          <a href="./categories.html" class="bg-brand text-white px-6 py-3 rounded-xl hover:bg-brand-dark transition-transform duration-100 hover:scale-95 flex items-center gap-2 text-sm font-medium shadow-sm">
+            View All Categories
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
       </section>
 
       <!-- ===== TOP PRODUCTS SECTION ===== -->
       <section class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 my-4 bg-white shadow-lg rounded-xl">
-        <!-- Section Header -->
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900">Top Products</h2>
           <p class="mt-2 text-base text-gray-500">Our most popular picks loved by customers</p>
         </div>
 
-        <!-- Product Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Product Cards -->
           <div class="flex flex-col rounded-xl hover:shadow-lg border border-gray-200 bg-white transition-transform duration-100 hover:brightness-95 hover:scale-95">
             <div class="flex-1 bg-white rounded-t-xl">
               <img src="./images/top/top-1.png" alt="Top Product 1" loading="lazy" class="w-full h-auto rounded-t-xl">
@@ -398,16 +219,13 @@
 
       <!-- ===== PROMOTIONS SECTION ===== -->
       <section class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 my-4 bg-white/90 backdrop-blur-sm shadow-lg rounded-xl">
-        <!-- Section Header -->
         <div class="text-center mb-8">
           <h2 class="text-3xl font-bold text-gray-900">Promotions</h2>
           <p class="mt-2 text-base text-gray-500">Explore our latest deals and exclusive offers</p>
         </div>
 
-        <!-- Promo Slider -->
         <div class="swiper swiper-promo relative">
           <div class="swiper-wrapper">
-            <!-- Promo Slides -->
             <div class="swiper-slide flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-white transition-transform duration-100 hover:brightness-95">
               <img src="./images/promo/promo-1.png" alt="Promo: Smart TV Sale" loading="lazy" class="h-64 w-full object-cover" />
               <button class="w-full bg-brand text-white text-sm font-semibold py-3 hover:bg-brand-dark transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">View Product</button>
@@ -442,7 +260,6 @@
             </div>
           </div>
 
-          <!-- Promo Slider Navigation -->
           <div class="swiper-pagination swiper-pagination-promo mt-4"></div>
           <div class="swiper-button-prev swiper-button-prev-promo absolute top-1/2 -left-4 transform -translate-y-1/2 z-10"></div>
           <div class="swiper-button-next swiper-button-next-promo absolute top-1/2 -right-4 transform -translate-y-1/2 z-10"></div>
@@ -451,7 +268,6 @@
 
       <!-- ===== FREEBIES SECTION ===== -->
       <section class="w-full max-w-screen-xl mx-auto px-4 py-12 my-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl">
-        <!-- Section Header -->
         <div class="text-center mb-10">
           <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 flex items-center justify-center">
             <img src="./images/freebies/freebie-icon.png" alt="Freebies Icon" class="w-10 h-10 object-contain">
@@ -460,14 +276,11 @@
           <p class="mt-3 text-gray-500 text-sm sm:text-base">Enjoy a complimentary appliance — yours to keep with every eligible purchase!</p>
         </div>
 
-        <!-- Freebie Layout -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Main Freebie Display -->
           <div class="flex items-center justify-center rounded-xl overflow-hidden border border-gray-200 bg-white transition-transform duration-100 hover:brightness-95 hover:scale-95">
             <img src="./images/freebies/freebie.webp" alt="Primary Freebie Offer" class="w-full h-full object-cover" loading="lazy" />
           </div>
 
-          <!-- Secondary Freebie Grid -->
           <div class="grid grid-cols-2 gap-4">
             <div class="rounded-xl border border-gray-100 shadow-xs overflow-hidden bg-white transition-transform duration-100 hover:brightness-95 hover:scale-95">
               <img src="./images/freebies/freebie-1.webp" alt="Bonus Blender" class="w-full h-full object-cover" loading="lazy" />
@@ -487,18 +300,13 @@
 
       <!-- ===== BRANDS SECTION ===== -->
       <section class="w-full max-w-screen-xl p-6 my-4 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg">
-        <!-- Section Header -->
         <div class="text-center mb-8">
           <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Shop by Brand</h2>
           <p class="mt-2 text-sm text-gray-500">Explore products from brands you trust.</p>
         </div>
 
-        <!-- Brands Carousel -->
         <div class="swiper swiper-brands relative">
           <div class="swiper-wrapper">
-            <!-- Brand Slides -->
-
-            <!-- SAMSUNG -->
             <div class="swiper-slide">
               <a href="/brands/samsung" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -506,8 +314,6 @@
                 </div>
               </a>
             </div>
-            
-            <!-- SHARP -->
             <div class="swiper-slide">
               <a href="/brands/sharp" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -515,8 +321,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- SONY -->
             <div class="swiper-slide">
               <a href="/brands/sony" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -524,17 +328,13 @@
                 </div>
               </a>
             </div>
-
-            <!-- CARRIER -->
             <div class="swiper-slide">
               <a href="/brands/carrier" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-carrier.webp" alt="Devant" class="max-h-full max-w-full object-cover" loading="lazy">
+                  <img src="./images/brands/brand-carrier.webp" alt="Carrier" class="max-h-full max-w-full object-cover" loading="lazy">
                 </div>
               </a>
             </div>
-
-            <!-- CONDURA -->
             <div class="swiper-slide">
               <a href="/brands/condura" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -542,35 +342,20 @@
                 </div>
               </a>
             </div>
-
-            <!-- MIDEA -->
             <div class="swiper-slide">
               <a href="/brands/midea" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-midea.webp" alt="Haier" class="max-h-full max-w-full object-cover" loading="lazy">
+                  <img src="./images/brands/brand-midea.webp" alt="Midea" class="max-h-full max-w-full object-cover" loading="lazy">
                 </div>
               </a>
             </div>
-            
-            <!-- LA GERMANIA -->
             <div class="swiper-slide">
               <a href="/brands/lagermania" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-lagermania.webp" alt="Haier" class="max-h-full max-w-full object-cover" loading="lazy">
+                  <img src="./images/brands/brand-lagermania.webp" alt="La Germania" class="max-h-full max-w-full object-cover" loading="lazy">
                 </div>
               </a>
             </div>
-
-            <!-- BEST ELECTRONICS -->
-            <!-- <div class="swiper-slide">
-              <a href="/brands/bestelectronics" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
-                <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-bestelectronics.webp" alt="Best Electronics" class="max-h-full max-w-full object-cover" loading="lazy">
-                </div>
-              </a>
-            </div> -->
-
-            <!-- ASTRON -->
             <div class="swiper-slide">
               <a href="/brands/astron" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -578,8 +363,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- DB AUDIO -->
             <div class="swiper-slide">
               <a href="/brands/dbaudio" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -587,17 +370,13 @@
                 </div>
               </a>
             </div>
-
-            <!-- DEVANT -->
             <div class="swiper-slide">
               <a href="/brands/devant" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-devant.webp" alt="Haier" class="max-h-full max-w-full object-contain" loading="lazy">
+                  <img src="./images/brands/brand-devant.webp" alt="Devant" class="max-h-full max-w-full object-contain" loading="lazy">
                 </div>
               </a>
             </div>
-
-            <!-- DOWELL -->
             <div class="swiper-slide">
               <a href="/brands/dowell" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -605,17 +384,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- HERCULES -->
-            <!-- <div class="swiper-slide">
-              <a href="/brands/hercules" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
-                <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-hercules.webp" alt="Hercules" class="max-h-full max-w-full object-cover" loading="lazy">
-                </div>
-              </a>
-            </div> -->
-
-            <!-- HISENSE -->
             <div class="swiper-slide">
               <a href="/brands/hisense" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -623,8 +391,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- MARKES -->
             <div class="swiper-slide">
               <a href="/brands/markes" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -632,8 +398,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- GE -->
             <div class="swiper-slide">
               <a href="/brands/ge" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -641,8 +405,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- ARISTON -->
             <div class="swiper-slide">
               <a href="/brands/ariston" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -650,8 +412,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- PHILIPS -->
             <div class="swiper-slide">
               <a href="/brands/philips" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -659,8 +419,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- PANASONIC -->
             <div class="swiper-slide">
               <a href="/brands/panasonic" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -668,8 +426,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- PENSONIC -->
             <div class="swiper-slide">
               <a href="/brands/pensonic" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -677,8 +433,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- TOSHIBA -->
             <div class="swiper-slide">
               <a href="/brands/toshiba" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -686,17 +440,13 @@
                 </div>
               </a>
             </div>
-
-            <!-- UNION -->
             <div class="swiper-slide">
               <a href="/brands/union" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-union.webp" alt="Toshiba" class="max-h-full max-w-full object-cover" loading="lazy">
+                  <img src="./images/brands/brand-union.webp" alt="Union" class="max-h-full max-w-full object-cover" loading="lazy">
                 </div>
               </a>
             </div>
-            
-            <!-- AKAI -->
             <div class="swiper-slide">
               <a href="/brands/akai" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -704,17 +454,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- ATOM -->
-            <!-- <div class="swiper-slide">
-              <a href="/brands/atom" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
-                <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-atom.webp" alt="Atom" class="max-h-full max-w-full object-cover" loading="lazy">
-                </div>
-              </a>
-            </div> -->
-
-            <!-- BELKIN -->
             <div class="swiper-slide">
               <a href="/brands/belkin" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -722,8 +461,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- DAEWOO -->
             <div class="swiper-slide">
               <a href="/brands/daewoo" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -731,35 +468,13 @@
                 </div>
               </a>
             </div>
-
-            <!-- EXSOL -->
-            <!-- <div class="swiper-slide">
-              <a href="/brands/exsol" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
-                <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-exsol.webp" alt="Exsol" class="max-h-full max-w-full object-cover" loading="lazy">
-                </div>
-              </a>
-            </div> -->
-
-            <!-- LA BELLE -->
-            <!-- <div class="swiper-slide">
-              <a href="/brands/labelle" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
-                <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-labelle.webp" alt="Labelle" class="max-h-full max-w-full object-cover" loading="lazy">
-                </div>
-              </a>
-            </div> -->
-
-            <!-- MABE -->
             <div class="swiper-slide">
               <a href="/brands/mabe" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
-                  <img src="./images/brands/brand-mabe.webp" alt="Labelle" class="max-h-full max-w-full object-cover" loading="lazy">
+                  <img src="./images/brands/brand-mabe.webp" alt="Mabe" class="max-h-full max-w-full object-cover" loading="lazy">
                 </div>
               </a>
             </div>
-
-            <!-- MITSUBISHI -->
             <div class="swiper-slide">
               <a href="/brands/mitsubishi" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
@@ -767,9 +482,7 @@
                 </div>
               </a>
             </div>
-
-            <!-- PLATINUM -->
-             <div class="swiper-slide">
+            <div class="swiper-slide">
               <a href="/brands/platinum" class="flex items-center justify-center bg-white p-4 rounded-lg border border-gray-200 transition-transform duration-100 hover:brightness-95 hover:scale-95">
                 <div class="h-full w-full flex items-center justify-center p-2 bg-white rounded-lg">
                   <img src="./images/brands/brand-platinum.webp" alt="Platinum" class="max-h-full max-w-full object-cover" loading="lazy">
@@ -777,12 +490,8 @@
               </a>
             </div>
           </div>
-
-          <!-- Add Navigation -->
           <div class="swiper-button-prev swiper-button-prev-brands"></div>
           <div class="swiper-button-next swiper-button-next-brands"></div>
-          
-          <!-- Add Pagination -->
           <div class="swiper-pagination swiper-pagination-brands mt-4"></div>
         </div>
       </section>
@@ -808,19 +517,16 @@
 
       <!-- ===== OFFICIAL CHANNELS SECTION ===== -->
       <section class="w-full max-w-screen-xl bg-white/90 backdrop-blur-sm py-16 my-4 shadow-lg rounded-xl">
-        <!-- Section Header -->
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mb-12 text-center">
             <h2 class="text-3xl font-bold text-gray-900">Official Channels</h2>
             <p class="mt-2 text-base text-gray-500">Reach us on your preferred platforms.</p>
           </div>
 
-          <!-- Contact Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-            <!-- Contact Cards -->
             <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-95">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
-                <img src="./images/socials/social-facebook.webp" alt="Facebook" class="h-6 w-6 object-contain" />
+                <img src="./images/socials/social-facebook.webp" alt="Facebook" class="h-6 w-6 object-contain">
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-gray-900">Shop on Facebook</h3>
@@ -829,7 +535,7 @@
             </div>
             <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-95">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
-                <img src="./images/socials/social-qapi.webp" alt="In-store" class="h-6 w-6 object-contain" />
+                <img src="./images/socials/social-qapi.webp" alt="In-store" class="h-6 w-6 object-contain">
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-gray-900">Shop In-Store</h3>
@@ -838,7 +544,7 @@
             </div>
             <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-95">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
-                <img src="./images/socials/social-viber.webp" alt="Viber" class="h-6 w-6 object-contain" />
+                <img src="./images/socials/social-viber.webp" alt="Viber" class="h-6 w-6 object-contain">
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-gray-900">Viber</h3>
@@ -847,7 +553,7 @@
             </div>
             <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-95">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
-                <img src="./images/socials/social-email.webp" alt="Email" class="h-6 w-6 object-contain" />
+                <img src="./images/socials/social-email.webp" alt="Email" class="h-6 w-6 object-contain">
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-gray-900">Email Us</h3>
@@ -856,7 +562,7 @@
             </div>
             <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-95">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
-                <img src="./images/socials/social-telephone.webp" alt="Call" class="h-6 w-6 object-contain" />
+                <img src="./images/socials/social-telephone.webp" alt="Call" class="h-6 w-6 object-contain">
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-gray-900">Call Us</h3>
@@ -865,7 +571,7 @@
             </div>
             <div class="bg-white flex items-center gap-4 p-5 rounded-2xl shadow-xs hover:shadow-md border border-gray-100 transition-transform duration-100 hover:brightness-95 hover:scale-95">
               <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-inner flex items-center justify-center">
-                <img src="./images/socials/social-oldPhone.webp" alt="Call" class="h-6 w-6 object-contain" />
+                <img src="./images/socials/social-oldPhone.webp" alt="Call" class="h-6 w-6 object-contain">
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-gray-900">Hotline</h3>
@@ -914,60 +620,56 @@
 
       <!-- ===== DISCOVER SECTION ===== -->
       <section class="w-full max-w-screen-xl bg-white/90 backdrop-blur-sm py-12 p-4 shadow-lg rounded-xl my-4">
-        <!-- Section Header -->
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mb-8 text-center">
             <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Discover</h2>
             <p class="mt-2 text-sm text-gray-500">Explore our top picks and best deals on quality appliances.</p>
           </div>
 
-          <!-- Discover Grid -->
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <!-- Discover Cards -->
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-1.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-1.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-2.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-2.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-3.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-3.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-4.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-4.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-5.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-5.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-6.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-6.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-7.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-7.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-8.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-8.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-9.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-9.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-10.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-10.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-11.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-11.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
             <div class="aspect-[4/5] overflow-hidden rounded-lg border border-gray-100 shadow-xs transition group hover:shadow-md">
-              <img src="./images/discover/discover-12.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy" />
+              <img src="./images/discover/discover-12.webp" alt="Top Product" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95 group-hover:brightness-95" loading="lazy">
             </div>
           </div>
 
-          <!-- View More Button -->
           <div class="flex justify-center mt-12">
             <button class="bg-brand text-white px-6 py-3 rounded-xl hover:bg-brand-dark transition-transform duration-100 hover:scale-95 flex items-center gap-2 text-sm font-medium shadow-sm">
               View All Products
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </button>
           </div>
@@ -979,34 +681,19 @@
         <!-- Decorative Arc Design -->
         <div class="absolute left-0 bottom-0 w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[450px] 2xl:h-[450px] translate-x-[-50%] translate-y-[50%] -z-10">
           <div class="relative w-full h-full">
-            <!-- Black Arc (Inner) -->
-            <div class="absolute inset-0 rounded-full" style="
-                background: conic-gradient(black 0deg 90deg, transparent 90deg 360deg);
-                mask-image: radial-gradient(circle at center, transparent 35%, black 35%, black 50%, transparent 50%);
-                -webkit-mask-image: radial-gradient(circle at center, transparent 35%, black 35%, black 50%, transparent 50%);
-                mask-composite: add;
-                -webkit-mask-composite: source-over;"></div>
-            <!-- Red Arc (Outer) -->
-            <div class="absolute inset-0 rounded-full" style="
-                background: conic-gradient(red 0deg 90deg, transparent 90deg 360deg);
-                mask-image: radial-gradient(circle at center, transparent 55%, black 55%, black 70%, transparent 70%);
-                -webkit-mask-image: radial-gradient(circle at center, transparent 55%, black 55%, black 70%, transparent 70%);
-                mask-composite: add;
-                -webkit-mask-composite: source-over;"></div>
+            <div class="absolute inset-0 rounded-full" style="background:conic-gradient(black 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);-webkit-mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);mask-composite:add;-webkit-mask-composite:source-over"></div>
+            <div class="absolute inset-0 rounded-full" style="background:conic-gradient(red 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);-webkit-mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);mask-composite:add;-webkit-mask-composite:source-over"></div>
           </div>
         </div>
 
         <!-- Footer Content -->
         <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-16 relative z-10">
-          <!-- Footer Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
-            <!-- Company Info -->
             <div class="lg:col-span-3">
               <img src="./images/qapi-logo.webp" alt="" class="h-16 w-auto object-cover object-center">
               <p class="mb-4 text-xs leading-relaxed">We provide durable, high-quality appliances for every home. Trusted by thousands, backed by excellent support, and guided by our mission of service excellence.</p>
             </div>
 
-            <!-- Footer Links -->
             <div class="lg:col-span-2">
               <h3 class="text-sm font-semibold text-gray-800 mb-3">Company</h3>
               <ul class="space-y-2 text-xs">
@@ -1018,7 +705,6 @@
               </ul>
             </div>
 
-            <!-- Policies -->
             <div class="lg:col-span-2">
               <h3 class="text-sm font-semibold text-gray-800 mb-3">Policies</h3>
               <ul class="space-y-2 text-xs">
@@ -1030,7 +716,6 @@
               </ul>
             </div>
 
-            <!-- Support -->
             <div class="lg:col-span-2">
               <h3 class="text-sm font-semibold text-gray-800 mb-3">Customer Support</h3>
               <ul class="space-y-2 text-xs">
@@ -1041,7 +726,6 @@
               </ul>
             </div>
 
-            <!-- Contact & Newsletter -->
             <div class="lg:col-span-3">
               <h3 class="text-sm font-semibold text-gray-800 mb-3">Get in Touch</h3>
               <ul class="text-xs space-y-2 mb-5">
@@ -1050,25 +734,13 @@
                 <li>🌍 Overseas: <a href="tel:0938534823" class="hover:text-brand">0938534823</a></li>
                 <li>📧 Email: <a href="mailto:support@qualityappliance.com" class="hover:text-brand">support@qualityappliance.com</a></li>
               </ul>
-
-              <!-- Newsletter Form -->
               <form class="flex flex-col sm:flex-row items-center gap-2">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
-                  class="w-full px-3 py-2 border rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-brand" 
-                />
-                <button 
-                  type="submit" 
-                  class="px-4 py-2 text-xs bg-brand text-white rounded-md hover:bg-brand-dark transition"
-                >
-                  Subscribe
-                </button>
+                <input type="email" placeholder="Your email address" class="w-full px-3 py-2 border rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-brand">
+                <button type="submit" class="px-4 py-2 text-xs bg-brand text-white rounded-md hover:bg-brand-dark transition">Subscribe</button>
               </form>
             </div>
           </div>
 
-          <!-- Footer Base -->
           <div class="mt-16 border-t border-gray-100 pt-6 text-center text-xs text-gray-500">
             <div class="flex justify-center items-center gap-4 mb-3">
               <span class="inline-block bg-gray-200 px-3 py-1 rounded">SSL Secured</span>

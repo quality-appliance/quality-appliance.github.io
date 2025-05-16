@@ -10,161 +10,100 @@
   </head>
   <body class="bg-gray-50">
     <div class="min-h-screen w-full flex flex-col justify-start items-center">
-      <!-- ===== HEADER SECTION ===== -->
+
       <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
         <div class="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
-          
-          <!-- Logo -->
           <a href="/" aria-label="Homepage" class="flex items-start shrink-0">
-            <img 
-              src="./images/qapi-logo.webp" 
-              alt="Quality Appliance Logo" class="h-auto w-48 sm:w-56 object-contain"
-            >
+            <img src="./images/qapi-logo.webp" alt="Quality Appliance Logo" class="h-auto w-48 sm:w-56 object-contain">
           </a>
-      
-          <!-- ===== SEARCH BAR ===== -->
           <div class="relative w-full max-w-lg flex-grow">
-            <input 
-              type="search" 
-              id="search" 
-              name="search" 
-              placeholder="Search appliances, brands, or models" 
-              aria-label="Search appliances" 
-              class="w-full bg-gray-100 focus:bg-white px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:outline-none transition focus:ring-2 focus:ring-brand"
-            >
-            
-            <!-- Search Button Icon -->
-            <button 
-              type="submit" 
-              class="absolute inset-y-0 right-3 flex items-center text-gray-600 hover:text-brand transition" 
-              aria-label="Submit search"
-            >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                class="w-5 h-5" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <circle cx="11" cy="11" r="8" stroke-width="2" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2" />
+            <input type="search" id="search" name="search" placeholder="Search appliances, brands, or models" aria-label="Search appliances" class="w-full bg-gray-100 focus:bg-white px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:outline-none transition focus:ring-2 focus:ring-brand">
+            <button type="submit" class="absolute inset-y-0 right-3 flex items-center text-gray-600 hover:text-brand transition" aria-label="Submit search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" stroke-width="2"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/>
               </svg>
             </button>
           </div>
-      
-          <!-- User Actions -->
           <div class="flex items-center gap-3 shrink-0 text-sm text-gray-800 px-4" role="group" aria-label="User actions">
-            <a 
-              href="#login" 
-              class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" 
-              aria-label="Login to your account"
-            >
-              Login
-            </a>
-            <a 
-              href="#register" 
-              class="hover:text-brand transition" 
-              aria-label="Create a new account"
-            >
-              Register
-            </a>
+            <a href="#login" class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" aria-label="Login to your account">Login</a>
+            <a href="#register" class="hover:text-brand transition" aria-label="Create a new account">Register</a>
           </div>
         </div>
       </header>
 
-      <!-- ===== PRIMARY NAVIGATION ===== -->
-      <nav 
-        class="w-full max-w-screen-xl bg-brand text-white shadow-lg rounded-b-xl" 
-        aria-label="Primary navigation"
-      >
+      <nav class="w-full max-w-screen-xl bg-brand text-white shadow-lg rounded-b-xl" aria-label="Primary navigation">
         <div class="w-full max-w-screen-xl flex justify-start items-center gap-5">
           <div class="h-full shrink-0 px-2">
             <img src="./images/menu-stripe.png" alt="M-stripe" class="w-48 h-full object-contain">
           </div>
           <ul class="flex justify-center items-center gap-4 sm:gap-6 text-sm">
-            <li>
-              <a href="/" class="hover:underline" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="./categories.html" class="hover:underline" aria-current="page">Categories</a>
-            </li>
-            <li>
-              <a href="#about" class="hover:underline">About</a>
-            </li>
-            <li>
-              <a href="#products" class="hover:underline">Products</a>
-            </li>
-            <li>
-              <a href="#careers" class="hover:underline">Careers</a>
-            </li>
-            <li>
-              <a href="#promos" class="hover:underline">Promo</a>
-            </li>
-            <li>
-              <a href="#contact-us" class="hover:underline">Contact Us</a>
-            </li>
-            <li>
-              <a href="#stores" class="hover:underline">Stores</a>
-            </li>
-            <li>
-              <a href="#installment" class="hover:underline">Installment Guide</a>
-            </li>
-            <li>
-              <a href="#application" class="hover:underline">Application Portal</a>
-            </li>
+            <li><a href="/" class="hover:underline" aria-current="page">Home</a></li>
+            <li><a href="./categories.html" class="hover:underline" aria-current="page">Categories</a></li>
+            <li><a href="#about" class="hover:underline">About</a></li>
+            <li><a href="#products" class="hover:underline">Products</a></li>
+            <li><a href="#careers" class="hover:underline">Careers</a></li>
+            <li><a href="#promos" class="hover:underline">Promo</a></li>
+            <li><a href="#contact-us" class="hover:underline">Contact Us</a></li>
+            <li><a href="#stores" class="hover:underline">Stores</a></li>
+            <li><a href="#installment" class="hover:underline">Installment Guide</a></li>
+            <li><a href="#application" class="hover:underline">Application Portal</a></li>
           </ul>
         </div>
       </nav>
-    <!-- Main content wrapper -->
+      
     <main class="w-full max-w-screen-xl bg-white flex flex-col my-8 p-2 gap-1 mx-auto rounded-xl shadow-md border border-gray-100">
-      <!-- ===== CATEGORY PAGE HEADER ===== -->
-      <section class="my-4">
-        <div class="text-center">
+      <section class="my-8">
+        <div class="text-center px-8">
           <h1 class="text-3xl font-bold text-gray-800 mb-1 ">All Categories</h1>
           <p class="text-base text-gray-500">Explore all categories of appliances and find the perfect match for your home.</p>
         </div>
       </section>
-      <!-- ===== MAIN CONTENT LAYOUT: 2-COLUMN FLEX ===== -->
-      <div class="flex flex-col lg:flex-row bg-white gap-4 mb-4 p-8">
-        <!-- ===== LEFT COLUMN: FILTERS SIDEBAR ===== -->
+      <div class="flex flex-col lg:flex-row bg-white gap-4 mb-4 px-8">
+
+        <!-- ===== CATEGORY TREE ===== -->
         <aside class="w-full max-w-[30%] p-4 border border-gray-200 rounded-xl shadow-xs" aria-label="Category Filters">
           <fieldset aria-labelledby="filter-heading" class="p-2">
             <legend id="filter-heading" class="text-xl font-bold text-gray-800 border-b border-gray-200 py-2 w-full">Filter by Category</legend>
-            <!-- ===== CATEGORY NAVIGATION TREE ===== -->
             <div role="tree" aria-label="Appliances Categories">
-              <!-- Level 1: Furniture Category -->
+
+              <!-- LEVEL 1: FURNITURE CATEGORY -->
               <details open class="group my-4" role="treeitem" aria-expanded="true">
                 <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
                   <input type="checkbox" class="accent-brand cursor-pointer" id="furniture-category" aria-label="Filter by Furniture">
-                  <label for="furniture-category" class="w-full h-full text-gray-700 font-semibold select-none cursor-pointer">Furniture</label>
+                  <label for="furniture-category" class="flex-1 text-gray-700 font-semibold cursor-pointer">Furniture</label>
                   <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
                   </svg>
                 </summary>
-                <!-- Level 2: Bed Sub-Category -->
-                <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Furniture subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="bed-category" aria-label="Filter by Bed">
-                    <label for="bed-category" class="text-sm text-gray-700 select-none cursor-pointer">Bed</label>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <!-- Level 3: Bed Types -->
-                  <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Bed types">
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="mattress" aria-label="Filter by Mattress">
-                      <label for="mattress" class="text-gray-600 select-none cursor-pointer flex-1">Mattress</label>
+
+                <!-- LEVEL 2: BED SUB-CATEGORY -->
+                <div class="ml-6 mt-2 space-y-2">
+                  <details open class="group" role="treeitem" aria-expanded="true">
+                    <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
+                      <input type="checkbox" class="accent-brand cursor-pointer" id="bed-category" aria-label="Filter by Bed">
+                      <label for="bed-category" class="flex-1 text-sm text-gray-700 cursor-pointer">Bed</label>
+                      <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </summary>
+                    <!-- LEVEL 3: MATTRESS TYPE -->
+                    <div class="ml-6 space-y-1 border-b border-gray-200">
+                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                        <input type="checkbox" class="accent-brand" id="mattress" aria-label="Filter by Mattress">
+                        <label for="mattress" class="text-gray-600 flex-1 cursor-pointe select-none">Mattress</label>
+                      </div>
+                      <!-- LEVEL 3: WALL-MOUNTED TYPE-->
+                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                        <input type="checkbox" class="accent-brand" id="wall-mounted" aria-label="Filter by Wall-Mounted Types">
+                        <label for="wall-mounted" class="text-gray-600 flex-1 cursor-pointer select-none">Wall-Mounted Types</label>
+                      </div>
                     </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="wall-mounted" aria-label="Filter by Wall-Mounted Types">
-                      <label for="wall-mounted" class="text-gray-600 select-none cursor-pointer flex-1">Wall-Mounted Types</label>
-                    </div>
-                  </div>
-                </details>
+                  </details>
+                </div>
               </details>
-              <!-- Level 1: Air Conditioning Category -->
+
+              <!-- LEVEL 1: AIR CONDITIONING CATEGORY -->
               <details open class="group my-4" role="treeitem" aria-expanded="true">
                 <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
                   <input type="checkbox" class="accent-brand cursor-pointer" id="air-conditioning-category" aria-label="Filter by Air Conditioning">
@@ -173,312 +112,178 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
                   </svg>
                 </summary>
-                <!-- Level 2: Single Aircon Sub-Category -->
-                <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Air Conditioning subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="single-aircon-category" aria-label="Filter by Single Aircon">
-                    <label for="single-aircon-category" class="text-sm text-gray-700 select-none cursor-pointer">Single Aircon</label>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <!-- Level 3: Single Aircon Types -->
-                  <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Single Aircon types">
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="s-inverter" aria-label="Filter by Inverter">
-                      <label for="inverter" class="text-gray-600 select-none cursor-pointer flex-1">Inverter</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="s-non-inverter" aria-label="Filter by Non-Inverter ">
-                      <label for="non-inverter" class="text-gray-600 select-none cursor-pointer flex-1">Non-Inverter</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="s-indoor-units" aria-label="Filter by Indoor Units">
-                      <label for="indoor-units" class="text-gray-600 select-none cursor-pointer flex-1">Indoor Units</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="s-outdoor-units" aria-label="Filter by Outdoor Units">
-                      <label for="outdoor-units" class="text-gray-600 select-none cursor-pointer flex-1">Outdoor Units</label>
-                    </div>
-                    <details open class="group" aria-label="Mounted Types subcategories">
-                      <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                        <span class="text-gray-600">Mounted Types</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                        </svg>
-                      </summary>
-                      <div class="ml-6 space-y-1" role="group" aria-label="Mounted types">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="wall-mount" aria-label="Filter by Wall Mount" />
-                          <span class="text-gray-600">Wall</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="ceiling-mount" aria-label="Filter by Ceiling Mount" />
-                          <span class="text-gray-600">Ceiling</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="floor-mount" aria-label="Filter by Floor Mount" />
-                          <span class="text-gray-600">Floor</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="cassette-mount" aria-label="Filter by Cassette Mount" />
-                          <span class="text-gray-600">Cassette</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="ducted-mount" aria-label="Filter by Ducted Mount" />
-                          <span class="text-gray-600">Ducted</span>
-                        </label>
+                <!-- LEVEL 2: AIR CONDITIONING SUB-CATEGORIES -->
+                <div class="ml-6 mt-2 space-y-2" role="group" aria-label="Air Conditioning subcategories">
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
+                    <input type="checkbox" class="accent-brand cursor-pointer" id="single-aircon" aria-label="Filter by Single Aircon">
+                    <label for="single-aircon" class="text-sm text-gray-700 select-none cursor-pointer">Single Aircon</label>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
+                    <input type="checkbox" class="accent-brand cursor-pointer" id="split-type" aria-label="Filter by Split Type Aircon">
+                    <label for="split-type" class="text-sm text-gray-700 select-none cursor-pointer">Split Type Aircon</label>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
+                    <input type="checkbox" class="accent-brand cursor-pointer" id="inverter" aria-label="Filter by Inverter">
+                    <label for="inverter" class="text-sm text-gray-700 select-none cursor-pointer">Inverter</label>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
+                    <input type="checkbox" class="accent-brand cursor-pointer" id="non-inverter" aria-label="Filter by Non-Inverter">
+                    <label for="non-inverter" class="text-sm text-gray-700 select-none cursor-pointer">Non-Inverter</label>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
+                    <input type="checkbox" class="accent-brand cursor-pointer" id="indoor-unit" aria-label="Filter by Indoor Unit">
+                    <label for="indoor-unit" class="text-sm text-gray-700 select-none cursor-pointer">Indoor Unit</label>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
+                    <input type="checkbox" class="accent-brand cursor-pointer" id="outdoor-unit" aria-label="Filter by Outdoor Unit">
+                    <label for="outdoor-unit" class="text-sm text-gray-700 select-none cursor-pointer">Outdoor Unit</label>
+                  </div>
+                  <details class="group" role="group" aria-label="Mounting Types">
+                    <summary class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200 cursor-pointer">
+                      <input type="checkbox" class="accent-brand cursor-pointer" id="mounting-types" aria-label="Filter by Mounting Types">
+                      <label for="mounting-types" class="text-sm text-gray-700 select-none cursor-pointer">Mounting Types</label>
+                      <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </summary>
+                    <div class="ml-6 space-y-1 border-b border-gray-200">
+                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                        <input type="checkbox" class="accent-brand cursor-pointer" id="wall-mount" aria-label="Filter by Wall Mount">
+                        <label for="wall-mount" class="text-gray-600 select-none cursor-pointer">Wall Mount</label>
                       </div>
-                    </details>
-                  </div>
-                </details>
-                <!-- Level 2: Split Type Sub-Category -->
-                <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Air Conditioning subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="split-type-category" aria-label="Filter by Split Type Aircon">
-                    <label for="split-type-category" class="text-sm text-gray-700 select-none cursor-pointer">Split Type Aircon</label>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <!-- Level 3: Split Type Aircon Types -->
-                  <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Split Type Aircon types">
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="st-inverter" aria-label="Filter by Inverter">
-                      <label for="inverter" class="text-gray-600 select-none cursor-pointer flex-1">Inverter</label>
+                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                        <input type="checkbox" class="accent-brand cursor-pointer" id="ceiling-mount" aria-label="Filter by Ceiling Mount">
+                        <label for="ceiling-mount" class="text-gray-600 select-none cursor-pointer">Ceiling Mount</label>
+                      </div>
+                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                        <input type="checkbox" class="accent-brand cursor-pointer" id="floor-mount" aria-label="Filter by Floor Mount">
+                        <label for="floor-mount" class="text-gray-600 select-none cursor-pointer">Floor Mount</label>
+                      </div>
+                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                        <input type="checkbox" class="accent-brand cursor-pointer" id="cassette-mount" aria-label="Filter by Cassette Mount">
+                        <label for="cassette-mount" class="text-gray-600 select-none cursor-pointer">Cassette Mount</label>
+                      </div>
+                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
+                        <input type="checkbox" class="accent-brand cursor-pointer" id="ducted-mount" aria-label="Filter by Ducted Mount">
+                        <label for="ducted-mount" class="text-gray-600 select-none cursor-pointer">Ducted Mount</label>
+                      </div>
                     </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="st-non-inverter" aria-label="Filter by Non-Inverter ">
-                      <label for="non-inverter" class="text-gray-600 select-none cursor-pointer flex-1">Non-Inverter</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="st-indoor-units" aria-label="Filter by Indoor Units">
-                      <label for="indoor-units" class="text-gray-600 select-none cursor-pointer flex-1">Indoor Units</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="st-outdoor-units" aria-label="Filter by Outdoor Units">
-                      <label for="outdoor-units" class="text-gray-600 select-none cursor-pointer flex-1">Outdoor Units</label>
-                    </div>
-                  </div>
-                </details>
+                  </details>
+                </div>
               </details>
-              <!-- Level 1: Audio/Video Equipment Category -->
+
+
+              <!-- LEVEL 1: AUDIO/VIDEO EQUIPMENT CATEGORY -->
               <details open class="group my-4" role="treeitem" aria-expanded="true">
                 <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
                   <input type="checkbox" class="accent-brand cursor-pointer" id="audiovideo-equipment-category" aria-label="Filter by Audio/Video Equipment">
-                  <label for="audiovideo-equipment-category" class="text-sm text-gray-700 font-semibold select-none cursor-pointer">Audio/Video Equipment</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
+                  <label for="audiovideo-equipment-category" class="flex-1 text-gray-700 font-semibold cursor-pointer">Audio/Video Equipment</label>
+                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
                 </summary>
-                <!-- Level 2: Audio Sub-Category -->
-                <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Audio subcategories">
+                <!-- LEVEL 2: AUDIO SUB-CATEGORY -->
+                <details open class="ml-6 mt-2 space-y-2" role="group">
                   <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
                     <input type="checkbox" class="accent-brand cursor-pointer" id="audio-category" aria-label="Filter by Audio">
-                    <label for="single-aircon-category" class="text-sm text-gray-700 select-none cursor-pointer">Audio</label>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
+                    <label for="audio-category" class="flex-1 text-sm text-gray-700 cursor-pointer">Audio</label>
+                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
                   </summary>
-                  <!-- Level 3: Audio Types -->
-                  <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Audio types">
-                    <!-- Level 4: Component Sub Types  -->
-                    <details open class="group" aria-label="Component subcategories">
+                  <!-- LEVEL 3: AUDIO TYPES -->
+                  <div class="ml-6 space-y-1 border-b border-gray-200">
+                    <!-- Component Types -->
+                    <details open class="group">
                       <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
                         <span class="text-gray-600">Component</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                        </svg>
+                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
                       </summary>
-                      <div class="ml-6 space-y-1" role="group" aria-label="Component Sub Types">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="mini" aria-label="Filter by Mini" />
-                          <span class="text-gray-600">Mini</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="micro" aria-label="Filter by Micro" />
-                          <span class="text-gray-600">Micro</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="HiFi" aria-label="Filter by HiFi" />
-                          <span class="text-gray-600">HiFi</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="boombox" aria-label="Filter by Boombox" />
-                          <span class="text-gray-600">Boombox</span>
-                        </label>
+                      <div class="ml-6 space-y-1">
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="mini" aria-label="Filter by Mini" /><span class="text-gray-600">Mini</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="micro" aria-label="Filter by Micro" /><span class="text-gray-600">Micro</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="HiFi" aria-label="Filter by HiFi" /><span class="text-gray-600">HiFi</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="boombox" aria-label="Filter by Boombox" /><span class="text-gray-600">Boombox</span></label>
                       </div>
                     </details>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="karaoke" aria-label="Filter by Karaoke ">
-                      <label for="karaoke" class="text-gray-600 select-none cursor-pointer flex-1">Karaoke</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="videoke" aria-label="Filter by Videoke">
-                      <label for="videoke" class="text-gray-600 select-none cursor-pointer flex-1">Videoke</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="speaker" aria-label="Filter by Speaker">
-                      <label for="speaker" class="text-gray-600 select-none cursor-pointer flex-1">Speaker</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="subwoofer" aria-label="Filter by Subwoofer">
-                      <label for="subwoofer" class="text-gray-600 select-none cursor-pointer flex-1">Subwoofer</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="amplifier" aria-label="Filter by Amplifier">
-                      <label for="amplifier" class="text-gray-600 select-none cursor-pointer flex-1">Amplifier</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="equalizer" aria-label="Filter by Equalizer">
-                      <label for="equalizer" class="text-gray-600 select-none cursor-pointer flex-1">Equalizer</label>
-                    </div>
-                    <!-- Level 4: Home Theater Sub Type  -->
-                    <details open class="group" aria-label="Home Theater subcategories">
+                    <!-- Simple Audio Types -->
+                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="karaoke" aria-label="Filter by Karaoke"><label for="karaoke" class="text-gray-600 select-none cursor-pointer flex-1">Karaoke</label></div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="videoke" aria-label="Filter by Videoke"><label for="videoke" class="text-gray-600 select-none cursor-pointer flex-1">Videoke</label></div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="speaker" aria-label="Filter by Speaker"><label for="speaker" class="text-gray-600 select-none cursor-pointer flex-1">Speaker</label></div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="subwoofer" aria-label="Filter by Subwoofer"><label for="subwoofer" class="text-gray-600 select-none cursor-pointer flex-1">Subwoofer</label></div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="amplifier" aria-label="Filter by Amplifier"><label for="amplifier" class="text-gray-600 select-none cursor-pointer flex-1">Amplifier</label></div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="equalizer" aria-label="Filter by Equalizer"><label for="equalizer" class="text-gray-600 select-none cursor-pointer flex-1">Equalizer</label></div>
+                    <!-- Home Theater Types -->
+                    <details open class="group">
                       <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
                         <input type="checkbox" class="accent-brand" id="home-theater" aria-label="Filter by Home Theater" />
                         <span class="text-gray-600">Home Theater</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                        </svg>
+                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
                       </summary>
-                      <div class="ml-6 space-y-1" role="group" aria-label="Home Theater types">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="5.1" aria-label="Filter by 5.1" />
-                          <span class="text-gray-600">5.1 Channel</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="7.1" aria-label="Filter by 7.1" />
-                          <span class="text-gray-600">7.1 Channel</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="soundbar" aria-label="Filter by Soundbar" />
-                          <span class="text-gray-600">Soundbar</span>
-                        </label>
+                      <div class="ml-6 space-y-1">
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="5.1" aria-label="Filter by 5.1" /><span class="text-gray-600">5.1 Channel</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="7.1" aria-label="Filter by 7.1" /><span class="text-gray-600">7.1 Channel</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="soundbar" aria-label="Filter by Soundbar" /><span class="text-gray-600">Soundbar</span></label>
                       </div>
                     </details>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="accessories" aria-label="Filter by Accessories">
-                      <label for="accessories" class="text-gray-600 select-none cursor-pointer flex-1">Accessories</label>
-                    </div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="accessories" aria-label="Filter by Accessories"><label for="accessories" class="text-gray-600 select-none cursor-pointer flex-1">Accessories</label></div>
                   </div>
                 </details>
-                <!-- Level 2: Video Sub-Category -->
-                <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Video subcategories">
+                <!-- LEVEL 2: VIDEO SUB-CATEGORY -->
+                <details open class="ml-6 mt-2 space-y-2" role="group">
                   <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="video" aria-label="Filter by Video">
-                    <label for="video-category" class="text-sm text-gray-700 select-none cursor-pointer">Video</label>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
+                    <input type="checkbox" class="accent-brand cursor-pointer" id="video-category" aria-label="Filter by Video">
+                    <label for="video-category" class="flex-1 text-sm text-gray-700 cursor-pointer">Video</label>
+                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
                   </summary>
-                  <!-- Level 3: Video Types -->
-                  <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Split Type Aircon types">
-                    <!-- Level 4: Video Sub Type  -->
-                    <details open class="group" aria-label="Video subcategories">
+                  <!-- LEVEL 3: VIDEO TYPES -->
+                  <div class="ml-6 space-y-1 border-b border-gray-200">
+                    <!-- TV Types -->
+                    <details open class="group">
                       <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
                         <input type="checkbox" class="accent-brand" id="tv" aria-label="Filter by TV" />
                         <span class="text-gray-600">TV</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                        </svg>
+                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
                       </summary>
-                      <div class="ml-6 space-y-1" role="group" aria-label="video subtypes">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="curved" aria-label="Filter by Curved" />
-                          <span class="text-gray-600">Curved</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="smart" aria-label="Filter by Smart" />
-                          <span class="text-gray-600">Smart</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="basic" aria-label="Filter by Basic" />
-                          <span class="text-gray-600">Basic</span>
-                        </label>
-                        <!-- Level 5: TV Variant  -->
-                        <details class="group" aria-label="TV variant">
-                          <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                            <span class="text-gray-600">Display</span>
-                            <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                            </svg>
-                          </summary>
-                          <div class="ml-6 space-y-1" role="group" aria-label="TV variants">
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                              <input type="checkbox" class="accent-brand" id="led" aria-label="Filter by LED" />
-                              <span class="text-gray-600">LED</span>
-                            </label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                              <input type="checkbox" class="accent-brand" id="lcd" aria-label="Filter by LCD" />
-                              <span class="text-gray-600">LCD</span>
-                            </label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                              <input type="checkbox" class="accent-brand" id="crt" aria-label="Filter by CRT" />
-                              <span class="text-gray-600">CRT</span>
-                            </label>
+                      <div class="ml-6 space-y-1">
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="curved" aria-label="Filter by Curved" /><span class="text-gray-600">Curved</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="smart" aria-label="Filter by Smart" /><span class="text-gray-600">Smart</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="basic" aria-label="Filter by Basic" /><span class="text-gray-600">Basic</span></label>
+                        <!-- TV Display Types -->
+                        <details class="group">
+                          <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm"><span class="text-gray-600">Display</span><svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></summary>
+                          <div class="ml-6 space-y-1">
+                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="led" aria-label="Filter by LED" /><span class="text-gray-600">LED</span></label>
+                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="lcd" aria-label="Filter by LCD" /><span class="text-gray-600">LCD</span></label>
+                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="crt" aria-label="Filter by CRT" /><span class="text-gray-600">CRT</span></label>
                           </div>
                         </details>
-                        <!-- Level 5: TV Variant  -->
-                        <details class="group" aria-label="resolution variant">
-                          <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                            <span class="text-gray-600">Resolution</span>
-                            <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                            </svg>
-                          </summary>
-                          <div class="ml-6 space-y-1" role="group" aria-label="video subtypes">
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                              <input type="checkbox" class="accent-brand" id="hd" aria-label="Filter by HD" />
-                              <span class="text-gray-600">HD</span>
-                            </label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                              <input type="checkbox" class="accent-brand" id="fhd" aria-label="Filter by FHD" />
-                              <span class="text-gray-600">FHD</span>
-                            </label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                              <input type="checkbox" class="accent-brand" id="uhd" aria-label="Filter by UHD" />
-                              <span class="text-gray-600">UHD</span>
-                            </label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                              <input type="checkbox" class="accent-brand" id="suhd" aria-label="Filter by SUHD" />
-                              <span class="text-gray-600">SUHD</span>
-                            </label>
+                        <!-- TV Resolution Types -->
+                        <details class="group">
+                          <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm"><span class="text-gray-600">Resolution</span><svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></summary>
+                          <div class="ml-6 space-y-1">
+                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="hd" aria-label="Filter by HD" /><span class="text-gray-600">HD</span></label>
+                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="fhd" aria-label="Filter by FHD" /><span class="text-gray-600">FHD</span></label>
+                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="uhd" aria-label="Filter by UHD" /><span class="text-gray-600">UHD</span></label>
+                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="suhd" aria-label="Filter by SUHD" /><span class="text-gray-600">SUHD</span></label>
                           </div>
                         </details>
                       </div>
                     </details>
-                    <!-- Level 4: Media Player Sub Type  -->
-                    <details open class="group" aria-label="Media Player subcategories">
+                    <!-- Media Player Types -->
+                    <details open class="group">
                       <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
                         <input type="checkbox" class="accent-brand" id="media-player" aria-label="Filter by Media Player" />
                         <span class="text-gray-600">Media Player</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                        </svg>
+                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
                       </summary>
-                      <div class="ml-6 space-y-1" role="group" aria-label="Home Theater types">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="blue-ray" aria-label="Filter by Blue Ray" />
-                          <span class="text-gray-600">Blue Ray</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="dvd" aria-label="Filter by DVD " />
-                          <span class="text-gray-600">DVD</span>
-                        </label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                          <input type="checkbox" class="accent-brand" id="digial-media" aria-label="Filter by Digital Media" />
-                          <span class="text-gray-600">Digital Media</span>
-                        </label>
+                      <div class="ml-6 space-y-1">
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="blue-ray" aria-label="Filter by Blue Ray" /><span class="text-gray-600">Blue Ray</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="dvd" aria-label="Filter by DVD" /><span class="text-gray-600">DVD</span></label>
+                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="digital-media" aria-label="Filter by Digital Media" /><span class="text-gray-600">Digital Media</span></label>
                       </div>
                     </details>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="tv-accessories" aria-label="Filter by TV Accessories">
-                      <label for="tv-accessories" class="text-gray-600 select-none cursor-pointer flex-1">TV Accessories</label>
-                    </div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="tv-accessories" aria-label="Filter by TV Accessories"><label for="tv-accessories" class="text-gray-600 select-none cursor-pointer flex-1">TV Accessories</label></div>
                   </div>
                 </details>
               </details>
+
               <!-- Level 1: Home Appliances Category -->
               <details open class="group my-4" role="treeitem" aria-expanded="true">
                 <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
