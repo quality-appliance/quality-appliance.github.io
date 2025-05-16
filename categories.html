@@ -10,7 +10,6 @@
   </head>
   <body class="bg-gray-50">
     <div class="min-h-screen w-full flex flex-col justify-start items-center">
-
       <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
         <div class="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
           <a href="/" aria-label="Homepage" class="flex items-start shrink-0">
@@ -59,622 +58,33 @@
           <p class="text-base text-gray-500">Explore all categories of appliances and find the perfect match for your home.</p>
         </div>
       </section>
-      <div class="flex flex-col lg:flex-row bg-white gap-4 mb-4 px-8">
-
-        <!-- ===== CATEGORY TREE ===== -->
-        <aside class="w-full max-w-[30%] p-4 border border-gray-200 rounded-xl shadow-xs" aria-label="Category Filters">
-          <fieldset aria-labelledby="filter-heading" class="p-2">
-            <legend id="filter-heading" class="text-xl font-bold text-gray-800 border-b border-gray-200 py-2 w-full">Filter by Category</legend>
-            <div role="tree" aria-label="Appliances Categories">
-
-              <!-- LEVEL 1: FURNITURE CATEGORY -->
-              <details open class="group my-4" role="treeitem" aria-expanded="true">
-                <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="furniture-category" aria-label="Filter by Furniture">
-                  <label for="furniture-category" class="flex-1 text-gray-700 font-semibold cursor-pointer">Furniture</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
-                </summary>
-
-                <!-- LEVEL 2: BED SUB-CATEGORY -->
-                <div class="ml-6 mt-2 space-y-2">
-                  <details open class="group" role="treeitem" aria-expanded="true">
-                    <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="bed-category" aria-label="Filter by Bed">
-                      <label for="bed-category" class="flex-1 text-sm text-gray-700 cursor-pointer">Bed</label>
-                      <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                      </svg>
-                    </summary>
-                    <!-- LEVEL 3: MATTRESS TYPE -->
-                    <div class="ml-6 space-y-1 border-b border-gray-200">
-                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand" id="mattress" aria-label="Filter by Mattress">
-                        <label for="mattress" class="text-gray-600 flex-1 cursor-pointe select-none">Mattress</label>
-                      </div>
-                      <!-- LEVEL 3: WALL-MOUNTED TYPE-->
-                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand" id="wall-mounted" aria-label="Filter by Wall-Mounted Types">
-                        <label for="wall-mounted" class="text-gray-600 flex-1 cursor-pointer select-none">Wall-Mounted Types</label>
-                      </div>
-                    </div>
-                  </details>
-                </div>
-              </details>
-
-              <!-- LEVEL 1: AIR CONDITIONING CATEGORY -->
-              <details open class="group my-4" role="treeitem" aria-expanded="true">
-                <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="air-conditioning-category" aria-label="Filter by Air Conditioning">
-                  <label for="air-conditioning-category" class="text-gray-700 font-semibold select-none cursor-pointer">Air Conditioning</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
-                </summary>
-                <!-- LEVEL 2: AIR CONDITIONING SUB-CATEGORIES -->
-                <div class="ml-6 mt-2 space-y-2" role="group" aria-label="Air Conditioning subcategories">
-                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="single-aircon" aria-label="Filter by Single Aircon">
-                    <label for="single-aircon" class="text-sm text-gray-700 select-none cursor-pointer">Single Aircon</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="split-type" aria-label="Filter by Split Type Aircon">
-                    <label for="split-type" class="text-sm text-gray-700 select-none cursor-pointer">Split Type Aircon</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="inverter" aria-label="Filter by Inverter">
-                    <label for="inverter" class="text-sm text-gray-700 select-none cursor-pointer">Inverter</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="non-inverter" aria-label="Filter by Non-Inverter">
-                    <label for="non-inverter" class="text-sm text-gray-700 select-none cursor-pointer">Non-Inverter</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="indoor-unit" aria-label="Filter by Indoor Unit">
-                    <label for="indoor-unit" class="text-sm text-gray-700 select-none cursor-pointer">Indoor Unit</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="outdoor-unit" aria-label="Filter by Outdoor Unit">
-                    <label for="outdoor-unit" class="text-sm text-gray-700 select-none cursor-pointer">Outdoor Unit</label>
-                  </div>
-                  <details class="group" role="group" aria-label="Mounting Types">
-                    <summary class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-b border-gray-200 cursor-pointer">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="mounting-types" aria-label="Filter by Mounting Types">
-                      <label for="mounting-types" class="text-sm text-gray-700 select-none cursor-pointer">Mounting Types</label>
-                      <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                      </svg>
-                    </summary>
-                    <div class="ml-6 space-y-1 border-b border-gray-200">
-                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand cursor-pointer" id="wall-mount" aria-label="Filter by Wall Mount">
-                        <label for="wall-mount" class="text-gray-600 select-none cursor-pointer">Wall Mount</label>
-                      </div>
-                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand cursor-pointer" id="ceiling-mount" aria-label="Filter by Ceiling Mount">
-                        <label for="ceiling-mount" class="text-gray-600 select-none cursor-pointer">Ceiling Mount</label>
-                      </div>
-                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand cursor-pointer" id="floor-mount" aria-label="Filter by Floor Mount">
-                        <label for="floor-mount" class="text-gray-600 select-none cursor-pointer">Floor Mount</label>
-                      </div>
-                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand cursor-pointer" id="cassette-mount" aria-label="Filter by Cassette Mount">
-                        <label for="cassette-mount" class="text-gray-600 select-none cursor-pointer">Cassette Mount</label>
-                      </div>
-                      <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand cursor-pointer" id="ducted-mount" aria-label="Filter by Ducted Mount">
-                        <label for="ducted-mount" class="text-gray-600 select-none cursor-pointer">Ducted Mount</label>
-                      </div>
-                    </div>
-                  </details>
-                </div>
-              </details>
-
-
-              <!-- LEVEL 1: AUDIO/VIDEO EQUIPMENT CATEGORY -->
-              <details open class="group my-4" role="treeitem" aria-expanded="true">
-                <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="audiovideo-equipment-category" aria-label="Filter by Audio/Video Equipment">
-                  <label for="audiovideo-equipment-category" class="flex-1 text-gray-700 font-semibold cursor-pointer">Audio/Video Equipment</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
-                </summary>
-                <!-- LEVEL 2: AUDIO SUB-CATEGORY -->
-                <details open class="ml-6 mt-2 space-y-2" role="group">
-                  <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="audio-category" aria-label="Filter by Audio">
-                    <label for="audio-category" class="flex-1 text-sm text-gray-700 cursor-pointer">Audio</label>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
-                  </summary>
-                  <!-- LEVEL 3: AUDIO TYPES -->
-                  <div class="ml-6 space-y-1 border-b border-gray-200">
-                    <!-- Component Types -->
-                    <details open class="group">
-                      <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                        <span class="text-gray-600">Component</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
-                      </summary>
-                      <div class="ml-6 space-y-1">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="mini" aria-label="Filter by Mini" /><span class="text-gray-600">Mini</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="micro" aria-label="Filter by Micro" /><span class="text-gray-600">Micro</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="HiFi" aria-label="Filter by HiFi" /><span class="text-gray-600">HiFi</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="boombox" aria-label="Filter by Boombox" /><span class="text-gray-600">Boombox</span></label>
-                      </div>
-                    </details>
-                    <!-- Simple Audio Types -->
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="karaoke" aria-label="Filter by Karaoke"><label for="karaoke" class="text-gray-600 select-none cursor-pointer flex-1">Karaoke</label></div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="videoke" aria-label="Filter by Videoke"><label for="videoke" class="text-gray-600 select-none cursor-pointer flex-1">Videoke</label></div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="speaker" aria-label="Filter by Speaker"><label for="speaker" class="text-gray-600 select-none cursor-pointer flex-1">Speaker</label></div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="subwoofer" aria-label="Filter by Subwoofer"><label for="subwoofer" class="text-gray-600 select-none cursor-pointer flex-1">Subwoofer</label></div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="amplifier" aria-label="Filter by Amplifier"><label for="amplifier" class="text-gray-600 select-none cursor-pointer flex-1">Amplifier</label></div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="equalizer" aria-label="Filter by Equalizer"><label for="equalizer" class="text-gray-600 select-none cursor-pointer flex-1">Equalizer</label></div>
-                    <!-- Home Theater Types -->
-                    <details open class="group">
-                      <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand" id="home-theater" aria-label="Filter by Home Theater" />
-                        <span class="text-gray-600">Home Theater</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
-                      </summary>
-                      <div class="ml-6 space-y-1">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="5.1" aria-label="Filter by 5.1" /><span class="text-gray-600">5.1 Channel</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="7.1" aria-label="Filter by 7.1" /><span class="text-gray-600">7.1 Channel</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="soundbar" aria-label="Filter by Soundbar" /><span class="text-gray-600">Soundbar</span></label>
-                      </div>
-                    </details>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="accessories" aria-label="Filter by Accessories"><label for="accessories" class="text-gray-600 select-none cursor-pointer flex-1">Accessories</label></div>
-                  </div>
-                </details>
-                <!-- LEVEL 2: VIDEO SUB-CATEGORY -->
-                <details open class="ml-6 mt-2 space-y-2" role="group">
-                  <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="video-category" aria-label="Filter by Video">
-                    <label for="video-category" class="flex-1 text-sm text-gray-700 cursor-pointer">Video</label>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
-                  </summary>
-                  <!-- LEVEL 3: VIDEO TYPES -->
-                  <div class="ml-6 space-y-1 border-b border-gray-200">
-                    <!-- TV Types -->
-                    <details open class="group">
-                      <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand" id="tv" aria-label="Filter by TV" />
-                        <span class="text-gray-600">TV</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
-                      </summary>
-                      <div class="ml-6 space-y-1">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="curved" aria-label="Filter by Curved" /><span class="text-gray-600">Curved</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="smart" aria-label="Filter by Smart" /><span class="text-gray-600">Smart</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="basic" aria-label="Filter by Basic" /><span class="text-gray-600">Basic</span></label>
-                        <!-- TV Display Types -->
-                        <details class="group">
-                          <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm"><span class="text-gray-600">Display</span><svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></summary>
-                          <div class="ml-6 space-y-1">
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="led" aria-label="Filter by LED" /><span class="text-gray-600">LED</span></label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="lcd" aria-label="Filter by LCD" /><span class="text-gray-600">LCD</span></label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="crt" aria-label="Filter by CRT" /><span class="text-gray-600">CRT</span></label>
-                          </div>
-                        </details>
-                        <!-- TV Resolution Types -->
-                        <details class="group">
-                          <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm"><span class="text-gray-600">Resolution</span><svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></summary>
-                          <div class="ml-6 space-y-1">
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="hd" aria-label="Filter by HD" /><span class="text-gray-600">HD</span></label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="fhd" aria-label="Filter by FHD" /><span class="text-gray-600">FHD</span></label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="uhd" aria-label="Filter by UHD" /><span class="text-gray-600">UHD</span></label>
-                            <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="suhd" aria-label="Filter by SUHD" /><span class="text-gray-600">SUHD</span></label>
-                          </div>
-                        </details>
-                      </div>
-                    </details>
-                    <!-- Media Player Types -->
-                    <details open class="group">
-                      <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                        <input type="checkbox" class="accent-brand" id="media-player" aria-label="Filter by Media Player" />
-                        <span class="text-gray-600">Media Player</span>
-                        <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
-                      </summary>
-                      <div class="ml-6 space-y-1">
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="blue-ray" aria-label="Filter by Blue Ray" /><span class="text-gray-600">Blue Ray</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="dvd" aria-label="Filter by DVD" /><span class="text-gray-600">DVD</span></label>
-                        <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand" id="digital-media" aria-label="Filter by Digital Media" /><span class="text-gray-600">Digital Media</span></label>
-                      </div>
-                    </details>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm"><input type="checkbox" class="accent-brand cursor-pointer" id="tv-accessories" aria-label="Filter by TV Accessories"><label for="tv-accessories" class="text-gray-600 select-none cursor-pointer flex-1">TV Accessories</label></div>
-                  </div>
-                </details>
-              </details>
-
-              <!-- Level 1: Home Appliances Category -->
-              <details open class="group my-4" role="treeitem" aria-expanded="true">
-                <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="home-appliances-category" aria-label="Filter by Home Appliances">
-                  <label for="home-appliances-category" class="text-gray-700 font-semibold select-none cursor-pointer">Home Appliances</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
-                </summary>
-                <!-- Level 2: Washing Machine Sub-Category -->
-                <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Washing Machine subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="washing-machine-category" aria-label="Filter by Washing Machine">
-                    <label for="washing-machine-category" class="text-sm text-gray-700  select-none cursor-pointer">Washing Machine</label>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <!-- Level 3: Washing Machine Types -->
-                  <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Washing Machine types">
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="twin-tub" aria-label="Filter by Twin Tub">
-                      <label for="twin-tub" class="text-gray-600 select-none cursor-pointer flex-1">Twin Tub</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="single-tub" aria-label="Filter by Single Tub Types">
-                      <label for="single-tub" class="text-gray-600 select-none cursor-pointer flex-1">Single Tub</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="fully-auto" aria-label="Filter by Fully Auto Types">
-                      <label for="fully-auto" class="text-gray-600 select-none cursor-pointer flex-1">Fully Auto</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="top-front-load" aria-label="Filter by Top/Front Load Types">
-                      <label for="top-front-load" class="text-gray-600 select-none cursor-pointer flex-1">Top/Front Load</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="gas-dryer" aria-label="Filter by Gas Dryer Types">
-                      <label for="gas-dryer" class="text-gray-600 select-none cursor-pointer flex-1">Gas Dryer</label>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand cursor-pointer" id="double-washer" aria-label="Filter by Double Washer Types">
-                      <label for="double-washer" class="text-gray-600 select-none cursor-pointer flex-1">Double Washer</label>
-                    </div>
-                  </div>
-                </details>
-              <!-- Level 2: Refrigerator Sub-Category -->
-              <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Refrigerator subcategories">
-                <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="refrigerator-category" aria-label="Filter by Refrigrator">
-                  <label for="refrigerator-category" class="text-sm text-gray-700  select-none cursor-pointer">Refrigerator</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
-                </summary>
-                <!-- Level 3: Refrigerator Types -->
-                <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Refrigerator types">
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="single-door" aria-label="Filter by Single Door">
-                    <label for="single-door" class="text-gray-600 select-none cursor-pointer flex-1">Single Door</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="two-door" aria-label="Filter by Two Door">
-                    <label for="two-door" class="text-gray-600 select-none cursor-pointer flex-1">Two Door</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="sidebyside" aria-label="Filter by Side by Side">
-                    <label for="sidebyside" class="text-gray-600 select-none cursor-pointer flex-1">Side by Side</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="frenchdoor" aria-label="Filter by Frenchdoor">
-                    <label for="frenchdoor" class="text-gray-600 select-none cursor-pointer flex-1">Frenchdoor</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="twintub" aria-label="Filter by TwinTub">
-                    <label for="twintub" class="text-gray-600 select-none cursor-pointer flex-1">TwinTub</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="chiller" aria-label="Filter by Chiller">
-                    <label for="chiller" class="text-gray-600 select-none cursor-pointer flex-1">Chiller</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="showcase" aria-label="Filter by Showcase">
-                    <label for="showcase" class="text-gray-600 select-none cursor-pointer flex-1">Showcase</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="beverage-cooler" aria-label="Filter by Beverage Cooler">
-                    <label for="beverage-cooler" class="text-gray-600 select-none cursor-pointer flex-1">Beverage Cooler</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="wine-cooler" aria-label="Filter by Wine Cooler">
-                    <label for="wine-cooler" class="text-gray-600 select-none cursor-pointer flex-1">Wine Cooler</label>
-                  </div>
-                </div>
-              </details>
-
-              <!-- Level 2: Freezer Sub-Category -->
-              <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Freezer subcategories">
-                <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="freezer-category" aria-label="Filter by Freezer">
-                  <label for="freezer-category" class="text-sm text-gray-700  select-none cursor-pointer">Freezer</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
-                </summary>
-                <!-- Level 3: Freezer Types -->
-                <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Freezer types">
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand cursor-pointer" id="chest-type" aria-label="Filter by Chest Type">
-                    <label for="chest-type" class="text-gray-600 select-none cursor-pointer flex-1">Chest Type</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="glass-top" aria-label="Filter by Glass Top">
-                    <label for="glass-top" class="text-gray-600 select-none cursor-pointer flex-1">Glass Top</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="hard-top" aria-label="Filter by Hard Top">
-                    <label for="hard-top" class="text-gray-600 select-none cursor-pointer flex-1">Hard Top</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="upright" aria-label="Filter by Upright">
-                    <label for="upright" class="text-gray-600 select-none cursor-pointer flex-1">Upright</label>
-                  </div>
-                </div>
-              </details>
-
-              <!-- Level 2: Microwave Ovens Sub-Category -->
-              <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="microwave overn subcategories">
-                <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="microwave-oven-category" aria-label="Filter by Microwave Ovens">
-                  <label for="microwave-ovens-category" class="text-sm text-gray-700  select-none cursor-pointer">Microwave Ovens</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
-                </summary>
-                <!-- Level 3: Microwave Ovens Types -->
-                <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Bed types">
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="manual" aria-label="Filter by Manual">
-                    <label for="manual" class="text-gray-600 select-none cursor-pointer flex-1">Manual</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="digital" aria-label="Filter by Digital">
-                    <label for="digital" class="text-gray-600 select-none cursor-pointer flex-1">Digital</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="inverter" aria-label="Filter by Inverter">
-                    <label for="inverter" class="text-gray-600 select-none cursor-pointer flex-1">Inverter</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="non-inverter" aria-label="Filter by Non-Inverter">
-                    <label for="non-inverter" class="text-gray-600 select-none cursor-pointer flex-1">Non-Inverter</label>
-                  </div>
-                </div>
-              </details>
-
-              <!-- Level 2: Cooking Appliances Sub-Category -->
-              <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="microwave overn subcategories">
-                <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="cooking-appliances-category" aria-label="Filter by Cooking Appliances">
-                  <label for="cooking-appliances-category" class="text-sm text-gray-700  select-none cursor-pointer">Cooking Appliances</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
-                </summary>
-                <!-- Level 3: Cooking Appliances Types -->
-                <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Bed types">
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="cooking-range" aria-label="Filter by Cooking Range">
-                    <label for="cooking-range" class="text-gray-600 select-none cursor-pointer flex-1">Cooking Range</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="oven" aria-label="Filter by Oven">
-                    <label for="oven" class="text-gray-600 select-none cursor-pointer flex-1">Oven</label>
-                  </div>
-                <details open class="group" aria-label="Range Hood subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand" id="range-hood" aria-label="Filter by Range Hood" />
-                    <span class="text-gray-600">Range Hood</span>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <div class="ml-6 space-y-1" role="group" aria-label="Range Hood Sub Types">
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand" id="desk" aria-label="Filter by Desk" />
-                      <span class="text-gray-600">Island</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand" id="stand" aria-label="Filter by stand" />
-                      <span class="text-gray-600">Chimney</span>
-                    </label>
-                  </div>
-                </details>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="dishwasher" aria-label="Filter by Dishwasher">
-                    <label for="dishwasher" class="text-gray-600 select-none cursor-pointer flex-1">Dishwasher</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="sterilizer" aria-label="Filter by Sterilizer">
-                    <label for="sterilizer" class="text-gray-600 select-none cursor-pointer flex-1">Sterilizer</label>
-                  </div>
-                  <div class="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand cursor-pointer" id="water-dispenser" aria-label="Filter by Water Dispenser">
-                    <label for="water-dispenser" class="text-gray-600 select-none cursor-pointer flex-1">Water Dispenser</label>
-                  </div>
-                </div>
-              </details>
-            </details>
-
-
-            <!-- Level 1: Small Domestic Aplliances Category -->
-            <details open class="group my-4" role="treeitem" aria-expanded="true">
-              <summary class="flex items-center p-3 gap-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50 select-none">
-                <input type="checkbox" class="accent-brand cursor-pointer" id="small-domestic-appliances-category" aria-label="Filter by Small Domestic Aplliances">
-                <label for="small-domestic-appliances-category" class="text-sm text-gray-700 font-semibold select-none cursor-pointer text-sm">Small Domestic Aplliances</label>
-                <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                </svg>
-              </summary>
-              <!-- Level 2: Living Area Sub-Category -->
-              <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Living Area subcategories">
-                <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                  <input type="checkbox" class="accent-brand cursor-pointer" id="living-area-category" aria-label="Filter by Living Area">
-                  <label for="living-area-category" class="text-sm text-gray-700  select-none cursor-pointer">Living Area</label>
-                  <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
-                </summary>
-                <!-- Level 3: Living Area Types -->
-                <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Audio types">
-                <!-- Level 4: Fans Sub Types  -->
-                <details open class="group" aria-label="Fans subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand" id="Fans" aria-label="Filter by Fans" />
-                    <span class="text-gray-600">Fans</span>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <div class="ml-6 space-y-1" role="group" aria-label="Fans Sub Types">
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand" id="desk" aria-label="Filter by Desk" />
-                      <span class="text-gray-600">Desk</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand" id="stand" aria-label="Filter by stand" />
-                      <span class="text-gray-600">Stand</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" ccent-brand" id="wall" aria-label="Filter by Wall" />
-                      <span class="text-gray-600">Wall</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand" id="ceiling" aria-label="Filter by Ceiling" />
-                      <span class="text-gray-600">Ceiling</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class="accent-brand" id="exhaust" aria-label="Filter by Exhaust" />
-                      <span class="text-gray-600">Exhaust</span>
-                    </label>
-                  </div>
-                </details>
-               </div>
-              </details>
-            <!-- Level 2: Industrial Fan Sub-Category -->
-            <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Industrial Fan subcategories">
-              <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                <input type="checkbox" class="accent-brand cursor-pointer" id="industrial-fan-category" aria-label="Filter by Refrigrator">
-                <label for="industrial-fan-category" class="text-sm text-gray-700  select-none cursor-pointer">Industrial Fan</label>
-                <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                </svg>
-              </summary>
-            </details>
-
-            <!-- Level 2: Kitchen Sub-Category -->
-            <details open class="ml-6 mt-2 space-y-2" role="group" aria-label="Kitchen subcategories">
-              <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-50 border-b border-gray-200 select-none">
-                <input type="checkbox" class="accent-brand cursor-pointer" id="kitchen-category" aria-label="Filter by Kitchen">
-                <label for="kitchen-category" class="text-sm text-gray-700  select-none cursor-pointer">Kitchen</label>
-                <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                </svg>
-              </summary>
-              <!-- Level 3: Cooking Equpment types -->
-              <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Cooking Equipment types">
-                <!-- Level 4: Cooking Equpment  Sub Types  -->
-                <details open class="group" aria-label="Cooking Equipment subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class="accent-brand" id="cooking-equipment" aria-label="Filter by Cooking Equipment" />
-                    <span class="text-gray-600">Cooking Equipment</span>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <div class="ml-6 space-y-1" role="group" aria-label="Cooking Equipment Sub Types">
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="rice-cooker" aria-label="Filter by Rice Cooker" />
-                      <span class="text-gray-600">Rice Cooker</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="turbo-boiler" aria-label="Filter by Turbo Boiler" />
-                      <span class="text-gray-600">Turbo Boiler</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="stove" aria-label="Filter by Stove" />
-                      <span class="text-gray-600">Stove</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="pressure-cooker" aria-label="Filter by Pressure Cooker" />
-                      <span class="text-gray-600">Pressure Cooker</span>
-                    </label>
-                  </div>
-                </details>
-               </div>
-               
-               <!--Level 3: Food Preparation Types  -->
-               <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Audio types">
-                <!-- Level 4: Food Preparation Sub Types  -->
-                <details open class="group" aria-label="Food Preparation subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand" id="food-preparation" aria-label="Filter by Food Preparation" />
-                    <span class="text-gray-600">Food Preparation</span>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <div class="ml-6 space-y-1" role="group" aria-label="Food Preparation Sub Types">
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="blender" aria-label="Filter by Blender" />
-                      <span class="text-gray-600">Blender</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="toaster" aria-label="Filter by Toaster" />
-                      <span class="text-gray-600">Toaster</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="waffle-maker" aria-label="Filter by Waffle Maker" />
-                      <span class="text-gray-600">Waffle Maker</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="air-fryer" aria-label="Filter by Air Fryer" />
-                      <span class="text-gray-600">Air Fryer</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="Coffee Maker" aria-label="Filter by Coffee Maker" />
-                      <span class="text-gray-600">Coffee Maker</span>
-                    </label>
-                  </div>
-                </details>
-               </div>
-
-
-               <!-- Level 3: Beverage Equipment Type -->
-               <div class="ml-6 space-y-1 border-b border-gray-200" role="group" aria-label="Beverage Equipment types">
-                <!-- Level 4: Beverage Equipment Sub Types  -->
-                <details open class="group" aria-label="Beverage Equipment subcategories">
-                  <summary class="flex items-center gap-2 px-3 py-1.5 mt-2 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                    <input type="checkbox" class=" accent-brand" id="beverage-equipment" aria-label="Filter by Beverage Equipment" />
-                    <span class="text-gray-600">Beverage Equipment</span>
-                    <svg class="w-4 h-4 ml-auto transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </summary>
-                  <div class="ml-6 space-y-1" role="group" aria-label="Beverage Equipment Sub Types">
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="kettle" aria-label="Filter by Kettle" />
-                      <span class="text-gray-600">Kettle</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="juicer" aria-label="Filter by Juicer" />
-                      <span class="text-gray-600">Juicer</span>
-                    </label>
-                    <label class="flex items-center gap-2 px-3 py-1.5 rounded cursor-pointer hover:bg-gray-50 text-sm">
-                      <input type="checkbox" class=" accent-brand" id="water-dispenser" aria-label="Filter by Water Dispenser" />
-                      <span class="text-gray-600">Water Dispenser</span>
-                    </label>
-                  </div>
-                </details>
-               </div>
-
-            </details>
-          </details>
-            </div>
-          </fieldset>
-        </aside>
-        <!-- ===== RIGHT COLUMN: PRODUCTS DISPLAY ===== -->
-        <section class="w-full max-w-[70%]" aria-label="Product listings">
+      <div class="flex flex-wrap items-center justify-end gap-2 px-8 my-4">
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
+            <input type="checkbox" id="furniture-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('furniture-section')">
+            <span class="text-sm font-medium text-gray-700 select-none">Furniture</span>
+        </label>
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
+            <input type="checkbox" id="air-conditioning-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('air-conditioning-section')">
+            <span class="text-sm font-medium text-gray-700 select-none">Air Conditioning</span>
+        </label>
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
+            <input type="checkbox" id="audio-video-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('audio-video-section')">
+            <span class="text-sm font-medium text-gray-700 select-none">Audio/Video</span>
+        </label>
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
+            <input type="checkbox" id="home-appliances-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('home-appliances-section')">
+            <span class="text-sm font-medium text-gray-700 select-none">Home Appliances</span>
+        </label>
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
+            <input type="checkbox" id="small-appliances-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('small-appliances-section')">
+            <span class="text-sm font-medium text-gray-700 select-none">Small Appliances</span>
+        </label>
+      </div>
+      
+      <div class="bg-white px-8">
+        <section class="w-full" aria-label="Product listings">
           <!-- Furniture -->
-          <div class="col-span-2 md:col-span-3 lg:col-span-5 mb-6">
+          <div id="furniture-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-3">
                 <div class="w-1.5 h-6 bg-brand rounded-full"></div>
@@ -682,23 +92,23 @@
               </div>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/furniture/bed.jpg" alt="Mattress" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2 rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/furniture/bed.jpg" alt="Mattress" class="object-contain h-18 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Bed</p>
+                <p class="text-sm font-medium text-gray-700">Bed</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/furniture/mattress.jpg" alt="Mattress" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/furniture/mattress.jpg" alt="Mattress" class="object-contain h-18 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Mattress</p>
+                <p class="text-sm font-medium text-gray-700">Mattress</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/furniture/wallMounted.jpg" alt="Wall Mounted" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/furniture/wallMounted.jpg" alt="Wall Mounted" class="object-contain h-18 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Wall Mounted</p>
+                <p class="text-sm font-medium text-gray-700">Wall Mounted</p>
               </div>
             </div>
             <!-- View All Furniture Button -->
@@ -712,77 +122,78 @@
           </div>           
           </div>
           <!-- Air Conditioning -->
-          <div class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
+          <div id="air-conditioning-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
             <div class="flex items-center gap-3 mb-4 mt-8">
               <div class="w-1.5 h-6 bg-brand rounded-full"></div>
               <h2 class="text-2xl font-bold text-gray-800 tracking-tight">Air Conditioning</h2>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/single-aircon.webp" alt="Single Aircon" class="object-contain h-20 group-hover:scale-105 transition" />
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-2">
+              <div class="flex flex-col items-center justify-center gap-2 rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class="flex items-center justify-center overflow-hidden">
+                  <img src="./images/categories/air-conditioners/single-aircon.webp" alt="Single Aircon" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Single</p>
+                <p class="text-sm font-medium text-gray-700">Single</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/splitType.jpg" alt="Split Type Aircon" class="object-contain h-20 group-hover:scale-105 transition" />
+
+              <div class="flex flex-col items-center justify-center gap-2 rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class="flex items-center justify-center overflow-hidden">
+                  <img src="./images/categories/air-conditioners/splitType.jpg" alt="Split Type Aircon" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Split Type</p>
+                <p class="text-sm font-medium text-gray-700">Split Type</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/inverter.png" alt="Inverter" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/inverter.png" alt="Inverter" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Inverter</p>
+                <p class="text-sm font-medium text-gray-700">Inverter</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/non-inverter.jpg" alt="Non Inverter" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/non-inverter.jpg" alt="Non Inverter" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Non Inverter</p>
+                <p class="text-sm font-medium text-gray-700">Non Inverter</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/indoor.jpg" alt="Indoor Units" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/indoor.jpg" alt="Indoor Units" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Indoor Units</p>
+                <p class="text-sm font-medium text-gray-700">Indoor Units</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/outdoor.jpg" alt="Indoor Units" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/outdoor.jpg" alt="Indoor Units" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Outdoor Units</p>
+                <p class="text-sm font-medium text-gray-700">Outdoor Units</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/wall-mounted.webp" alt="Wall Mounted" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/wall-mounted.webp" alt="Wall Mounted" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Wall Mounted</p>
+                <p class="text-sm font-medium text-gray-700">Wall Mounted</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/ceiling.jpg" alt="Ceiling Mounted" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/ceiling.jpg" alt="Ceiling Mounted" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Ceiling</p>
+                <p class="text-sm font-medium text-gray-700">Ceiling</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/standing.jpg" alt="Ceiling Mounted" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/standing.jpg" alt="Ceiling Mounted" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Floor</p>
+                <p class="text-sm font-medium text-gray-700">Floor</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/cassette.jpg" alt="Ceiling Mounted" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/cassette.jpg" alt="Ceiling Mounted" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Cassette</p>
+                <p class="text-sm font-medium text-gray-700">Cassette</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/air-conditioners/ducted.jpg" alt="Ceiling Mounted" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/air-conditioners/ducted.jpg" alt="Ceiling Mounted" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Ducted</p>
+                <p class="text-sm font-medium text-gray-700">Ducted</p>
               </div>
             </div>
             <div class="flex justify-center items-center mt-6 mb-16">
@@ -795,161 +206,161 @@
           </div>
           
           <!-- Audio / Video -->
-          <div class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
+          <div id="audio-video-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
             <div class="flex items-center gap-3 mb-4 mt-8">
               <div class="w-1.5 h-6 bg-brand rounded-full"></div>
               <h2 class="text-2xl font-bold text-gray-800 tracking-tight">Audio / Video Equipments</h2>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/audio.jpg" alt="Audio" class="object-contain h-20 group-hover:scale-105 transition" />
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/audio.jpg" alt="Audio" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Audio</p>
+                <p class="text-sm font-medium text-gray-700">Audio</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/video.jpg" alt="Video" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/video.jpg" alt="Video" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Video</p>
+                <p class="text-sm font-medium text-gray-700">Video</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/karaoke.webp" alt="Karaoke" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/karaoke.webp" alt="Karaoke" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Karaoke</p>
+                <p class="text-sm font-medium text-gray-700">Karaoke</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/speaker.png" alt="Speaker" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/speaker.png" alt="Speaker" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Speaker</p>
+                <p class="text-sm font-medium text-gray-700">Speaker</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/subwoofer.webp" alt="Twintub" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/subwoofer.webp" alt="Twintub" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Subwoofer</p>
+                <p class="text-sm font-medium text-gray-700">Subwoofer</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/amplifier.png" alt="Amplifier" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/amplifier.png" alt="Amplifier" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Amplifier</p>
+                <p class="text-sm font-medium text-gray-700">Amplifier</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/5.1.png" alt="5.1" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/5.1.png" alt="5.1" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">5.1 Channel</p>
+                <p class="text-sm font-medium text-gray-700">5.1 Channel</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/7.1.jpg" alt="7.1" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/7.1.jpg" alt="7.1" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">7.1 Channel</p>
+                <p class="text-sm font-medium text-gray-700">7.1 Channel</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/soundbar.jpg" alt="Soundbar" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/soundbar.jpg" alt="Soundbar" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Soundbar</p>
+                <p class="text-sm font-medium text-gray-700">Soundbar</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/accessories.jpg" alt="Audio Accessories" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/accessories.jpg" alt="Audio Accessories" class="object-contain h-20 " />
                 </div>
-                <p class="text-center text-xs font-medium text-gray-700">Audio Accessories</p>
+                <p class="text-center text-sm font-medium text-gray-700">Audio Accessories</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/mini.png" alt="Mini" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/mini.png" alt="Mini" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Mini</p>
+                <p class="text-sm font-medium text-gray-700">Mini</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/micro.jpg" alt="Micro" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/micro.jpg" alt="Micro" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Micro</p>
+                <p class="text-sm font-medium text-gray-700">Micro</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/hifi.png" alt="Hifi" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/hifi.png" alt="Hifi" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Hifi</p>
+                <p class="text-sm font-medium text-gray-700">Hifi</p>
               </div>
-               <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/TV.jpg" alt="TV" class="object-contain h-20 group-hover:scale-105 transition" />
+               <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/TV.jpg" alt="TV" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">TV</p>
+                <p class="text-sm font-medium text-gray-700">TV</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/media-player.png" alt="Media Player" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/media-player.png" alt="Media Player" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Media Player</p>
+                <p class="text-sm font-medium text-gray-700">Media Player</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/curved.png" alt="Curved TV" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/curved.png" alt="Curved TV" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Curved TV</p>
+                <p class="text-sm font-medium text-gray-700">Curved TV</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/smart.jpg" alt="Smart TV" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/smart.jpg" alt="Smart TV" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Smart TV</p>
+                <p class="text-sm font-medium text-gray-700">Smart TV</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/basic.jpg" alt="Basic TV" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/basic.jpg" alt="Basic TV" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Basic TV</p>
+                <p class="text-sm font-medium text-gray-700">Basic TV</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/blueray.png" alt="Blueray" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/blueray.png" alt="Blueray" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Blueray</p>
+                <p class="text-sm font-medium text-gray-700">Blueray</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/dvd.jpg" alt="DVD" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/dvd.jpg" alt="DVD" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">DVD</p>
+                <p class="text-sm font-medium text-gray-700">DVD</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/digital-media.jpg" alt="Digital Media" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/digital-media.jpg" alt="Digital Media" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Digital Media</p>
+                <p class="text-sm font-medium text-gray-700">Digital Media</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/tv-accessories.png" alt="TV Accessories" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/tv-accessories.png" alt="TV Accessories" class="object-contain h-20 " />
                 </div>
-                <p class="text-center text-xs font-medium text-gray-700">TV Accessories</p>
+                <p class="text-center text-sm font-medium text-gray-700">TV Accessories</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/led.png" alt="LED Display" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/led.png" alt="LED Display" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">LED Display</p>
+                <p class="text-sm font-medium text-gray-700">LED Display</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/lcd.png" alt="LCD Display" class="aspect-square object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/lcd.png" alt="LCD Display" class="aspect-square object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">LCD Display</p>
+                <p class="text-sm font-medium text-gray-700">LCD Display</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/audio-video/crt.png" alt="CRT Display" class="aspect-square object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/audio-video/crt.png" alt="CRT Display" class="aspect-square object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">CRT Display</p>
+                <p class="text-sm font-medium text-gray-700">CRT Display</p>
               </div>
             </div>
             <div class="flex justify-center items-center mt-6 mb-16">
@@ -963,192 +374,192 @@
           </div>
          
           <!-- Home Appliances -->
-          <div class="col-span-2 md:col-span-3 lg:col-span-6">
+          <div id="home-appliances-section" class="col-span-2 md:col-span-3 lg:col-span-6">
             <div class="flex items-center gap-3 mb-4 mt-8">
               <div class="w-1.5 h-6 bg-brand rounded-full"></div>
               <h2 class="text-2xl font-bold text-gray-800 tracking-tight">Home Appliances</h2>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/washing-machine.png" alt="Washing Machine" class="object-contain h-20 group-hover:scale-105 transition" />
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/washing-machine.png" alt="Washing Machine" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Washing Machine</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Washing Machine</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/refrigerator.png" alt="Refrigerator" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/refrigerator.png" alt="Refrigerator" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Refrigerator</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Refrigerator</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/freezer.png" alt="Freezer" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/freezer.png" alt="Freezer" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Freezer</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Freezer</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/microwave-oven.png" alt="Microwave Oven" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/microwave-oven.png" alt="Microwave Oven" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Microwave Oven</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Microwave Oven</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/cooking-appliances.png" alt="Cooking Appliances" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/cooking-appliances.png" alt="Cooking Appliances" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Cooking Appliances</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Cooking Appliances</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/singletub.png" alt="Single Tub" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/singletub.png" alt="Single Tub" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Single Tub</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Single Tub</p>
               </div>
 
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/twintub.png" alt="Twin Tub" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/twintub.png" alt="Twin Tub" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Twin Tub</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Twin Tub</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/fully-auto.png" alt="Fully Automatic" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/fully-auto.png" alt="Fully Automatic" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Fully Automatic</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Fully Automatic</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/topload.png" alt="Top Load" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/topload.png" alt="Top Load" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Top Load</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Top Load</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/gas-dryer.png" alt="Gas Dryer" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/gas-dryer.png" alt="Gas Dryer" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Gas Dryer</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Gas Dryer</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/double-washer.png" alt="Double Washer" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/double-washer.png" alt="Double Washer" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Double Washer</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Double Washer</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/single-door.png" alt="Single Door" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/single-door.png" alt="Single Door" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Single Door</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Single Door</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/two-door.png" alt="Two Door" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/two-door.png" alt="Two Door" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Two Door</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Two Door</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/sidebyside.png" alt="Side by Side" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/sidebyside.png" alt="Side by Side" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Side by Side</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Side by Side</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/frenchdoor.png" alt="French Door" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/frenchdoor.png" alt="French Door" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">French Door</p>
+                <p class="text-sm font-medium text-gray-700 text-center">French Door</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/chiller.png" alt="Chiller" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/chiller.png" alt="Chiller" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Chiller</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Chiller</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/showcase.png" alt="Showcase" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/showcase.png" alt="Showcase" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Showcase</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Showcase</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/beverage-cooler.png" alt="Beverage Cooler" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/beverage-cooler.png" alt="Beverage Cooler" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Beverage Cooler</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Beverage Cooler</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/wine-cooler.png" alt="Wine Cooler" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/wine-cooler.png" alt="Wine Cooler" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Wine Cooler</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Wine Cooler</p>
               </div>
-               <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/chest-type.png" alt="Chest Type" class="object-contain h-20 group-hover:scale-105 transition" />
+               <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/chest-type.png" alt="Chest Type" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Chest Type</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Chest Type</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/glass-top.png" alt="Glass Top" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/glass-top.png" alt="Glass Top" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Glass Top</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Glass Top</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/upright.png" alt="Upright" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/upright.png" alt="Upright" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Upright</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Upright</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/manual.png" alt="Manual" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/manual.png" alt="Manual" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Manual</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Manual</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/digital.png" alt="Digital" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/digital.png" alt="Digital" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Digital</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Digital</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/inverter.png" alt="Inverter" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/inverter.png" alt="Inverter" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Inverter</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Inverter</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/non-inverter.png" alt="Non-Inverter" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/non-inverter.png" alt="Non-Inverter" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Non-Inverter</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Non-Inverter</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/cooking-range.png" alt="Cooking Range" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/cooking-range.png" alt="Cooking Range" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Cooking Range</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Cooking Range</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/oven.jpg" alt="Oven" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/oven.jpg" alt="Oven" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Oven</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Oven</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/range-hood.png" alt="Range Hood" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/range-hood.png" alt="Range Hood" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Range Hood</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Range Hood</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/home-appliances/dishwasher.png" alt="Dishwasher" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/home-appliances/dishwasher.png" alt="Dishwasher" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700 text-center">Dishwasher</p>
+                <p class="text-sm font-medium text-gray-700 text-center">Dishwasher</p>
               </div>
             </div>
             <div class="flex justify-center items-center mt-6 mb-16">
@@ -1161,119 +572,119 @@
               </div>
           </div>
           <!-- Small Domestic Appliances -->
-          <div class="col-span-2 md:col-span-3 lg:col-span-6">
+          <div id="small-appliances-section" class="col-span-2 md:col-span-3 lg:col-span-6">
             <div class="flex items-center gap-3 mb-4 mt-8">
               <div class="w-1.5 h-6 bg-brand rounded-full"></div>
               <h2 class="text-2xl font-bold text-gray-800 tracking-tight">Small Domestic Appliances</h2>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/fans.png" alt="Fans" class="object-contain h-20 group-hover:scale-105 transition" />
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/fans.png" alt="Fans" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Fans</p>
+                <p class="text-sm font-medium text-gray-700">Fans</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/desk-fan.jpg" alt="Desk Fan" class="object-contain h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/desk-fan.jpg" alt="Desk Fan" class="object-contain h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Desk Fan</p>
+                <p class="text-sm font-medium text-gray-700">Desk Fan</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/stand-fan.webp" alt="Stand Fan" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/stand-fan.webp" alt="Stand Fan" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Stand Fan</p>
+                <p class="text-sm font-medium text-gray-700">Stand Fan</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/wall-fan.png" alt="Wall Fan" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/wall-fan.png" alt="Wall Fan" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Wall Fan</p>
+                <p class="text-sm font-medium text-gray-700">Wall Fan</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/ceiling-fan.png" alt="Ceiling Fan" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/ceiling-fan.png" alt="Ceiling Fan" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Ceiling Fan</p>
+                <p class="text-sm font-medium text-gray-700">Ceiling Fan</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/exhaust-fan.png" alt="Exhaust Fan" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/exhaust-fan.png" alt="Exhaust Fan" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Exhaust Fan</p>
+                <p class="text-sm font-medium text-gray-700">Exhaust Fan</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/industrial-fan.png" alt="Industrial Fan" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/industrial-fan.png" alt="Industrial Fan" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Industrial Fan</p>
+                <p class="text-sm font-medium text-gray-700">Industrial Fan</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/rice-cooker.png" alt="Rice Cooker" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/rice-cooker.png" alt="Rice Cooker" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Rice Cooker</p>
+                <p class="text-sm font-medium text-gray-700">Rice Cooker</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/turbo-boiler.png" alt="Turbo Boiler" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/turbo-boiler.png" alt="Turbo Boiler" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Turbo Boiler</p>
+                <p class="text-sm font-medium text-gray-700">Turbo Boiler</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/stove.jpg" alt="Stove" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/stove.jpg" alt="Stove" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Stove</p>
+                <p class="text-sm font-medium text-gray-700">Stove</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/pressure-cooker.png" alt="Pressure Cooker" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/pressure-cooker.png" alt="Pressure Cooker" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Pressure Cooker</p>
+                <p class="text-sm font-medium text-gray-700">Pressure Cooker</p>
               </div>
-               <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/blender.png" alt="Blender" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+               <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/blender.png" alt="Blender" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Blender</p>
+                <p class="text-sm font-medium text-gray-700">Blender</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/waffle-maker.png" alt="Waffle Maker" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/waffle-maker.png" alt="Waffle Maker" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Waffle Maker</p>
+                <p class="text-sm font-medium text-gray-700">Waffle Maker</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/air-fryer.webp" alt="Air Fryer" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/air-fryer.webp" alt="Air Fryer" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Air Fryer</p>
+                <p class="text-sm font-medium text-gray-700">Air Fryer</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/coffee-maker.png" alt="Coffee Maker" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/coffee-maker.png" alt="Coffee Maker" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Coffee Maker</p>
+                <p class="text-sm font-medium text-gray-700">Coffee Maker</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/kettle.png" alt="Kettle" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/kettle.png" alt="Kettle" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Kettle</p>
+                <p class="text-sm font-medium text-gray-700">Kettle</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/blender.png" alt="Blender" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/blender.png" alt="Blender" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Blender</p>
+                <p class="text-sm font-medium text-gray-700">Blender</p>
               </div>
-              <div class="flex flex-col items-center justify-center gap-2 bg-white rounded-xl shadow hover:shadow-lg transition p-4 cursor-pointer group">
-                <div class="w-24 h-24 flex items-center justify-center mb-2 overflow-hidden">
-                  <img src="./images/categories/small-domestic-appliances/water-dispenser.webp" alt="Water Dispenser" class="object-contain w-auto h-20 group-hover:scale-105 transition" />
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/small-domestic-appliances/water-dispenser.webp" alt="Water Dispenser" class="object-contain  h-20 " />
                 </div>
-                <p class="text-xs font-medium text-gray-700">Water Dispenser</p>
+                <p class="text-sm font-medium text-gray-700">Water Dispenser</p>
               </div>
             </div>
             <div class="flex justify-center items-center mt-6 mb-16">
@@ -1316,7 +727,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
               <!-- Company Info -->
               <div class="lg:col-span-3">
-                <img src="./images/qapi-logo.webp" alt="" class="h-16 w-auto object-cover object-center">
+                <img src="./images/qapi-logo.webp" alt="" class="h-16  object-cover object-center">
                 <p class="mb-4 text-xs leading-relaxed">We provide durable, high-quality appliances for every home. Trusted by thousands, backed by excellent support, and guided by our mission of service excellence.</p>
               </div>
   
@@ -1395,5 +806,29 @@
         </footer>
     </div>
 
+    <script>
+        function toggleSection(sectionId) {
+          const targetSection = document.getElementById(sectionId);
+          const targetCheckbox = document.getElementById(sectionId.replace('-section', '-checkbox'));
+          
+          const categoryCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+          const activeCheckboxCount = Array.from(categoryCheckboxes).filter(checkbox => checkbox.checked).length;
+          
+          const categorySections = document.querySelectorAll('[id$="-section"]');
+          categorySections.forEach(section => section.classList.add('hidden'));
+          
+          if (activeCheckboxCount === 0) {
+            categorySections.forEach(section => section.classList.remove('hidden'));
+          } else {
+            categorySections.forEach(section => {
+              const sectionCheckbox = document.getElementById(section.id.replace('-section', '-checkbox'));
+              if (sectionCheckbox && sectionCheckbox.checked) {
+                section.classList.remove('hidden');
+              }
+            });
+          }
+        }
+    </script>
+    
   </body>
 </html>
