@@ -59,68 +59,30 @@
         </div>
       </section>
       <div class="flex flex-wrap items-center justify-end gap-2 px-8 my-4">
-        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
-            <input type="checkbox" id="furniture-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('furniture-section')">
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer has-[input:checked]:border-red-400 has-[input:checked]:border-2">
+            <input type="checkbox" id="furniture-checkbox" class="w-4 h-4 accent-red-500" onchange="toggleSection('furniture-section')">
             <span class="text-sm font-medium text-gray-700 select-none">Furniture</span>
         </label>
-        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
-            <input type="checkbox" id="air-conditioning-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('air-conditioning-section')">
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer has-[input:checked]:border-red-400 has-[input:checked]:border-2">
+            <input type="checkbox" id="air-conditioning-checkbox" class="w-4 h-4 accent-red-500" onchange="toggleSection('air-conditioning-section')">
             <span class="text-sm font-medium text-gray-700 select-none">Air Conditioning</span>
         </label>
-        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
-            <input type="checkbox" id="audio-video-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('audio-video-section')">
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer has-[input:checked]:border-red-400 has-[input:checked]:border-2">
+            <input type="checkbox" id="audio-video-checkbox" class="w-4 h-4 accent-red-500" onchange="toggleSection('audio-video-section')">
             <span class="text-sm font-medium text-gray-700 select-none">Audio/Video</span>
         </label>
-        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
-            <input type="checkbox" id="home-appliances-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('home-appliances-section')">
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer has-[input:checked]:border-red-400 has-[input:checked]:border-2">
+            <input type="checkbox" id="home-appliances-checkbox" class="w-4 h-4 accent-red-500" onchange="toggleSection('home-appliances-section')">
             <span class="text-sm font-medium text-gray-700 select-none">Home Appliances</span>
         </label>
-        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer">
-            <input type="checkbox" id="small-appliances-checkbox" class="w-4 h-4 accent-brand" onchange="toggleSection('small-appliances-section')">
+        <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors cursor-pointer has-[input:checked]:border-red-400 has-[input:checked]:border-2">
+            <input type="checkbox" id="small-appliances-checkbox" class="w-4 h-4 accent-red-500" onchange="toggleSection('small-appliances-section')">
             <span class="text-sm font-medium text-gray-700 select-none">Small Appliances</span>
         </label>
       </div>
-      
       <div class="bg-white px-8">
         <section class="w-full" aria-label="Product listings">
-          <!-- Furniture -->
-          <div id="furniture-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-1.5 h-6 bg-brand rounded-full"></div>
-                <h2 class="text-2xl font-bold text-gray-800 tracking-tight">Furniture</h2>
-              </div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              <div class="flex flex-col items-center justify-center gap-2 rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white p-4 cursor-pointer group">
-                <div class=" flex items-center justify-center ">
-                  <img src="./images/categories/furniture/bed.jpg" alt="Mattress" class="object-contain h-18 " />
-                </div>
-                <p class="text-sm font-medium text-gray-700">Bed</p>
-              </div>
-              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
-                <div class=" flex items-center justify-center ">
-                  <img src="./images/categories/furniture/mattress.jpg" alt="Mattress" class="object-contain h-18 " />
-                </div>
-                <p class="text-sm font-medium text-gray-700">Mattress</p>
-              </div>
-              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
-                <div class=" flex items-center justify-center ">
-                  <img src="./images/categories/furniture/wallMounted.jpg" alt="Wall Mounted" class="object-contain h-18 " />
-                </div>
-                <p class="text-sm font-medium text-gray-700">Wall Mounted</p>
-              </div>
-            </div>
-            <!-- View All Furniture Button -->
-            <div class="flex justify-center items-center mt-6 mb-16">
-            <button class="bg-brand text-white px-6 py-3 rounded-xl hover:bg-brand-dark transition-transform duration-100 hover:scale-95 flex items-center gap-2 text-sm font-medium shadow-sm">
-              View All Furnitures
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-            </button>
-          </div>           
-          </div>
+          
           <!-- Air Conditioning -->
           <div id="air-conditioning-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
             <div class="flex items-center gap-3 mb-4 mt-8">
@@ -196,13 +158,16 @@
                 <p class="text-sm font-medium text-gray-700">Ducted</p>
               </div>
             </div>
-            <div class="flex justify-center items-center mt-6 mb-16">
-            <button class="bg-brand text-white px-6 py-3 rounded-xl hover:bg-brand-dark transition-transform duration-100 hover:scale-95 flex items-center gap-2 text-sm font-medium shadow-sm">
+          <div class="flex justify-center items-center mt-6 mb-16">
+            <button class="bg-gradient-to-r from-brand to-red-500 text-white px-7 py-3 rounded-xl shadow-lg hover:from-red-600 hover:to-brand-dark transition-transform duration-150 hover:scale-95 flex items-center gap-2 text-base font-semibold group relative overflow-hidden">
               View All Air Conditioners
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-          </div>
+              <span class="inline-block transform group-hover:translate-x-1 transition-transform duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+          </div>           
           </div>
           
           <!-- Audio / Video -->
@@ -364,13 +329,15 @@
               </div>
             </div>
             <div class="flex justify-center items-center mt-6 mb-16">
-            <button class="bg-brand text-white px-6 py-3 rounded-xl hover:bg-brand-dark transition-transform duration-100 hover:scale-95 flex items-center gap-2 text-sm font-medium shadow-sm">
-              View All Audio / Video
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            </div>
+              <button class="bg-gradient-to-r from-brand to-red-500 text-white px-7 py-3 rounded-xl shadow-lg hover:from-red-600 hover:to-brand-dark transition-transform duration-150 hover:scale-95 flex items-center gap-2 text-base font-semibold group relative overflow-hidden">
+                View All Audio/Video
+                <span class="inline-block transform group-hover:translate-x-1 transition-transform duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+            </div>           
           </div>
          
           <!-- Home Appliances -->
@@ -562,14 +529,16 @@
                 <p class="text-sm font-medium text-gray-700 text-center">Dishwasher</p>
               </div>
             </div>
-            <div class="flex justify-center items-center mt-6 mb-16">
-              <button class="bg-brand text-white px-6 py-3 rounded-xl hover:bg-brand-dark transition-transform duration-100 hover:scale-95 flex items-center gap-2 text-sm font-medium shadow-sm">
-                View All Home Appliances
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </button>
-              </div>
+              <div class="flex justify-center items-center mt-6 mb-16">
+                <button class="bg-gradient-to-r from-brand to-red-500 text-white px-7 py-3 rounded-xl shadow-lg hover:from-red-600 hover:to-brand-dark transition-transform duration-150 hover:scale-95 flex items-center gap-2 text-base font-semibold group relative overflow-hidden">
+                  View All Home Appliances
+                  <span class="inline-block transform group-hover:translate-x-1 transition-transform duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </div>           
           </div>
           <!-- Small Domestic Appliances -->
           <div id="small-appliances-section" class="col-span-2 md:col-span-3 lg:col-span-6">
@@ -687,14 +656,59 @@
                 <p class="text-sm font-medium text-gray-700">Water Dispenser</p>
               </div>
             </div>
-            <div class="flex justify-center items-center mt-6 mb-16">
-              <button class="bg-brand text-white px-6 py-3 rounded-xl hover:bg-brand-dark transition-transform duration-100 hover:scale-95 flex items-center gap-2 text-sm font-medium shadow-sm">
+              <div class="flex justify-center items-center mt-6 mb-16">
+                <button class="bg-gradient-to-r from-brand to-red-500 text-white px-7 py-3 rounded-xl shadow-lg hover:from-red-600 hover:to-brand-dark transition-transform duration-150 hover:scale-95 flex items-center gap-2 text-base font-semibold group relative overflow-hidden">
                 View All Small Domestic Appliances
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </button>
+                  <span class="inline-block transform group-hover:translate-x-1 transition-transform duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </div>           
+          </div>
+          <!-- Furniture -->
+          <div id="furniture-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-1.5 h-12 bg-brand rounded-full"></div>
+                <div>
+                <h2 class="text-2xl font-bold text-gray-800 tracking-tight">Furniture</h2>
+                <p class="text-gray-500">Discover our premium furniture selection for every room.</p>
+                </div>
               </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 p-4">
+              <div class="flex flex-col items-center justify-center gap-2 rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/furniture/bed.jpg" alt="Mattress" class="object-contain h-18 " />
+                </div>
+                <p class="text-sm font-medium text-gray-700">Bed</p>
+              </div>
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/furniture/mattress.jpg" alt="Mattress" class="object-contain h-18 " />
+                </div>
+                <p class="text-sm font-medium text-gray-700">Mattress</p>
+              </div>
+              <div class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+                <div class=" flex items-center justify-center ">
+                  <img src="./images/categories/furniture/wallMounted.jpg" alt="Wall Mounted" class="object-contain h-18 " />
+                </div>
+                <p class="text-sm font-medium text-gray-700">Wall Mounted</p>
+              </div>
+            </div>
+            <!-- View All Furniture Button -->
+            <div class="flex justify-center items-center mt-6 mb-16">
+              <button class="bg-gradient-to-r from-brand to-red-500 text-white px-7 py-3 rounded-xl shadow-lg hover:from-red-600 hover:to-brand-dark transition-transform duration-150 hover:scale-95 flex items-center gap-2 text-base font-semibold group relative overflow-hidden">
+                View All Furnitures
+                <span class="inline-block transform group-hover:translate-x-1 transition-transform duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+            </div>           
           </div>
         </section>
       </div>
@@ -811,9 +825,10 @@
           const targetSection = document.getElementById(sectionId);
           const targetCheckbox = document.getElementById(sectionId.replace('-section', '-checkbox'));
           
+          console.log(targetCheckbox)
           const categoryCheckboxes = document.querySelectorAll('input[type="checkbox"]');
           const activeCheckboxCount = Array.from(categoryCheckboxes).filter(checkbox => checkbox.checked).length;
-          
+
           const categorySections = document.querySelectorAll('[id$="-section"]');
           categorySections.forEach(section => section.classList.add('hidden'));
           
