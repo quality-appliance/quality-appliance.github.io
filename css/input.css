@@ -9,21 +9,3 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
 }
-
-@font-face {
-  font-family: 'gilmer-bold';
-  src:url('../gilmer-font/gilmer-bold.otf');
-}
-
-@font-face {
-  font-family: 'gilmer-regular';
-  src:url('../gilmer-font/gilmer-regular.otf');
-}
-
-.gilmer-heading {
-  font-family: 'gilmer-bold', sans-serif;
-}
-
-.gilmer-regular {
-  font-family: 'gilmer-regular', sans-serif;
-}
