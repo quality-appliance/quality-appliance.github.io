@@ -9,3 +9,23 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+/* Hero Swiper Navigation */
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: white;
+      }
+
+      /* Hero Swiper Pagination */
+      .swiper-pagination-bullet-active {
+        background-color: black;
+      }
+
+      /* Promo Swiper Navigation */
+      .swiper-button-next-promo,
+      .swiper-button-prev-promo,
+      .swiper-button-next-brands,
+      .swiper-button-prev-brands {
+        color: #cd002e;
+        padding: 1rem;
+      }

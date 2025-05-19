@@ -1,0 +1,195 @@
+{
+  "categories": [
+    {
+      "name": "Furniture",
+      "subcategories": [
+        {
+          "name": "Bed",
+          "attributeKeys": ["furnitureBedTypes"]
+        }
+      ]
+    },
+    {
+      "name": "Air Conditioning",
+      "subcategories": [
+        { "name": "Single Aircon", "attributeKeys": ["airConGeneral"] },
+        { "name": "Split Type Aircon", "attributeKeys": ["airConGeneral"] },
+        { "name": "Mounting Types", "attributeKeys": ["airConMountingTypes"] }
+      ]
+    },
+    {
+      "name": "Audio/Video Equipment",
+      "subcategories": [
+        {
+          "name": "Audio",
+          "attributeKeys": ["audioTypes", "audioComponents", "audioHomeTheater"]
+        },
+        {
+          "name": "Video",
+          "attributeKeys": ["videoTvTypes", "videoMediaPlayers"]
+        },
+        {
+          "name": "TV Accessories",
+          "attributeKeys": []
+        }
+      ]
+    },
+    {
+      "name": "Home Appliances",
+      "subcategories": [
+        { "name": "Washing Machine", "attributeKeys": ["washingMachineTypes"] },
+        { "name": "Refrigerators", "attributeKeys": ["refrigeratorTypes"] },
+        { "name": "Freezers", "attributeKeys": ["freezerTypes"] },
+        { "name": "Microwave Ovens", "attributeKeys": ["microwaveOvenTypes"] },
+        { "name": "Cooking Appliances", "attributeKeys": ["cookingApplianceTypes"] }
+      ]
+    },
+    {
+      "name": "Small Domestic Appliances",
+      "subcategories": [
+        { "name": "Living Area", "attributeKeys": ["livingAreaTypes"] },
+        { "name": "Kitchen", "attributeKeys": ["kitchenTypes"] }
+      ]
+    }
+  ],
+
+  "attributes": {
+    "furnitureBedTypes": {
+      "displayName": "Bed Type",
+      "options": [
+        "Mattress",
+        "Wall-Mounted Types"
+      ]
+    },
+    "airConGeneral": {
+      "displayName": "General Features",
+      "options": [
+        "Inverter",
+        "Non-Inverter",
+        "Indoor Units",
+        "Outdoor Units"
+      ]
+    },
+    "airConMountingTypes": {
+      "displayName": "Mounting Type",
+      "options": [
+        "Wall",
+        "Ceiling",
+        "Floor",
+        "Cassette",
+        "Ducted"
+      ]
+    },
+    "audioTypes": {
+      "displayName": "Audio Type",
+      "options": [
+        "Karaoke",
+        "Videoke",
+        "Speaker",
+        "Subwoofer",
+        "Amplifier",
+        "Equalizer",
+        "Accessories"
+      ]
+    },
+    "audioComponents": {
+      "displayName": "Audio Components",
+      "options": [
+        "Mini",
+        "Micro",
+        "HiFi",
+        "Boombox"
+      ]
+    },
+    "audioHomeTheater": {
+      "displayName": "Home Theater Type",
+      "options": [
+        "5.1 Channels",
+        "7.1 Channels",
+        "Soundbar"
+      ]
+    },
+    "videoTvTypes": {
+      "displayName": "TV Types",
+      "options": [
+        "Curved",
+        "Smart",
+        "Basic"
+      ]
+    },
+    "videoMediaPlayers": {
+      "displayName": "Media Players",
+      "options": [
+        "Blu-ray",
+        "DVD",
+        "Digital Media"
+      ]
+    },
+    "washingMachineTypes": {
+      "displayName": "Washing Machine Type",
+      "options": [
+        "Twin Tub",
+        "Single Tub",
+        "Fully Auto",
+        "Gas Dryer",
+        "Double Washer"
+      ]
+    },
+    "refrigeratorTypes": {
+      "displayName": "Refrigerator Type",
+      "options": [
+        "Single Door",
+        "Two Door",
+        "Side by Side",
+        "French Door",
+        "Chiller",
+        "Showcase",
+        "Beverage Cooler",
+        "Wine Cooler"
+      ]
+    },
+    "freezerTypes": {
+      "displayName": "Freezer Type",
+      "options": [
+        "Chest Type",
+        "Upright"
+      ]
+    },
+    "microwaveOvenTypes": {
+      "displayName": "Microwave Oven Type",
+      "options": [
+        "Manual",
+        "Digital",
+        "Inverter",
+        "Non-Inverter"
+      ]
+    },
+    "cookingApplianceTypes": {
+      "displayName": "Cooking Appliance Type",
+      "options": [
+        "Cooking Range",
+        "Oven",
+        "Rangehood",
+        "Dish Washer",
+        "Sterilizer",
+        "Water Dispenser"
+      ]
+    },
+    "livingAreaTypes": {
+      "displayName": "Living Area Type",
+      "options": [
+        "Fans",
+        "Industrial Fans",
+        "Home & Personal Appliances"
+      ]
+    },
+    "kitchenTypes": {
+      "displayName": "Kitchen Type",
+      "options": [
+        "Cooking Equipment",
+        "Food Preparation",
+        "Beverage Equipment"
+      ]
+    }
+  }
+}

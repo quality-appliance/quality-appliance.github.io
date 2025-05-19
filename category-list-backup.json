@@ -1,0 +1,260 @@
+{
+    "categories": [
+      {
+        "name": "Furniture",
+        "subcategories": [
+          {
+            "name": "Bed",
+            "types": [
+              { "name": "Mattress" },
+              { "name": "Wall-Mounted Types" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Air Conditioning",
+        "subcategories": [
+          { "name": "Single Aircon" },
+          { "name": "Split Type Aircon" },
+          { "name": "Non-Inverter" },
+          { "name": "Inverter" },
+          { "name": "Indoor" },
+          { "name": "Outdoor Units" },
+          {
+            "name": "Mounting Types",
+            "types": [
+              { "name": "Wall" },
+              { "name": "Ceiling" },
+              { "name": "Floor" },
+              { "name": "Cassette" },
+              { "name": "Ducted" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Audio/Video Equipment",
+        "subcategories": [
+          {
+            "name": "Audio",
+            "types": [
+              {
+                "name": "Component",
+                "subtypes": [
+                  { "name": "Mini" },
+                  { "name": "Micro" },
+                  { "name": "HiFi" },
+                  { "name": "Boombox" }
+                ]
+              },
+              { "name": "Karaoke" },
+              { "name": "Videoke" },
+              { "name": "Speaker" },
+              { "name": "Subwoofer" },
+              { "name": "Amplifier" },
+              { "name": "Equalizer" },
+              {
+                "name": "Home Theater",
+                "subtypes": [
+                  { "name": "5.1 Channels" },
+                  { "name": "7.1 Channels" },
+                  { "name": "Soundbar" }
+                ]
+              },
+              { "name": "Accessories" }
+            ]
+          },
+          {
+            "name": "Video",
+            "types": [
+              {
+                "name": "TV Types",
+                "subtypes": [
+                  { "name": "Curved" },
+                  { "name": "Smart" },
+                  { "name": "Basic" },
+                  {
+                    "name": "Display Types",
+                    "variants": [
+                      { "name": "LED" },
+                      { "name": "LCD" },
+                      { "name": "CRT" },
+                      { "name": "Plasma" }
+                    ]
+                  },
+                  {
+                    "name": "Resolutions",
+                    "variants": [
+                      { "name": "HD" },
+                      { "name": "FHD" },
+                      { "name": "UHD" },
+                      { "name": "SUHD" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Media Players",
+                "subtypes": [
+                  { "name": "Blu-ray" },
+                  { "name": "DVD" },
+                  { "name": "Digital Media" }
+                ]
+              },
+              { "name": "TV Accessories" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Home Appliances",
+        "subcategories": [
+          {
+            "name": "Washing Machine",
+            "types": [
+              { "name": "Twin Tub" },
+              { "name": "Single Tub" },
+              {
+                "name": "Fully Auto",
+                "subtypes": [
+                  { "name": "Top Load" },
+                  { "name": "Front Load" }
+                ]
+              },
+              { "name": "Gas Dryer" },
+              { "name": "Double Washer" }
+            ]
+          },
+          {
+            "name": "Refrigerators",
+            "types": [
+              { "name": "Single Door" },
+              { "name": "Two Door" },
+              { "name": "Side by Side" },
+              { "name": "French Door" },
+              { "name": "Chiller" },
+              { "name": "Showcase" },
+              { "name": "Beverage Cooler" },
+              { "name": "Wine Cooler" }
+            ]
+          },
+          {
+            "name": "Freezers",
+            "types": [
+              {
+                "name": "Chest Type",
+                "subtypes": [
+                  { "name": "Glass Top" },
+                  { "name": "Hard Top" }
+                ]
+              },
+              { "name": "Upright" }
+            ]
+          },
+          {
+            "name": "Microwave Ovens",
+            "types": [
+              { "name": "Manual" },
+              { "name": "Digital" },
+              { "name": "Inverter" },
+              { "name": "Non-Inverter" }
+            ]
+          },
+          {
+            "name": "Cooking Appliances",
+            "types": [
+              {
+                "name": "Cooking Range",
+                "subtypes": [
+                  { "name": "Built-In" },
+                  { "name": "Free Standing with 2-6 Burners" }
+                ]
+              },
+              {
+                "name": "Oven",
+                "subtypes": [
+                  { "name": "Gas" },
+                  { "name": "Electric" }
+                ]
+              },
+              {
+                "name": "Rangehood",
+                "subtypes": [
+                  { "name": "Island" },
+                  { "name": "Chimney" }
+                ]
+              },
+              { "name": "Dish Washer" },
+              { "name": "Sterilizer" },
+              { "name": "Water Dispenser" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Small Domestic Appliances",
+        "subcategories": [
+          {
+            "name": "Living Area",
+            "types": [
+              {
+                "name": "Fans",
+                "subtypes": [
+                  { "name": "Desk" },
+                  { "name": "Stand" },
+                  { "name": "Wall" },
+                  { "name": "Ceiling" },
+                  { "name": "Exhaust" }
+                ]
+              },
+              { "name": "Industrial Fans" },
+              {
+                "name": "Home & Personal Appliances",
+                "subtypes": [
+                  { "name": "Air Cooler" },
+                  { "name": "Vacuum" },
+                  { "name": "Iron" },
+                  { "name": "Humidifier" },
+                  { "name": "Steamers" }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Kitchen",
+            "types": [
+              {
+                "name": "Cooking Equipment",
+                "subtypes": [
+                  { "name": "Rice Cooker" },
+                  { "name": "Turbo Broiler" },
+                  { "name": "Stove" },
+                  { "name": "Pressure Cooker" }
+                ]
+              },
+              {
+                "name": "Food Preparation",
+                "subtypes": [
+                  { "name": "Blender" },
+                  { "name": "Toaster" },
+                  { "name": "Waffle Maker" },
+                  { "name": "Air Fryer" },
+                  { "name": "Coffee Maker" }
+                ]
+              },
+              {
+                "name": "Beverage Equipment",
+                "subtypes": [
+                  { "name": "Kettle" },
+                  { "name": "Juicer" },
+                  { "name": "Water Despenser" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
