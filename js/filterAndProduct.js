@@ -16,7 +16,17 @@ function filterSidebar() {
     error: '',
     debounceTimeout: null,
 
-    // Fetch categories/attributes
+    // Helper: get category by id
+    getCategoryById(id) {
+      return this.categories.find(cat => cat.id === id);
+    },
+    // Helper: get subcategory by id
+    getSubcategoryById(catId, subId) {
+      const cat = this.getCategoryById(catId);
+      if (!cat) return null;
+      return cat.subcategories.find(sub => sub.id === subId);
+    },
+
     async init() {
       this.loading = true;
       this.error = '';
@@ -27,122 +37,104 @@ function filterSidebar() {
         if (!data.categories || !data.attributes) throw new Error('Invalid data structure');
         this.categories = data.categories;
         this.attributes = data.attributes;
-        // --- Open all filters by default, but do not check any ---
-        this.open.categories = this.categories.map(cat => cat.name);
+        this.open.categories = this.categories.map(cat => cat.id);
         this.open.subcategories = {};
         this.categories.forEach(cat => {
-          this.open.subcategories[cat.name] = cat.subcategories.map(sub => sub.name);
+          this.open.subcategories[cat.id] = cat.subcategories.map(sub => sub.id);
         });
-        // --- End open all filters ---
-        // --- Auto-select main category from query string ---
         const params = new URLSearchParams(window.location.search);
-        const category = params.get('category');
-        if (category) {
-          // Only add if not already selected and if it matches a real category
-          const catNames = this.categories.map(cat => cat.name);
-          if (catNames.includes(category) && !this.selected.categories.includes(category)) {
-            this.selected.categories.push(category);
+        const categoryId = params.get('category');
+        if (categoryId) {
+          const catIds = this.categories.map(cat => cat.id);
+          if (catIds.includes(categoryId) && !this.selected.categories.includes(categoryId)) {
+            this.selected.categories.push(categoryId);
             // Optionally, open the category accordion
-            if (this.open.categories && !this.open.categories.includes(category)) {
-              this.open.categories.push(category);
+            if (this.open.categories && !this.open.categories.includes(categoryId)) {
+              this.open.categories.push(categoryId);
             }
-            // Emit change so product list updates
             this.emitChange();
           }
         }
-        // --- End auto-select main category ---
       } catch (e) {
         this.error = e.message || 'Error loading data';
       } finally {
         this.loading = false;
       }
     },
-    // Helpers for selection
-    isCategorySelected(cat) {
-      return this.selected.categories.includes(cat);
+    isCategorySelected(catId) {
+      return this.selected.categories.includes(catId);
     },
-    isSubcategorySelected(cat, sub) {
-      return (this.selected.subcategories[cat] || []).includes(sub);
+    isSubcategorySelected(catId, subId) {
+      return (this.selected.subcategories[catId] || []).includes(subId);
     },
-    isAttributeSelected(cat, sub, key, option) {
+    isAttributeSelected(catId, subId, key, option) {
       return (
-        this.selected.attributes[sub] &&
-        this.selected.attributes[sub][key] &&
-        this.selected.attributes[sub][key].includes(option)
+        this.selected.attributes[subId] &&
+        this.selected.attributes[subId][key] &&
+        this.selected.attributes[subId][key].includes(option)
       );
     },
-    // Helpers for open state
-    isCategoryOpen(cat) {
-      return this.open.categories.includes(cat);
+    isCategoryOpen(catId) {
+      return this.open.categories.includes(catId);
     },
-    isSubcategoryOpen(cat, sub) {
-      return (this.open.subcategories[cat] || []).includes(sub);
+    isSubcategoryOpen(catId, subId) {
+      return (this.open.subcategories[catId] || []).includes(subId);
     },
-    // Toggle logic
-    toggleCategory(cat) {
-      const idx = this.selected.categories.indexOf(cat);
+    toggleCategory(catId) {
+      const idx = this.selected.categories.indexOf(catId);
       if (idx > -1) {
         // Uncheck: remove category, all its subcategories, and related attributes
         this.selected.categories.splice(idx, 1);
-        delete this.selected.subcategories[cat];
+        delete this.selected.subcategories[catId];
         // Remove all attributes related to this category's subcategories
-        const catObj = this.categories.find(c => c.name === cat);
+        const catObj = this.categories.find(c => c.id === catId);
         if (catObj) {
           catObj.subcategories.forEach(sub => {
-            delete this.selected.attributes[sub.name];
+            delete this.selected.attributes[sub.id];
           });
         }
       } else {
-        // Check: only allow one category at a time
-        this.selected.categories = [cat];
-        // Remove all subcategories and attributes except for the selected category
+        this.selected.categories = [catId];
         this.selected.subcategories = {};
         this.selected.attributes = {};
-        this.selected.subcategories[cat] = this.selected.subcategories[cat] || [];
+        this.selected.subcategories[catId] = this.selected.subcategories[catId] || [];
       }
       this.selected = JSON.parse(JSON.stringify(this.selected));
       this.emitChange();
     },
-    toggleSubcategory(cat, sub) {
-      // If another category is selected, clear all selections and only select this one
-      if (!this.selected.categories.includes(cat) || this.selected.categories.length > 1) {
-        this.selected.categories = [cat];
+    toggleSubcategory(catId, subId) {
+      if (!this.selected.categories.includes(catId) || this.selected.categories.length > 1) {
+        this.selected.categories = [catId];
         this.selected.subcategories = {};
         this.selected.attributes = {};
       }
-      const arr = this.selected.subcategories[cat] = this.selected.subcategories[cat] || [];
-      const idx = arr.indexOf(sub);
+      const arr = this.selected.subcategories[catId] = this.selected.subcategories[catId] || [];
+      const idx = arr.indexOf(subId);
       if (idx > -1) {
-        // Uncheck subcategory
         arr.splice(idx, 1);
-        // Remove attributes for this subcategory
-        delete this.selected.attributes[sub];
-        // If no subcategories are checked, uncheck the parent category
+        delete this.selected.attributes[subId];
         if (arr.length === 0) {
-          delete this.selected.subcategories[cat];
-          const catIdx = this.selected.categories.indexOf(cat);
+          delete this.selected.subcategories[catId];
+          const catIdx = this.selected.categories.indexOf(catId);
           if (catIdx > -1) {
             this.selected.categories.splice(catIdx, 1);
           }
         }
       } else {
-        // Check subcategory
-        arr.push(sub);
-        // Also check the parent category if not already checked (handled above)
+        arr.push(subId);
       }
       this.selected = JSON.parse(JSON.stringify(this.selected));
       this.emitChange();
     },
-    toggleAttribute(cat, sub, key, option) {
-      // Ensure structure exists
-      if (!this.selected.attributes[sub]) this.selected.attributes[sub] = {};
-      if (!this.selected.attributes[sub][key]) this.selected.attributes[sub][key] = [];
-      const arr = this.selected.attributes[sub][key];
+    toggleAttribute(catId, subId, key, option) {
+      if (!this.selected.attributes[subId]) this.selected.attributes[subId] = {};
+      if (!this.selected.attributes[subId][key]) this.selected.attributes[subId][key] = [];
+      const arr = this.selected.attributes[subId][key];
       const idx = arr.indexOf(option);
       if (idx > -1) {
         arr.splice(idx, 1);
-        if (arr.length === 0) delete this.selected.attributes[sub][key];
-        if (Object.keys(this.selected.attributes[sub]).length === 0) delete this.selected.attributes[sub];
+        if (arr.length === 0) delete this.selected.attributes[subId][key];
+        if (Object.keys(this.selected.attributes[subId]).length === 0) delete this.selected.attributes[subId];
       } else {
         arr.push(option);
       }
@@ -153,14 +145,12 @@ function filterSidebar() {
     resetAll() {
       this.selected = { categories: [], subcategories: {}, attributes: {} };
       this.emitChange();
-      // Remove query string from URL (preserve hash if present)
       if (window.history.replaceState) {
         const { protocol, host, pathname, hash } = window.location;
         const url = `${protocol}//${host}${pathname}${hash}`;
         window.history.replaceState({}, '', url);
       }
     },
-    // Debounced event emit
     emitChange() {
       clearTimeout(this.debounceTimeout);
       this.debounceTimeout = setTimeout(() => {
@@ -174,29 +164,28 @@ function filterSidebar() {
         cat.subcategories.some(sub => sub.name.toLowerCase().includes(this.filterSearch.toLowerCase()))
       );
     },
-    toggleCategoryOpen(cat) {
-      if (this.open.categories.includes(cat)) {
-        this.open.categories = this.open.categories.filter(c => c !== cat);
+    toggleCategoryOpen(catId) {
+      if (this.open.categories.includes(catId)) {
+        this.open.categories = this.open.categories.filter(c => c !== catId);
       } else {
-        this.open.categories.push(cat);
+        this.open.categories.push(catId);
       }
     },
-    toggleSubcategoryOpen(cat, sub) {
-      if (!this.open.subcategories[cat]) this.open.subcategories[cat] = [];
-      if (this.open.subcategories[cat].includes(sub)) {
-        this.open.subcategories[cat] = this.open.subcategories[cat].filter(s => s !== sub);
+    toggleSubcategoryOpen(catId, subId) {
+      if (!this.open.subcategories[catId]) this.open.subcategories[catId] = [];
+      if (this.open.subcategories[catId].includes(subId)) {
+        this.open.subcategories[catId] = this.open.subcategories[catId].filter(s => s !== subId);
       } else {
-        this.open.subcategories[cat].push(sub);
+        this.open.subcategories[catId].push(subId);
       }
     },
-    // Remove filter chip
     removeFilter(type, value) {
       if (type === 'category') {
         this.toggleCategory(value);
       } else if (type === 'subcategory') {
-        this.toggleSubcategory(value.cat, value.sub);
+        this.toggleSubcategory(value.catId, value.subId);
       } else if (type === 'attribute') {
-        this.toggleAttribute('', value.sub, value.key, value.option);
+        this.toggleAttribute('', value.subId, value.key, value.option);
       }
     }
   };
@@ -209,121 +198,181 @@ function productList() {
         id: 1,
         name: 'Samsung 1.5HP Split Type AC',
         price: 28999,
+        oldPrice: 31999,
+        discount: 9,
         description: 'Efficient inverter air conditioner for medium rooms.',
-        category: 'Air Conditioning',
-        subcategory: 'Split Type Aircon',
-        attributes: { 'airConGeneral': 'Inverter' },
-        image: './images/product/split-inverter.png'
+        categoryId: 'ac',
+        subcategoryId: 'split',
+        attributes: { airConGeneral: 'Inverter' },
+        image: 'split-inverter.png',
+        rating: 4.5,
+        reviewCount: 123,
+        isBestSeller: true
       },
       {
         id: 2,
         name: 'Sony 5.1 Channel Home Theater',
         price: 15999,
+        oldPrice: null,
+        discount: 0,
         description: 'Immersive surround sound system for home entertainment.',
-        category: 'Audio/Video Equipment',
-        subcategory: 'Audio',
-        attributes: { 'audioHomeTheater': '5.1 Channels' },
-        image: './images/product/home-theater.png'
+        categoryId: 'av',
+        subcategoryId: 'audio',
+        attributes: { audioHomeTheater: '5.1 Channels' },
+        image: 'home-theater.png',
+        rating: 4.7,
+        reviewCount: 98,
+        isBestSeller: false
       },
       {
         id: 3,
         name: 'LG Twin Tub Washing Machine',
         price: 12999,
+        oldPrice: 13999,
+        discount: 7,
         description: 'Efficient twin tub washing machine for family use.',
-        category: 'Home Appliances',
-        subcategory: 'Washing Machine',
-        attributes: { 'washingMachineTypes': 'Twin Tub' },
-        image: './images/product/washing-machine.png'
+        categoryId: 'appliances',
+        subcategoryId: 'wmachine',
+        attributes: { washingMachineTypes: 'Twin Tub' },
+        image: 'washing-machine.png',
+        rating: 4.2,
+        reviewCount: 54,
+        isBestSeller: false
       },
       {
         id: 4,
         name: 'Samsung Side by Side Refrigerator',
         price: 45999,
+        oldPrice: 49999,
+        discount: 8,
         description: 'Spacious side by side refrigerator with modern features.',
-        category: 'Home Appliances',
-        subcategory: 'Refrigerators',
-        attributes: { 'refrigeratorTypes': 'Side by Side' },
-        image: './images/product/refrigerator.png'
+        categoryId: 'appliances',
+        subcategoryId: 'ref',
+        attributes: { refrigeratorTypes: 'Side by Side' },
+        image: 'refrigerator.png',
+        rating: 4.8,
+        reviewCount: 201,
+        isBestSeller: true
       },
       {
         id: 5,
         name: 'Panasonic Chest Freezer',
         price: 18999,
+        oldPrice: null,
+        discount: 0,
         description: 'Large capacity chest freezer for bulk storage.',
-        category: 'Home Appliances',
-        subcategory: 'Freezers',
-        attributes: { 'freezerTypes': 'Chest Type' },
-        image: './images/product/freezer.png'
+        categoryId: 'appliances',
+        subcategoryId: 'freezer',
+        attributes: { freezerTypes: 'Chest Type' },
+        image: 'freezer.png',
+        rating: 4.1,
+        reviewCount: 33,
+        isBestSeller: false
       },
       {
         id: 6,
         name: 'Sharp Digital Microwave',
         price: 8999,
+        oldPrice: 9999,
+        discount: 10,
         description: 'Digital microwave oven with multiple cooking modes.',
-        category: 'Home Appliances',
-        subcategory: 'Microwave Ovens',
-        attributes: { 'microwaveOvenTypes': 'Digital' },
-        image: './images/product/microwave.png'
+        categoryId: 'appliances',
+        subcategoryId: 'microwave',
+        attributes: { microwaveOvenTypes: 'Digital' },
+        image: 'microwave.png',
+        rating: 4.3,
+        reviewCount: 41,
+        isBestSeller: false
       },
       {
         id: 7,
         name: 'Electrolux Cooking Range',
         price: 24999,
+        oldPrice: null,
+        discount: 0,
         description: 'Professional cooking range for home kitchens.',
-        category: 'Home Appliances',
-        subcategory: 'Cooking Appliances',
-        attributes: { 'cookingApplianceTypes': 'Cooking Range' },
-        image: './images/product/cooking-range.png'
+        categoryId: 'appliances',
+        subcategoryId: 'cooking',
+        attributes: { cookingApplianceTypes: 'Cooking Range' },
+        image: 'cooking-range.png',
+        rating: 4.6,
+        reviewCount: 67,
+        isBestSeller: false
       },
       {
         id: 8,
         name: 'Khind Industrial Fan',
         price: 3999,
+        oldPrice: 4499,
+        discount: 11,
         description: 'Powerful industrial fan for large spaces.',
-        category: 'Small Domestic Appliances',
-        subcategory: 'Living Area',
-        attributes: { 'livingAreaTypes': 'Industrial Fans' },
-        image: './images/product/industrial-fan.png'
+        categoryId: 'sda',
+        subcategoryId: 'living',
+        attributes: { livingAreaTypes: 'Industrial Fans' },
+        image: 'industrial-fan.png',
+        rating: 4.0,
+        reviewCount: 22,
+        isBestSeller: false
       },
       {
         id: 9,
         name: 'Philips Food Processor',
         price: 5999,
+        oldPrice: null,
+        discount: 0,
         description: 'Versatile food processor for kitchen preparation.',
-        category: 'Small Domestic Appliances',
-        subcategory: 'Kitchen',
-        attributes: { 'kitchenTypes': 'Food Preparation' },
-        image: './images/product/food-processor.png'
+        categoryId: 'sda',
+        subcategoryId: 'kitchen',
+        attributes: { kitchenTypes: 'Food Preparation' },
+        image: 'food-processor.png',
+        rating: 4.4,
+        reviewCount: 38,
+        isBestSeller: false
       },
       {
         id: 10,
         name: 'Queen Size Bed',
         price: 15999,
+        oldPrice: 17999,
+        discount: 11,
         description: 'Space-saving wall-mounted bed with storage.',
-        category: 'Furniture',
-        subcategory: 'Bed',
-        attributes: { 'furnitureBedTypes': 'Mattress' },
-        image: './images/product/bed-mattress.png'
+        categoryId: 'furniture',
+        subcategoryId: 'bed',
+        attributes: { furnitureBedTypes: 'Mattress' },
+        image: 'bed-mattress.png',
+        rating: 4.2,
+        reviewCount: 19,
+        isBestSeller: false
       },
       {
         id: 11,
         name: 'Sony Blu-ray Player',
         price: 7999,
+        oldPrice: null,
+        discount: 0,
         description: 'High-quality Blu-ray player with streaming capabilities.',
-        category: 'Audio/Video Equipment',
-        subcategory: 'Video',
-        attributes: { 'videoMediaPlayers': 'Blu-ray' },
-        image: './images/product/bluray.png'
+        categoryId: 'av',
+        subcategoryId: 'video',
+        attributes: { videoMediaPlayers: 'Blu-ray' },
+        image: 'bluray.png',
+        rating: 4.5,
+        reviewCount: 44,
+        isBestSeller: false
       },
       {
         id: 12,
         name: 'JBL Soundbar',
         price: 12999,
+        oldPrice: 14999,
+        discount: 13,
         description: 'Premium soundbar for enhanced TV audio.',
-        category: 'Audio/Video Equipment',
-        subcategory: 'Audio',
-        attributes: { 'audioHomeTheater': 'Soundbar' },
-        image: './images/product/soundbar.png'
+        categoryId: 'av',
+        subcategoryId: 'audio',
+        attributes: { audioHomeTheater: 'Soundbar' },
+        image: 'soundbar.png',
+        rating: 4.6,
+        reviewCount: 61,
+        isBestSeller: true
       }
     ],
     filteredProducts: [],
@@ -353,26 +402,26 @@ function productList() {
       }
       this.filteredProducts = this.products.filter(item => {
         // Category filter
-        if (filters.categories && filters.categories.length > 0 && !filters.categories.includes(item.category)) {
+        if (filters.categories && filters.categories.length > 0 && !filters.categories.includes(item.categoryId)) {
           return false;
         }
         // Subcategory filter
         if (
           filters.subcategories &&
-          filters.subcategories[item.category] &&
-          filters.subcategories[item.category].length > 0 &&
-          !filters.subcategories[item.category].includes(item.subcategory)
+          filters.subcategories[item.categoryId] &&
+          filters.subcategories[item.categoryId].length > 0 &&
+          !filters.subcategories[item.categoryId].includes(item.subcategoryId)
         ) {
           return false;
         }
-        // Attribute filter
+        // Attribute filter (improved)
         if (filters.attributes) {
-          // For each subcategory in filters.attributes
-          for (const [sub, keys] of Object.entries(filters.attributes)) {
-            for (const [key, options] of Object.entries(keys)) {
+          // Only check attributes for the product's subcategory
+          const subAttrFilters = filters.attributes[item.subcategoryId];
+          if (subAttrFilters) {
+            for (const [key, options] of Object.entries(subAttrFilters)) {
               if (
                 options.length > 0 &&
-                (item.subcategory === sub) &&
                 (!item.attributes[key] || !options.includes(item.attributes[key]))
               ) {
                 return false;
@@ -382,6 +431,33 @@ function productList() {
         }
         return true;
       });
+    },
+    getCategoryName(catId) {
+      const cat = this.categories?.find(c => c.id === catId);
+      return cat ? cat.name : catId;
+    },
+    getSubcategoryName(catId, subId) {
+      const cat = this.categories?.find(c => c.id === catId);
+      if (!cat) return subId;
+      const sub = cat.subcategories?.find(s => s.id === subId);
+      return sub ? sub.name : subId;
+    },
+    getStarArray(rating) {
+      const stars = [];
+      let rounded = Math.round(rating * 2) / 2;
+      for (let i = 1; i <= 5; i++) {
+        if (rounded >= i) {
+          stars.push('full');
+        } else if (rounded + 0.5 >= i) {
+          stars.push('half');
+        } else {
+          stars.push('empty');
+        }
+      }
+      return stars;
+    },
+    isDiscount(item) {
+      return item.discount > 0 && item.oldPrice > item.price;
     }
   }
 } 

@@ -18,9 +18,12 @@
     <link rel="stylesheet" href="./css/output.css">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
   </head>
 
-  <body class="bg-gray-50">
+  <body class="bg-gray-100">
     <!-- Main Container -->
     <div class="min-h-screen w-full flex flex-col justify-start items-center">
       <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
@@ -726,6 +729,21 @@
       </footer>
     </div>
 
+      <button
+      x-data="{ show: false }"
+      x-init="window.addEventListener('scroll', () => { show = window.scrollY > 200 })"
+      x-show="show"
+      x-transition
+      @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-brand hover:bg-brand/90 text-white rounded-full p-2 sm:p-3 shadow-lg transition-all"
+      style="display: none;"
+      aria-label="Back to top"
+    >
+      <!-- Up Arrow SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
     <!-- External Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/searchDropdown.js" defer></script>

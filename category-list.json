@@ -1,54 +1,47 @@
 {
   "categories": [
     {
+      "id": "furniture",
       "name": "Furniture",
       "subcategories": [
-        {
-          "name": "Bed",
-          "attributeKeys": ["furnitureBedTypes"]
-        }
+        { "id": "bed", "name": "Bed", "attributeKeys": ["furnitureBedTypes"] }
       ]
     },
     {
+      "id": "ac",
       "name": "Air Conditioning",
       "subcategories": [
-        { "name": "Single Aircon", "attributeKeys": ["airConGeneral"] },
-        { "name": "Split Type Aircon", "attributeKeys": ["airConGeneral"] },
-        { "name": "Mounting Types", "attributeKeys": ["airConMountingTypes"] }
+        { "id": "single", "name": "Single Aircon", "attributeKeys": ["airConGeneral"] },
+        { "id": "split", "name": "Split Type Aircon", "attributeKeys": ["airConGeneral"] },
+        { "id": "mounting", "name": "Mounting Types", "attributeKeys": ["airConMountingTypes"] }
       ]
     },
     {
+      "id": "av",
       "name": "Audio/Video Equipment",
       "subcategories": [
-        {
-          "name": "Audio",
-          "attributeKeys": ["audioTypes", "audioComponents", "audioHomeTheater"]
-        },
-        {
-          "name": "Video",
-          "attributeKeys": ["videoTvTypes", "videoMediaPlayers"]
-        },
-        {
-          "name": "TV Accessories",
-          "attributeKeys": []
-        }
+        { "id": "audio", "name": "Audio", "attributeKeys": ["audioTypes", "audioComponents", "audioHomeTheater"] },
+        { "id": "video", "name": "Video", "attributeKeys": ["videoTvTypes", "videoMediaPlayers"] },
+        { "id": "tvacc", "name": "TV Accessories", "attributeKeys": [] }
       ]
     },
     {
+      "id": "appliances",
       "name": "Home Appliances",
       "subcategories": [
-        { "name": "Washing Machine", "attributeKeys": ["washingMachineTypes"] },
-        { "name": "Refrigerators", "attributeKeys": ["refrigeratorTypes"] },
-        { "name": "Freezers", "attributeKeys": ["freezerTypes"] },
-        { "name": "Microwave Ovens", "attributeKeys": ["microwaveOvenTypes"] },
-        { "name": "Cooking Appliances", "attributeKeys": ["cookingApplianceTypes"] }
+        { "id": "wmachine", "name": "Washing Machine", "attributeKeys": ["washingMachineTypes"] },
+        { "id": "ref", "name": "Refrigerators", "attributeKeys": ["refrigeratorTypes"] },
+        { "id": "freezer", "name": "Freezers", "attributeKeys": ["freezerTypes"] },
+        { "id": "microwave", "name": "Microwave Ovens", "attributeKeys": ["microwaveOvenTypes"] },
+        { "id": "cooking", "name": "Cooking Appliances", "attributeKeys": ["cookingApplianceTypes"] }
       ]
     },
     {
+      "id": "sda",
       "name": "Small Domestic Appliances",
       "subcategories": [
-        { "name": "Living Area", "attributeKeys": ["livingAreaTypes"] },
-        { "name": "Kitchen", "attributeKeys": ["kitchenTypes"] }
+        { "id": "living", "name": "Living Area", "attributeKeys": ["livingAreaTypes"] },
+        { "id": "kitchen", "name": "Kitchen", "attributeKeys": ["kitchenTypes"] }
       ]
     }
   ],
