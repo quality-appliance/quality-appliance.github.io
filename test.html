@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions">
+    <title>Quality Appliance Plaza Official Website</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+  </head>
+  <body>
+    <div class="min-h-screen w-full flex flex-col justify-start items-center">
+      <main class="w-full flex flex-col md:flex-row max-w-screen-xl my-4 bg-white/70 backdrop-blur-sm rounded-xl shadow-lg items-start gap-4 p-4">
+        <aside class="h-screen w-full md:max-w-[28%] bg-white/90 border border-gray-100 rounded-2xl shadow-sm p-6 flex flex-col gap-8 sticky top-8 self-start mx-auto mb-4 md:mb-0" aria-label="Filter sidebar">
+          <h1 class="text-lg font-semibold text-gray-900 tracking-widest uppercase mb-4">Filter by Category</h1>
+          <section class="space-y-4 h-full overflow-y-auto">
+            <div x-data="categoriesFilter()" class="space-y-4">
+              <template x-for="category in categories" :key="category.id">
+                <div>
+                  <label :for="`category-${category.id}`" class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" :id="`category-${category.id}`" :value="category.id" x-model="selectedCategories" class="accent-brand" />
+                    <span x-text="category.name" class="select-none"></span>
+                  </label>
+                  <div x-show="selectedCategories.includes(category.id)" x-transition class="ml-6 mt-1 space-y-1">
+                    <template x-for="subcategory in category.subcategories" :key="subcategory">
+                      <label :for="`subcategory-${category.id}-${subcategory}`" class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" :id="`subcategory-${category.id}-${subcategory}`" :value="subcategory" x-model="selectedSubcategories[category.id]" class="accent-brand" />
+                        <span x-text="subcategory" class="select-none"></span>
+                      </label>
+                    </template>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </section>
+        </aside>
+        <section class="w-full md:max-w-[70%]" aria-label="Product listing">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+      </main>
+    </div>
+    <script>
+      document.addEventListener('alpine:init', () => {
+        Alpine.data('categoriesFilter', () => (
+        {
+          categories: 
+          [
+            { id: 'furniture', name: 'Furniture', subcategories: ['Bed']}, 
+            { id: 'air-conditioning',name: 'Air Conditioning', subcategories: ['Single', 'Split Type', 'Mounting Types'] },
+            { id: 'audio-video', name: 'Audio/Video Equipment', subcategories: ['Audio', 'Video', 'TV Accessories'] },
+            { id: 'home-appliances', name: 'Home Appliances', subcategories: ['Washing Machine', 'Refrigerator', 'Freezers', 'Microwave Ovens', 'Cooking Appliances'] },
+            { id: 'small-domestic-appliances', name: 'Small Domestic Appliances', subcategories: ['Living Area', 'Kitchen'] },
+          ],
+          selectedCategories: [],
+          selectedSubcategories: {},
+
+          init() {
+            this.categories.forEach(category => {
+                this.selectedSubcategories[category.id] = [];
+            });
+
+            this.$watch('selectedCategories', (newCategories, oldCategories) => {
+              const unchecked = oldCategories.filter(id => !newCategories.includes(id));
+              unchecked.forEach(id => {
+                if (this.selectedSubcategories[id]) 
+                {
+                  this.selectedSubcategories[id] = [];
+                }
+              });
+
+            });
+          }
+        }));
+      });
+    </script>
+  </body>
+</html>
