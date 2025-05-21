@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions">
+    <title>About Us | Quality Appliance Plaza</title>
+
+    <!-- External CSS Dependencies -->
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
+  </head>
+
+  <body class="bg-gray-50">
+     <!-- Main Container -->
+    <div class="min-h-screen w-full flex flex-col justify-start items-center">
+      <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
+        <div class="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+          <a href="/" aria-label="Homepage" class="flex items-start shrink-0">
+            <img src="./images/qapi-logo.webp" alt="Quality Appliance Logo" class="h-auto w-48 sm:w-56 object-contain">
+          </a>
+          <div class="relative w-full max-w-lg flex-grow">
+            <input type="search" id="search" name="search" placeholder="Search appliances, brands, or models" aria-label="Search appliances" class="w-full bg-gray-100 focus:bg-white px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:outline-none transition focus:ring-2 focus:ring-brand">
+            <button type="submit" class="absolute inset-y-0 right-3 flex items-center text-gray-600 hover:text-brand transition" aria-label="Submit search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" stroke-width="2"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 text-sm text-gray-800 px-4" role="group" aria-label="User actions">
+            <a href="#login" class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" aria-label="Login to your account">Login</a>
+            <a href="#register" class="hover:text-brand transition" aria-label="Create a new account">Register</a>
+          </div>
+        </div>
+      </header>
+
+      <nav class="w-full max-w-screen-xl bg-brand text-white shadow-lg rounded-b-xl" aria-label="Primary navigation">
+        <div class="w-full max-w-screen-xl flex justify-start items-center gap-5">
+          <div class="h-full shrink-0 px-2">
+            <img src="./images/menu-stripe.png" alt="M-stripe" class="w-48 h-full object-contain">
+          </div>
+          <ul class="flex justify-center items-center gap-4 sm:gap-6 text-sm">
+            <li><a href="/" class="hover:underline" aria-current="page">Home</a></li>
+            <li><a href="./categories.html" class="hover:underline" aria-current="page">Categories</a></li>
+            <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
+            <li><a href="#products" class="hover:underline">Products</a></li>
+            <li><a href="#careers" class="hover:underline">Careers</a></li>
+            <li><a href="#promos" class="hover:underline">Promo</a></li>
+            <li><a href="#contact-us" class="hover:underline">Contact Us</a></li>
+            <li><a href="#stores" class="hover:underline">Stores</a></li>
+            <li><a href="#installment" class="hover:underline">Installment Guide</a></li>
+            <li><a href="#application" class="hover:underline">Application Portal</a></li>
+          </ul>
+        </div>
+      </nav> 
+
+    <div class="min-h-screen flex flex-col">
+      <main class="flex-grow">
+        <div class="max-w-screen-xl mx-auto px-4 py-8 space-y-10">
+          <!-- Hero Section -->
+          <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row items-stretch">
+              <div class="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                <div class="space-y-6">
+                  <span class="inline-block text-sm font-semibold text-red-600 uppercase tracking-wider">About Our Company</span>
+                  <h1 class="text-3xl text-4xl font-bold text-gray-900 leading-tight">Quality Appliance Plaza</h1>
+                  <div class="w-16 h-1 bg-red-600 rounded-full"></div>
+                  <p class="text-gray-700 leading-relaxed">
+                    Since 1988, <strong>Quality Appliance Plaza</strong> has been a trusted name in the Philippines for appliances, consumer electronics, and furniture. We empower homes and businesses with the latest solutions from the world's top brands—made accessible through flexible payment options and exceptional service.
+                  </p>
+                  <blockquote class="border-l-4 border-red-600 pl-4 italic text-gray-600">
+                    "Your trusted partner for quality home solutions at competitive prices."
+                  </blockquote>
+                  <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
+                    <span class="text-sm text-gray-500">Founded by <span class="font-semibold text-gray-700">Quality Appliance Group</span> in <span class="font-bold text-red-600">1988</span></span>
+                    <a href="#careers" class="inline-block bg-red-600 text-white font-semibold px-4 py-3 rounded-lg shadow-md hover:bg-red-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2" aria-label="Join our journey">Join our journey</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2">
+                <div class="relative h-full overflow-hidden">
+                  <img src="./images/about/plaza.jpg" alt="Exterior view of Quality Appliance Plaza flagship store" class="w-full h-full object-cover object-center" />
+                  <div class="absolute inset-0 bg-gradient-to-tr from-red-600/80 via-transparent to-gray-900/20 opacity-30"></div>
+                  <div class="absolute bottom-6 left-6 text-white drop-shadow-lg">
+                    <span class="text-xl font-bold">Our Flagship Store</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Mission Section -->
+          <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="py-16 px-8 text-center">
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Our Mission</h2>
+              <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-8"></div>
+              <p class="text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                To enrich Filipino lives by providing quality appliances, furniture, and lifestyle solutions. We are committed to delivering outstanding customer service, a diverse product selection, and flexible payment options—making premium products accessible to every Filipino home.
+              </p>
+            </div>
+          </section>
+
+          <!-- Image Banner Section -->
+          <section class="relative h-[300px]  rounded-xl overflow-hidden shadow-lg">
+            <img src="./images/about/display.jpg" alt="Store display" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-tr from-red-600/80 via-transparent to-gray-900/20 opacity-15"></div>
+            <div class="absolute inset-0 bg-gradient-to-tl from-red-600/80 via-transparent to-gray-900/20 opacity-15"></div>
+          </section>
+
+          <!-- Vision Section -->
+          <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="py-16 px-8 text-center">
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Our Vision</h2>
+              <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-8"></div>
+              <p class="text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                To transform Filipino households through innovative home solutions. We strive to be the most trusted retail partner nationwide, maintain our standing among the top dealers for major brands, and continually elevate the shopping experience through technology and customer-centric services.
+              </p>
+            </div>
+          </section>
+
+          <!-- Values Section -->
+          <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="py-12 px-8">
+              <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Our Values</h2>
+                <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-8"></div>
+              </div>
+              <div class="grid grid-cols-2 gap-12 px-8">
+                <div class="group bg-white rounded-xl border border-gray-200 p-8 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center">
+                  <div class="w-auto h-50 flex items-center justify-center mb-3">
+                    <img src="./images/about/certified.png" alt="Quality" class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3">Quality</h3>
+                  <p class="text-gray-700 ">We offer only reliable, branded appliances and solutions you can trust.</p>
+                </div>
+                <div class="group bg-white rounded-xl border border-gray-200 p-8 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center">
+                  <div class="w-auto h-50 flex items-center justify-center mb-3">
+                    <img src="./images/about/money.png" alt="Affordability" class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3">Affordability</h3>
+                  <p class="text-gray-700 ">Competitive pricing and flexible payment options for every budget.</p>
+                </div>
+                <div class="group bg-white rounded-xl border border-gray-200 p-8 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center">
+                  <div class="w-auto h-50 flex items-center justify-center mb-3">
+                    <img src="./images/about/support.png" alt="Customer Service" class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3">Customer Service</h3>
+                  <p class="text-gray-700 ">Expert advice and dedicated after-sales support for every customer.</p>
+                </div>
+                <div class="group bg-white rounded-xl border border-gray-200 p-8 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center">
+                  <div class="w-auto h-50 flex items-center justify-center mb-3">
+                    <img src="./images/about/world.png" alt="Accessibility" class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3">Accessibility</h3>
+                  <p class="text-gray-700 ">Convenient locations and multiple payment options for all.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+    </div>
+     <!-- ===== FOOTER SECTION ===== -->
+        <footer class="w-full bg-white/90 backdrop-blur-sm border-t border-gray-200 mt-20 text-gray-600 text-sm shadow-lg relative overflow-hidden">
+          <!-- Decorative Arc Design -->
+          <div class="absolute left-0 bottom-0 w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[450px] 2xl:h-[450px] translate-x-[-50%] translate-y-[50%] -z-10">
+            <div class="relative w-full h-full">
+              <!-- Black Arc (Inner) -->
+              <div class="absolute inset-0 rounded-full" style="
+                  background: conic-gradient(black 0deg 90deg, transparent 90deg 360deg);
+                  mask-image: radial-gradient(circle at center, transparent 35%, black 35%, black 50%, transparent 50%);
+                  -webkit-mask-image: radial-gradient(circle at center, transparent 35%, black 35%, black 50%, transparent 50%);
+                  mask-composite: add;
+                  -webkit-mask-composite: source-over;"></div>
+              <!-- Red Arc (Outer) -->
+              <div class="absolute inset-0 rounded-full" style="
+                  background: conic-gradient(red 0deg 90deg, transparent 90deg 360deg);
+                  mask-image: radial-gradient(circle at center, transparent 55%, black 55%, black 70%, transparent 70%);
+                  -webkit-mask-image: radial-gradient(circle at center, transparent 55%, black 55%, black 70%, transparent 70%);
+                  mask-composite: add;
+                  -webkit-mask-composite: source-over;"></div>
+            </div>
+          </div>
+  
+          <!-- Footer Content -->
+          <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-16 relative z-10">
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+              <!-- Company Info -->
+              <div class="lg:col-span-3">
+                <img src="./images/qapi-logo.webp" alt="" class="h-16  object-cover object-center">
+                <p class="mb-4 text-xs leading-relaxed">We provide durable, high-quality appliances for every home. Trusted by thousands, backed by excellent support, and guided by our mission of service excellence.</p>
+              </div>
+  
+              <!-- Footer Links -->
+              <div class="lg:col-span-2">
+                <h3 class="text-sm font-semibold text-gray-800 mb-3">Company</h3>
+                <ul class="space-y-2 text-xs">
+                  <li><a href="#" class="hover:text-brand">About Us</a></li>
+                  <li><a href="#" class="hover:text-brand">Why Choose Us</a></li>
+                  <li><a href="#" class="hover:text-brand">Careers</a></li>
+                  <li><a href="#" class="hover:text-brand">Vision & Mission</a></li>
+                  <li><a href="#" class="hover:text-brand">Our Stores</a></li>
+                </ul>
+              </div>
+  
+              <!-- Policies -->
+              <div class="lg:col-span-2">
+                <h3 class="text-sm font-semibold text-gray-800 mb-3">Policies</h3>
+                <ul class="space-y-2 text-xs">
+                  <li><a href="#" class="hover:text-brand">Privacy Policy</a></li>
+                  <li><a href="#" class="hover:text-brand">Terms & Conditions</a></li>
+                  <li><a href="#" class="hover:text-brand">Returns & Refunds</a></li>
+                  <li><a href="#" class="hover:text-brand">Shipping Policy</a></li>
+                  <li><a href="#" class="hover:text-brand">Warranty Info</a></li>
+                </ul>
+              </div>
+  
+              <!-- Support -->
+              <div class="lg:col-span-2">
+                <h3 class="text-sm font-semibold text-gray-800 mb-3">Customer Support</h3>
+                <ul class="space-y-2 text-xs">
+                  <li><a href="#" class="hover:text-brand">Installation Guide</a></li>
+                  <li><a href="#" class="hover:text-brand">Order Tracking</a></li>
+                  <li><a href="#" class="hover:text-brand">FAQs</a></li>
+                  <li><a href="#" class="hover:text-brand">Feedback</a></li>
+                </ul>
+              </div>
+  
+              <!-- Contact & Newsletter -->
+              <div class="lg:col-span-3">
+                <h3 class="text-sm font-semibold text-gray-800 mb-3">Get in Touch</h3>
+                <ul class="text-xs space-y-2 mb-5">
+                  <li>📞 Tel: <a href="tel:893402230" class="hover:text-brand">893402-230</a></li>
+                  <li>📱 Mobile: <a href="tel:0924235352" class="hover:text-brand">0924235352</a></li>
+                  <li>🌍 Overseas: <a href="tel:0938534823" class="hover:text-brand">0938534823</a></li>
+                  <li>📧 Email: <a href="mailto:support@qualityappliance.com" class="hover:text-brand">support@qualityappliance.com</a></li>
+                </ul>
+  
+                <!-- Newsletter Form -->
+                <form class="flex flex-col sm:flex-row items-center gap-2">
+                  <input 
+                    type="email" 
+                    placeholder="Your email address" 
+                    class="w-full px-3 py-2 border rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-brand" 
+                  />
+                  <button 
+                    type="submit" 
+                    class="px-4 py-2 text-xs bg-brand text-white rounded-md hover:bg-brand-dark transition"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+  
+            <!-- Footer Base -->
+            <div class="mt-16 border-t border-gray-100 pt-6 text-center text-xs text-gray-500">
+              <div class="flex justify-center items-center gap-4 mb-3">
+                <span class="inline-block bg-gray-200 px-3 py-1 rounded">SSL Secured</span>
+                <span class="inline-block bg-gray-200 px-3 py-1 rounded">Trusted Seller</span>
+                <span class="inline-block bg-gray-200 px-3 py-1 rounded">Secure Checkout</span>
+              </div>
+              <p>© 2025 <span class="font-semibold text-brand">Quality Appliance Plaza</span>. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+  </body>
+</html>
