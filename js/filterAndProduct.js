@@ -115,10 +115,6 @@ function filterSidebar() {
         delete this.selected.attributes[subId];
         if (arr.length === 0) {
           delete this.selected.subcategories[catId];
-          const catIdx = this.selected.categories.indexOf(catId);
-          if (catIdx > -1) {
-            this.selected.categories.splice(catIdx, 1);
-          }
         }
       } else {
         arr.push(subId);

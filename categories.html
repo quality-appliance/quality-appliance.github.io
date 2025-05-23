@@ -10,7 +10,7 @@
     <!-- Alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-neutral-100">
     <div class="min-h-screen w-full flex flex-col justify-start items-center">
       <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
         <div class="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
@@ -42,7 +42,7 @@
             <li><a href="/" class="hover:underline" aria-current="page">Home</a></li>
             <li><a href="./categories.html" class="hover:underline" aria-current="page">Categories</a></li>
             <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
-            <li><a href="#products" class="hover:underline">Products</a></li>
+            <li><a href="./products.html" class="hover:underline">Products</a></li>
             <li><a href="#careers" class="hover:underline">Careers</a></li>
             <li><a href="#promos" class="hover:underline">Promo</a></li>
             <li><a href="#contact-us" class="hover:underline">Contact Us</a></li>
@@ -53,14 +53,14 @@
         </div>
       </nav>
       
-    <main class="w-full max-w-screen-xl bg-white flex flex-col my-8 p-2 gap-1 mx-auto rounded-xl shadow-md border border-gray-100">
+    <main class="w-full max-w-screen-xl bg-white flex flex-col my-8 mx-auto rounded-xl shadow-md border border-gray-200">
       <section class="my-8">
         <div class="text-center px-8">
-          <h1 class="text-3xl font-bold text-gray-800 mb-1 ">All Categories</h1>
+          <h1 class="text-3xl font-bold text-gray-800 mb-1">All Categories</h1>
           <p class="text-base text-gray-500">Explore all categories of appliances and find the perfect match for your home.</p>
         </div>
       </section>
-      <div class="flex flex-wrap items-center justify-center gap-2 px-8 mb-6 mt-4">
+      <div class="w-full flex flex-wrap items-center justify-center gap-2 px-8 mb-6 mt-4">
         <label class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 shadow-xs hover:bg-gray-50 transition-colors cursor-pointer has-[input:checked]:border-red-400 has-[input:checked]:border-2">
             <input type="checkbox" id="furniture-checkbox" class="w-4 h-4 accent-red-500" onchange="toggleSection('furniture-section')">
             <span class="text-sm font-medium text-gray-700 select-none">Furniture</span>
@@ -82,11 +82,11 @@
             <span class="text-sm font-medium text-gray-700 select-none">Small Appliances</span>
         </label>
       </div>
-      <div class="bg-white px-8">
+      <div class="">
         <section class="w-full" aria-label="Product listings">
           
           <!-- Air Conditioning -->
-          <div id="air-conditioning-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
+          <div id="air-conditioning-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6 px-8 py-4">
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-3">
                 <div class="w-1.5 h-12 bg-brand rounded-full"></div>
@@ -178,7 +178,7 @@
           </div>
           
           <!-- Audio / Video -->
-          <div id="audio-video-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
+          <div id="audio-video-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6 border-y border-gray-200 px-8 py-8">
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-3">
                 <div class="w-1.5 h-12 bg-brand rounded-full"></div>
@@ -189,151 +189,151 @@
               </div>
             </div>  
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/audio.jpg" alt="Audio" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Audio</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/video.jpg" alt="Video" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Video</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/karaoke.webp" alt="Karaoke" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Karaoke</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/speaker.png" alt="Speaker" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Speaker</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/subwoofer.webp" alt="Twintub" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Subwoofer</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/amplifier.png" alt="Amplifier" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Amplifier</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/5-1-channel.png" alt="5.1" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">5.1 Channel</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/7-1-channel.jpg" alt="7.1" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">7.1 Channel</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/soundbar.jpg" alt="Soundbar" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Soundbar</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/accessories.jpg" alt="Audio Accessories" class="object-contain h-20 " />
                 </div>
                 <p class="text-center text-sm font-medium text-gray-700">Audio Accessories</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/mini.png" alt="Mini" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Mini</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/micro.jpg" alt="Micro" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Micro</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/hifi.png" alt="Hifi" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Hifi</p>
               </a>
-               <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+               <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/tv.jpg" alt="TV" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">TV</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/media-player.png" alt="Media Player" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Media Player</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/curved.png" alt="Curved TV" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Curved TV</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/smart.jpg" alt="Smart TV" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Smart TV</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/basic.jpg" alt="Basic TV" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Basic TV</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/blueray.png" alt="Blueray" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Blueray</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/dvd.jpg" alt="DVD" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">DVD</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/digital-media.jpg" alt="Digital Media" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Digital Media</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/tv-accessories.png" alt="TV Accessories" class="object-contain h-20 " />
                 </div>
                 <p class="text-center text-sm font-medium text-gray-700">TV Accessories</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/led.png" alt="LED Display" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">LED Display</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/lcd.png" alt="LCD Display" class="aspect-square object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">LCD Display</p>
               </a>
-              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=av" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/audio-video/crt.png" alt="CRT Display" class="aspect-square object-contain h-20 " />
                 </div>  
@@ -353,7 +353,7 @@
           </div>
          
           <!-- Home Appliances -->
-          <div id="home-appliances-section" class="col-span-2 md:col-span-3 lg:col-span-6">
+          <div id="home-appliances-section" class="col-span-2 md:col-span-3 lg:col-span-6 px-8 py-4">
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-3">
                 <div class="w-1.5 h-12 bg-brand rounded-full"></div>
@@ -557,7 +557,7 @@
               </div>           
           </div>
           <!-- Small Domestic Appliances -->
-          <div id="small-appliances-section" class="col-span-2 md:col-span-3 lg:col-span-6">
+          <div id="small-appliances-section" class="col-span-2 md:col-span-3 lg:col-span-6 px-8 py-8 border-y border-gray-200">
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-3">
                 <div class="w-1.5 h-12 bg-brand rounded-full"></div>
@@ -568,109 +568,109 @@
               </div>
             </div>  
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/fans.png" alt="Fans" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Fans</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/desk-fan.jpg" alt="Desk Fan" class="object-contain h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Desk Fan</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/stand-fan.webp" alt="Stand Fan" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Stand Fan</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/wall-fan.png" alt="Wall Fan" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Wall Fan</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/ceiling-fan.png" alt="Ceiling Fan" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Ceiling Fan</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/exhaust-fan.png" alt="Exhaust Fan" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Exhaust Fan</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/industrial-fan.png" alt="Industrial Fan" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Industrial Fan</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/rice-cooker.png" alt="Rice Cooker" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Rice Cooker</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/turbo-boiler.png" alt="Turbo Boiler" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Turbo Boiler</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/stove.jpg" alt="Stove" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Stove</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/pressure-cooker.png" alt="Pressure Cooker" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Pressure Cooker</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/blender.png" alt="Blender" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Blender</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/waffle-maker.png" alt="Waffle Maker" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Waffle Maker</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/air-fryer.webp" alt="Air Fryer" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Air Fryer</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/coffee-maker.png" alt="Coffee Maker" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Coffee Maker</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/kettle.png" alt="Kettle" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Kettle</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/blender.png" alt="Blender" class="object-contain  h-20 " />
                 </div>
                 <p class="text-sm font-medium text-gray-700">Blender</p>
               </a>
-              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95 bg-white transition p-4 cursor-pointer group">
+              <a href="./category.html?category=sda" class="flex flex-col items-center justify-center gap-2  rounded-xl hover:shadow-lg hover:scale-85 transition hover:brightness-95  transition p-4 cursor-pointer group">
                 <div class=" flex items-center justify-center ">
                   <img src="./images/categories/small-domestic-appliances/water-dispenser.webp" alt="Water Dispenser" class="object-contain  h-20 " />
                 </div>
@@ -689,7 +689,7 @@
               </div>           
           </div>
           <!-- Furniture -->
-          <div id="furniture-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6">
+          <div id="furniture-section" class="col-span-2 md:col-span-3 lg:col-span-6 mb-6 py-8 px-8 bg-white">
              <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-3">
                 <div class="w-1.5 h-12 bg-brand rounded-full"></div>

@@ -10,6 +10,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+select, option {
+  font-family: inherit;
+}
+
 /* Hero Swiper Navigation */
       .swiper-button-next,
       .swiper-button-prev {
@@ -29,3 +33,4 @@ body {
         color: #cd002e;
         padding: 1rem;
       }
+

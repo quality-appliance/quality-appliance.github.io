@@ -1,0 +1,146 @@
+[
+  {
+    "image": "./images/product/popular/popular-1.png",
+    "name": "Samsung 28 cu. ft. Large Capacity 3-Door French Door Refrigerator in Stainless Steel",
+    "price": "₱110,115.49",
+    "features": [
+      "Triple cooling system",
+      "Smart connectivity",
+      "Energy efficient"
+    ],
+    "rating": 4.5,
+    "reviews": 128
+  },
+  {
+    "image": "./images/product/popular/popular-2.png",
+    "name": "LG 24 cu. ft. Side-by-Side Inverter Refrigerator",
+    "price": "₱89,995.00",
+    "features": [
+      "Inverter Linear Compressor",
+      "Multi Air Flow",
+      "Smart Diagnosis"
+    ],
+    "rating": 4.7,
+    "reviews": 102
+  },
+  {
+    "image": "./images/product/washing-machine.png",
+    "name": "Panasonic 7.5 kg Top Load Washing Machine",
+    "price": "₱15,499.00",
+    "features": [
+      "ActiveFoam System",
+      "Aqua Spin Rinse",
+      "Energy Saving"
+    ],
+    "rating": 4.6,
+    "reviews": 88
+  },
+  {
+    "image": "./images/product/split-inverter.png",
+    "name": "Samsung WindFree™ Premium Plus Air Conditioner 1.0HP",
+    "price": "₱38,995.00",
+    "features": [
+      "WindFree™ Cooling",
+      "AI Auto Cooling",
+      "Digital Inverter Boost"
+    ],
+    "rating": 4.8,
+    "reviews": 75
+  },
+  {
+    "image": "./images/product/microwave.png",
+    "name": "Whirlpool 20L Microwave Oven with Grill",
+    "price": "₱6,995.00",
+    "features": [
+      "Grill Function",
+      "Jet Start",
+      "Defrost by Weight/Time"
+    ],
+    "rating": 4.5,
+    "reviews": 60
+  },
+  {
+    "image": "./images/product/washing-machine.png",
+    "name": "Haier 8.5 kg Front Load Washing Machine",
+    "price": "₱22,999.00",
+    "features": [
+      "Direct Motion Motor",
+      "Anti-Bacterial Treatment",
+      "Smart Dosing"
+    ],
+    "rating": 4.6,
+    "reviews": 54
+  },
+  {
+    "image": "./images/product/popular/popular-3.png",
+    "name": "Condura 10.7 cu. ft. Inverter Refrigerator",
+    "price": "₱23,495.00",
+    "features": [
+      "Inverter Technology",
+      "Tropicalized Compressor",
+      "LED Lighting"
+    ],
+    "rating": 4.4,
+    "reviews": 49
+  },
+  {
+    "image": "./images/product/rice-cooker.png",
+    "name": "Hanabishi 1.8L Rice Cooker",
+    "price": "₱1,299.00",
+    "features": [
+      "Keep Warm Function",
+      "Non-stick Inner Pot",
+      "Cook & Steam"
+    ],
+    "rating": 4.7,
+    "reviews": 140
+  },
+  {
+    "image": "./images/product/cooking-range.png",
+    "name": "Beko 60cm Built-in Gas Range",
+    "price": "₱25,995.00",
+    "features": [
+      "4 Gas Burners",
+      "Electric Oven",
+      "Flame Failure Device"
+    ],
+    "rating": 4.5,
+    "reviews": 33
+  },
+  {
+    "image": "./images/product/washing-machine.png",
+    "name": "Electrolux 11kg UltimateCare™ Top Load Washer",
+    "price": "₱29,995.00",
+    "features": [
+      "UltraMix Technology",
+      "EcoInverter",
+      "Vapour Care"
+    ],
+    "rating": 4.8,
+    "reviews": 41
+  },
+  {
+    "image": "./images/product/split-type.png",
+    "name": "TCL 1.5HP Elite Series Split Type Air Conditioner",
+    "price": "₱27,995.00",
+    "features": [
+      "Fast Cooling",
+      "Gold Fin Anti-Corrosion",
+      "Smart Airflow"
+    ],
+    "rating": 4.6,
+    "reviews": 29
+  },
+  {
+    "image": "./images/product/stand-fan.png",
+    "name": "American Home 16\" Stand Fan",
+    "price": "₱1,499.00",
+    "features": [
+      "3 Speed Settings",
+      "Oscillation Function",
+      "Adjustable Height"
+    ],
+    "rating": 4.5,
+    "reviews": 67
+  }
+] 

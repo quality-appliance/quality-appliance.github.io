@@ -47,7 +47,7 @@
             <li><a href="/" class="hover:underline" aria-current="page">Home</a></li>
             <li><a href="./categories.html" class="hover:underline">Categories</a></li>
             <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
-            <li><a href="#products" class="hover:underline">Products</a></li>
+            <li><a href="./products.html" class="hover:underline">Products</a></li>
             <li><a href="#careers" class="hover:underline">Careers</a></li>
             <li><a href="#promos" class="hover:underline">Promo</a></li>
             <li><a href="#contact-us" class="hover:underline">Contact Us</a></li>
@@ -57,7 +57,7 @@
           </ul>
         </div>
       </nav> 
-          <main class="w-full flex flex-col md:flex-row max-w-screen-xl my-4 bg-white/70 backdrop-blur-sm rounded-xl shadow-lg items-start gap-4 p-4">
+          <main class="w-full flex flex-col md:flex-row max-w-screen-xl my-8 bg-white/70 backdrop-blur-sm rounded-xl shadow-lg items-start gap-4 p-4">
         <aside class="h-screen w-full md:max-w-[28%] bg-white/90  border border-gray-100 rounded-2xl shadow-sm p-6 flex flex-col gap-8 sticky top-8 self-start mx-auto mb-4 md:mb-0" aria-label="Filter sidebar">
           <h1 class="text-lg font-semibold text-gray-900 tracking-widest uppercase mb-4">Filter by Category</h1>
           <section x-data="filterSidebar()" x-init="init()" class="space-y-4 h-full overflow-y-auto" @keydown.escape.window="resetAll()">
@@ -216,7 +216,7 @@
                       <span class="bg-gray-50 text-gray-500 px-3 py-1 rounded-full text-xs" x-text="`${val}`"></span>
                     </template>
                   </div>
-                  <button class="mt-auto w-full bg-gradient-to-r from-brand to-red-500 text-white font-bold py-2 rounded-full hover:scale-105 hover:shadow-lg transition-all text-base">Shop Now</button>
+                  <button class="mt-auto w-full bg-gradient-to-r from-brand to-red-500 text-white font-bold py-2 rounded-full hover:scale-105 hover:shadow-lg transition-all text-base">View Product</button>
                 </div>
               </article>
             </template>
