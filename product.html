@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions">
+  <title>Product Card | Quality Appliance Plaza</title>
+  <link rel="stylesheet" href="./css/output.css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-neutral-100">
+  <div class="flex-1 flex flex-col justify-start items-center w-full">
+    <!-- Navbar Header -->
+    <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
+      <div class="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+        <a href="/" aria-label="Homepage" class="flex items-start shrink-0"><img src="./images/qapi-logo.webp" alt="Quality Appliance Logo" class="h-auto w-48 sm:w-56 object-contain"></a>
+        <div class="relative w-full max-w-lg flex-grow">
+          <input type="search" id="search" name="search" placeholder="Search appliances, brands, or models" aria-label="Search appliances" class="w-full bg-zinc-100 focus:bg-white px-4 py-3 pr-12 rounded-xl border border-zinc-300 focus:outline-none transition focus:ring-2 focus:ring-brand">
+          <button type="submit" class="absolute inset-y-0 right-3 flex items-center text-zinc-600 hover:text-brand transition" aria-label="Submit search">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/></svg>
+          </button>
+        </div>
+        <div class="flex items-center gap-3 shrink-0 text-sm text-zinc-800 px-4" role="group" aria-label="User actions">
+          <a href="#login" class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" aria-label="Login to your account">Login</a>
+          <a href="#register" class="hover:text-brand transition" aria-label="Create a new account">Register</a>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar Menu -->
+    <nav class="w-full max-w-screen-xl bg-brand text-white shadow-lg rounded-b-xl" aria-label="Primary navigation">
+      <div class="w-full max-w-screen-xl flex justify-start items-center gap-5">
+        <div class="h-full shrink-0 px-2"><img src="./images/menu-stripe.png" alt="M-stripe" class="w-48 h-full object-contain"></div>
+        <ul class="flex justify-center items-center gap-4 sm:gap-6 text-sm">
+          <li><a href="/" class="hover:underline" aria-current="page">Home</a></li>
+          <li><a href="./categories.html" class="hover:underline" aria-current="page">Categories</a></li>
+          <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
+          <li><a href="./products.html" class="hover:underline">Products</a></li>
+          <li><a href="#careers" class="hover:underline">Careers</a></li>
+          <li><a href="#promos" class="hover:underline">Promo</a></li>
+          <li><a href="#contact-us" class="hover:underline">Contact Us</a></li>
+          <li><a href="#stores" class="hover:underline">Stores</a></li>
+          <li><a href="#installment" class="hover:underline">Installment Guide</a></li>
+          <li><a href="#application" class="hover:underline">Application Portal</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Product Card -->
+    <section class="flex-1 bg-white h-full w-full max-w-screen-xl mx-auto rounded-xl shadow-lg overflow-hidden my-8 px-8 py-12">
+      <div class="flex items-center text-sm text-zinc-600 mb-6 gap-1.5">
+        <a href="/" class="hover:text-brand transition">Quality Appliance</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        <a href="/products.html" class="hover:text-brand transition">Home Appliances</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        <a href="/products.html?category=refrigerator" class="hover:text-brand transition">Refrigerator</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        <span class="text-zinc-900 font-medium">French Door</span>
+      </div>
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div x-data="{images:['./images/product-card/1.webp','./images/product-card/2.webp','./images/product-card/3.webp','./images/product-card/4.webp','./images/product-card/5.webp'],selected:0,hovered:null,modalOpen:false,modalImage:'',get mainImage(){return this.hovered!==null?this.images[this.hovered]:this.images[this.selected];}}" class="w-full">
+          <img :src="mainImage" alt="" class="h-96 w-full object-contain object-center border border-zinc-200 rounded-xl transition-all duration-200" @click="modalImage=mainImage;modalOpen=true" style="cursor:zoom-in;">
+          <div class="grid grid-cols-4 gap-2 mt-4">
+            <template x-for="(img,idx) in images.slice(1)" :key="idx">
+              <img :src="img" alt="" class="thumbnail w-full h-36 w-auto object-contain object-center border border-zinc-200 rounded-xl cursor-pointer transition-all duration-300" :class="{'ring-2 ring-brand':selected===idx+1,'opacity-80':hovered===idx+1}" @mouseenter="hovered=idx+1" @mouseleave="hovered=null" @click="modalImage=img;modalOpen=true" style="cursor:zoom-in;">
+            </template>
+          </div>
+          <div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" @click.self="modalOpen=false" @keydown.escape.window="modalOpen=false" style="display:none;">
+            <div class="relative">
+              <img :src="modalImage" alt="Preview" class="max-h-[80vh] max-w-[90vw] rounded-lg shadow-2xl border-4 border-white">
+              <button @click="modalOpen=false" class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:bg-zinc-200 transition" aria-label="Close preview">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-zinc-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full">
+          <div class="text-sm font-medium text-zinc-500 mb-1.5">SKU: RF28T5001SR</div>
+          <h1 class="text-3xl font-semibold leading-tight mb-1.5">Samsung 28 cu. ft. Large Capacity 3-Door French Door</h1>
+          <h2 class="text-2xl font-bold text-brand leading-snug mb-1.5">₱ 110,115.99</h2>
+          <div class="text-sm text-zinc-500">As low as <span class="text-brand font-semibold">₱2,800.00</span> × 36 Months</div>
+          <div class="flex items-center gap-2 my-3" x-data="{rating:4.5}">
+            <div class="flex items-center">
+              <template x-for="i in 5" :key="i">
+                <svg class="w-4 h-4" :class="i<=rating?'text-yellow-400':'text-zinc-300'" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </template>
+            </div>
+            <span class="text-sm text-zinc-500" x-text="rating+' (128 reviews)'"></span>
+          </div>
+          <div class="text-sm text-zinc-500 mb-1.5">
+            <h3 class="text-sm font-medium text-zinc-700 mb-1">EXCLUSIVE SERVICES</h3>
+            <ul class="flex gap-5 text-sm text-zinc-600 list-disc pl-5">
+              <li class="underline">Free Delivery</li>
+              <li class="underline">Free Installation</li>
+              <li class="underline">1 Year Warranty</li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-4 my-4">
+            <button class="bg-brand text-white font-semibold px-4 py-2 rounded-lg">Inquire Now</button>
+            <h4 class="font-medium text-zinc-700 ">Where to Buy?</h4>
+          </div>
+          <div class="my-4">
+            <h4 class="text-sm font-medium text-zinc-700 mb-1">Short Description:</h4>
+            <p class="text-sm text-zinc-600">3-Door French Door Refrigerator, AI Powered Smart Dial Front Load Washer and AI Powered Smart Dial and Super Speed Dry Dryer package</p>
+            <h4 class="text-sm font-medium text-zinc-700 mb-1 mt-4">Feature Overview:</h4>
+            <ul class="text-sm text-zinc-600 list-disc pl-5 grid grid-cols-2">
+              <li>All-Around Cooling</li>
+              <li>High-efficiency LED Lighting</li>
+              <li>More Space</li>
+              <li>Modern Design</li>
+              <li>Finger Print Resistant</li>
+              <li>Large Drawer</li>
+              <li>EZ-Open Handle™</li>
+              <li>Energy efficient and industry awarded</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="pt-16 border-t border-zinc-200">
+        <h1 class="text-2xl font-semibold text-zinc-700 mb-4 text-center">Product Specifications</h1>
+        <div class="flex justify-center items-center gap-4 mb-4">
+          <a href="./file/spech-sheet.pdf" class="text-sm text-zinc-500 underline flex items-center gap-1" download="spech-sheet.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download Specification Sheet
+          </a>
+          <a href="./file/measurement-guide.pdf" class="text-sm text-zinc-500 underline flex items-center gap-1" download="measurement-guide.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download Measurement Guide
+          </a>
+        </div>
+        <div x-data="{open: false}" class="overflow-x-auto flex flex-col justify-center items-center py-4">
+          <button x-on:click="open = ! open" class="text-sm my-4 text-zinc-600 font-medium flex items-center gap-2">
+            View All Specifications
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-200" :class="{'rotate-180': open}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <table x-show="open" class="w-full max-w-screen-lg text-sm border border-zinc-200 rounded-xl p-4">
+            <thead>
+              <tr>
+                <th class="text-left font-semibold text-zinc-500 py-2 px-3 border border-zinc-200">Feature</th>
+                <th class="text-left font-semibold text-zinc-500 py-2 px-3 border border-zinc-200">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Core Features -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Core Features</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Interior Material <span title="Durable, easy-to-clean interior">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Ceramic Enamel</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Built-In Design</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Eco Mode <span title="Reduces standby power consumption">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Control Panel</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Membrane</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Turntable</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes, Glass, 15.56"</td></tr>
+              <!-- Convenience & Safety -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Convenience & Safety</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Child Lock <span title="Prevents accidental operation">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Sound On/Off</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Weight Option</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Kg and Lbs</td></tr>
+              <!-- Design & Appearance -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Design & Appearance</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Color</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Stainless</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Type</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Countertop</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Display Color</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Ice Blue</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Ventilation Grill Design</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Exposed</td></tr>
+              <!-- Performance -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Performance</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Heating Type</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Microwave</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Auto Defrost</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Cooking Power</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">950 W</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Sensor Cook <span title="Automatically adjusts cooking time">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Levels</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">10</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Auto Cook Presets</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Soften / Melt</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <!-- Power & Energy -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Power & Energy</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Supply</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">120V / 60Hz</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Amp Circuit</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">13.3A</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Consumption</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">1600W</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Cord Length</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">39.37"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Energy Consumption</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">645 kWh/year</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Volt/Amps</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">115V/60Hz/5.3A</td></tr>
+              <!-- Size & Weight -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Size & Weight</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Product Weight</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">43.03 lbs.</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Product Dimensions (W x H x D)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">23 5/8" x 13 9/32" x 18 7/16"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Height (decimal)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">13.28"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Width (decimal)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">23.62"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Depth (decimal)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">18.4375"</td></tr>
+              <!-- Warranty & Support -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Warranty & Support</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Parts & Labor</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">1 Year</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Magnetron <span title="Main microwave generator">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">10 Years</td></tr>
+              <!-- Refrigerator Build -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Refrigerator Build</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">General Feature</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">3DR French Door</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Color</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Fingerprint Resistant Stainless Steel</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Number of Doors</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">3</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Depth</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Regular (30" and above)</td></tr>
+              <!-- Storage Features -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Storage Features</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Humidity Control Crispers</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">2</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Gallon Bins</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Gallon Door Bins</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Total Bins</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">6</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Interior Light</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">TOP LED</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Spill Proof Shelves</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Automatic Ice Maker</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <!-- Freezer Features -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Freezer Features</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Total Ice Storage</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">3</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">EZ-Open Handle™</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Drawer Divider</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Built-In Automatic Icemaker</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Icemaker</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Interior Light</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">High Efficiency LED</td></tr>
+              <!-- Additional Features -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Additional Features</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Ice Maker</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">In Freezer</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">ADA Compliant <span title="Meets accessibility standards">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">2020 New Refrigerators</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">ENERGY STAR® Certified</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">AI Home</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Surround Air Flow</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Freeze and Power Cool Options</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Humidity Controlled Crispers</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Shelves</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">5</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">2-Minute Door Alarm</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">CoolTight Door</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Filter Indicator</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Handles</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Flat Handle</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Water Filter</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">HAF-QIN (Included)</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Sabbath Mode <span title="Disables lights and alarms for observance">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Adjustable Shelves</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Modern Look Design</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <!-- Capacity -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Capacity</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Total Capacity</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">28.2 cu.ft.</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Refrigerator Capacity</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">19.6 cu.ft.</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Freezer Capacity</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">8.6 cu.ft.</td></tr>
+              <!-- Dimensions -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Dimensions</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">With Hinges, Handles and Door</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">35 3/4" W x 70" H x 35 3/8" D</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Without Hinges and Door</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">35 3/4" (W) x 68 7/8" (H) x 28 7/8" (D)</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">With Door, No Handles</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">35 3/4" (W) x 70" (H) x 32 7/8" (D)</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Shipping Dimensions</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">37 23/32" (W) x 75 5/16" (H) x 35 29/32" (D)</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Net Depth with Door Handle</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">36"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Net Height with Hinge</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">70"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Net Height without Hinge</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">68 7/8"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Net Depth w/o Door Handle</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">32 7/8"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Depth without Door (in)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">28 7/8"</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Width</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">35 3/4"</td></tr>
+              <!-- Weight -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Weight</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Product Weight (lbs.)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">276 lbs.</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Shipping Weight</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">284 lbs.</td></tr>
+              <!-- Extended Warranty -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Extended Warranty</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">1-Year Parts and Labor on Refrigerator</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">5-year Parts and Labor on sealed Refrigeration system only <span title="Covers compressor, evaporator, condenser, drier, connecting tubing">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">10-year Part and 5-year Labor on Digital Inverter Compressor</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+              <!-- Certifications & Awards -->
+              <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Certifications & Awards</td></tr>
+              <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">ETA Awards</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Reviews -->
+        <div class="border-t border-zinc-200 my-16 text-center py-12">
+          <h1 class="text-2xl font-semibold text-zinc-700 mb-4 text-center">Reviews</h1>
+          <div class="flex items-center justify-center gap-1 mb-6">
+            <svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-10 h-10 text-yellow-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <defs>
+                  <linearGradient id="half">
+                      <stop offset="50%" stop-color="currentColor"/>
+                      <stop offset="50%" stop-color="#D1D5DB"/>
+                  </linearGradient>
+              </defs>
+              <path fill="url(#half)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-zinc-600 ml-2">4.5 out of 5 stars (128)</span>
+          </div>
+          <div class="w-full flex flex-wrap items-center justify-center gap-2 px-8 mb-6 mt-4 pb-8 border-b border-zinc-200">
+            <label class="flex items-center gap-1.5 bg-white border border-zinc-200 rounded-lg px-3 py-1.5 shadow-xs hover:bg-zinc-50 transition-colors cursor-pointer has-[input:checked]:border-yellow-400 has-[input:checked]:border-2">
+                <input type="checkbox" id="5-stars" class="w-4 h-4 accent-yellow-500 sr-only">
+                <span class="text-sm font-medium text-zinc-700 select-none">5 Stars</span>
+            </label>
+            <label class="flex items-center gap-1.5 bg-white border border-zinc-200 rounded-lg px-3 py-1.5 shadow-xs hover:bg-zinc-50 transition-colors cursor-pointer has-[input:checked]:border-yellow-400 has-[input:checked]:border-2">
+                <input type="checkbox" id="4-stars" class="w-4 h-4 accent-yellow-500 sr-only">
+                <span class="text-sm font-medium text-zinc-700 select-none">4 Stars</span>
+            </label>
+            <label class="flex items-center gap-1.5 bg-white border border-zinc-200 rounded-lg px-3 py-1.5 shadow-xs hover:bg-zinc-50 transition-colors cursor-pointer has-[input:checked]:border-yellow-400 has-[input:checked]:border-2">
+                <input type="checkbox" id="3-stars" class="w-4 h-4 accent-yellow-500 sr-only">
+                <span class="text-sm font-medium text-zinc-700 select-none">3 Stars</span>
+            </label>
+            <label class="flex items-center gap-1.5 bg-white border border-zinc-200 rounded-lg px-3 py-1.5 shadow-xs hover:bg-zinc-50 transition-colors cursor-pointer has-[input:checked]:border-yellow-400 has-[input:checked]:border-2">
+                <input type="checkbox" id="2-stars" class="w-4 h-4 accent-yellow-500 sr-only">
+                <span class="text-sm font-medium text-zinc-700 select-none">2 Stars</span>
+            </label>
+            <label class="flex items-center gap-1.5 bg-white border border-zinc-200 rounded-lg px-3 py-1.5 shadow-xs hover:bg-zinc-50 transition-colors cursor-pointer has-[input:checked]:border-yellow-400 has-[input:checked]:border-2">
+                <input type="checkbox" id="1-stars" class="w-4 h-4 accent-yellow-500 sr-only">
+                <span class="text-sm font-medium text-zinc-700 select-none">1 Stars</span>
+            </label>
+          </div>
+          <div class="w-full flex flex-col gap-1 justify-start items-start text-justify p-8 border-b border-zinc-200">
+            <img src="./images/user-icon.png" alt="" class="h-20 w-auto object-contain object-center">
+            <h5 class="">Jane S.</h5>
+            <p class="text-xs text-zinc-600">2025-05-20</p>
+            <div class="flex items-center justify-center gap-1 mb-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="w-full text-sm text-zinc-600">I'm happy with the fridge so far. It's spacious and the shelves are easy to adjust. The only thing I noticed is the doors need a firm push to close completely, but otherwise, it's working well for my family.</p>
+            <div class="flex items-center gap-4 mt-4">
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up text-zinc-600">
+                  <path d="M7 10v12"/>
+                  <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Helpful (12)</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down text-zinc-600">
+                  <path d="M17 14V2"/>
+                  <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Not Helpful (1)</span>
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-1 justify-start items-start text-justify p-8 border-b border-zinc-200">
+            <img src="./images/user-icon.png" alt="" class="h-20 w-auto object-contain object-center">
+            <h5 class="">Carlos M.</h5>
+            <p class="text-xs text-zinc-600">2025-05-18</p>
+            <div class="flex items-center justify-center gap-1 mb-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="w-full text-sm text-zinc-600">The cooling is consistent and it's pretty quiet. I like the design, but the stainless finish does show some smudges, even though it's supposed to be fingerprint-resistant. Not a dealbreaker, just something to keep in mind.</p>
+            <div class="flex items-center gap-4 mt-4">
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up text-zinc-600">
+                  <path d="M7 10v12"/>
+                  <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Helpful (8)</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down text-zinc-600">
+                  <path d="M17 14V2"/>
+                  <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Not Helpful (2)</span>
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-1 justify-start items-start text-justify p-8 border-b border-zinc-200">
+            <img src="./images/user-icon.png" alt="" class="h-20 w-auto object-contain object-center">
+            <h5 class="">Alyssa P.</h5>
+            <p class="text-xs text-zinc-600">2025-05-15</p>
+            <div class="flex items-center justify-center gap-1 mb-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="w-full text-sm text-zinc-600">Delivery was on time and installation was smooth. The ice maker is a nice feature, but it took a day to start producing ice. Overall, I'm satisfied with the purchase.</p>
+            <div class="flex items-center gap-4 mt-4">
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up text-zinc-600">
+                  <path d="M7 10v12"/>
+                  <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Helpful (10)</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down text-zinc-600">
+                  <path d="M17 14V2"/>
+                  <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Not Helpful (0)</span>
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-1 justify-start items-start text-justify p-8 border-b border-zinc-200">
+            <img src="./images/user-icon.png" alt="" class="h-20 w-auto object-contain object-center">
+            <h5 class="">Mark D.</h5>
+            <p class="text-xs text-zinc-600">2025-05-10</p>
+            <div class="flex items-center justify-center gap-1 mb-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="w-full text-sm text-zinc-600">The fridge is good, but it's bigger than I expected. Make sure to measure your space before buying. It keeps food fresh and the lighting is bright, but I wish the manual was a bit clearer.</p>
+            <div class="flex items-center gap-4 mt-4">
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up text-zinc-600">
+                  <path d="M7 10v12"/>
+                  <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Helpful (5)</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down text-zinc-600">
+                  <path d="M17 14V2"/>
+                  <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Not Helpful (3)</span>
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-1 justify-start items-start text-justify p-8 border-b border-zinc-200">
+            <img src="./images/user-icon.png" alt="" class="h-20 w-auto object-contain object-center">
+            <h5 class="">Rina L.</h5>
+            <p class="text-xs text-zinc-600">2025-05-08</p>
+            <div class="flex items-center justify-center gap-1 mb-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="w-full text-sm text-zinc-600">Looks great in my kitchen and runs quietly. I did have to adjust the temperature settings a couple of times to get it just right. Customer service was helpful when I called with a question.</p>
+            <div class="flex items-center gap-4 mt-4">
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up text-zinc-600">
+                  <path d="M7 10v12"/>
+                  <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Helpful (7)</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down text-zinc-600">
+                  <path d="M17 14V2"/>
+                  <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                </svg>
+                <span class="text-sm text-zinc-700">Not Helpful (1)</span>
+              </button>
+            </div>
+          </div>
+          <ul class="flex justify-center gap-1.5 text-zinc-700 mt-8">
+            <li>
+              <button class="grid size-8 place-content-center rounded border border-zinc-200 transition-colors hover:bg-zinc-50 rtl:rotate-180" aria-label="Previous page">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </li>
+            <li><button class="block size-8 rounded border border-zinc-200 text-center text-sm/8 font-medium transition-colors hover:bg-zinc-50">1</button></li>
+            <li class="block size-8 rounded border border-brand bg-brand text-center text-sm/8 font-medium text-white">2</li>
+            <li><button class="block size-8 rounded border border-zinc-200 text-center text-sm/8 font-medium transition-colors hover:bg-zinc-50">3</button></li>
+            <li><button class="block size-8 rounded border border-zinc-200 text-center text-sm/8 font-medium transition-colors hover:bg-zinc-50">4</button></li>
+            <li>
+              <button class="grid size-8 place-content-center rounded border border-zinc-200 transition-colors hover:bg-zinc-50 rtl:rotate-180" aria-label="Next page">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="w-full bg-white/90 backdrop-blur-sm border-t border-zinc-200 mt-20 text-zinc-600 text-sm shadow-lg relative overflow-hidden">
+    <div class="absolute left-0 bottom-0 w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[450px] 2xl:h-[450px] translate-x-[-50%] translate-y-[50%] -z-10">
+      <div class="relative w-full h-full">
+        <div class="absolute inset-0 rounded-full" style="background:conic-gradient(black 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);-webkit-mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);mask-composite:add;-webkit-mask-composite:source-over;"></div>
+        <div class="absolute inset-0 rounded-full" style="background:conic-gradient(red 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);-webkit-mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);mask-composite:add;-webkit-mask-composite:source-over;"></div>
+      </div>
+    </div>
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-16 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-3"><img src="./images/qapi-logo.webp" alt="" class="h-16 object-cover object-center"><p class="mb-4 text-xs leading-relaxed">We provide durable, high-quality appliances for every home. Trusted by thousands, backed by excellent support, and guided by our mission of service excellence.</p></div>
+        <div class="lg:col-span-2"><h3 class="text-sm font-semibold text-zinc-800 mb-3">Company</h3><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-brand">About Us</a></li><li><a href="#" class="hover:text-brand">Why Choose Us</a></li><li><a href="#" class="hover:text-brand">Careers</a></li><li><a href="#" class="hover:text-brand">Vision & Mission</a></li><li><a href="#" class="hover:text-brand">Our Stores</a></li></ul></div>
+        <div class="lg:col-span-2"><h3 class="text-sm font-semibold text-zinc-800 mb-3">Policies</h3><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-brand">Privacy Policy</a></li><li><a href="#" class="hover:text-brand">Terms & Conditions</a></li><li><a href="#" class="hover:text-brand">Returns & Refunds</a></li><li><a href="#" class="hover:text-brand">Shipping Policy</a></li><li><a href="#" class="hover:text-brand">Warranty Info</a></li></ul></div>
+        <div class="lg:col-span-2"><h3 class="text-sm font-semibold text-zinc-800 mb-3">Customer Support</h3><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-brand">Installation Guide</a></li><li><a href="#" class="hover:text-brand">Order Tracking</a></li><li><a href="#" class="hover:text-brand">FAQs</a></li><li><a href="#" class="hover:text-brand">Feedback</a></li></ul></div>
+        <div class="lg:col-span-3"><h3 class="text-sm font-semibold text-zinc-800 mb-3">Get in Touch</h3><ul class="text-xs space-y-2 mb-5"><li>📞 Tel: <a href="tel:893402230" class="hover:text-brand">893402-230</a></li><li>📱 Mobile: <a href="tel:0924235352" class="hover:text-brand">0924235352</a></li><li>🌍 Overseas: <a href="tel:0938534823" class="hover:text-brand">0938534823</a></li><li>📧 Email: <a href="mailto:support@qualityappliance.com" class="hover:text-brand">support@qualityappliance.com</a></li></ul>
+          <form class="flex flex-col sm:flex-row items-center gap-2"><input type="email" placeholder="Your email address" class="w-full px-3 py-2 border rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-brand"/><button type="submit" class="px-4 py-2 text-xs bg-brand text-white rounded-md hover:bg-brand-dark transition">Subscribe</button></form>
+        </div>
+      </div>
+      <div class="mt-16 border-t border-zinc-100 pt-6 text-center text-xs text-zinc-500">
+        <div class="flex justify-center items-center gap-4 mb-3"><span class="inline-block bg-zinc-200 px-3 py-1 rounded">SSL Secured</span><span class="inline-block bg-zinc-200 px-3 py-1 rounded">Trusted Seller</span><span class="inline-block bg-zinc-200 px-3 py-1 rounded">Secure Checkout</span></div>
+        <p>© 2025 <span class="font-semibold text-brand">Quality Appliance Plaza</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <button x-data="{show:false}" x-init="window.addEventListener('scroll',()=>{show=window.scrollY>200})" x-show="show" x-transition @click="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-brand hover:bg-brand/90 text-white rounded-full p-2 sm:p-3 shadow-lg transition-all" style="display:none;" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+  </button>
+  </body>
+</html>
