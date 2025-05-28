@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions">
+    <title>Promo | Quality Appliance Plaza</title>
+
+    <!-- External CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
+    <style>
+      .swiper-button-prev,
+      .swiper-button-next {
+        color:#D60024;
+      }
+    </style>
+  </head>
+
+  <body class="bg-zinc-100">
+    <!-- Main Container -->
+    <div class="min-h-screen w-full flex flex-col justify-start items-center">
+      <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
+        <div class="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+          <a href="/" aria-label="Homepage" class="flex items-start shrink-0">
+            <img src="./images/qapi-logo.webp" alt="Quality Appliance Logo" class="h-auto w-48 sm:w-56 object-contain">
+          </a>
+          <div class="relative w-full max-w-lg flex-grow">
+            <input type="search" id="search" name="search" placeholder="Search appliances, brands, or models" aria-label="Search appliances" class="w-full bg-zinc-100 focus:bg-white px-4 py-3 pr-12 rounded-xl border border-zinc-300 focus:outline-none transition focus:ring-2 focus:ring-brand">
+            <button type="submit" class="absolute inset-y-0 right-3 flex items-center text-zinc-600 hover:text-brand transition" aria-label="Submit search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" stroke-width="2"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 text-sm text-zinc-800 px-4" role="group" aria-label="User actions">
+            <a href="#login" class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" aria-label="Login to your account">Login</a>
+            <a href="#register" class="hover:text-brand transition" aria-label="Create a new account">Register</a>
+          </div>
+        </div>
+      </header>
+
+      <nav class="w-full max-w-screen-xl bg-brand text-white shadow-lg rounded-b-xl" aria-label="Primary navigation">
+        <div class="w-full max-w-screen-xl flex justify-start items-center gap-5">
+          <div class="h-full shrink-0 px-2">
+            <img src="./images/menu-stripe.png" alt="M-stripe" class="w-48 h-full object-contain">
+          </div>
+          <ul class="flex justify-center items-center gap-4 sm:gap-6 text-sm">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="./categories.html" class="hover:underline " aria-current="page">Categories</a></li>
+            <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
+            <li><a href="./products.html" class="hover:underline">Products</a></li>
+            <li><a href="./careers.html" class="hover:underline">Careers</a></li>
+            <li><a href="./promo.html" class="font-bold underline" aria-current="page">Promo</a></li>
+            <li><a href="#contact-us" class="hover:underline">Contact Us</a></li>
+            <li><a href="#stores" class="hover:underline">Stores</a></li>
+            <li><a href="#installment" class="hover:underline">Installment Guide</a></li>
+            <li><a href="#application" class="hover:underline">Application Portal</a></li>
+          </ul>
+        </div>
+      </nav> 
+
+      <section class="flex flex-col w-full max-w-screen-xl my-8 p-4 bg-white rounded-xl shadow-lg items-center justify-center">
+        <div class="text-center mt-4 max-w-2xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-2 tracking-tighter">Summer Sale Promo</h2>
+            <p class="text-base text-zinc-500">Get up to 50% off on selected appliances this summer! Beat the heat with our special deals on air conditioners, refrigerators, and more.</p>
+          </div>
+         <div class="w-full h-[500px] rounded-xl overflow-hidden my-8">
+          <!-- Hero Image Slider -->
+          <div class="swiper-hero swiper w-full h-full p-8">
+            <div class="swiper-wrapper h-full">
+              <div class="swiper-slide h-full flex items-center justify-center">
+                <img src="./images/promo/bg-1.webp" alt="Hero 1" class="object-contain object-center h-full w-auto rounded-lg cursor-pointer shadow-sm transition-transform duration-100 mx-auto" loading="lazy">
+              </div>
+              <div class="swiper-slide h-full flex items-center justify-center">
+                <img src="./images/promo/bg-2.webp" alt="Hero 2" class="object-contain object-center h-full w-auto rounded-lg cursor-pointer shadow-sm transition-transform duration-100 mx-auto" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-button-prev" aria-label="Previous slide"></div>
+            <div class="swiper-button-next" aria-label="Next slide"></div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full max-w-screen-xl mx-auto rounded-xl shadow-lg overflow-hidden my-8 bg-white p-8">
+          <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-1.5 h-12 bg-brand rounded-full"></div>
+                <div>
+                <h2 class="text-2xl font-bold text-zinc-800 tracking-tight">Summer Promo Items</h2>
+                <p class="text-zinc-500 text-sm">Summer deals up to 50% off on air conditioners, refrigerators & more!</p>
+                </div>
+              </div>
+            </div> 
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch mt-4">
+          <figure class="flex flex-col h-full bg-white border border-zinc-200 rounded-lg  overflow-hidden">
+            <img src="./images/categories/air-conditioners/split-type.jpg" alt="Daikin FTKM Series Split-Type Air Conditioner" class="w-full h-48 object-contain object-center p-4" loading="lazy" decoding="async">
+            <figcaption class="flex flex-col flex-1 border-t border-zinc-100 p-4 bg-zinc-50">
+              <h2 class="text-lg font-medium text-zinc-800 tracking-tighter truncate">Daikin FTKM Series Split-Type Air Conditioner</h2>
+              <div class="flex items-center justify-start my-4">
+                <img src="./images/stars.png" alt="" class="w-auto h-5 object-contain object-center">
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-brand font-semibold text-lg">₱24,995</span>
+                <span class="text-zinc-400 line-through text-sm">₱49,990</span>
+                <span class="ml-2 bg-red-100 text-brand text-xs font-bold px-2 py-1 rounded">50% OFF</span>
+              </div>
+              <div class="flex items-center justify-center mt-4">
+                <a href="./product.html" class="bg-gradient-to-r from-brand to-red-500 text-white w-full px-4 py-2 rounded-full font-semibold text-center">View Product</a>
+              </div>
+            </figcaption>
+          </figure>
+           <figure class="flex flex-col h-full bg-white border border-zinc-200 rounded-lg  overflow-hidden">
+            <img src="./images/categories/home-appliances/chest-type.png" alt="Panasonic NR-AF163SS Chest Freezer" class="w-full h-48 object-contain object-center p-4" loading="lazy" decoding="async">
+            <figcaption class="flex flex-col flex-1 border-t border-zinc-100 p-4 bg-zinc-50">
+              <h2 class="text-lg font-medium text-zinc-800 tracking-tighter truncate">Panasonic NR-AF163SS Chest Freezer</h2>
+              <div class="flex items-center justify-start my-4">
+                <img src="./images/stars.png" alt="" class="w-auto h-5 object-contain object-center">
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-brand font-semibold text-lg">₱24,995</span>
+                <span class="text-zinc-400 line-through text-sm">₱32,995</span>
+                <span class="ml-2 bg-red-100 text-brand text-xs font-bold px-2 py-1 rounded">24% OFF</span>
+              </div>
+              <div class="flex items-center justify-center mt-4">
+                <a href="./product.html" class="bg-gradient-to-r from-brand to-red-500 text-white w-full px-4 py-2 rounded-full font-semibold text-center">View Product</a>
+              </div>
+            </figcaption>
+          </figure>
+           <figure class="flex flex-col h-full bg-white border border-zinc-200 rounded-lg  overflow-hidden">
+            <img src="./images/categories/home-appliances/side-by-side.png" alt="Samsung RS64R5301B4 Side-by-Side Refrigerator" class="w-full h-48 object-contain object-center p-4" loading="lazy" decoding="async">
+            <figcaption class="flex flex-col flex-1 border-t border-zinc-100 p-4 bg-zinc-50">
+              <h2 class="text-lg font-medium text-zinc-800 tracking-tighter truncate">Samsung RS64R5301B4 Side-by-Side Refrigerator</h2>
+              <div class="flex items-center justify-start my-4">
+                <img src="./images/stars.png" alt="" class="w-auto h-5 object-contain object-center">
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-brand font-semibold text-lg">₱24,995</span>
+                <span class="text-zinc-400 line-through text-sm">₱39,995</span>
+                <span class="ml-2 bg-red-100 text-brand text-xs font-bold px-2 py-1 rounded">38% OFF</span>
+              </div>
+              <div class="flex items-center justify-center mt-4">
+                <a href="./product.html" class="bg-gradient-to-r from-brand to-red-500 text-white w-full px-4 py-2 rounded-full font-semibold text-center">View Product</a>
+              </div>
+            </figcaption>
+          </figure>
+           <figure class="flex flex-col h-full bg-white border border-zinc-200 rounded-lg  overflow-hidden">
+            <img src="./images/categories/home-appliances/washing-machine.png" alt="LG TWINWash F2721STWV Washing Machine" class="w-full h-48 object-contain object-center p-4" loading="lazy" decoding="async">
+            <figcaption class="flex flex-col flex-1 border-t border-zinc-100 p-4 bg-zinc-50">
+              <h2 class="text-lg font-medium text-zinc-800 tracking-tighter truncate">LG TWINWash F2721STWV Washing Machine</h2>
+              <div class="flex items-center justify-start my-4">
+                <img src="./images/stars.png" alt="" class="w-auto h-5 object-contain object-center">
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-brand font-semibold text-lg">₱24,995</span>
+                <span class="text-zinc-400 line-through text-sm">₱29,995</span>
+                <span class="ml-2 bg-red-100 text-brand text-xs font-bold px-2 py-1 rounded">17% OFF</span>
+              </div>
+              <div class="flex items-center justify-center mt-4">
+                <a href="./product.html" class="bg-gradient-to-r from-brand to-red-500 text-white w-full px-4 py-2 rounded-full font-semibold text-center">View Product</a>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      
+      <section class="flex flex-col w-full max-w-screen-xl my-8 p-4 bg-white rounded-xl shadow-lg items-center justify-center">
+        <div class="text-center mt-4 max-w-2xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-2 tracking-tighter">Limited Time Promo</h2>
+            <p class="text-base text-zinc-500">Hurry—exclusive flash deals on top appliances for a limited time only! Upgrade your home with unbeatable discounts before these offers disappear.</p>
+          </div>
+         <div class="w-full h-[500px] rounded-xl overflow-hidden my-8">
+          <!-- Hero Image Slider -->
+          <div class="swiper-hero swiper w-full h-full p-8">
+            <div class="swiper-wrapper h-full">
+              <div class="swiper-slide h-full flex items-center justify-center">
+                <img src="./images/promo/bg-3.jpeg" alt="Hero 1" class="object-contain object-center h-full w-auto rounded-lg cursor-pointer shadow-sm transition-transform duration-100 mx-auto" loading="lazy">
+              </div>
+              <div class="swiper-slide h-full flex items-center justify-center">
+                <img src="./images/promo/bg-4.jpeg" alt="Hero 2" class="object-contain object-center h-full w-auto rounded-lg cursor-pointer shadow-sm transition-transform duration-100 mx-auto" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-button-prev" aria-label="Previous slide"></div>
+            <div class="swiper-button-next" aria-label="Next slide"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full max-w-screen-xl mx-auto rounded-xl shadow-lg overflow-hidden my-8 bg-white p-8">
+          <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-1.5 h-12 bg-brand rounded-full"></div>
+                <div>
+                <h2 class="text-2xl font-bold text-zinc-800 tracking-tight">Limited Time Promo Items</h2>
+                <p class="text-zinc-500 text-sm">Exclusive flash deals on select appliances and home essentials!</p>
+                </div>
+              </div>
+            </div> 
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch mt-4">
+          <figure class="flex flex-col h-full bg-white border border-zinc-200 rounded-lg  overflow-hidden">
+            <img src="./images/categories/audio-video/smart.jpg" alt="Samsung 55'' Crystal UHD Smart TV" class="w-full h-48 object-contain object-center p-4" loading="lazy" decoding="async">
+            <figcaption class="flex flex-col flex-1 border-t border-zinc-100 p-4 bg-zinc-50">
+              <h2 class="text-lg font-medium text-zinc-800 tracking-tighter truncate">Samsung 55'' Crystal UHD Smart TV</h2>
+              <div class="flex items-center justify-start my-4">
+                <img src="./images/stars.png" alt="" class="w-auto h-5 object-contain object-center">
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-brand font-semibold text-lg">₱28,990</span>
+                <span class="text-zinc-400 line-through text-sm">₱39,990</span>
+                <span class="ml-2 bg-red-100 text-brand text-xs font-bold px-2 py-1 rounded">28% OFF</span>
+              </div>
+              <div class="flex items-center justify-center mt-4">
+                <a href="./product.html" class="bg-gradient-to-r from-brand to-red-500 text-white w-full px-4 py-2 rounded-full font-semibold text-center">View Product</a>
+              </div>
+            </figcaption>
+          </figure>
+           <figure class="flex flex-col h-full bg-white border border-zinc-200 rounded-lg  overflow-hidden">
+            <img src="./images/categories/small-domestic-appliances/air-fryer.webp" alt="Philips Rapid Air Fryer XL" class="w-full h-48 object-contain object-center p-4" loading="lazy" decoding="async">
+            <figcaption class="flex flex-col flex-1 border-t border-zinc-100 p-4 bg-zinc-50">
+              <h2 class="text-lg font-medium text-zinc-800 tracking-tighter truncate">Philips Rapid Air Fryer XL</h2>
+              <div class="flex items-center justify-start my-4">
+                <img src="./images/stars.png" alt="" class="w-auto h-5 object-contain object-center">
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-brand font-semibold text-lg">₱6,499</span>
+                <span class="text-zinc-400 line-through text-sm">₱8,999</span>
+                <span class="ml-2 bg-red-100 text-brand text-xs font-bold px-2 py-1 rounded">28% OFF</span>
+              </div>
+              <div class="flex items-center justify-center mt-4">
+                <a href="./product.html" class="bg-gradient-to-r from-brand to-red-500 text-white w-full px-4 py-2 rounded-full font-semibold text-center">View Product</a>
+              </div>
+            </figcaption>
+          </figure>
+           <figure class="flex flex-col h-full bg-white border border-zinc-200 rounded-lg  overflow-hidden">
+            <img src="./images/categories/home-appliances/oven.jpg" alt="La Germania 60cm Electric Oven" class="w-full h-48 object-contain object-center p-4" loading="lazy" decoding="async">
+            <figcaption class="flex flex-col flex-1 border-t border-zinc-100 p-4 bg-zinc-50">
+              <h2 class="text-lg font-medium text-zinc-800 tracking-tighter truncate">La Germania 60cm Electric Oven</h2>
+              <div class="flex items-center justify-start my-4">
+                <img src="./images/stars.png" alt="" class="w-auto h-5 object-contain object-center">
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-brand font-semibold text-lg">₱19,995</span>
+                <span class="text-zinc-400 line-through text-sm">₱25,995</span>
+                <span class="ml-2 bg-red-100 text-brand text-xs font-bold px-2 py-1 rounded">23% OFF</span>
+              </div>
+              <div class="flex items-center justify-center mt-4">
+                <a href="./product.html" class="bg-gradient-to-r from-brand to-red-500 text-white w-full px-4 py-2 rounded-full font-semibold text-center">View Product</a>
+              </div>
+            </figcaption>
+          </figure>
+           <figure class="flex flex-col h-full bg-white border border-zinc-200 rounded-lg  overflow-hidden">
+            <img src="./images/categories/audio-video/soundbar.jpg" alt="Sony 2.1ch Wireless Soundbar" class="w-full h-48 object-contain object-center p-4" loading="lazy" decoding="async">
+            <figcaption class="flex flex-col flex-1 border-t border-zinc-100 p-4 bg-zinc-50">
+              <h2 class="text-lg font-medium text-zinc-800 tracking-tighter truncate">Sony 2.1ch Wireless Soundbar</h2>
+              <div class="flex items-center justify-start my-4">
+                <img src="./images/stars.png" alt="" class="w-auto h-5 object-contain object-center">
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-brand font-semibold text-lg">₱7,499</span>
+                <span class="text-zinc-400 line-through text-sm">₱10,499</span>
+                <span class="ml-2 bg-red-100 text-brand text-xs font-bold px-2 py-1 rounded">29% OFF</span>
+              </div>
+              <div class="flex items-center justify-center mt-4">
+                <a href="./product.html" class="bg-gradient-to-r from-brand to-red-500 text-white w-full px-4 py-2 rounded-full font-semibold text-center">View Product</a>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===== FOOTER SECTION ===== -->
+      <footer class="w-full bg-white/90 backdrop-blur-sm border-t border-zinc-200 mt-20 text-zinc-600 text-sm shadow-lg relative overflow-hidden">
+        <!-- Decorative Arc Design -->
+        <div class="absolute left-0 bottom-0 w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[450px] 2xl:h-[450px] translate-x-[-50%] translate-y-[50%] -z-10">
+          <div class="relative w-full h-full">
+            <div class="absolute inset-0 rounded-full" style="background:conic-gradient(black 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);-webkit-mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);mask-composite:add;-webkit-mask-composite:source-over"></div>
+            <div class="absolute inset-0 rounded-full" style="background:conic-gradient(red 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);-webkit-mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);mask-composite:add;-webkit-mask-composite:source-over"></div>
+          </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-16 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-3">
+              <img src="./images/qapi-logo.webp" alt="" class="h-16 w-auto object-cover object-center">
+              <p class="mb-4 text-xs leading-relaxed">We provide durable, high-quality appliances for every home. Trusted by thousands, backed by excellent support, and guided by our mission of service excellence.</p>
+            </div>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-zinc-800 mb-3">Company</h3>
+              <ul class="space-y-2 text-xs">
+                <li><a href="#" class="hover:text-brand">About Us</a></li>
+                <li><a href="#" class="hover:text-brand">Why Choose Us</a></li>
+                <li><a href="#" class="hover:text-brand">Careers</a></li>
+                <li><a href="#" class="hover:text-brand">Vision & Mission</a></li>
+                <li><a href="#" class="hover:text-brand">Our Stores</a></li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-zinc-800 mb-3">Policies</h3>
+              <ul class="space-y-2 text-xs">
+                <li><a href="#" class="hover:text-brand">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-brand">Terms & Conditions</a></li>
+                <li><a href="#" class="hover:text-brand">Returns & Refunds</a></li>
+                <li><a href="#" class="hover:text-brand">Shipping Policy</a></li>
+                <li><a href="#" class="hover:text-brand">Warranty Info</a></li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-zinc-800 mb-3">Customer Support</h3>
+              <ul class="space-y-2 text-xs">
+                <li><a href="#" class="hover:text-brand">Installation Guide</a></li>
+                <li><a href="#" class="hover:text-brand">Order Tracking</a></li>
+                <li><a href="#" class="hover:text-brand">FAQs</a></li>
+                <li><a href="#" class="hover:text-brand">Feedback</a></li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-3">
+              <h3 class="text-sm font-semibold text-zinc-800 mb-3">Get in Touch</h3>
+              <ul class="text-xs space-y-2 mb-5">
+                <li>📞 Tel: <a href="tel:893402230" class="hover:text-brand">893402-230</a></li>
+                <li>📱 Mobile: <a href="tel:0924235352" class="hover:text-brand">0924235352</a></li>
+                <li>🌍 Overseas: <a href="tel:0938534823" class="hover:text-brand">0938534823</a></li>
+                <li>📧 Email: <a href="mailto:support@qualityappliance.com" class="hover:text-brand">support@qualityappliance.com</a></li>
+              </ul>
+              <form class="flex flex-col sm:flex-row items-center gap-2">
+                <input type="email" placeholder="Your email address" class="w-full px-3 py-2 border rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-brand">
+                <button type="submit" class="px-4 py-2 text-xs bg-gradient-to-r from-brand to-red-500 text-white rounded-md hover:bg-brand-dark transition">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="mt-16 border-t border-zinc-100 pt-6 text-center text-xs text-zinc-500">
+            <div class="flex justify-center items-center gap-4 mb-3">
+              <span class="inline-block bg-zinc-200 px-3 py-1 rounded">SSL Secured</span>
+              <span class="inline-block bg-zinc-200 px-3 py-1 rounded">Trusted Seller</span>
+              <span class="inline-block bg-zinc-200 px-3 py-1 rounded">Secure Checkout</span>
+            </div>
+            <p>© 2025 <span class="font-semibold text-brand">Quality Appliance Plaza</span>. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+      <button
+      x-data="{ show: false }"
+      x-init="window.addEventListener('scroll', () => { show = window.scrollY > 200 })"
+      x-show="show"
+      x-transition
+      @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-brand hover:bg-brand/90 text-white rounded-full p-2 sm:p-3 shadow-lg transition-all"
+      style="display: none;"
+      aria-label="Back to top"
+    >
+      <!-- Up Arrow SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./js/swiperFunction.js" defer></script>
+    
+  </body>
+</html>
