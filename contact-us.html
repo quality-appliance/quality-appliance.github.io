@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions">
+    <title>Promo | Quality Appliance Plaza</title>
+
+    <!-- External CSS Dependencies -->
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
+  </head>
+
+  <body class="bg-zinc-100">
+    <!-- Main Container -->
+    <div class="min-h-screen w-full flex flex-col justify-start items-center">
+      <header class="w-full max-w-screen-xl bg-white shadow-lg" aria-label="Site header">
+        <div class="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+          <a href="/" aria-label="Homepage" class="flex items-start shrink-0">
+            <img src="./images/qapi-logo.webp" alt="Quality Appliance Logo" class="h-auto w-48 sm:w-56 object-contain">
+          </a>
+          <div class="relative w-full max-w-lg flex-grow">
+            <input type="search" id="search" name="search" placeholder="Search appliances, brands, or models" aria-label="Search appliances" class="w-full bg-zinc-100 focus:bg-white px-4 py-3 pr-12 rounded-xl border border-zinc-300 focus:outline-none transition focus:ring-2 focus:ring-brand">
+            <button type="submit" class="absolute inset-y-0 right-3 flex items-center text-zinc-600 hover:text-brand transition" aria-label="Submit search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" stroke-width="2"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 text-sm text-zinc-800 px-4" role="group" aria-label="User actions">
+            <a href="#login" class="bg-brand text-white font-medium px-4 py-2 rounded-lg hover:bg-brand/90 transition" aria-label="Login to your account">Login</a>
+            <a href="#register" class="hover:text-brand transition" aria-label="Create a new account">Register</a>
+          </div>
+        </div>
+      </header>
+
+      <nav class="w-full max-w-screen-xl bg-brand text-white shadow-lg rounded-b-xl" aria-label="Primary navigation">
+        <div class="w-full max-w-screen-xl flex justify-start items-center gap-5">
+          <div class="h-full shrink-0 px-2">
+            <img src="./images/menu-stripe.png" alt="M-stripe" class="w-48 h-full object-contain">
+          </div>
+          <ul class="flex justify-center items-center gap-4 sm:gap-6 text-sm">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="./categories.html" class="hover:underline">Categories</a></li>
+            <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
+            <li><a href="./products.html" class="hover:underline">Products</a></li>
+            <li><a href="./careers.html" class="hover:underline">Careers</a></li>
+            <li><a href="./promo.html" class="hover:underline">Promo</a></li>
+            <li><a href="./contact-us.html" class="font-bold underline" aria-current="page">Contact Us</a></li>
+            <li><a href="#stores" class="hover:underline">Stores</a></li>
+            <li><a href="#installment" class="hover:underline">Installment Guide</a></li>
+            <li><a href="#application" class="hover:underline">Application Portal</a></li>
+          </ul>
+        </div>
+      </nav> 
+
+      <section class="flex flex-col flex-1 w-full max-w-screen-xl my-8 p-8 bg-white rounded-2xl shadow-lg items-center justify-center">
+        <div class="text-center w-full max-w-2xl mt-12 mb-8">
+          <h1 class="text-4xl font-bold tracking-tight text-zinc-900 mb-2">Contact Us</h1>
+          <p class="text-lg text-zinc-500">We're here to help. Reach out with any questions or feedback.</p>
+        </div>
+        <div class="w-full max-w-lg mx-auto bg-white rounded-2xl p-10 mb-12 border border-zinc-200">
+          <h2 class="text-2xl font-bold text-zinc-800 mb-4 text-center">Send us a message</h2>
+          <p class="text-zinc-600 mb-6 text-center">Send your message to <a href="mailto:support@qualityappliance.com" class="text-brand underline hover:text-brand/80">support@qualityappliance.com</a> or use the form below. </p>
+          <form class="flex flex-col gap-6">
+            <input type="text" name="name" placeholder="Full Name" required class="px-5 py-3 border border-zinc-200 rounded-full focus:ring-2 focus:ring-brand transition">
+            <input type="email" name="email" placeholder="Email Address" required class="px-5 py-3 border border-zinc-200 rounded-full focus:ring-2 focus:ring-brand transition">
+            <textarea name="message" placeholder="Write your message here..." class="w-full h-40 px-5 py-3 border border-zinc-200 rounded-2xl focus:ring-2 focus:ring-brand transition"></textarea>
+            <button type="submit" class="bg-gradient-to-r from-brand to-red-500 text-white px-8 py-3 rounded-full font-semibold text-lg hover:scale-105 transition">Submit Message</button>
+          </form>
+        </div>
+        <div class="text-center w-full max-w-3xl my-20">
+          <h1 class="text-xl font-bold text-zinc-800 mb-1">Social Media Channels</h1>
+          <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-1"></div>
+          <p class="text-base text-zinc-500">Follow us on our official social media channels to stay updated with the latest news and promotions.</p>
+          <div class="flex flex-wrap justify-center items-center gap-8 mt-8">
+            <!-- Facebook Card -->
+            <a href="#" class="flex flex-col items-center bg-white rounded-xl p-6 w-32 border border-zinc-200">
+              <div class="mb-2">
+                <img src="./images/contact-us/facebook.png" alt="Facebook" class="w-10 h-10 object-contain">   
+              </div>
+              <span class="text-zinc-600 font-medium text-sm">Facebook</span>
+            </a>
+            <!-- Instagram Card -->
+            <a href="#" class="flex flex-col items-center bg-white rounded-xl p-6 w-32 border border-zinc-200">
+              <div class="mb-2">
+                <img src="./images/contact-us/instagram.png" alt="Instagram" class="w-10 h-10 object-contain">   
+              </div>
+              <span class="text-zinc-600 font-medium text-sm">Instagram</span>
+            </a>
+            <!-- Twitter Card -->
+            <a href="#" class="flex flex-col items-center bg-white rounded-xl p-6 w-32 border border-zinc-200">
+              <div class="mb-2">
+                <img src="./images/contact-us/twitter.png" alt="Twitter" class="w-10 h-10 object-contain">   
+              </div>
+              <span class="text-zinc-600 font-medium text-sm">Twitter</span>
+            </a>
+            <!-- Viber Card -->
+            <a href="#" class="flex flex-col items-center bg-white rounded-xl p-6 w-32 border border-zinc-200">
+                <div class="mb-2">
+                  <img src="./images/contact-us/viber.png" alt="Viber" class="w-10 h-10 object-contain">   
+                </div>
+                <span class="text-zinc-600 font-medium text-sm">Viber</span>
+              </a>
+          </div>
+        </div>
+        <div class="text-center w-full max-w-3xl my-20">
+          <h1 class="text-xl font-bold text-zinc-800 mb-1">Official Contact Numbers </h1>
+          <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-1"></div>
+          <p class="text-base text-zinc-500">If you have any questions, comments, or concerns, feel free to reach out. We're always here to help and ensure you get the support you need.</p>
+          <div class="flex flex-wrap justify-center items-center gap-8 mt-8">
+            <div class="flex flex-col items-center bg-white rounded-xl p-6 w-40 border border-zinc-200">
+              <div class="mb-2">
+                <img src="./images/contact-us/call.png" alt="Call" class="w-10 h-10 object-contain">   
+              </div> 
+              <span class="text-zinc-600 text-sm">Mobile: 0924235352</span>
+            </div>
+            <div class="flex flex-col items-center bg-white rounded-xl p-6 w-40 border border-zinc-200">
+                <div class="mb-2">
+                  <img src="./images/contact-us/telephone.png" alt="Telephone" class="w-10 h-10 object-contain">   
+                </div> 
+                <span class="text-zinc-600 text-sm">Telephone: 893402-230</span>
+              </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center w-full max-w-3xl my-20">
+            <h1 class="text-xl font-bold text-zinc-800 mb-1">Visit Us</h1>
+            <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-1"></div>
+            <p class="text-base text-zinc-500 text-center">Visit our stores to experience our products and services firsthand. We're always here to help and ensure you get the support you need.</p>
+            <iframe class="max-w-2xl mt-8 rounded-xl " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.2172066834696!2d124.64510877474487!3d8.478248797367335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2d0b78efd97%3A0x611f849ae0c42c1f!2sQuality%20Appliance%20Plaza!5e0!3m2!1sen!2sph!4v1748403125268!5m2!1sen!2sph" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
+      </section>
+
+
+      <!-- ===== FOOTER SECTION ===== -->
+      <footer class="w-full bg-white/90 backdrop-blur-sm border-t border-zinc-200 mt-20 text-zinc-600 text-sm shadow-lg relative overflow-hidden">
+        <!-- Decorative Arc Design -->
+        <div class="absolute left-0 bottom-0 w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[450px] 2xl:h-[450px] translate-x-[-50%] translate-y-[50%] -z-10">
+          <div class="relative w-full h-full">
+            <div class="absolute inset-0 rounded-full" style="background:conic-gradient(black 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);-webkit-mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);mask-composite:add;-webkit-mask-composite:source-over"></div>
+            <div class="absolute inset-0 rounded-full" style="background:conic-gradient(red 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);-webkit-mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);mask-composite:add;-webkit-mask-composite:source-over"></div>
+          </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-16 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-3">
+              <img src="./images/qapi-logo.webp" alt="" class="h-16 w-auto object-cover object-center">
+              <p class="mb-4 text-xs leading-relaxed">We provide durable, high-quality appliances for every home. Trusted by thousands, backed by excellent support, and guided by our mission of service excellence.</p>
+            </div>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-zinc-800 mb-3">Company</h3>
+              <ul class="space-y-2 text-xs">
+                <li><a href="#" class="hover:text-brand">About Us</a></li>
+                <li><a href="#" class="hover:text-brand">Why Choose Us</a></li>
+                <li><a href="#" class="hover:text-brand">Careers</a></li>
+                <li><a href="#" class="hover:text-brand">Vision & Mission</a></li>
+                <li><a href="#" class="hover:text-brand">Our Stores</a></li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-zinc-800 mb-3">Policies</h3>
+              <ul class="space-y-2 text-xs">
+                <li><a href="#" class="hover:text-brand">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-brand">Terms & Conditions</a></li>
+                <li><a href="#" class="hover:text-brand">Returns & Refunds</a></li>
+                <li><a href="#" class="hover:text-brand">Shipping Policy</a></li>
+                <li><a href="#" class="hover:text-brand">Warranty Info</a></li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-sm font-semibold text-zinc-800 mb-3">Customer Support</h3>
+              <ul class="space-y-2 text-xs">
+                <li><a href="#" class="hover:text-brand">Installation Guide</a></li>
+                <li><a href="#" class="hover:text-brand">Order Tracking</a></li>
+                <li><a href="#" class="hover:text-brand">FAQs</a></li>
+                <li><a href="#" class="hover:text-brand">Feedback</a></li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-3">
+              <h3 class="text-sm font-semibold text-zinc-800 mb-3">Get in Touch</h3>
+              <ul class="text-xs space-y-2 mb-5">
+                <li>📞 Tel: <a href="tel:893402230" class="hover:text-brand">893402-230</a></li>
+                <li>📱 Mobile: <a href="tel:0924235352" class="hover:text-brand">0924235352</a></li>
+                <li>🌍 Overseas: <a href="tel:0938534823" class="hover:text-brand">0938534823</a></li>
+                <li>📧 Email: <a href="mailto:support@qualityappliance.com" class="hover:text-brand">support@qualityappliance.com</a></li>
+              </ul>
+              <form class="flex flex-col sm:flex-row items-center gap-2">
+                <input type="email" placeholder="Your email address" class="w-full px-3 py-2 border rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-brand">
+                <button type="submit" class="px-4 py-2 text-xs bg-gradient-to-r from-brand to-red-500 text-white rounded-md hover:bg-brand-dark transition">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="mt-16 border-t border-zinc-100 pt-6 text-center text-xs text-zinc-500">
+            <div class="flex justify-center items-center gap-4 mb-3">
+              <span class="inline-block bg-zinc-200 px-3 py-1 rounded">SSL Secured</span>
+              <span class="inline-block bg-zinc-200 px-3 py-1 rounded">Trusted Seller</span>
+              <span class="inline-block bg-zinc-200 px-3 py-1 rounded">Secure Checkout</span>
+            </div>
+            <p>© 2025 <span class="font-semibold text-brand">Quality Appliance Plaza</span>. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+      <button
+      x-data="{ show: false }"
+      x-init="window.addEventListener('scroll', () => { show = window.scrollY > 200 })"
+      x-show="show"
+      x-transition
+      @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-brand hover:bg-brand/90 text-white rounded-full p-2 sm:p-3 shadow-lg transition-all"
+      style="display: none;"
+      aria-label="Back to top"
+    >
+      <!-- Up Arrow SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+    
+  </body>
+</html>
