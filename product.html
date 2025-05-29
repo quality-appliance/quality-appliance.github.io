@@ -76,10 +76,12 @@
           </div>
         </div>
         <div class="w-full">
-          <div class="text-sm font-medium text-zinc-500 mb-1.5">SKU: RF28T5001SR</div>
-          <h1 class="text-3xl font-semibold leading-tight mb-1.5">Samsung 28 cu. ft. Large Capacity 3-Door French Door</h1>
-          <h2 class="text-2xl font-bold text-brand leading-snug mb-1.5">₱ 110,115.99</h2>
-          <div class="text-sm text-zinc-500">As low as <span class="text-brand font-semibold">₱2,800.00</span> × 36 Months</div>
+          <p class="text-sm font-medium text-zinc-500">SKU: <span class="font-semibold">9158</span></p>
+          <h1 class="text-lg font-medium tracking-tight">Brand: <span class="font-semibold">SAMSUNG</span></h1>
+          <h1 class="text-2xl font-medium leading-tight mb-1">Model: <span class="text-brand font-semibold">RS63R5561M9</span></h1>
+          <h1 class="text-lg leading-tight mb-1">28 cu. ft. Large Capacity 3-Door French Door</h1>
+          <h2 class="text-xl font-bold text-brand leading-snug my-2.5">₱ 110,115.99</h2>
+          <div class="text-sm text-zinc-500 my-2.5">As low as <span class="text-brand font-semibold">₱3,800.00</span> × 24 Months</div>
           <div class="flex items-center gap-2 my-3" x-data="{rating:4.5}">
             <div class="flex items-center">
               <template x-for="i in 5" :key="i">
@@ -88,6 +90,8 @@
             </div>
             <span class="text-sm text-zinc-500" x-text="rating+' (128 reviews)'"></span>
           </div>
+
+          <div class="text-sm text-zinc-600 my-2.5">Stocks Available: <span class="font-semibold underline">12</span></div>
           <div class="text-sm text-zinc-500 mb-1.5">
             <h3 class="text-sm font-medium text-zinc-700 mb-1">EXCLUSIVE SERVICES</h3>
             <ul class="flex gap-5 text-sm text-zinc-600 list-disc pl-5">
@@ -97,11 +101,11 @@
             </ul>
           </div>
           <div class="flex items-center gap-4 my-4">
-            <button class="bg-brand text-white font-semibold px-4 py-2 rounded-lg">Inquire Now</button>
-            <h4 class="font-medium text-zinc-700 ">Where to Buy?</h4>
+            <button onclick="contactUsQuery()" class="bg-brand text-white font-semibold px-4 py-2 rounded-lg">Inquire Now</button>
+            <a href="./stores.html" class="font-medium text-zinc-700 hover:text-brand transition">Where to Buy?</a>
           </div>
           <div class="my-4">
-            <h4 class="text-sm font-medium text-zinc-700 mb-1">Short Description:</h4>
+            <h4 class="text-sm font-medium text-zinc-700 mb-1">Description:</h4>
             <p class="text-sm text-zinc-600">3-Door French Door Refrigerator, AI Powered Smart Dial Front Load Washer and AI Powered Smart Dial and Super Speed Dry Dryer package</p>
             <h4 class="text-sm font-medium text-zinc-700 mb-1 mt-4">Feature Overview:</h4>
             <ul class="text-sm text-zinc-600 list-disc pl-5 grid grid-cols-2">
@@ -499,5 +503,23 @@
   <button x-data="{show:false}" x-init="window.addEventListener('scroll',()=>{show=window.scrollY>200})" x-show="show" x-transition @click="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-brand hover:bg-brand/90 text-white rounded-full p-2 sm:p-3 shadow-lg transition-all" style="display:none;" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
   </button>
+
+  <script>
+   "use strict";
+    const contactUsURL = "./contact-us.html"
+    const message =
+    `Good day Ma'am/Sir,
+      I would like to inquire about the following product:
+        Model: RS63R5561M9
+        28 cu. ft. Large Capacity 3-Door French Door
+        ₱110,115.99
+
+      May I know if this item is currently available and how I can proceed with the purchase? Thank you!
+    `;
+    const encodedMessage =  encodeURIComponent(message);
+    function contactUsQuery() {
+      window.location.href = contactUsURL+"?message="+`${encodedMessage}`;
+    }
+  </script>
   </body>
 </html>
