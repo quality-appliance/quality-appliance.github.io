@@ -8,12 +8,19 @@
     <title>Promo | Quality Appliance Plaza</title>
 
     <!-- External CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/output.css">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
     <!-- Alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
 
+    <style>
+      .swiper-button-prev,
+      .swiper-button-next {
+        color:#D60024;
+      }
+    </style>
   </head>
 
   <body class="bg-zinc-100">
@@ -47,96 +54,25 @@
           </div>
           <ul class="flex justify-center items-center gap-4 sm:gap-6 text-sm">
             <li><a href="/" class="hover:underline">Home</a></li>
-            <li><a href="./categories.html" class="hover:underline">Categories</a></li>
+            <li><a href="./categories.html" class="hover:underline " aria-current="page">Categories</a></li>
             <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
             <li><a href="./products.html" class="hover:underline">Products</a></li>
             <li><a href="./careers.html" class="hover:underline">Careers</a></li>
             <li><a href="./promo.html" class="hover:underline">Promo</a></li>
-            <li><a href="./contact-us.html" class="font-bold underline" aria-current="page">Contact Us</a></li>
+            <li><a href="./contact-us.html" class="hover:underline">Contact Us</a></li>
             <li><a href="./stores.html" class="hover:underline">Stores</a></li>
             <li><a href="./installment-guide.html" class="hover:underline">Installment Guide</a></li>
-            <li><a href="./application-portal.html" class="hover:underline">Application Portal</a></li>
+            <li><a href="./application-portal.html" class="font-bold underline" aria-current="page">Application Portal</a></li>
           </ul>
         </div>
       </nav> 
 
-      <section class="flex flex-col flex-1 w-full max-w-screen-xl my-8 p-8 bg-white rounded-2xl shadow-lg items-center justify-center">
-        <div class="text-center w-full max-w-2xl mt-12 mb-8">
-          <h1 class="text-4xl font-bold tracking-tight text-zinc-900 mb-2">Contact Us</h1>
-          <p class="text-lg text-zinc-500">We're here to help. Reach out with any questions or feedback.</p>
-        </div>
-        <div class="w-full max-w-lg mx-auto bg-white rounded-2xl p-10 mb-12 border border-zinc-200">
-          <h2 class="text-2xl font-bold text-zinc-800 mb-4 text-center">Send us a message</h2>
-          <p class="text-zinc-600 mb-6 text-center">Send your message to <a href="mailto:support@qualityappliance.com" class="text-brand underline hover:text-brand/80">support@qualityappliance.com</a> or use the form below. </p>
-          <form class="flex flex-col gap-6">
-            <input type="text" name="name" placeholder="Full Name" required class="px-5 py-3 border border-zinc-200 rounded-full focus:ring-2 focus:ring-brand transition">
-            <input type="email" name="email" placeholder="Email Address" required class="px-5 py-3 border border-zinc-200 rounded-full focus:ring-2 focus:ring-brand transition">
-            <textarea name="message" placeholder="Write your message here..." class="w-full h-40 px-5 py-3 border border-zinc-200 rounded-2xl focus:ring-2 focus:ring-brand transition"></textarea>
-            <button type="submit" class="bg-gradient-to-r from-brand to-red-500 text-white px-8 py-3 rounded-full font-semibold text-lg hover:scale-105 transition">Submit Message</button>
-          </form>
-        </div>
-        <div class="text-center w-full max-w-3xl my-20">
-          <h1 class="text-xl font-bold text-zinc-800 mb-1">Social Media Channels</h1>
-          <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-1"></div>
-          <p class="text-base text-zinc-500">Follow us on our official social media channels to stay updated with the latest news and promotions.</p>
-          <div class="flex flex-wrap justify-center items-center gap-8 mt-8">
-            <!-- Facebook Card -->
-            <a href="#" class="flex flex-col items-center bg-white rounded-xl p-6 w-32 border border-zinc-200">
-              <div class="mb-2">
-                <img src="./images/contact-us/facebook.png" alt="Facebook" class="w-10 h-10 object-contain">   
-              </div>
-              <span class="text-zinc-600 font-medium text-sm">Facebook</span>
-            </a>
-            <!-- Instagram Card -->
-            <a href="#" class="flex flex-col items-center bg-white rounded-xl p-6 w-32 border border-zinc-200">
-              <div class="mb-2">
-                <img src="./images/contact-us/instagram.png" alt="Instagram" class="w-10 h-10 object-contain">   
-              </div>
-              <span class="text-zinc-600 font-medium text-sm">Instagram</span>
-            </a>
-            <!-- Twitter Card -->
-            <a href="#" class="flex flex-col items-center bg-white rounded-xl p-6 w-32 border border-zinc-200">
-              <div class="mb-2">
-                <img src="./images/contact-us/twitter.png" alt="Twitter" class="w-10 h-10 object-contain">   
-              </div>
-              <span class="text-zinc-600 font-medium text-sm">Twitter</span>
-            </a>
-            <!-- Viber Card -->
-            <a href="#" class="flex flex-col items-center bg-white rounded-xl p-6 w-32 border border-zinc-200">
-                <div class="mb-2">
-                  <img src="./images/contact-us/viber.png" alt="Viber" class="w-10 h-10 object-contain">   
-                </div>
-                <span class="text-zinc-600 font-medium text-sm">Viber</span>
-              </a>
-          </div>
-        </div>
-        <div class="text-center w-full max-w-3xl my-20">
-          <h1 class="text-xl font-bold text-zinc-800 mb-1">Official Contact Numbers </h1>
-          <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-1"></div>
-          <p class="text-base text-zinc-500">If you have any questions, comments, or concerns, feel free to reach out. We're always here to help and ensure you get the support you need.</p>
-          <div class="flex flex-wrap justify-center items-center gap-8 mt-8">
-            <div class="flex flex-col items-center bg-white rounded-xl p-6 w-40 border border-zinc-200">
-              <div class="mb-2">
-                <img src="./images/contact-us/call.png" alt="Call" class="w-10 h-10 object-contain">   
-              </div> 
-              <span class="text-zinc-600 text-sm">Mobile: 0924235352</span>
-            </div>
-            <div class="flex flex-col items-center bg-white rounded-xl p-6 w-40 border border-zinc-200">
-                <div class="mb-2">
-                  <img src="./images/contact-us/telephone.png" alt="Telephone" class="w-10 h-10 object-contain">   
-                </div> 
-                <span class="text-zinc-600 text-sm">Telephone: 893402-230</span>
-              </div>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center w-full max-w-3xl my-20">
-            <h1 class="text-xl font-bold text-zinc-800 mb-1">Visit Us</h1>
-            <div class="w-16 h-1 bg-red-600 rounded-full mx-auto mb-1"></div>
-            <p class="text-base text-zinc-500 text-center">Visit our stores to experience our products and services firsthand. We're always here to help and ensure you get the support you need.</p>
-            <iframe class="max-w-2xl mt-8 rounded-xl " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.2172066834696!2d124.64510877474487!3d8.478248797367335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2d0b78efd97%3A0x611f849ae0c42c1f!2sQuality%20Appliance%20Plaza!5e0!3m2!1sen!2sph!4v1748403125268!5m2!1sen!2sph" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+      <section class="flex flex-col flex-1 w-full max-w-screen-xl my-8 p-4 bg-white rounded-xl shadow-lg items-center justify-center">
+        <div class="text-center w-full max-w-3xl mt-12 mb-8">
+          <h1 class="text-4xl font-bold tracking-tight text-zinc-900 mb-2">Application Portal</h1>
+          <p class="text-lg text-zinc-500"></p>
         </div>
       </section>
-
 
       <!-- ===== FOOTER SECTION ===== -->
       <footer class="w-full bg-white/90 backdrop-blur-sm border-t border-zinc-200 mt-20 text-zinc-600 text-sm shadow-lg relative overflow-hidden">
@@ -230,6 +166,9 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
       </svg>
     </button>
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./js/swiperFunction.js" defer></script>
     
   </body>
 </html>
