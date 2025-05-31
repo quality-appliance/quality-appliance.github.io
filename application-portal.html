@@ -59,246 +59,388 @@
         </div>
       </nav> 
 
-      <section class="flex flex-col flex-1 w-full max-w-screen-xl my-8 p-4 bg-white rounded-xl shadow-lg items-center justify-center">
-        <div class="w-full max-w-6xl my-12 p-4">
-          <div class="w-full text-center my-8">
-            <h1 class="text-zinc-800 text-4xl font-extrabold">Application Portal</h1>
-            <p class="w-full text-zinc-500 mt-2">Start Your Application Now!</p>
-          </div>
-         <hr class="text-zinc-200 my-8">
-          <h2 class="text-xl text-zinc-700 font-bold my-1">DESIRED UNIT</h2>
-          <section class="bg-zinc-50 p-4 border border-zinc-200 rounded-xl">
-            <div class="grid grid-cols-3 gap-4 my-4">
-              <label for="referral-code" class="block text-zinc-700">Referral Code:
-                <input type="text" id="referral-code" name="referral-code" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Referral Code" autocomplete="off" />
-              </label>
-              <label for="model" class="block text-zinc-700">Model:
-                <input type="text" id="model" name="model" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter model name" autocomplete="off" />
-              </label>
-              <label for="term" class="block text-zinc-700">Installment Period:
-                <select id="term" name="term" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none">
-                  <option value="" disabled selected>Select Months</option>
-                  <option value="1-month">1 Month</option>
-                  <option value="2-months">2 Months</option>
-                  <option value="3-months">3 Months</option>
-                  <option value="4-months">4 Months</option>
-                  <option value="5-months">5 Months</option>
-                  <option value="6-months">6 Months</option>
-                  <option value="7-months">7 Months</option>
-                  <option value="8-months">8 Months</option>
-                  <option value="9-months">9 Months</option>
-                  <option value="10-months">10 Months</option>
-                  <option value="11-months">11 Months</option>
-                  <option value="12-months">12 Months</option>
-                  <option value="13-months">13 Months</option>
-                  <option value="14-months">14 Months</option>
-                  <option value="15-months">15 Months</option>
-                  <option value="16-months">16 Months</option>
-                  <option value="17-months">17 Months</option>
-                  <option value="18-months">18 Months</option>
-                  <option value="19-months">19 Months</option>
-                  <option value="20-months">20 Months</option>
-                  <option value="21-months">21 Months</option>
-                  <option value="22-months">22 Months</option>
-                  <option value="23-months">23 Months</option>
-                  <option value="24-months">24 Months</option>
-                </select>
-              </label>
+      <section id="application-form" class="flex flex-col flex-1 w-full max-w-screen-xl items-center justify-center">
+        <div x-data="{ step: 1 }" class="w-full max-w-6xl my-4 p-4">
+
+          <section x-show="step === 1" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100">
+
+            <!-- Header Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-3xl font-bold text-zinc-900 tracking-tight mb-2">Application Portal</h1>
+                <p class="text-zinc-600 font-light max-w-lg mx-auto">Please fill out the form below to begin your application.</p>
             </div>
-          </section>
-          <hr class="text-zinc-200 my-8">
-          <h2 class="text-xl text-zinc-700 font-bold mb-1 mt-8">PERSONAL INFORMATION</h2>
-          <section class="bg-zinc-50 p-4 border border-zinc-200 rounded-xl mb-4">
-            <h3 class="text-lg text-zinc-700 font-semibold">1. APPLICATION INFORMATION</h3>
-            <div class="grid grid-cols-4 gap-4 my-4">
-              <label for="customer-id" class="block text-zinc-700">Customer ID:
-                <input type="number" id="customer-id" name="customer-id" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Customer ID" autocomplete="off" />
-              </label>
+        
+            <!-- Progress Indicator -->
+            <div class="mb-10">
+                <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                    <span>Application Progress</span>
+                    <span class="text-zinc-700">Step 1 of 11</span>
+                </div>
+                <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                    <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:9%"></div>
+                </div>
             </div>
-            <div class="grid grid-cols-4 gap-4 my-4">
-              <label for="last-name" class="block text-zinc-700">Last Name:
-                <input type="text" id="last-name" name="last-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Last Name" autocomplete="off" />
+        
+            <!-- Form Container -->
+            <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+                <div class="space-y-8">
+                    <!-- Section Header -->
+                    <div class="flex items-start gap-4 mb-8">
+                        <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                            <span class="text-brand font-semibold text-base">0</span>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-semibold text-zinc-900">Unit Selection</h2>
+                            <p class="text-zinc-500 text-sm mt-1">Provide details about the product you're applying for</p>
+                        </div>
+                    </div>
+        
+                    <!-- Form Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Referral Code -->
+                        <div class="">
+                            <label for="referral-code" class="block text-zinc-700">Referral Code <span class="text-zinc-400 font-normal">(optional)</span></label>
+                            <div class="relative">
+                                <input type="text" id="referral-code" name="referral-code" 
+                                       class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" 
+                                       placeholder="Enter referral code" 
+                                       autocomplete="off" />
+                            </div>
+                        </div>
+        
+                        <!-- Model -->
+                        <div class="">
+                            <label for="model" class="block text-zinc-700">Model <span class="text-red-500">*</span></label>
+                            <div class="relative">
+                                <input type="text" id="model" name="model" required 
+                                       class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" 
+                                       placeholder="e.g., Model X, Pro Max" 
+                                       autocomplete="off" />
+                            </div>
+                        </div>
+        
+                        <!-- Installment Period -->
+                        <div class="">
+                            <label for="term" class="block text-zinc-700">Installment Period <span class="text-red-500">*</span></label>
+                            <div class="relative">
+                                <select id="term" name="term" required 
+                                        class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white appearance-none transition-all duration-150">
+                                    <option value="" disabled selected>Select duration</option>
+                                    <option value="1-months">1 Month</option>
+                                    <option value="3-months">3 Months</option>
+                                    <option value="6-months">6 Months</option>
+                                    <option value="12-months">12 Months</option>
+                                    <option value="18-months">18 Months</option>
+                                    <option value="24-months">24 Months</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                    <svg class="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Location -->
+                        <div class="">
+                            <label for="location" class="block text-zinc-700">Location <span class="text-red-500">*</span></label>
+                            <div class="relative">
+                                <input type="text" id="location" name="location" required 
+                                       class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" 
+                                       placeholder="City, State/Province" 
+                                       autocomplete="address-level2" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Navigation -->
+            <div class="flex justify-end">
+                <button @click="step++" 
+                        class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
+            </div>
+        </section> 
+
+          <section x-show="step === 2" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl font-bold text-zinc-900 tracking-tight mb-2">Personal Information</h1>
+                <p class="text-zinc-600 font-light max-w-lg mx-auto">Please fill out the form below to continue your application.</p>
+            </div>
+            
+               <!-- Progress Indicator -->
+            <div class="mb-10">
+                <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                    <span>Application Progress</span>
+                    <span class="text-zinc-700">Step 2 of 11</span>
+                </div>
+                <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                    <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:18%"></div>
+                </div>
+            </div>
+
+            <!-- Form Container -->
+            <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+
+             <div class="flex items-start gap-4 mb-8">
+                <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                    <span class="text-brand font-semibold text-base">1</span>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold text-zinc-900">Application Information</h2>
+                    <p class="text-zinc-500 text-sm mt-1">Provide details about your application</p>
+                </div>
+             </div>
+          
+            <div class="grid grid-cols-2 gap-4 my-4">
+              <label for="last-name" class="block text-zinc-700">
+                <span class= text-zinc-700">Last Name <span class="text-red-500">*</span></span>
+                <input type="text" id="last-name" name="last-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Last Name" autocomplete="off" />
               </label>
-              <label for="first-name" class="block text-zinc-700">First Name:
-                <input type="text" id="first-name" name="first-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter First Name" autocomplete="off" />
+              <label for="first-name" class="block text-zinc-700">
+                <span class= text-zinc-700">First Name <span class="text-red-500">*</span></span>
+                <input type="text" id="first-name" name="first-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter First Name" autocomplete="off" />
               </label>
-              <label for="middle-name" class="block text-zinc-700">Middle Name:
-                <input type="text" id="middle-name" name="middle-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Middle Name" autocomplete="off" />
+              <label for="middle-name" class="block text-zinc-700">
+                <span class= text-zinc-700">Middle Name <span class="text-red-500">*</span></span>
+                <input type="text" id="middle-name" name="middle-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Middle Name" autocomplete="off" />
               </label>
-              <label for="suffix" class="block text-zinc-700">Suffix:
-                <input type="text" id="suffix" name="suffix" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Suffix" autocomplete="off" />
+              <label for="suffix" class="block text-zinc-700">
+                <span class= text-zinc-700">Suffix <span class="text-red-500">*</span></span>
+                <input type="text" id="suffix" name="suffix" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Suffix" autocomplete="off" />
               </label>
             </div>
 
-            <div class="grid grid-cols-4 gap-4 my-4">
-              <label for="marital-status">
-                <span class="block text-zinc-700">Marital Status:</span>
-                <input type="text" id="marital-status" name="marital-status" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Select Marital Status" autocomplete="off"/>
+            <div class="grid grid-cols-2 gap-4 my-4">
+              <label for="marital-status" class="block text-zinc-700">
+                <span class= text-zinc-700">Marital Status <span class="text-red-500">*</span></span>
+                <input type="text" id="marital-status" name="marital-status" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Select Marital Status" autocomplete="off"/>
               </label>
-              <label for="gender">
-                <span class="block text-zinc-700">Gender:</span>
-                <input type="text" id="gender" name="gender" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Select Gender" autocomplete="off"/>
+              <label for="gender" class="block text-zinc-700">
+                <span class= text-zinc-700">Gender <span class="text-red-500">*</span></span>
+                <input type="text" id="gender" name="gender" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Select Gender" autocomplete="off"/>
               </label>
-              <label for="birth-place">
-                <span class="block text-zinc-700">Birth Place:</span>
-                <input type="text" id="birth-place" name="birth-place" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Birth Place" autocomplete="off"/>
+              <label for="birth-place" class="block text-zinc-700">
+                <span class= text-zinc-700">Bithde Place <span class="text-red-500">*</span></span>
+                <input type="text" id="gender" name="gender" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Select Gender" autocomplete="off"/>
               </label>
-              <label for="birth-date">
-                <span class="block text-zinc-700">Birth Date:</span>
-                <input type="date" id="birth-date" name="birth-date" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Birth Date" autocomplete="off"/>
-              </label>
-            </div>
-
-            <div class="grid grid-cols-4 gap-4 my-4">
-              <label for="nationality">
-                <span class="block text-zinc-700">Nationality:</span>
-                <input type="text" id="nationality" name="nationality" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Nationality" autocomplete="off"/>
-              </label>
-              <label for="citizenship">
-                <span class="block text-zinc-700">Citizenship:</span>
-                <input type="text" id="civil-status" name="civil-status" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Citizenship" autocomplete="off"/>
-              </label>
-              <label for="passport">
-                <span class="block text-zinc-700">Passport:</span>
-                <input type="text" id="passport" name="passport" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Passport" autocomplete="off"/>
-              </label>
-              <label for="postal-id">
-                <span class="block text-zinc-700">Postal ID:</span>
-                <input type="number" id="postal-id" name="postal-id" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Postal ID" autocomplete="off"/>
+              <label for="birth-date" class="block text-zinc-700">
+                <span class= text-zinc-700">Birth Date <span class="text-red-500">*</span></span>
+                <input type="date" id="birth-date" name="birth-date" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Birth Date" autocomplete="off"/>
               </label>
             </div>
 
-            <div class="grid grid-cols-4 gap-4 my-4">
-              <label for="tin">
-                <span class="block text-zinc-700">TIN Number:</span>
-                <input type="text" id="tin" name="tin" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter TIN" autocomplete="off"/>
+            <div class="grid grid-cols-2 gap-4 my-4">
+              <label for="nationality" class="block text-zinc-700">
+                <span class= text-zinc-700">Nationality <span class="text-red-500">*</span></span>
+                <input type="text" id="nationality" name="nationality" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Nationality" autocomplete="off"/>
               </label>
-              <label for="sss">
-                <span class="block text-zinc-700">SSS Number:</span>
-                <input type="text" id="sss" name="sss" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter SSS" autocomplete="off"/>
+              <label for="citizenship" class="block text-zinc-700">
+                <span class= text-zinc-700">Citizenship <span class="text-red-500">*</span></span>
+                <input type="text" id="civil-status" name="civil-status" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Citizenship" autocomplete="off"/>
               </label>
-              <label for="gsis">
-                <span class="block text-zinc-700">GSIS Number:</span>
-                <input type="text" id="gsis" name="gsis" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter GSIS" autocomplete="off"/>
+              <label for="passport" class="block text-zinc-700">
+                <span class= text-zinc-700">Passport <span class="text-red-500">*</span></span>
+                <input type="text" id="passport" name="passport" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Passport" autocomplete="off"/>
               </label>
-              <label for="nbi">
-                <span class="block text-zinc-700">NBI Number:</span>
-                <input type="number" id="nbi" name="nbi" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter NBI" autocomplete="off"/>
-              </label>
-            </div>
-
-            <div class="grid grid-cols-3 gap-4 my-4">
-              <label for="residence-address">
-                <span class="block text-zinc-700">Residence Address:</span>
-                <input type="text" id="residence-address" name="residence-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Residence Address" autocomplete="off"/>
-              </label>
-              <label for="zone">
-                <span class="block text-zinc-700">Zone:</span>
-                <input type="text" id="zone" name="zone" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Zone" autocomplete="off"/>
-              </label>
-              <label for="length-of-stay">
-                <span class="block text-zinc-700">Length of Stay:</span>
-                <input type="text" id="length-of-stay" name="length-of-stay" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Length of Stay" autocomplete="off"/>
+              <label for="postal-id" class="block text-zinc-700">
+                <span class= text-zinc-700">Postal ID <span class="text-red-500">*</span></span>
+                <input type="number" id="postal-id" name="postal-id" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Postal ID" autocomplete="off"/>
               </label>
             </div>
 
-            <div class="grid grid-cols-3 gap-4 my-4">
-              <label for="residence-type">
-                <span class="block text-zinc-700">Residence Type:</span>
-                <div class="flex gap-2.5">
-                  <label class="flex items-center gap-1 text-sm">
-                    <input type="radio" name="residence-type" value="free" class="w-3 h-3 accent-brand">
+            <div class="grid grid-cols-2 gap-4 my-4">
+              <label for="tin" class="block text-zinc-700">
+                <span class= text-zinc-700">TIN Number <span class="text-red-500">*</span></span>
+                <input type="text" id="tin" name="tin" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter TIN" autocomplete="off"/>
+              </label>
+              <label for="sss" class="block text-zinc-700">
+                <span class= text-zinc-700">SSS Number <span class="text-red-500">*</span></span>
+                <input type="text" id="sss" name="sss" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter SSS" autocomplete="off"/>
+              </label>
+              <label for="gsis" class="block text-zinc-700">
+                <span class= text-zinc-700">GSIS Number <span class="text-red-500">*</span></span>
+                <input type="text" id="gsis" name="gsis" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter GSIS" autocomplete="off"/>
+              </label>
+              <label for="nbi" class="block text-zinc-700">
+                <span class= text-zinc-700">NBI Number <span class="text-red-500">*</span></span>
+                <input type="number" id="nbi" name="nbi" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter NBI" autocomplete="off"/>
+              </label>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 my-4">
+              <label for="residence-address" class="block text-zinc-700">
+                <span class= text-zinc-700">Residence Address <span class="text-red-500">*</span></span>
+                <input type="text" id="residence-address" name="residence-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Residence Address" autocomplete="off"/>
+              </label>
+              <label for="zone" class="block text-zinc-700">
+                <span class= text-zinc-700">Zone <span class="text-red-500">*</span></span>
+                <input type="text" id="zone" name="zone" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Zone" autocomplete="off"/>
+              </label>
+              <label for="length-of-stay" class="block text-zinc-700">
+                <span class= text-zinc-700">Length of Stay <span class="text-red-500">*</span></span>
+                <input type="text" id="length-of-stay" name="length-of-stay" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Length of Stay" autocomplete="off"/>
+              </label>
+              <label for="residence-type" class="block text-zinc-700">
+                <span class= text-zinc-700">Residence Type <span class="text-red-500">*</span></span>
+                <div class="flex items-center p-2.5 gap-2.5">
+                  <label class="flex items-center gap-1">
+                    <input type="radio" name="residence-type" value="free" class="w-4 h-4 accent-brand">
                     <span class="text-zinc-600">Free</span>
                   </label>
-                  <label class="flex items-center gap-1 text-sm">
-                    <input type="radio" name="residence-type" value="owned" class="w-3 h-3 accent-brand">
+                  <label class="flex items-center gap-1">
+                    <input type="radio" name="residence-type" value="owned" class="w-4 h-4 accent-brand">
                     <span class="text-zinc-600">Owned</span>
                   </label>
-                  <label class="flex items-center gap-1 text-sm">
-                    <input type="radio" name="residence-type" value="rented" class="w-3 h-3 accent-brand">
+                  <label class="flex items-center gap-1">
+                    <input type="radio" name="residence-type" value="rented" class="w-4 h-4 accent-brand">
                     <span class="text-zinc-600">Rented</span>
                   </label>
-                  <label class="flex items-center gap-1 text-sm">
-                    <input type="radio" name="residence-type" value="living-with-relatives" class="w-3 h-3 accent-brand">
+                  <label class="flex items-center gap-1">
+                    <input type="radio" name="residence-type" value="living-with-relatives" class="w-4 h-4 accent-brand">
                     <span class="text-zinc-600">Living with Relatives</span>
                   </label>
                 </div>
               </label>
-              <label for="telephone">
-                <span class="block text-zinc-700">Telephone:</span>
-                <input type="number" id="telephone" name="telephone" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Telephone" autocomplete="off"/>
+              <label for="telephone" class="block text-zinc-700">
+                <span class= text-zinc-700">Telephone <span class="text-red-500">*</span></span>
+                <input type="number" id="telephone" name="telephone" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Telephone" autocomplete="off"/>
               </label>
-              <label for="landlord">
-                <span class="block text-zinc-700">Landlord:</span>
-                <input type="text" id="landlord" name="landlord" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Landlord" autocomplete="off"/>
+              <label for="landlord" class="block text-zinc-700">
+                <span class= text-zinc-700">Landlord <span class="text-red-500">*</span></span>
+                <input type="text" id="landlord" name="landlord" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Landlord" autocomplete="off"/>
               </label>
             </div>
 
-            <div class="grid grid-cols-3 gap-4 my-4">
-              <label for="previous-address">
-                <span class="block text-zinc-700">Previous Address:</span>
-                <input type="text" id="previous-address" name="previous-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Previous Address" autocomplete="off"/>
+            <div class="grid grid-cols-2 gap-4 my-4">
+              <label for="previous-address" class="block text-zinc-700">
+                <span class= text-zinc-700">Previous Address <span class="text-red-500">*</span></span>
+                <input type="text" id="previous-address" name="previous-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Previous Address" autocomplete="off"/>
               </label>
-              <label for="email">
-                <span class="block text-zinc-700">Email:</span>
-                <input type="text" id="email" name="email" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Email" autocomplete="off"/>
+              <label for="email" class="block text-zinc-700">
+                <span class= text-zinc-700">Email <span class="text-red-500">*</span></span>
+                <input type="text" id="email" name="email" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Email" autocomplete="off"/>
               </label>
-              <label for="sc-pwd-id">
-                <span class="block text-zinc-700">SC/PWD ID:</span>
-                <input type="text" id="sc-pwd-id" name="sc-pwd-id" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter SC/PWD ID" autocomplete="off"/>
+              <label for="sc-pwd-id" class="block text-zinc-700">
+                <span class= text-zinc-700">SC/PWD ID <span class="text-red-500">*</span></span>
+                <input type="text" id="sc-pwd-id" name="sc-pwd-id" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter SC/PWD ID" autocomplete="off"/>
               </label>
+            </div>
+
+            </div>
+            <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
             </div>
           </section> 
 
-          <section class="bg-zinc-50 p-4 border border-zinc-200 rounded-xl mb-4 mt-8">
-            <h2 class="text-lg text-zinc-700 font-semibold ">2. SPOUSE</h2>
-              <div class="grid grid-cols-4 gap-4 my-4">
+          <section x-show="step === 3" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8">
+               <!-- Progress Indicator -->
+            <div class="mb-10">
+                <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                    <span>Application Progress</span>
+                    <span class="text-zinc-700">Step 3 of 11</span>
+                </div>
+                <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                    <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:27%"></div>
+                </div>
+            </div>
+
+             <!-- Form Container -->
+            <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+
+             <div class="flex items-start gap-4 mb-8">
+                <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                    <span class="text-brand font-semibold text-base">2</span>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold text-zinc-900">SPOUSE</h2>
+                    <p class="text-zinc-500 text-sm mt-1">Provide details about your spouse</p>
+                </div>
+             </div>
+              <div class="grid grid-cols-2 gap-4 my-4">
                 <label for="spouse-name">
                   <span class="block text-zinc-700">Spouse Name:</span>
-                  <input type="text" id="spouse-name" name="spouse-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Spouse Name" autocomplete="off"/>
+                  <input type="text" id="spouse-name" name="spouse-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Spouse Name" autocomplete="off"/>
                 </label>
                 <label for="spouse-occupation">
                   <span class="block text-zinc-700">Occupation:</span>
-                  <input type="text" id="spouse-occupation" name="spouse-occupation" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Spouse Occupation" autocomplete="off"/>
+                  <input type="text" id="spouse-occupation" name="spouse-occupation" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Spouse Occupation" autocomplete="off"/>
                 </label>
                 <label for="spouse-telephone">
                   <span class="block text-zinc-700">Telephone:</span>
-                  <input type="number" id="spouse-telephone" name="spouse-telephone" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Spouse Telephone" autocomplete="off"/>
+                  <input type="number" id="spouse-telephone" name="spouse-telephone" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Spouse Telephone" autocomplete="off"/>
                 </label>
                 <label for="both-spouse-literate">
-                  <span class="block text-zinc-700">Both Spouses are Literate:</span>
+                  <span class="block text-zinc-700">Both Spouses are Literate <span class="text-red-500">*</span></span>
                   <div class="flex items-center gap-2 mt-2">
                     <input type="checkbox" id="both-spouse-literate" name="both-spouse-literate" class="accent-brand w-4 h-4">
                     <label for="both-spouse-literate" class="text-zinc-600">Yes</label>
                   </div>
                 </label>
               </div>
+              </div>
+              <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
+            </div>
             </section>
 
-            <section class="bg-zinc-50 border border-zinc-200 p-4 rounded-xl mb-4 mt-8">
-            <h2 class="text-lg text-zinc-700 font-semibold">3.CHILDREN</h2>
+            <section x-show="step === 4" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8">
+              <div class="mb-10">
+                <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                    <span>Application Progress</span>
+                    <span class="text-zinc-700">Step 4 of 11</span>
+                </div>
+                <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                    <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:36%"></div>
+                </div>
+            </div>
+            <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+              <div class="flex items-start gap-4 mb-8">
+                <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                    <span class="text-brand font-semibold text-base">3</span>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold text-zinc-900">CHILDREN</h2>
+                    <p class="text-zinc-500 text-sm mt-1">Provide details about your children</p>
+                </div>
+             </div>
+            
             <div class="grid grid-cols-7 gap-4 my-4">
               <div class="col-span-2">
                 <label for="children-full-name-1">
                   <span class="block text-zinc-700">Full Name:</span>
-                  <input type="text" id="children-full-name" name="children-full-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Children Full Name" autocomplete="off"/>
+                  <input type="text" id="children-full-name" name="children-full-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Children Full Name" autocomplete="off"/>
                 </label>
               </div>
               <!-- CHILDREN 1 -->
             <label for="children-age-1">
                 <span class="block text-zinc-700">Age:</span>
-                <input type="text" id="children-age" name="children-age" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Age" autocomplete="off"/>
+                <input type="text" id="children-age" name="children-age" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Age" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="children-school/employer-address-1 ">
                   <span class="block text-zinc-700">School /Employer and Address:</span>
-                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="School Or Employer & Address" autocomplete="off"/>
+                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="School Or Employer & Address" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="grade/year-level/position-1">
                   <span class="block text-zinc-700">Grade/Year Level/Position:</span>
-                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Grade/Year Level or Position" autocomplete="off"/>
+                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Grade/Year Level or Position" autocomplete="off"/>
                 </label>
               </div>
             </div>
@@ -306,20 +448,20 @@
             <div class="grid grid-cols-7 gap-4 my-4">
               <div class="col-span-2">
                 <label for="children-full-name-2">
-                  <input type="text" id="children-full-name" name="children-full-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Children Full Name" autocomplete="off"/>
+                  <input type="text" id="children-full-name" name="children-full-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Children Full Name" autocomplete="off"/>
                 </label>
               </div>
             <label for="children-age-2">
-                <input type="text" id="children-age" name="children-age" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Age" autocomplete="off"/>
+                <input type="text" id="children-age" name="children-age" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Age" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="children-school/employer-address-2 ">
-                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="School Or Employer & Address" autocomplete="off"/>
+                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="School Or Employer & Address" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="grade/year-level/position-2">
-                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Grade/Year Level or Position" autocomplete="off"/>
+                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Grade/Year Level or Position" autocomplete="off"/>
                 </label>
               </div>
             </div>
@@ -327,20 +469,20 @@
             <div class="grid grid-cols-7 gap-4 my-4">
               <div class="col-span-2">
                 <label for="children-full-name-3">
-                  <input type="text" id="children-full-name" name="children-full-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Children Full Name" autocomplete="off"/>
+                  <input type="text" id="children-full-name" name="children-full-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Children Full Name" autocomplete="off"/>
                 </label>
               </div>
             <label for="children-age-3">
-                <input type="text" id="children-age" name="children-age" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Age" autocomplete="off"/>
+                <input type="text" id="children-age" name="children-age" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Age" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="children-school/employer-address-3 ">
-                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="School Or Employer & Address" autocomplete="off"/>
+                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="School Or Employer & Address" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="grade/year-level/position-3">
-                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Grade/Year Level or Position" autocomplete="off"/>
+                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Grade/Year Level or Position" autocomplete="off"/>
                 </label>
               </div>
             </div>
@@ -348,20 +490,20 @@
             <div class="grid grid-cols-7 gap-4 my-4">
               <div class="col-span-2">
                 <label for="children-full-name-4">
-                  <input type="text" id="children-full-name" name="children-full-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Children Full Name" autocomplete="off"/>
+                  <input type="text" id="children-full-name" name="children-full-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Children Full Name" autocomplete="off"/>
                 </label>
               </div>
             <label for="children-age-4">
-                <input type="text" id="children-age" name="children-age" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Age" autocomplete="off"/>
+                <input type="text" id="children-age" name="children-age" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Age" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="children-school/employer-address-4 ">
-                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="School Or Employer & Address" autocomplete="off"/>
+                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="School Or Employer & Address" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="grade/year-level/position-4">
-                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Grade/Year Level or Position" autocomplete="off"/>
+                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Grade/Year Level or Position" autocomplete="off"/>
                 </label>
               </div>
             </div>
@@ -369,198 +511,329 @@
             <div class="grid grid-cols-7 gap-4 my-4">
               <div class="col-span-2">
                 <label for="children-full-name-5">
-                  <input type="text" id="children-full-name" name="children-full-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Children Full Name" autocomplete="off"/>
+                  <input type="text" id="children-full-name" name="children-full-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Children Full Name" autocomplete="off"/>
                 </label>
               </div>
             <label for="children-age-5">
-                <input type="text" id="children-age" name="children-age" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Age" autocomplete="off"/>
+                <input type="text" id="children-age" name="children-age" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Age" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="children-school/employer-address-5 ">
-                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="School Or Employer & Address" autocomplete="off"/>
+                  <input type="text" id="children-school/employer-address" name="children-school/employer-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="School Or Employer & Address" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="grade/year-level/position-5">
-                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Grade/Year Level or Position" autocomplete="off"/>
+                  <input type="text" id="grade/year-level/position" name="grade/year-level/position" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Grade/Year Level or Position" autocomplete="off"/>
                 </label>
               </div>
             </div>
+            </div>
+                 <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
+            </div>
           </section>
 
-          <hr class="text-zinc-200 my-8">
-          <h2 class="text-xl text-zinc-700 font-bold mb-1 mt-8">ADDITIONAL INFORMATION</h2> 
-          <section class="bg-zinc-50 border border-zinc-200 p-4 rounded-xl mb-4">
-            <h2 class="text-lg text-zinc-700 font-semibold">4. PARENTS</h2>
+          <section x-show="step === 5" class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8">
+          <div class="text-center mb-12">
+                <h1 class="text-3xl font-bold text-zinc-900 tracking-tight mb-2">Additional Information</h1>
+                <p class="text-zinc-600 font-light max-w-lg mx-auto">Please fill out the form below to continue your application.</p>
+            </div>
+
+            <div class="mb-10">
+              <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                  <span>Application Progress</span>
+                  <span class="text-zinc-700">Step 5 of 11</span>
+              </div>
+              <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:45%"></div>
+              </div>
+          </div>
+
+            <!-- Form Container -->
+            <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+
+             <div class="flex items-start gap-4 mb-8">
+                <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                    <span class="text-brand font-semibold text-base">4</span>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold text-zinc-900">PARENTS</h2>
+                    <p class="text-zinc-500 text-sm mt-1">Provide details about your parents</p>
+                </div>
+             </div>
             <div class="grid grid-cols-4 gap-4 my-4">
               <label for="father-name">
                 <span class="block text-zinc-700">Father's Name:</span>
-                <input type="text" id="father-name" name="father-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Father's Name" autocomplete="off"/>
+                <input type="text" id="father-name" name="father-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Father's Name" autocomplete="off"/>
               </label>
               <label for="father-birthdate">
                 <span class="block text-zinc-700">Birthdate:</span>
-                <input type="date" id="father-birthdate" name="father-birthdate" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Father's Birthdate" autocomplete="off"/>
+                <input type="date" id="father-birthdate" name="father-birthdate" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Father's Birthdate" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="father-home-address">
                   <span class="block text-zinc-700">Home Address:</span>
-                  <input type="text" id="father-home-address" name="father-home-address" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Father's Home Address" autocomplete="off"/>
+                  <input type="text" id="father-home-address" name="father-home-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Father's Home Address" autocomplete="off"/>
                 </label>
               </div>
             </div>
             <div class="grid grid-cols-4 gap-4 my-4">
               <label for="mother-name">
                 <span class="block text-zinc-700">Mother's Name:</span>
-                <input type="text" id="mother-name" name="mother-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Mother's Name" autocomplete="off"/>
+                <input type="text" id="mother-name" name="mother-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Mother's Name" autocomplete="off"/>
               </label>
               <label for="mother-birthdate">
                 <span class="block text-zinc-700">Birthdate:</span>
-                <input type="date" id="mother-birthdate" name="mother-birthdate" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Mother's Birthdate" autocomplete="off"/>
+                <input type="date" id="mother-birthdate" name="mother-birthdate" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Mother's Birthdate" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="mother-home-address">
                   <span class="block text-zinc-700">Home Address:</span>
-                  <input type="text" id="mother-home-address" name="mother-home-address" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Mother's Home Address" autocomplete="off"/>
+                  <input type="text" id="mother-home-address" name="mother-home-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Mother's Home Address" autocomplete="off"/>
                 </label>
               </div>
             </div>
+            </div>
+                  <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
+            </div>
           </section>
 
-          <section class="bg-zinc-50 border border-zinc-200 p-4 rounded-xl mt-8 mb-4">
-            <h2 class="text-lg text-zinc-700 font-semibold mb-4">5. PERSONAL REFERENCES</h2>
-            <div class="grid grid-cols-5 gap-4 my-4">
+          <section x-show="step === 6" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8">
+            <div class="mb-10">
+              <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                  <span>Application Progress</span>
+                  <span class="text-zinc-700">Step 6 of 11</span>
+              </div>
+              <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:54%"></div>
+              </div>
+          </div>
+
+            <!-- Form Container -->
+            <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+
+             <div class="flex items-start gap-4 mb-8">
+                <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                    <span class="text-brand font-semibold text-base">5</span>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold text-zinc-900">PERSONAL REFERENCES</h2>
+                    <p class="text-zinc-500 text-sm mt-1">Provide details about your personal references</p>
+                </div>
+             </div>
+            <div class="grid grid-cols-6 gap-4 my-4">
+              <div class="col-span-2">
               <label for="personal-reference-name-1">
                 <span class="block text-zinc-700">Full Name:</span>
-                <input type="text" id="personal-reference-name-1" name="personal-reference-name-1" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Personal Reference Name" autocomplete="off"/>
+                <input type="text" id="personal-reference-name-1" name="personal-reference-name-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Personal Reference Name" autocomplete="off"/>
               </label>
+              </div>
               <label for="personal-reference-relationship-1">
                 <span class="block text-zinc-700">Relationship:</span>
-                <input type="text" id="personal-reference-relationship-1" name="personal-reference-relationship-1" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Personal Reference Relationship" autocomplete="off"/>
+                <input type="text" id="personal-reference-relationship-1" name="personal-reference-relationship-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Personal Reference Relationship" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="personal-reference-home-address-1">
                   <span class="block text-zinc-700">Home Address:</span>
-                  <input type="text" id="personal-reference-home-address-1" name="personal-reference-home-address-1" class="px-3 py-1 text-zinc-600 bg-white w-full maw-x-md border border-zinc-300 focus:outline-none" placeholder="Enter Personal Reference Home Address" autocomplete="off"/>
+                  <input type="text" id="personal-reference-home-address-1" name="personal-reference-home-address-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Personal Reference Home Address" autocomplete="off"/>
                 </label>
               </div>
               <label for="personal-reference-home-phone-1">
                 <span class="block text-zinc-700">Home Phone:</span>
-                <input type="number" id="personal-reference-home-phone-1" name="personal-reference-home-phone-1" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Personal Reference Home Phone" autocomplete="off"/>
+                <input type="number" id="personal-reference-home-phone-1" name="personal-reference-home-phone-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Personal Reference Home Phone" autocomplete="off"/>
               </label>
             </div>
-            <div class="grid grid-cols-5 gap-4 my-4">
+            <div class="grid grid-cols-6 gap-4 my-4">
+              <div class="col-span-2">
               <label for="personal-reference-name-2">
                 <span class="block text-zinc-700">Full Name:</span>
-                <input type="text" id="personal-reference-name-2" name="personal-reference-name-2" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Personal Reference Name" autocomplete="off"/>
+                <input type="text" id="personal-reference-name-2" name="personal-reference-name-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Personal Reference Name" autocomplete="off"/>
               </label>
+
+              </div>
               <label for="personal-reference-relationship-2">
                 <span class="block text-zinc-700">Relationship:</span>
-                <input type="text" id="personal-reference-relationship-2" name="personal-reference-relationship-2" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Personal Reference Relationship" autocomplete="off"/>
+                <input type="text" id="personal-reference-relationship-2" name="personal-reference-relationship-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Personal Reference Relationship" autocomplete="off"/>
               </label>
               <div class="col-span-2">
                 <label for="personal-reference-home-address-2">
                   <span class="block text-zinc-700">Home Address:</span>
-                  <input type="text" id="personal-reference-home-address-2" name="personal-reference-home-address-2" class="px-3 py-1 text-zinc-600 bg-white w-full maw-x-md border border-zinc-300 focus:outline-none" placeholder="Enter Personal Reference Home Address" autocomplete="off"/>
+                  <input type="text" id="personal-reference-home-address-2" name="personal-reference-home-address-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Personal Reference Home Address" autocomplete="off"/>
                 </label>
               </div>
               <label for="personal-reference-home-phone-2">
                 <span class="block text-zinc-700">Home Phone:</span>
-                <input type="number" id="personal-reference-home-phone-2" name="personal-reference-home-phone-2" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Personal Reference Home Phone" autocomplete="off"/>
+                <input type="number" id="personal-reference-home-phone-2" name="personal-reference-home-phone-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Personal Reference Home Phone" autocomplete="off"/>
               </label>
+            </div>
+            </div>
+                  <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
             </div>
           </section>
 
-          <section class="bg-zinc-50 border border-zinc-200 p-4 rounded-xl mt-8 mb-4">
-          <h2 class="text-lg text-zinc-700 font-semibold mb-4">6. CREDIT VERIFICATION</h2>
-           <div class="grid grid-cols-6 gap-4 my-4">
+          <section x-show="step === 7" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8 mb-4">
+            <div class="mb-10">
+              <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                  <span>Application Progress</span>
+                  <span class="text-zinc-700">Step 7 of 11</span>
+              </div>
+              <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:63%"></div>
+              </div>
+          </div>
+
+          <!-- Form Container -->
+          <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+
+            <div class="flex items-start gap-4 mb-8">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <span class="text-brand font-semibold text-base">6</span>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-zinc-900">CREDIT VERIFICATION</h2>
+                <p class="text-zinc-500 text-sm mt-1">Provide details about your credit verification</p>
+              </div>
+            </div>
+
+            
+           <div class="grid grid-cols-2 gap-4 my-4">
             <label for="creditor-name-1">
               <span class="block text-zinc-700">Name:</span>
-              <input type="text" id="creditor-name-1" name="creditor-name-1" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Name" autocomplete="off"/>
+              <input type="text" id="creditor-name-1" name="creditor-name-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Name" autocomplete="off"/>
             </label>
             <label for="creditor-telephone-1">
               <span class="block text-zinc-700">Telephone:</span>
-              <input type="number" id="creditor-telephone-1" name="creditor-telephone-1" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Telephone" autocomplete="off"/>
+              <input type="number" id="creditor-telephone-1" name="creditor-telephone-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Telephone" autocomplete="off"/>
             </label>
             <div class="col-span-2">
               <label for="creditor-address-1">
                 <span class="block text-zinc-700">Address:</span>
-                <input type="text" id="creditor-address-1" name="creditor-address-1" class="px-3 py-1 text-zinc-600 bg-white w-full maw-x-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Address" autocomplete="off"/>
+                <input type="text" id="creditor-address-1" name="creditor-address-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Address" autocomplete="off"/>
               </label>
             </div>
              <label for="creditor-credit-obtained-1">
               <span class="block text-zinc-700">Credit Obtained:</span>
-              <input type="number" id="creditor-credit-obtained-1" name="creditor-credit-obtained-1" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Credit Obtained" autocomplete="off"/>
+              <input type="number" id="creditor-credit-obtained-1" name="creditor-credit-obtained-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Credit Obtained" autocomplete="off"/>
             </label>
              <label for="creditor-credit-value-1">
               <span class="block text-zinc-700">Credit Value:</span>
-              <input type="number" id="creditor-credit-value-1" name="creditor-credit-value-1" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Credit Value" autocomplete="off"/>
+              <input type="number" id="creditor-credit-value-1" name="creditor-credit-value-1" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Credit Value" autocomplete="off"/>
             </label>
           </div>
-           <div class="grid grid-cols-6 gap-4 my-4">
+           <div class="grid grid-cols-2 gap-4 my-4 mt-8">
             <label for="creditor-name-2">
               <span class="block text-zinc-700">Name:</span>
-              <input type="text" id="creditor-name-2" name="creditor-name-2" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Name" autocomplete="off"/>
+              <input type="text" id="creditor-name-2" name="creditor-name-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Name" autocomplete="off"/>
             </label>
             <label for="creditor-telephone-2">
               <span class="block text-zinc-700">Telephone:</span>
-              <input type="number" id="creditor-telephone-2" name="creditor-telephone-2" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Telephone" autocomplete="off"/>
+              <input type="number" id="creditor-telephone-2" name="creditor-telephone-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Telephone" autocomplete="off"/>
             </label>
             <div class="col-span-2">
               <label for="creditor-address-2">
                 <span class="block text-zinc-700">Address:</span>
-                <input type="text" id="creditor-address-2" name="creditor-address-2" class="px-3 py-1 text-zinc-600 bg-white w-full maw-x-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Address" autocomplete="off"/>
+                <input type="text" id="creditor-address-2" name="creditor-address-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Address" autocomplete="off"/>
               </label>
             </div>
              <label for="creditor-credit-obtained-2">
               <span class="block text-zinc-700">Credit Obtained:</span>
-              <input type="number" id="creditor-credit-obtained-2" name="creditor-credit-obtained-2" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Credit Obtained" autocomplete="off"/>
+              <input type="number" id="creditor-credit-obtained-2" name="creditor-credit-obtained-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Credit Obtained" autocomplete="off"/>
             </label>
              <label for="creditor-credit-value-2">
               <span class="block text-zinc-700">Credit Value:</span>
-              <input type="number" id="creditor-credit-value-2" name="creditor-credit-value-2" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Creditor Credit Value" autocomplete="off"/>
+              <input type="number" id="creditor-credit-value-2" name="creditor-credit-value-2" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Creditor Credit Value" autocomplete="off"/>
             </label>
           </div>
+          </div>
+                <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
+            </div>
           </section>
 
-          <section class="bg-zinc-50 border border-zinc-200 p-4 rounded-xl mt-8 mb-1">
-            <h2 class="text-lg text-zinc-700 font-semibold mb-4">7. CO-MAKERS BIO DATA</h2>
-            <div class="grid grid-cols-3 gap-4 my-4">
+          <section x-show="step === 8" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8 mb-4">
+               <div class="mb-10">
+              <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                  <span>Application Progress</span>
+                  <span class="text-zinc-700">Step 8 of 11</span>
+              </div>
+              <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:72%"></div>
+              </div>
+          </div>
+
+          <!-- Form Container -->
+          <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+
+            <div class="flex items-start gap-4 mb-8">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <span class="text-brand font-semibold text-base">7</span>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-zinc-900">CO-MAKERS BIO DATA</h2>
+                <p class="text-zinc-500 text-sm mt-1">Provide details about your co-makers</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 my-4">
               <label for="co-maker-name">
-                <span class="block text-zinc-700">Full Name:</span>
-                <input type="text" id="co-maker-name" name="co-maker-name" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Name" autocomplete="off"/>
+                <span class="block text-zinc">Full Name:</span>
+                <input type="text" id="co-maker-name" name="co-maker-name" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Name" autocomplete="off"/>
               </label>
               <label for="co-maker-birthdate">
                 <span class="block text-zinc-700">Birthdate:</span>
-                <input type="date" id="co-maker-birthdate" name="co-maker-birthdate" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Birthdate" autocomplete="off"/>
+                <input type="date" id="co-maker-birthdate" name="co-maker-birthdate" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Birthdate" autocomplete="off"/>
               </label>
               <label for="co-maker-relationship">
                 <span class="block text-zinc-700">Relationship to Applicant:</span>
-                <input type="text" id="co-maker-relationship" name="co-maker-relationship" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Relationship" autocomplete="off"/>
+                <input type="text" id="co-maker-relationship" name="co-maker-relationship" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Relationship" autocomplete="off"/>
               </label>
               <label for="co-maker-gender">
                 <span class="block text-zinc-700">Gender:</span>
-                <input type="text" id="co-maker-gender" name="co-maker-gender" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Gender" autocomplete="off"/>
+                <input type="text" id="co-maker-gender" name="co-maker-gender" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Gender" autocomplete="off"/>
               </label>
               <label for="co-maker-status">
                 <span class="block text-zinc-700">Status:</span>
-                <input type="text" id="co-maker-status" name="co-maker-status" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Status" autocomplete="off"/>
+                <input type="text" id="co-maker-status" name="co-maker-status" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Status" autocomplete="off"/>
               </label>
               <label for="co-maker-dependents">
                 <span class="block text-zinc-700">No. of Dependents:</span>
-                <input type="number" id="co-maker-dependents" name="co-maker-dependents" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Dependents" autocomplete="off"/>
+                <input type="number" id="co-maker-dependents" name="co-maker-dependents" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Dependents" autocomplete="off"/>
               </label>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-4 my-4">
               <label for="co-maker-address">
                 <span class="block text-zinc-700">Home Address:</span>
-                <input type="text" id="co-maker-address" name="co-maker-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Address" autocomplete="off"/>
+                <input type="text" id="co-maker-address" name="co-maker-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Address" autocomplete="off"/>
               </label>
-
               <label for="co-maker-residence-type">
                 <span class="block text-zinc-700">Residence Type:</span>
                 <div class="flex gap-2.5">
-                  <label class="flex items-center gap-1">
+                  <label class="flex items-center p-2 gap-1">
                     <input type="radio" name="co-maker-residence-type" value="free" class="w-4 h-4 accent-brand">
                     <span class="text-zinc-600">Free</span>
                   </label>
@@ -580,91 +853,108 @@
               </label>
               <label for="co-maker-home-phone">
                 <span class="block text-zinc-700">Home Phone:</span>
-                <input type="number" id="co-maker-home-phone" name="co-maker-home-phone" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Home Phone" autocomplete="off"/>
+                <input type="number" id="co-maker-home-phone" name="co-maker-home-phone" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Home Phone" autocomplete="off"/>
               </label>
               <label for="co-maker-mobile-phone">
                 <span class="block text-zinc-700">Mobile Phone:</span>
-                <input type="number" id="co-maker-mobile-phone" name="co-maker-mobile-phone" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Mobile Phone" autocomplete="off"/>
+                <input type="number" id="co-maker-mobile-phone" name="co-maker-mobile-phone" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Mobile Phone" autocomplete="off"/>
               </label>
             </div>
-              <div class="grid grid-cols-5 gap-4 my-4">
+              <div class="grid grid-cols-2 gap-4 my-4">
               <label for="co-maker-business-address">
                 <span class="block text-zinc-700">Business Address:</span>
-                <input type="text" id="co-maker-business-address" name="co-maker-business-address" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Business Address" autocomplete="off"/>
+                <input type="text" id="co-maker-business-address" name="co-maker-business-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Business Address" autocomplete="off"/>
               </label>
               <label for="co-maker-position">
                 <span class="block text-zinc-700">Position:</span>
-                <input type="text" id="co-maker-position" name="co-maker-position" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Position" autocomplete="off"/>
+                <input type="text" id="co-maker-position" name="co-maker-position" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Position" autocomplete="off"/>
               </label>
-              <div class="col-span-2">
                 <label for="co-maker-tenure">
                   <span class="block text-zinc-700">Tenure:</span>
-                  <input type="text" id="co-maker-tenure" name="co-maker-tenure" class="px-3 py-1 text-zinc-600 bg-white w-full maw-x-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Tenure" autocomplete="off"/>
+                  <input type="text" id="co-maker-tenure" name="co-maker-tenure" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Tenure" autocomplete="off"/>
                 </label>
-              </div>
               <label for="co-maker-monthly-income">
                 <span class="block text-zinc-700">Monthly Income:</span>
-                <input type="number" id="co-maker-monthly-income" name="co-maker-monthly-income" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Co-Maker Monthly Income" autocomplete="off"/>
+                <input type="number" id="co-maker-monthly-income" name="co-maker-monthly-income" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Co-Maker Monthly Income" autocomplete="off"/>
               </label>
+            </div>
+            </div>
+                  <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
             </div>
           </section>
 
-          <hr class="text-zinc-200 my-8">
-          <h2 class="text-xl text-zinc-700 font-bold mb-1 mt-8">FINANCIAL INFORMATION</h2> 
-          <section class="bg-zinc-50 p-4 border border-zinc-200 rounded-xl mb-4">
-          <h2 class="text-lg text-zinc-700 font-semibold mb-4 mt-1">8. EMPLOYMENT SOURCES OF INCOME</h2> 
+          <section x-show="step === 9" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl font-bold text-zinc-900 tracking-tight mb-2">FINANCIAL INFORMATION</h1>
+                <p class="text-zinc-600 font-light max-w-lg mx-auto">Please fill out the form below to continue your application.</p>
+            </div> 
+
+              <div class="mb-10">
+              <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                  <span>Application Progress</span>
+                  <span class="text-zinc-700">Step 9 of 11</span>
+              </div>
+              <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:81%"></div>
+              </div>
+          </div>
+
+          <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+
+            <div class="flex items-start gap-4 mb-8">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <span class="text-brand font-semibold text-base">8</span>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-zinc-900">EMPLOYMENT SOURCES OF INCOME</h2>
+                <p class="text-zinc-500 text-sm mt-1">Provide details about your employment sources of income</p>
+              </div>
+            </div>
           <h3 class="text-lg text-zinc-700 font-medium mb-2">Applicant:</h3>
-          <div class="grid grid-cols-5 gap-4 mb-4 pl-4">
-            <div class="col-span-2">
+          <div class="grid grid-cols-2 gap-4 mb-4 pl-4">
               <label for="applicant-name-of-company">
                 <span class="block text-zinc-700">Name of Company:</span>
-                <input type="text" id="applicant-name-of-company" name="applicant-name-of-company" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Name of Company" autocomplete="off"/>
+                <input type="text" id="applicant-name-of-company" name="applicant-name-of-company" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Name of Company" autocomplete="off"/>
               </label>
-            </div>
-            <div class="col-span-2">
               <label for="applicant-company-address">
                 <span class="block text-zinc-700">Address:</span>
-                <input type="text" id="applicant-company-address" name="applicant-company-address" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Address" autocomplete="off"/>
+                <input type="text" id="applicant-company-address" name="applicant-company-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Address" autocomplete="off"/>
               </label>
-            </div>
-            <div class="col-span-1">
               <label for="applicant-company-telephone">
                 <span class="block text-zinc-700">Telephone:</span>
-                <input type="number" id="applicant-company-telephone" name="applicant-company-telephone" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Telephone" autocomplete="off"/>
+                <input type="number" id="applicant-company-telephone" name="applicant-company-telephone" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Telephone" autocomplete="off"/>
               </label>
-            </div>
-          </div>
-          <div class="grid grid-cols-3 gap-4 mb-4 pl-4">
               <label for="applicant-company-designation">
                 <span class="block text-zinc-700">Designation:</span>
-                <input type="text" id="applicant-company-designation" name="applicant-company-designation" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Designation" autocomplete="off"/>
+                <input type="text" id="applicant-company-designation" name="applicant-company-designation" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Designation" autocomplete="off"/>
               </label>
               <label for="applicant-company-years-employed">
                 <span class="block text-zinc-700">Years Employed:</span>
-                <input type="text" id="applicant-company-year-employed" name="applicant-company-year-employed" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Year Employed" autocomplete="off"/>
+                <input type="text" id="applicant-company-year-employed" name="applicant-company-year-employed" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Year Employed" autocomplete="off"/>
               </label>
               <label for="applicant-company-monthly-salary">
                 <span class="block text-zinc-700">Monthly Salary:</span>
-                <input type="number" id="applicant-company-monthly-salary" name="applicant-company-monthly-salary" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Monthly Salary" autocomplete="off"/>
+                <input type="number" id="applicant-company-monthly-salary" name="applicant-company-monthly-salary" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Monthly Salary" autocomplete="off"/>
               </label>
-
           </div> 
 
-          <h3 class="text-lg text-zinc-700 font-medium mb-2">Spouse:</h3>
-          <div class="grid grid-cols-5 gap-4 mb-4 pl-4">
-            <div class="col-span-2">
+          <h3 class="text-lg text-zinc-700 font-medium mb-2 mt-8">Spouse:</h3>
+          <div class="grid grid-cols-2 gap-4 mb-4 pl-4">
               <label for="spouse-name-of-company">
                 <span class="block text-zinc-700">Name of Company:</span>
-                <input type="text" id="spouse-name-of-company" name="spouse-name-of-company" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Name of Company" autocomplete="off"/>
+                <input type="text" id="spouse-name-of-company" name="spouse-name-of-company" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Name of Company" autocomplete="off"/>
               </label>
-            </div>
-            <div class="col-span-2">
               <label for="spouse-company-address">
                 <span class="block text-zinc-700">Address:</span>
-                <input type="text" id="spouse-company-address" name="spouse-company-address" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Address" autocomplete="off"/>
+                <input type="text" id="spouse-company-address" name="spouse-company-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Address" autocomplete="off"/>
               </label>
-            </div>
-            <div class="col-span-1">
               <label for="spouse-within-same-city">
               <span class="block text-zinc-700 ">Within the same city:</span>
               <div class="flex items-center gap-2 mt-2">
@@ -672,90 +962,110 @@
                 <label for="spouse-within-same-city" class="text-zinc-600">Yes</label>
               </div>
             </label>
-            </div>
-          </div>
-          <div class="grid grid-cols-3 gap-4 mb-4 pl-4">
               <label for="spouse-company-designation">
                 <span class="block text-zinc-700">Designation:</span>
-                <input type="text" id="spouse-company-designation" name="spouse-company-designation" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Designation" autocomplete="off"/>
+                <input type="text" id="spouse-company-designation" name="spouse-company-designation" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Designation" autocomplete="off"/>
               </label>
               <label for="spouse-company-years-employed">
                 <span class="block text-zinc-700">Years Employed:</span>
-                <input type="text" id="spouse-company-year-employed" name="spouse-company-year-employed" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Year Employed" autocomplete="off"/>
+                <input type="text" id="spouse-company-year-employed" name="spouse-company-year-employed" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Year Employed" autocomplete="off"/>
               </label>
               <label for="spouse-company-monthly-salary">
                 <span class="block text-zinc-700">Monthly Salary:</span>
-                <input type="number" id="applicant-company-monthly-salary" name="applicant-company-monthly-salary" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Monthly Salary" autocomplete="off"/>
+                <input type="number" id="applicant-company-monthly-salary" name="applicant-company-monthly-salary" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Monthly Salary" autocomplete="off"/>
               </label>
           </div> 
 
-
-            <h3 class="text-lg text-zinc-700 font-medium mb-2">Family Business:</h3>
-          <div class="grid grid-cols-5 gap-4 mb-4 pl-4">
-            <div class="col-span-2">
+            <h3 class="text-lg text-zinc-700 font-medium mb-2 mt-8">Family Business:</h3>
+          <div class="grid grid-cols-2 gap-4 mb-4 pl-4">
               <label for="family-business-establishment">
                 <span class="block text-zinc-700">Establishment:</span>
-                <input type="text" id="family-business-establishment" name="family-business-establishment" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Name of Company" autocomplete="off"/>
+                <input type="text" id="family-business-establishment" name="family-business-establishment" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Name of Company" autocomplete="off"/>
               </label>
-            </div>
-            <div class="col-span-2">
               <label for="family-business-address">
                 <span class="block text-zinc-700">Address:</span>
-                <input type="text" id="family-business-address" name="family-business-address" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Address" autocomplete="off"/>
+                <input type="text" id="family-business-address" name="family-business-address" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Address" autocomplete="off"/>
               </label>
-            </div>
-            <div class="col-span-1">
               <label for="family-business-telephone">
                 <span class="block text-zinc-700">Telephone:</span>
-                <input type="number" id="family-business-telephone" name="family-business-telephone" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Telephone" autocomplete="off"/>
+                <input type="number" id="family-business-telephone" name="family-business-telephone" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Telephone" autocomplete="off"/>
               </label>
-            </div>
-          </div>
-          <div class="grid grid-cols-3 gap-4 mb-4 pl-4">
               <label for="family-business-nature-of-business">
                 <span class="block text-zinc-700">Nature of Business:</span>
-                <input type="text" id="family-business-nature-of-business" name="family-business-nature-of-business" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Nature of Business" autocomplete="off"/>
+                <input type="text" id="family-business-nature-of-business" name="family-business-nature-of-business" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Nature of Business" autocomplete="off"/>
               </label>
               <label for="family-business-years-operating">
                 <span class="block text-zinc-700">Years Operating:</span>
-                <input type="text" id="family-business-years-operating" name="family-business-years-operating" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Years Operating" autocomplete="off"/>
+                <input type="text" id="family-business-years-operating" name="family-business-years-operating" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Years Operating" autocomplete="off"/>
               </label>
               <label for="family-business-monthly-income">
                 <span class="block text-zinc-700">Monthly Income:</span>
-                <input type="number" id="family-business-monthly-income" name="family-business-monthly-income" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Monthly Income" autocomplete="off"/>
+                <input type="number" id="family-business-monthly-income" name="family-business-monthly-income" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Monthly Income" autocomplete="off"/>
               </label>
           </div> 
-          <h3 class="text-lg text-zinc-700 font-medium mb-2">Other Sources:</h3>
+          <h3 class="text-lg text-zinc-700 font-medium mb-2 mt-8">Other Sources:</h3>
           <div class="grid grid-cols-4 gap-4 mb-4 pl-4">
             <div class="col-span-2">
               <label for="other-sources-please-describe">
                 <span class="block text-zinc-700">Please Describe:</span>
-                <input type="text" id="other-sources-please-describe" name="other-sources-please-describe" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Please Describe" autocomplete="off"/>
+                <input type="text" id="other-sources-please-describe" name="other-sources-please-describe" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Please Describe" autocomplete="off"/>
               </label>
             </div>
             <div class="col-span-2">
               <label for="other-sources-monthly-income">
                 <span class="block text-zinc-700">Monthly Income:</span>
-                <input type="number" id="other-sources-monthly-income" name="other-sources-monthly-income" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Company Monthly Income" autocomplete="off"/>
+                <input type="number" id="other-sources-monthly-income" name="other-sources-monthly-income" class="w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand bg-white placeholder-zinc-400 transition-all duration-150" placeholder="Enter Company Monthly Income" autocomplete="off"/>
               </label>
             </div>
           </div>
+          </div>
+                <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
+            </div>
           </section>
 
-          <section class="bg-zinc-50 border border-zinc-200 rounded-xl p-4 mt-8">
-            <h2 class="text-lg text-zinc-700 font-semibold mb-4 mt-1">9. ASSETS / PROPERTIES OWNED / LIABILITIES</h2> 
+          <section x-show="step === 10" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8">
+            
+              <div class="mb-10">
+              <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                  <span>Application Progress</span>
+                  <span class="text-zinc-700">Step 10 of 11</span>
+              </div>
+              <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:90%"></div>
+              </div>
+          </div>
+
+           <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+
+            <div class="flex items-start gap-4 mb-8">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <span class="text-brand font-semibold text-base">9</span>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-zinc-900">ASSETS / PROPERTIES OWNED / LIABILITIES</h2>
+                <p class="text-zinc-500 text-sm mt-1">Provide details about your assets, properties owned, and liabilities</p>
+              </div>
+            </div>
+            
             <h3 class="text-lg text-zinc-700 font-medium mb-2">Real Property:</h3> 
-                <div class="grid grid-cols-6 gap-4 mb-4 pl-4">
+                <div class="grid grid-cols-2 gap-4 mb-4 pl-4">
               <div class="col-span-2">
                 <label for="real-property-house-lot/location">
                   <span class="block text-zinc-700">House & Lot / Location:</span>
-                  <input type="text" id="house-lot-location" name="house-lot-location" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter House & Lot" autocomplete="off"/>
+                  <input type="text" id="house-lot-location" name="house-lot-location" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter House & Lot" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
                 <label for="real-property-total-value">
                   <span class="block text-zinc-700">Total Value:</span>
-                  <input type="number" id="real-property-total-value" name="real-property-total-value" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Value" autocomplete="off"/>
+                  <input type="number" id="real-property-total-value" name="real-property-total-value" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Value" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
@@ -770,28 +1080,28 @@
               <div class="col-span-1">
                 <label for="real-propery-creditor">
                   <span class="block text-zinc-700">Creditor:</span>
-                  <input type="text" id="real-propery-creditor" name="real-propery-creditor" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Creditor" autocomplete="off"/>
+                  <input type="text" id="real-propery-creditor" name="real-propery-creditor" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Creditor" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
                 <label for="real-property-monthly-due">
                   <span class="block text-zinc-700">Monthly Due:</span>
-                  <input type="number" id="real-property-monthly-due" name="real-property-monthly-due" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Due" autocomplete="off"/>
+                  <input type="number" id="real-property-monthly-due" name="real-property-monthly-due" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Due" autocomplete="off"/>
                 </label>
               </div>
             </div>
-            <h3 class="text-lg text-zinc-700 font-medium mb-2">Vehicle:</h3> 
-                <div class="grid grid-cols-6 gap-4 mb-4 pl-4">
+            <h3 class="text-lg text-zinc-700 font-medium mb-2 mt-8">Vehicle:</h3> 
+                <div class="grid grid-cols-2 gap-4 mb-4 pl-4">
               <div class="col-span-2">
                 <label for="vehicle-make-model-year">
                   <span class="block text-zinc-700">Make/Model/Year:</span>
-                  <input type="text" id="vehicle-make-model-year" name="vehicle-make-model-year" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Make, Model, Year" autocomplete="off"/>
+                  <input type="text" id="vehicle-make-model-year" name="vehicle-make-model-year" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Make, Model, Year" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
                 <label for="vehicle-total-value">
                   <span class="block text-zinc-700">Total Value:</span>
-                  <input type="number" id="vehicle-total-value" name="vehicle-total-value" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Value" autocomplete="off"/>
+                  <input type="number" id="vehicle-total-value" name="vehicle-total-value" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Value" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
@@ -806,28 +1116,28 @@
               <div class="col-span-1">
                 <label for="vehicle-creditor">
                   <span class="block text-zinc-700">Creditor:</span>
-                  <input type="text" id="vehicle-creditor" name="vehicle-creditor" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Creditor" autocomplete="off"/>
+                  <input type="text" id="vehicle-creditor" name="vehicle-creditor" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Creditor" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
                 <label for="vehicle-monthly-due">
                   <span class="block text-zinc-700">Monthly Due:</span>
-                  <input type="number" id="vehicle-monthly-due" name="vehicle-monthly-due" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Due" autocomplete="off"/>
+                  <input type="number" id="vehicle-monthly-due" name="vehicle-monthly-due" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Due" autocomplete="off"/>
                 </label>
               </div>
             </div>
-            <h3 class="text-lg text-zinc-700 font-medium mb-2">Appliances:</h3> 
-                <div class="grid grid-cols-6 gap-4 mb-4 pl-4">
+            <h3 class="text-lg text-zinc-700 font-medium mb-2 mt-8">Appliances:</h3> 
+                <div class="grid grid-cols-2 gap-4 mb-4 pl-4">
               <div class="col-span-2">
                 <label for="appliances-particulars">
                   <span class="block text-zinc-700">Particulars:</span>
-                  <input type="text" id="appliances-particulars" name="appliances-particulars" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Particulars" autocomplete="off"/>
+                  <input type="text" id="appliances-particulars" name="appliances-particulars" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Particulars" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
                 <label for="appliances-total-value">
                   <span class="block text-zinc-700">Total Value:</span>
-                  <input type="number" id="appliances-total-value" name="appliances-total-value" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Value" autocomplete="off"/>
+                  <input type="number" id="appliances-total-value" name="appliances-total-value" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Value" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
@@ -842,95 +1152,132 @@
               <div class="col-span-1">
                 <label for="appliances-creditor">
                   <span class="block text-zinc-700">Creditor:</span>
-                  <input type="text" id="appliances-creditor" name="appliances-creditor" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Creditor" autocomplete="off"/>
+                  <input type="text" id="appliances-creditor" name="appliances-creditor" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Creditor" autocomplete="off"/>
                 </label>
               </div>
               <div class="col-span-1">
                 <label for="appliances-monthly-due">
                   <span class="block text-zinc-700">Monthly Due:</span>
-                  <input type="number" id="appliances-monthly-due" name="appliances-monthly-due" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Due" autocomplete="off"/>
+                  <input type="number" id="appliances-monthly-due" name="appliances-monthly-due" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Due" autocomplete="off"/>
                 </label>
               </div>
             </div>
 
-            <h3 class="text-lg text-zinc-700 font-medium mb-2">Bank Deposit:</h3> 
-              <div class="grid grid-cols-6 gap-4 mb-4 pl-4">
-              <div class="col-span-2">
+            <h3 class="text-lg text-zinc-700 font-medium mb-2 mt-8">Bank Deposit:</h3> 
+              <div class="grid grid-cols-2 gap-4 mb-4 pl-4">
                 <label for="bank-deposit-bank-branch">
                   <span class="block text-zinc-700">Bank Branch:</span>
-                  <input type="text" id="bank-deposit-bank-branch" name="bank-deposit-bank-branch" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Bank Branch" autocomplete="off"/>
+                  <input type="text" id="bank-deposit-bank-branch" name="bank-deposit-bank-branch" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Bank Branch" autocomplete="off"/>
                 </label>
-              </div>
-              <div class="col-span-2">
                 <label for="bank-deposit-total-value">
                   <span class="block text-zinc-700">Total Amount:</span>
-                  <input type="number" id="bank-deposit-total-amount" name="bank-deposit-total-amount" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Amount" autocomplete="off"/>
+                  <input type="number" id="bank-deposit-total-amount" name="bank-deposit-total-amount" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Amount" autocomplete="off"/>
                 </label>
-              </div>
             </div>
 
-            <h3 class="text-lg text-zinc-700 font-medium mb-2">Expenses:</h3> 
-              <div class="grid grid-cols-5 gap-4 mb-4 pl-4">
+            <h3 class="text-lg text-zinc-700 font-medium mb-2 mt-8">Expenses:</h3> 
+              <div class="grid grid-cols-2 gap-4 mb-4 pl-4">
                 <label for="expenses-house-rent">
                   <span class="block text-zinc-700">House Rent:</span>
-                  <input type="text" id="expenses-house-rent" name="expenses-house-rent" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter House Rent" autocomplete="off"/>
+                  <input type="text" id="expenses-house-rent" name="expenses-house-rent" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter House Rent" autocomplete="off"/>
                 </label>
                 <label for="expenses-utility-bills">
                   <span class="block text-zinc-700">Utility Bills:</span>
-                  <input type="number" id="expenses-utility-bills" name="expenses-utility-bills" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Utility Bills" autocomplete="off"/>
+                  <input type="number" id="expenses-utility-bills" name="expenses-utility-bills" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Utility Bills" autocomplete="off"/>
                 </label>
                 <label for="expenses-education">
                   <span class="block text-zinc-700">Education:</span>
-                  <input type="number" id="expenses-education" name="expenses-education" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Education" autocomplete="off"/>
+                  <input type="number" id="expenses-education" name="expenses-education" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Education" autocomplete="off"/>
                 </label>
                 <label for="expenses-medicine">
                   <span class="block text-zinc-700">Medicine:</span>
-                  <input type="number" id="expenses-medicine" name="expenses-medicine" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Medicine" autocomplete="off"/>
+                  <input type="number" id="expenses-medicine" name="expenses-medicine" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Medicine" autocomplete="off"/>
                 </label>
                 <label for="expenses-others">
                   <span class="block text-zinc-700">Others:</span>
-                  <input type="number" id="expenses-others" name="expenses-others" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Others" autocomplete="off"/>
+                  <input type="number" id="expenses-others" name="expenses-others" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Others" autocomplete="off"/>
                 </label>
                 <label for="expenses-food">
                   <span class="block text-zinc-700">Food:</span>
-                  <input type="number" id="expenses-food" name="expenses-food" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Food" autocomplete="off"/>
+                  <input type="number" id="expenses-food" name="expenses-food" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Food" autocomplete="off"/>
                 </label>
                 <label for="expenses-transportation">
                   <span class="block text-zinc-700">Transportation:</span>
-                  <input type="number" id="expenses-others" name="expenses-others" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Others" autocomplete="off"/>
+                  <input type="number" id="expenses-others" name="expenses-others" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Others" autocomplete="off"/>
                 </label>
                 <label for="expenses-allowance">
                   <span class="block text-zinc-700">Allowance:</span>
-                  <input type="number" id="expenses-allowance" name="expenses-allowance" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Allowance" autocomplete="off"/>
+                  <input type="number" id="expenses-allowance" name="expenses-allowance" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Allowance" autocomplete="off"/>
                 </label>
                 <label for="expenses-insurance">
                   <span class="block text-zinc-700">Insurance:</span>
-                  <input type="number" id="expenses-insurance" name="expenses-insurance" class="px-3 py-1 text-zinc-600 bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Insurance" autocomplete="off"/>
+                  <input type="number" id="expenses-insurance" name="expenses-insurance" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Insurance" autocomplete="off"/>
                 </label>
+            </div>
+            </div>
+                  <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button @click="step++"  class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Continue to Next Step
+                </button>
             </div>
           </section>
 
-          <section class="bg-zinc-50 border border-zinc-200 rounded-xl p-4 mt-8">
-          <h2 class="text-lg text-zinc-700 font-semibold mb-4">10. FINANCIAL SUMMARY</h2>
-           <div class="grid grid-cols-4 gap-4 my-4">
+          <section x-show="step === 11" x-transition.opacity x-transition:enter.duration.700ms x-transition:leave.duration.300ms class="bg-white rounded-2xl p-8 max-w-screen-xl mx-auto shadow-lg border border-zinc-100 mt-8">
+            
+
+              <div class="mb-10">
+              <div class="flex items-center justify-between text-sm text-zinc-500 mb-2 font-medium">
+                  <span>Application Progress</span>
+                  <span class="text-zinc-700">Step 11 of 11</span>
+              </div>
+              <div class="w-full bg-zinc-100 rounded-full h-2.5 overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand to-yellow-500 h-full rounded-full transition-all duration-500 ease-out" style="width:100%"></div>
+              </div>
+          </div>
+
+          <div class="p-10 border border-zinc-100 rounded-xl mb-10 bg-zinc-50/20">
+             <div class="flex items-start gap-4 mb-8">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <span class="text-brand font-semibold text-base">10</span>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-zinc-900">FINANCIAL SUMMARY</h2>
+                <p class="text-zinc-500 text-sm mt-1">Provide details about your financial summary</p>
+              </div>
+            </div>
+           <div class="grid grid-cols-2 gap-4 my-4">
             <label for="financial-summary-monthly-income">
               <span class="block text-zinc-700">Monthly Income:</span>
-              <input type="text" id="financial-summary-monthly-income" name="financial-summary-monthly-income" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Income" autocomplete="off"/>
+              <input type="text" id="financial-summary-monthly-income" name="financial-summary-monthly-income" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Income" autocomplete="off"/>
             </label>
             <label for="financial-summary-monthly-expenses">
               <span class="block text-zinc-700">Monthly Expenses:</span>
-              <input type="text" id="financial-summary-monthly-expenses" name="financial-summary-monthly-expenses" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Expenses" autocomplete="off"/>
+              <input type="text" id="financial-summary-monthly-expenses" name="financial-summary-monthly-expenses" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Expenses" autocomplete="off"/>
             </label>
              <label for="financial-summary-monthly-savings">
               <span class="block text-zinc-700">Monthly Savings:</span>
-              <input type="text" id="financial-summary-monthly-savings" name="financial-summary-monthly-savings" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Savings" autocomplete="off"/>
+              <input type="text" id="financial-summary-monthly-savings" name="financial-summary-monthly-savings" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Monthly Savings" autocomplete="off"/>
             </label>
              <label for="financial-summary-total-assets">
               <span class="block text-zinc-700">Total Assets:</span>
-              <input type="text" id="financial-summary-total-assets" name="financial-summary-total-assets" class="px-3 py-1 text-zinc-600 bg-white w-full max-w-md border border-zinc-300 focus:outline-none" placeholder="Enter Total Assets" autocomplete="off"/>
+              <input type="text" id="financial-summary-total-assets" name="financial-summary-total-assets" class="w-full px-4 py-3 border border-zinc-200 rounded-lg bg-white w-full  border border-zinc-300 focus:outline-none" placeholder="Enter Total Assets" autocomplete="off"/>
             </label>
           </div>
         </div>
+              <!-- Navigation -->
+            <div class="flex justify-end gap-4">
+                 <button @click="step--"  class="step-nav px-8 py-3.5 bg-black text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                    Prev
+                </button>                               
+                <button type="submit" class="step-nav px-8 py-3.5 bg-gradient-to-r from-brand to-red-500 text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:ring-offset-2">
+                  Submit Application
+                </button>
+            </div>
+          </div>
       </section>
 
       <!-- ===== FOOTER SECTION ===== -->
@@ -1014,6 +1361,22 @@
       <!-- Up Arrow SVG -->
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /> </svg>
     </button>
- 
+    
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all navigation buttons
+    document.querySelectorAll('.step-nav').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        // Use setTimeout to wait for Alpine.js to update the DOM
+        setTimeout(function () {
+          var form = document.getElementById('application-form');
+          if (form) {
+            form.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100); 
+      });
+    });
+  });
+</script>
   </body>
 </html>
