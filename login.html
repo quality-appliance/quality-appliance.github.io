@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions" />
+  <title>Login | Quality Appliance Plaza</title>
+
+  <!-- External CSS Dependencies -->
+  <link rel="stylesheet" href="./css/output.css" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+  <!-- Alpine JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-zinc-100 antialiased">
+  <main class="min-h-screen flex items-center justify-center px-4 py-8">
+    <div class="w-full max-w-6xl grid grid-cols-2 bg-white shadow-lg rounded-xl overflow-hidden">
+    
+      <aside class="relative h-full bg-gradient-to-br from-red-400 via-red-600 to-brand border-l border-zinc-200 p-8 flex flex-col items-center justify-center text-center overflow-hidden">
+        <!-- Decorative SVG or pattern -->
+        <svg class="absolute top-0 left-0 w-full h-full opacity-10" viewBox="0 0 400 400" fill="none">
+          <circle cx="200" cy="200" r="200" fill="white"/>
+        </svg>
+        <!-- Glow behind image -->
+        <div class="absolute top-16 left-1/2 -translate-x-1/2 w-48 h-48 bg-white opacity-20 rounded-full blur-2xl"></div>
+        <!-- Main content -->
+        <img src="./images/appliances-1.png" alt="" class="relative h-auto w-auto mb-4 object-contain object-center z-10">
+        <h1 class="text-4xl font-semibold text-white tracking-tighter relative z-10">Ready to upgrade your home?</h1>
+        <p class="text-white mb-4 relative z-10"> Log in for the best appliance deals</p>
+      </aside>
+
+      <section class="px-16 py-8 bg-white">
+
+        <!-- Bread Crumbs -->
+        <div class="flex items-center gap-1 text-zinc-700 text-xs">
+          <span class="flex items-center gap-1">
+            <a href="./index.html" class="hover:underline">Home</a>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span>Login</span>
+        </div>
+
+        <img src="./images/icon-big.png" alt="" class="h-12 w-auto my-4">
+
+        <header class="mb-4">
+          <h1 class="text-2xl font-bold">Login</h1>
+          <p class="text-zinc-600 mt-1 font-light">Access your Quality Appliance Plaza account</p>
+        </header>
+
+        <form class="space-y-4">
+          <div>
+            <label for="email" class="block mb-1 text-zinc-700">Email</label>
+            <input id="email" type="email" class="bg-zinc-50 w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand" autocomplete="off" required/>
+          </div>
+
+          <div>
+            <label for="password" class="block mb-1 text-zinc-700">Password</label>
+            <input id="password" type="password" class="bg-zinc-50 w-full px-4 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring focus:ring-brand focus:border-brand" autocomplete="off" required/>
+          </div>
+
+          <div class="flex items-center my-8">
+            <hr class="flex-grow border-zinc-200">
+            <span class="mx-4 text-zinc-500 text-xs whitespace-nowrap font-light">Or login with your google account</span>
+            <hr class="flex-grow border-zinc-200">
+          </div>
+
+          <button type="button" class="bg-zinc-50 w-full flex items-center justify-center gap-3 border border-zinc-200 py-3 rounded-lg hover:bg-zinc-50 transition" >
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="w-5 h-5" />
+            <span class="text-sm text-zinc-700">Sign in with Google</span>
+          </button>
+
+          <div class="flex items-center justify-between text-sm">
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="form-checkbox h-4 w-4 accent-brand" />
+              <span class="text-zinc-600">Remember me</span>
+            </label>
+            <a href="#" class="text-brand hover:underline">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="w-full bg-brand text-white py-3 rounded-lg hover:bg-brand/90 transition font-medium ">
+            Login
+          </button>
+        </form>
+
+        <div class="text-center text-sm mt-6 text-zinc-700">
+          Not registered yet?
+          <a href="#" class="text-brand hover:underline">Create an Account</a>
+        </div>
+      </section>
+
+     
+    </div>
+  </main>
+
+
+   <!-- ===== FOOTER SECTION ===== -->
+   <footer class="w-full bg-white/90 backdrop-blur-sm border-t border-zinc-200 mt-20 text-zinc-600 text-sm shadow-lg relative overflow-hidden">
+    <!-- Decorative Arc Design -->
+    <div class="absolute left-0 bottom-0 w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[450px] 2xl:h-[450px] translate-x-[-50%] translate-y-[50%] -z-10">
+      <div class="relative w-full h-full">
+        <div class="absolute inset-0 rounded-full" style="background:conic-gradient(black 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);-webkit-mask-image:radial-gradient(circle at center,transparent 35%,black 35%,black 50%,transparent 50%);mask-composite:add;-webkit-mask-composite:source-over"></div>
+        <div class="absolute inset-0 rounded-full" style="background:conic-gradient(red 0deg 90deg,transparent 90deg 360deg);mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);-webkit-mask-image:radial-gradient(circle at center,transparent 55%,black 55%,black 70%,transparent 70%);mask-composite:add;-webkit-mask-composite:source-over"></div>
+      </div>
+    </div>
+
+    <!-- Footer Content -->
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-16 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-3">
+          <img src="./images/qapi-logo.webp" alt="" class="h-16 w-auto object-cover object-center">
+          <p class="mb-4 text-xs leading-relaxed">We provide durable, high-quality appliances for every home. Trusted by thousands, backed by excellent support, and guided by our mission of service excellence.</p>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-semibold text-zinc-800 mb-3">Company</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-brand">About Us</a></li>
+            <li><a href="#" class="hover:text-brand">Why Choose Us</a></li>
+            <li><a href="#" class="hover:text-brand">Careers</a></li>
+            <li><a href="#" class="hover:text-brand">Vision & Mission</a></li>
+            <li><a href="#" class="hover:text-brand">Our Stores</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-semibold text-zinc-800 mb-3">Policies</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-brand">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-brand">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:text-brand">Returns & Refunds</a></li>
+            <li><a href="#" class="hover:text-brand">Shipping Policy</a></li>
+            <li><a href="#" class="hover:text-brand">Warranty Info</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-sm font-semibold text-zinc-800 mb-3">Customer Support</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-brand">Installation Guide</a></li>
+            <li><a href="#" class="hover:text-brand">Order Tracking</a></li>
+            <li><a href="#" class="hover:text-brand">FAQs</a></li>
+            <li><a href="#" class="hover:text-brand">Feedback</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h3 class="text-sm font-semibold text-zinc-800 mb-3">Get in Touch</h3>
+          <ul class="text-xs space-y-2 mb-5">
+            <li>📞 Tel: <a href="tel:893402230" class="hover:text-brand">893402-230</a></li>
+            <li>📱 Mobile: <a href="tel:0924235352" class="hover:text-brand">0924235352</a></li>
+            <li>🌍 Overseas: <a href="tel:0938534823" class="hover:text-brand">0938534823</a></li>
+            <li>📧 Email: <a href="mailto:support@qualityappliance.com" class="hover:text-brand">support@qualityappliance.com</a></li>
+          </ul>
+          <form class="flex flex-col sm:flex-row items-center gap-2">
+            <input type="email" placeholder="Your email address" class="w-full px-3 py-2 border rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-brand">
+            <button type="submit" class="px-4 py-2 text-xs bg-gradient-to-r from-brand to-red-500 text-white rounded-md hover:bg-brand-dark transition">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-16 border-t border-zinc-100 pt-6 text-center text-xs text-zinc-500">
+        <div class="flex justify-center items-center gap-4 mb-3">
+          <span class="inline-block bg-zinc-200 px-3 py-1 rounded">SSL Secured</span>
+          <span class="inline-block bg-zinc-200 px-3 py-1 rounded">Trusted Seller</span>
+          <span class="inline-block bg-zinc-200 px-3 py-1 rounded">Secure Checkout</span>
+        </div>
+        <p>© 2025 <span class="font-semibold text-brand">Quality Appliance Plaza</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Back to Top Button -->
+  <button
+    x-data="{ show: false }"
+    x-init="window.addEventListener('scroll', () => { show = window.scrollY > 200 })"
+    x-show="show"
+    x-transition
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-5 right-5 z-50 bg-brand hover:bg-brand/90 text-white rounded-full p-3 shadow-lg transition"
+    aria-label="Back to top"
+    style="display: none;"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+</body>
+</html>
