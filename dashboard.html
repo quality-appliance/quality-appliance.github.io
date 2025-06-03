@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta name="viewport" content="width=1200">
+  <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions" />
+  <title>Dashboard | Quality Appliance Plaza</title>
+  <link rel="stylesheet" href="./css/output.css" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+</head>
+<body class="bg-zinc-100 text-zinc-800 antialiased ">
+  <div class="min-h-screen flex">
+    <!-- Sidebar -->
+    <aside class="w-80 bg-white border-r border-zinc-200 shadow-md flex flex-col justify-between">
+      <div>
+        <!-- Logo -->
+        <div class="p-4 flex items-center gap-2 mt-4">
+          <img src="./images/icon-big.png" alt="" class="h-10 w-10 object-contain">
+          <span class="text-xl font-bold tracking-tight">Quality Appliance Plaza</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="p-4 space-y-6 ">
+          <div>
+            <p class="text-sm font-semibold text-zinc-400 uppercase px-2 mb-2">Main</p>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="flex items-center gap-3 px-4 py-3.5 rounded-lg bg-brand text-white font-semibold hover:bg-zinc-200 transition">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-zinc-700 hover:bg-zinc-100 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-user-icon lucide-shield-user"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M6.376 18.91a6 6 0 0 1 11.249.003"/><circle cx="12" cy="11" r="4"/></svg>
+                  Account
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-zinc-700 hover:bg-zinc-100 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-pen-icon lucide-user-round-pen"><path d="M2 21a8 8 0 0 1 10.821-7.487"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/><circle cx="10" cy="8" r="5"/></svg>
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-zinc-700 hover:bg-zinc-100 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right-icon lucide-arrow-left-right"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+                  Transactions
+                </a>
+              </li>
+              <div class="my-4 py-4 border-y border-zinc-200 ">
+                <li>
+                  <a href="#" class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-zinc-700 hover:bg-zinc-100 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="./index.html" class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-zinc-700 hover:bg-zinc-100 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg> 
+                    Logout
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col min-h-screen">
+      <div class="flex items-center justify-between border-b border-zinc-200 bg-white py-2">
+          <div class="flex justify-between items-center px-4">
+            <div class="flex items-center gap-2">
+              <div class="w-1.5 h-10 bg-brand rounded-full"></div>
+              <h1 class="text-3xl font-bold tracking-tight text-zinc-900">Dashboard</h1>
+            </div>
+          </div>
+
+        <a href="#" class="flex items-center gap-3 p-4 hover:bg-zinc-50 transition">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="" class="h-10 w-10 object-contain border-2 border-brand rounded-full">
+          <div>
+            <p class="text-sm font-semibold">Virginia Villaruel</p>
+            <p class="text-xs text-zinc-500">virginia.villaruel@gmail.com</p>
+          </div>
+        </a>
+      </div>
+      <main class="flex-1 p-8 bg-zinc-100">
+        <div class="max-w-screen-2xl mx-auto space-y-6">
+          <div class="grid grid-cols-4 gap-8">
+            <section class="bg-white rounded-2xl shadow-lg p-8 space-y-4 col-span-4">
+              <div class="flex items-center gap-3 text-xl font-semibold text-zinc-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Item Details
+              </div>
+              <div class="grid grid-cols-4 gap-2">
+                <div><p class="text-sm text-zinc-500">Brand</p><p class="font-light">CONDURA</p></div>
+                <div><p class="text-sm text-zinc-500">Item Code</p><p class="font-light">16545</p></div>
+                <div><p class="text-sm text-zinc-500">Model Number</p><p class="font-light">CCF310RI</p></div>
+                <div><p class="text-sm text-zinc-500">Description</p><p class="font-light">CHEST FRZ S.T</p></div>
+                <div><p class="text-sm text-zinc-500">Serial</p><p class="font-light">2000831241000</p></div>
+                <div><p class="text-sm text-zinc-500">Transaction Number</p><p class="font-light">139591</p></div>
+                <div><p class="text-sm text-zinc-500">Invoice Number</p><p class="font-light">SI31020</p></div>
+                <div><p class="text-sm text-zinc-500">Reporting Date</p><p class="font-light">05/30/25</p></div>
+              </div>
+            </section>
+          </div>
+            
+          <section class="bg-white rounded-2xl p-2.5 space-y-4 shadow-lg">
+            <div class="overflow-x-auto bg-white rounded-xl ">
+              <table class="min-w-full">
+                <thead class="text-xs text-zinc-700 border-b border-zinc-200">
+                  <tr>
+                    <th class="px-4 py-3 text-left">Date</th>
+                    <th class="px-4 py-3 text-left">Reference</th>
+                    <th class="px-4 py-3 text-right">Amount Paid</th>
+                    <th class="px-4 py-3 text-right">DP</th>
+                    <th class="px-4 py-3 text-right">Rebate</th>
+                    <th class="px-4 py-3 text-right">Installment</th>
+                    <th class="px-4 py-3 text-right">Penalty Charge</th>
+                    <th class="px-4 py-3 text-right">Others</th>
+                    <th class="px-4 py-3 text-right">Balance</th>
+                    <th class="px-4 py-3 text-right">Monthly Due</th>
+                    <th class="px-4 py-3 text-right">Due Next Month</th>
+                    <th class="px-4 py-3 text-center">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="text-sm text-zinc-700 divide-y divide-zinc-200">
+                  <!-- Example row -->
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">05/30/25</td>
+                    <td class="px-4 py-3">ACR311363</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱3,150</td>
+                    <td class="px-4 py-3 text-right">₱7,151</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱44,681</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-green-100 text-green-800 rounded">Paid</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">05/30/25</td>
+                    <td class="px-4 py-3">ACR311400</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱4001</td>
+                    <td class="px-4 py-3 text-right">₱4001</td>
+                    <td class="px-4 py-3 text-right">₱1430</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱175</td>
+                    <td class="px-4 py-3 text-right">₱40,680</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-green-100 text-green-800 rounded">Paid</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">05/30/25</td>
+                    <td class="px-4 py-3">CR311417</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱1645</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱50</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱ -1695</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-green-100 text-green-800 rounded">Paid</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50 bg-red-50">
+                    <td class="px-4 py-3 whitespace-nowrap">07/30/25</td>
+                    <td class="px-4 py-3">M01</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-red-100 text-red-800 rounded">Overdue</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">08/30/25</td>
+                    <td class="px-4 py-3">M02</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">09/30/25</td>
+                    <td class="px-4 py-3">M03</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱3390</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">10/30/25</td>
+                    <td class="px-4 py-3">M04</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱5085</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">11/30/25</td>
+                    <td class="px-4 py-3">M05</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱6780</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">12/30/25</td>
+                    <td class="px-4 py-3">M06</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱8475</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">01/30/26</td>
+                    <td class="px-4 py-3">M07</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱10170</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">02/30/26</td>
+                    <td class="px-4 py-3">M08</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱11865</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">03/30/26</td>
+                    <td class="px-4 py-3">M09</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱13560</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">04/30/26</td>
+                    <td class="px-4 py-3">M10</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱15255</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">05/30/26</td>
+                    <td class="px-4 py-3">M11</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱16950</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-zinc-50">
+                    <td class="px-4 py-3 whitespace-nowrap">06/30/26</td>
+                    <td class="px-4 py-3">M12</td>
+                    <td class="px-4 py-3 text-right text-green-600">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱0</td>
+                    <td class="px-4 py-3 text-right">₱38,985</td>
+                    <td class="px-4 py-3 text-right">₱1695</td>
+                    <td class="px-4 py-3 text-right">₱18645</td>
+                    <td class="px-4 py-3 text-center">
+                      <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Upcoming</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+         
+          <!-- Personal Information -->
+          <section class="bg-white rounded-2xl shadow-lg p-8 space-y-4">
+            <div class="flex items-center gap-3 text-xl font-semibold text-zinc-800">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M15 18a3 3 0 1 0-6 0"/><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><circle cx="12" cy="13" r="2"/></svg>
+              Personal Information
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+              <div><p class="text-sm text-zinc-500">Account No</p><p class="font-light">E6-25-05-0103</p></div>
+              <div><p class="text-sm text-zinc-500">Account Name</p><p class="font-light">VILLARUEL, VIRGINIA CARVAJAL</p></div>
+              <div><p class="text-sm text-zinc-500">Telephone</p><p class="font-light">0955-886-3392</p></div>
+              <div><p class="text-sm text-zinc-500">Home Address</p><p class="font-light">B-37 LT-1 ORO HABITAT CALAANAN CANITOAN, CDOC</p></div>
+              <div><p class="text-sm text-zinc-500">Office Address</p><p class="font-light">B-37 LT-1 ORO HABITAT CALAANAN CANITOAN, CDOC</p></div>
+              <div><p class="text-sm text-zinc-500">Spouse</p><p class="font-light">VILLARUEL, LUIS - 0</p></div>
+              <div><p class="text-sm text-zinc-500">Personal Reference</p><p class="font-light">REMETAR, JERRY</p></div>
+              <div><p class="text-sm text-zinc-500">Name of Company</p><p class="font-light">RAPHAEL PIZZA</p></div>
+            </div>
+          </section>
+
+          <!-- Transaction Details -->
+          <section class="bg-white rounded-2xl shadow-lg p-8 space-y-4">
+            <div class="flex items-center gap-3 text-xl font-semibold text-zinc-800">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+              Transaction Details
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <div><p class="text-sm text-zinc-500">Co Maker</p><p class="font-light">N/A</p></div>
+              <div><p class="text-sm text-zinc-500">Date Sold</p><p class="font-light">05/30/25</p></div>
+              <div><p class="text-sm text-zinc-500">S.I. No.</p><p class="font-light">SI31020</p></div>
+              <div><p class="text-sm text-zinc-500">Sales Rep.</p><p class="font-light">1178</p></div>
+              <div><p class="text-sm text-zinc-500">Term</p><p class="font-light">24 MONTHS</p></div>
+              <div><p class="text-sm text-zinc-500">Due Date</p><p class="font-light">07/02/25</p></div>
+            </div>
+          </section>
+
+          <!-- Financial Summary -->
+          <section class="bg-white rounded-2xl shadow-lg p-8 space-y-4">
+            <div class="flex items-center gap-3 text-xl font-semibold text-zinc-800">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+              Financial Summary
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+              <div><p class="text-sm text-zinc-500">Total Price</p><p class="font-light">₱47,831</p></div>
+              <div><p class="text-sm text-zinc-500">Required D/P</p><p class="font-light">₱7,151</p></div>
+              <div><p class="text-sm text-zinc-500">Balance</p><p class="font-light">₱38,985</p></div>
+              <div><p class="text-sm text-zinc-500">D/P Balance</p><p class="font-light">₱0</p></div>
+              <div><p class="text-sm text-zinc-500">L.C.P.</p><p class="font-light">₱28,601</p></div>
+              <div><p class="text-sm text-zinc-500">Monthly Installment</p><p class="font-light">₱1,695</p></div>
+              <div><p class="text-sm text-zinc-500">Rebate</p><p class="font-light">₱50</p></div>
+              <div><p class="text-sm text-zinc-500">Class</p><p class="font-light">INSTALLMENT</p></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <button
+  x-data="{ show: false }"
+  x-init="window.addEventListener('scroll', () => { show = window.scrollY > 200 })"
+  x-show="show"
+  x-transition
+  @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+  class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-brand hover:bg-brand/90 text-white rounded-full p-2 sm:p-3 shadow-lg transition-all"
+  style="display: none;"
+  aria-label="Back to top"
+>
+  <!-- Up Arrow SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+</body>
+</html>
