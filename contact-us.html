@@ -69,19 +69,20 @@
           <h2 class="text-2xl font-bold text-zinc-800 mb-4 text-center">Send us a message</h2>
           <p class="text-zinc-600 mb-6 text-center">Send your message to <a href="mailto:support@qualityappliance.com" class="text-brand underline hover:text-brand/80">support@qualityappliance.com</a> or use the form below. </p>
           <form class="flex flex-col gap-6">
-            <input type="text" name="name" placeholder="Full Name" required class="px-5 py-3 border border-zinc-200 rounded-lg focus:outline-none">
-            <input type="email" name="email" placeholder="Email Address" required class="px-5 py-3 border border-zinc-200 rounded-lg focus:outline-none">
+            <input type="text" name="name" placeholder="Full Name" required class="px-5 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+            <input type="email" name="email" placeholder="Email Address" required class="px-5 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+                              <input type="number" name="phone" placeholder="Phone Number" required class="px-5 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
 
-            <label for="attachment" class="block px-5 py-3 border border-zinc-200 rounded-lg text-zinc-500 flex items-center justify-center cursor-pointer hover:bg-zinc-50">
+            <label for="attachment" class="block px-5 py-3 border border-zinc-200 rounded-lg text-zinc-500 flex items-center justify-center cursor-pointer hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-brand">
               <div class="flex items-center gap-2">
-                Add Files
+                Add Attachments
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload-icon lucide-upload"><path d="M12 3v12"/><path d="m17 8-5-5-5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>
               </div>
                 <input type="file" name="attachment" id="attachment" required multiple class="hidden" onchange="displayFileNames()">
             </label>
             <div id="file-names" class="text-xs text-zinc-600 mt-2 px-5 hidden"></div>
 
-            <textarea name="message" placeholder="Write your message here..." class="w-full h-60 px-5 py-3 border border-zinc-200 rounded-lg focus:outline-none"></textarea>
+            <textarea name="message" placeholder="Write your message here..." class="w-full h-60 px-5 py-3 border border-zinc-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand text-zinc-700"></textarea>
             <button type="submit" class="bg-gradient-to-r from-brand to-red-500 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:scale-105 transition">Submit Message</button>
           </form>
         </div>
@@ -232,12 +233,6 @@
 
     <script>
       "use strict";
-       const message = new URLSearchParams(window.location.search).get("message");
-
-       if(message) {
-          document.querySelector("textarea[name='message']").value = decodeURIComponent(message);
-       }
-
       window.displayFileNames = function () {
         const fileInput = document.getElementById('attachment');
         const fileNamesContainer = document.getElementById('file-names');
