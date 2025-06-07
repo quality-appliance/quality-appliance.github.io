@@ -12,7 +12,7 @@
     "reviews": 128
   },
   {
-    "image": "./images/categories/home-appliances/side-by-side.png",
+    "image": "./images/product/popular/popular-2.png",
     "name": "LG 24 cu. ft. Side-by-Side Inverter Refrigerator",
     "price": "₱89,995.00",
     "features": [
@@ -24,7 +24,7 @@
     "reviews": 102
   },
   {
-    "image": "./images/product/washing-machine.png",
+    "image": "./images/product/popular/popular-3.png",
     "name": "Panasonic 7.5 kg Top Load Washing Machine",
     "price": "₱15,499.00",
     "features": [
@@ -36,7 +36,7 @@
     "reviews": 88
   },
   {
-    "image": "./images/product/split-inverter.png",
+    "image": "./images/product/popular/popular-4.png",
     "name": "Samsung WindFree™ Premium Plus Air Conditioner 1.0HP",
     "price": "₱38,995.00",
     "features": [
@@ -48,7 +48,7 @@
     "reviews": 75
   },
   {
-    "image": "./images/product/microwave.png",
+    "image": "./images/product/popular/popular-5.png",
     "name": "Whirlpool 20L Microwave Oven with Grill",
     "price": "₱6,995.00",
     "features": [
@@ -60,7 +60,7 @@
     "reviews": 60
   },
   {
-    "image": "./images/product/washing-machine.png",
+    "image": "./images/product/popular/popular-6.png",
     "name": "Haier 8.5 kg Front Load Washing Machine",
     "price": "₱22,999.00",
     "features": [
