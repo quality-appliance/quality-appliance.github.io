@@ -115,8 +115,8 @@
         </nav>
       </nav>
 
-          <main class="w-full flex flex-col md:flex-row max-w-screen-xl my-8 bg-white/70 backdrop-blur-sm rounded-xl shadow-lg items-start gap-4 p-4">
-        <aside class="h-screen w-full md:max-w-[28%] bg-white/90  border border-zinc-100 rounded-2xl shadow-sm p-6 flex flex-col gap-8 sticky top-8 self-start mx-auto mb-4 md:mb-0" aria-label="Filter sidebar">
+          <main class="w-full flex flex-col md:flex-row max-w-screen-xl my-4 bg-white/70 backdrop-blur-sm rounded-3xl shadow-lg items-start gap-4 p-4">
+        <aside class="h-screen w-full md:max-w-[28%] bg-white/90  border border-zinc-100 rounded-3xl shadow-sm p-6 flex flex-col gap-8 sticky top-8 self-start mx-auto mb-4 md:mb-0" aria-label="Filter sidebar">
           <h1 class="text-lg font-semibold text-zinc-900 tracking-widest uppercase mb-4">Filter by Category</h1>
           <section x-data="filterSidebar()" x-init="init()" class="space-y-4 h-full overflow-y-auto" @keydown.escape.window="resetAll()">
             <template x-if="loading">
@@ -228,7 +228,7 @@
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             <template x-for="item in filteredProducts" :key="item.id">
-              <article class="relative bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group" aria-label="Product card">
+              <article class="relative bg-white rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group" aria-label="Product card">
                 <div class="absolute top-3 left-3 z-10 space-y-1 flex flex-col">
                   <template x-if="item.isBestSeller">
                     <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">Best Seller</span>
