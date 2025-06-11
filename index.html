@@ -10,80 +10,80 @@
      <div class="flex flex-col items-center justify-center min-h-screen">
 
         <!-- Navigation Bar -->
-        <nav class="w-full flex items-center justify-evenly bg-white py-4 text-sm">
-            <img src="./public/images/quality-appliance-logo.png" alt="Quality Appliance Plaza Logo" class="h-10 w-auto object-cover object-center">
+        <nav class="w-full flex items-center justify-evenly bg-white py-4 text-sm shadow-sm sticky top-0 z-50">
+            <img src="./public/images/quality-appliance-logo.png" alt="Quality Appliance Plaza Logo" class="h-10 w-auto object-cover object-center hover:opacity-80 transition-opacity">
             <ul class="flex font-light justify-center items-center gap-8 text-zinc-900 tracking-tighter">
-                <li>Store</li>
-                <li>Categories</li>
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Promo</li>
-                <li>Contact Us</li>
-                <li>Application Portal</li>
+                <li class="hover:text-brand transition-colors cursor-pointer">Store</li>
+                <li class="hover:text-brand transition-colors cursor-pointer">Categories</li>
+                <li class="hover:text-brand transition-colors cursor-pointer">About Us</li>
+                <li class="hover:text-brand transition-colors cursor-pointer">Careers</li>
+                <li class="hover:text-brand transition-colors cursor-pointer">Promo</li>
+                <li class="hover:text-brand transition-colors cursor-pointer">Contact Us</li>
+                <li class="hover:text-brand transition-colors cursor-pointer">Application Portal</li>
             </ul>
             <div class="flex items-center gap-4 text-zinc-900">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="m18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search hover:text-brand transition-colors cursor-pointer"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round hover:text-brand transition-colors cursor-pointer"><path d="m18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
             </div>
         </nav>
 
         <!-- Main Content -->
-        <main class="w-full max-w-screen-xl flex flex-col items-center justify-center">
+        <main class="w-full max-w-screen-xl flex flex-col items-center justify-center border-x border-zinc-200 px-2">
             <!-- Carousel Banner Section -->
            <div class="relative mb-1">
               <!-- Image Placeholder -->
-              <div class="w-full aspect-[16/9]">
-                <img src="./public/images/homepage-hero.jpg" alt="Quality Appliance Plaza Store Front" class="w-full h-full object-cover object-top">
+              <div class="w-full aspect-[16/8]">
+                <img src="./public/images/hero/hero-1.jpg" alt="Quality Appliance Plaza Store Front" class="w-full h-full object-cover object-top">
               </div>
               <!-- Gradient Overlay -->
               <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/90 to-transparent"></div>
               <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black/30 to-transparent"></div>
            </div>
            <!-- Category Section -->
-           <div class="grid grid-cols-5 gap-8 px-12 -mt-6 relative z-10 mb-4">
-            <div class="relative">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center text-white font-semibold z-50">Air Conditioners</h2>
-                <img src="./public/images/categories/1.png" alt="Air Conditioners" class="h-full object-cover object-center border-b-10 border-brand">
+           <div class="grid grid-cols-5 gap-8 px-12 -mt-6 relative z-10 mb-4 text-sm bg-black">
+            <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <h2 class="absolute top-0 left-0 right-0 mt-4 bg-black/40 py-2 text-center tracking-wider text-white font-medium z-50 group-hover:scale-105 transition-transform">Air Conditioners</h2>
+                <img src="./public/images/categories/1.png" alt="Air Conditioners" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
             </div>
-            <div class="relative">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center text-white font-semibold z-50">Audio & Video Equipments</h2>
-                <img src="./public/images/categories/2.png" alt="Electronics" class="h-full object-cover object-center border-b-10 border-brand">
+            <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <h2 class="absolute top-0 left-0 right-0 mt-4 bg-black/40 py-2 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform">Audio & Video Equipments</h2>
+                <img src="./public/images/categories/2.png" alt="Electronics" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
             </div>
-            <div class="relative">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center text-white font-semibold z-50">Home Appliances</h2>
-                <img src="./public/images/categories/3.png" alt="Kitchen Appliances" class="h-full object-cover object-center border-b-10 border-brand">
+            <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <h2 class="absolute top-0 left-0 right-0 mt-4 bg-black/40 py-2  text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform">Home Appliances</h2>
+                <img src="./public/images/categories/3.png" alt="Kitchen Appliances" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
             </div>
-            <div class="relative">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center text-black font-semibold z-50">Small Domestic Appliances</h2>
-                <img src="./public/images/categories/4.png" alt="Laundry Appliances" class="h-full object-cover object-center border-b-10 border-brand">
+            <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <h2 class="absolute top-0 left-0 right-0 mt-4 bg-black/40 py-2  text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform">Small Domestic Appliances</h2>
+                <img src="./public/images/categories/4.png" alt="Laundry Appliances" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
             </div>
-            <div class="relative">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center text-black font-semibold z-50">Furniture</h2>
-                <img src="./public/images/categories/5.png" alt="Appliance Accessories" class="h-full object-cover object-center border-b-10 border-brand">
+            <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <h2 class="absolute top-0 left-0 right-0 mt-4 bg-black/40 py-2  text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform">Furniture</h2>
+                <img src="./public/images/categories/5.png" alt="Appliance Accessories" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
             </div>
            </div>
 
            <!-- Position Statement -->
-            <div class="relative bg-brand mb-4 ">
+            <div class="relative bg-brand mb-4 rounded-3xl overflow-hidden shadow-xl">
                 <div class="w-full max-w-screen-xl flex">
-                    <div class="flex-1">
+                    <div class="flex-1 p-12">
                         <div class="h-full flex flex-col items-center justify-center">
-                            <h2 class="text-5xl font-extrabold tracking-tight text-white leading-tight text-center">Your trusted partner for quality home solutions at competitive prices.</h2>
-                            <div class="flex items-center justify-center gap-4 mt-4">
-                                <a href="./contact-us.html" class="bg-black text-white px-6 py-3 text-sm font-semibold shadow cursor-pointer hover:scale-95 transition duration-100 ease-in-out">Inquire Now</a>
-                                <a href="./about-us.html" class="text-sm font-medium text-white transition cursor-pointer border border-white px-6 py-2 ">Learn More</a>
+                            <h2 class="text-5xl font-extrabold tracking-tight text-white leading-tight text-center mb-8">Your trusted partner for quality home solutions at competitive prices.</h2>
+                            <div class="flex items-center justify-center gap-6 mt-4">
+                                <a href="./contact-us.html" class="bg-black text-white px-8 py-4 text-sm font-semibold shadow-lg cursor-pointer hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-md">Inquire Now</a>
+                                <a href="./about-us.html" class="text-sm font-medium text-white transition-all cursor-pointer border-2 border-white px-8 py-4 rounded-md hover:bg-white hover:text-brand duration-300">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="h-full">
-                        <img src="./public/images/white-stripe-pattern.webp" alt="Decorative Pattern" class="h-full min-h-full max-h-128">
+                        <img src="./public/images/white-stripe-pattern.webp" alt="Decorative Pattern" class="h-full min-h-full max-h-128 ">
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full h-16 bg-black/40"></div>
+                    <div class="absolute bottom-0 left-0 w-full h-16 bg-black/50"></div>
                 </div>
             </div>
 
-            <div class="mb-4">
-                <img src="./public/images/current-promotion.jpg" alt="Current Promotion" class="aspect-[16/9] object-cover object-center">
+            <div class="mb-4 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                <img src="./public/images/current-promotion.jpg" alt="Current Promotion" class="aspect-[16/9] object-cover object-center hover:scale-105 transition-transform duration-500">
             </div>
         </main>
            
