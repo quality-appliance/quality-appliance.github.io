@@ -13,6 +13,9 @@
     <link rel="icon" href="./public/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./dist/assets/main.css">
     
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
     <!-- Preload Critical Assets -->
     <link rel="preload" href="./public/images/quality-appliance-logo.png" as="image">
     <link rel="preload" href="./public/images/landing-page/hero/hero-1.jpg" as="image">
@@ -56,7 +59,7 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="h-full w-full max-w-screen-xl flex flex-col items-center justify-center px-8 pt-8 pb-24 bg-white shadow-lg">
+        <main class="h-full w-full max-w-screen-xl flex flex-col items-center justify-center px-8 pt-8 pb-24 bg-white shadow-lg" x-data="{ showMap: false }">
             <header class="text-center">
                 <h1 class="text-2xl font-medium text-zinc-900">Stores</h1>
                 <p class="text-lg font-light text-zinc-600">Find the nearest store to you</p>
@@ -152,12 +155,47 @@
                             <p>0912 345 6789</p>
                         </address>
                         <button
+                            @click="showMap = true"
                             class="mt-2 bg-black text-sm text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
                             type="button"
                             aria-label="Get directions to Cagayan de Oro Store"
                         >
-                        Get Directions
+                            Get Directions
                         </button>
+                    </div>
+
+                    <!-- Full Screen Map Modal -->
+                    <div 
+                        x-show="showMap" 
+                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+                        @click.self="showMap = false"
+                    >
+                        <div class="relative w-full max-w-3xl h-[80vh] bg-white rounded-lg shadow-xl overflow-hidden">
+                            <!-- Close Button -->
+
+                            <button 
+                                @click="showMap = false"
+                                class="absolute top-2 right-2 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-black"
+                                aria-label="Close map"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-900">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+
+                            <!-- Map Container -->
+                            <div class="w-full h-full">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.217261156192!2d124.6451087750125!3d8.478243491562743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2d0b78efd97%3A0x611f849ae0c42c1f!2sQuality%20Appliance%20Plaza!5e0!3m2!1sen!2sph!4v1749799760516!5m2!1sen!2sph" 
+                                    class="w-full h-full"
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -180,6 +218,7 @@
                             class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
                             type="button"
                             aria-label="Get directions to Bayugan Store"
+                            @click="showMap = true"
                         >
                             Get Directions 
                         </button>
@@ -205,6 +244,7 @@
                             class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
                             type="button"
                             aria-label="Get directions to Davao Store"
+                            @click="showMap = true"
                         >
                             Get Directions
                         </button>
@@ -230,6 +270,7 @@
                             class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
                             type="button"
                             aria-label="Get directions to General Santos Store"
+                            @click="showMap = true"
                         >
                             Get Directions
                         </button>
@@ -279,6 +320,7 @@
                             class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
                             type="button"
                             aria-label="Get directions to Bayugan Store"
+                            @click="showMap = true"
                         >
                             Get Directions 
                         </button>
@@ -304,6 +346,7 @@
                             class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
                             type="button"
                             aria-label="Get directions to Davao Store"
+                            @click="showMap = true"
                         >
                             Get Directions
                         </button>
@@ -329,6 +372,7 @@
                             class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
                             type="button"
                             aria-label="Get directions to General Santos Store"
+                            @click="showMap = true"
                         >
                             Get Directions
                         </button>
