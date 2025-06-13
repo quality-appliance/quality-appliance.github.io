@@ -1,132 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags for SEO and Viewport -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions at competitive prices. Find the best appliances and furniture in the Philippines.">
+    <meta name="keywords" content="appliances, furniture, home solutions, Philippines, quality appliances">
+    <meta name="author" content="Quality Appliance Plaza">
+    
+    <!-- Favicon and Stylesheets -->
     <title>Quality Appliance Plaza Official Website</title>
-    <link rel="icon" href="./public/images/favicon.ico">
+    <link rel="icon" href="./public/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./dist/assets/main.css">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="./public/images/quality-appliance-logo.png" as="image">
+    <link rel="preload" href="./public/images/landing-page/hero/hero-1.jpg" as="image">
 </head>
-<body class="bg-black antialiased">
-     <div class="flex flex-col items-center justify-center min-h-screen">
 
+<body class="bg-black antialiased">
+    <!-- Main Container -->
+    <div class="flex flex-col items-center justify-center min-h-screen">
         <!-- Navigation Bar -->
-        <nav class="w-full flex items-center justify-evenly bg-white py-4 text-sm shadow-sm sticky top-0 z-50">
-            <img src="./public/images/quality-appliance-logo.png" alt="Quality Appliance Plaza Logo" class="h-10 w-auto object-cover object-center hover:opacity-80 transition-opacity">
-            <ul class="flex font-light justify-center items-center gap-8 text-zinc-900 tracking-tighter">
-                <li class="hover:text-brand transition-colors cursor-pointer border-red-500" aria-current="page">Home</li>
-                <li class="hover:text-brand transition-colors cursor-pointer">Store</li>
-                <li class="hover:text-brand transition-colors cursor-pointer">Categories</li>
-                <li class="hover:text-brand transition-colors cursor-pointer">About Us</li>
-                <li class="hover:text-brand transition-colors cursor-pointer">Careers</li>
-                <li class="hover:text-brand transition-colors cursor-pointer">Promo</li>
-                <li class="hover:text-brand transition-colors cursor-pointer">Contact Us</li>
-                <li class="hover:text-brand transition-colors cursor-pointer">Application Portal</li>
+        <nav class="w-full flex items-center justify-evenly bg-white py-4 text-sm shadow-sm sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+            <!-- Logo -->
+            <a href="./index.html" class="focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                <img src="./public/images/quality-appliance-logo.png" 
+                     alt="Quality Appliance Plaza Logo" 
+                     class="h-10 w-auto object-cover object-center hover:opacity-80 transition-opacity"
+                     width="120" 
+                     height="40">
+            </a>
+
+            <!-- Main Navigation Links -->
+            <ul class="flex font-light justify-center items-center gap-8 text-zinc-900 tracking-tighter" role="menubar">
+                <li role="none"><a href="./index.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand px-2 py-1 border-b-2 border-brand" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="./stores.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand px-2 py-1" role="menuitem">Stores</a></li>
+                <li role="none"><a href="./categories.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand px-2 py-1" role="menuitem">Categories</a></li>
+                <li role="none"><a href="./about-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand px-2 py-1" role="menuitem">About Us</a></li>
+                <li role="none"><a href="./careers.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand px-2 py-1" role="menuitem">Careers</a></li>
+                <li role="none"><a href="./promo.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand px-2 py-1" role="menuitem">Promo</a></li>
+                <li role="none"><a href="./contact-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand px-2 py-1" role="menuitem">Contact Us</a></li>
+                <li role="none"><a href="./application-portal.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand px-2 py-1" role="menuitem">Application Portal</a></li>
             </ul>
-            <div class="flex items-center gap-4 text-zinc-900">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search hover:text-brand transition-colors cursor-pointer"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round hover:text-brand transition-colors cursor-pointer"><path d="m18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+
+            <!-- User Actions -->
+            <div class="flex items-center gap-4 text-zinc-900" role="group" aria-label="User actions">
+                <button class="focus:outline-none focus:ring-2 focus:ring-brand rounded p-1" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search hover:text-brand transition-colors"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                </button>
+                <button class="focus:outline-none focus:ring-3 focus:ring-brand rounded p-1" aria-label="User account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round hover:text-brand transition-colors"><path d="m18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+                </button>
             </div>
         </nav>
 
         <!-- Main Content -->
         <main class="w-full max-w-screen-xl flex flex-col items-center justify-center px-2.5 bg-black">
-            <!-- Carousel Banner Section -->
-           <div class="relative mb-1">
-              <!-- Image Placeholder -->
-              <div class="w-full aspect-[16/8]">
-                <img src="./public/images/hero/hero-1.jpg" alt="Quality Appliance Plaza Store Front" class="w-full h-full object-cover object-top">
-              </div>
-              <!-- Gradient Overlay -->
-              <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/96 to-transparent"></div>
-              <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black/30 to-transparent"></div>
-              <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/99 to-transparent"></div>
-           </div>
-           <!-- Category Section -->
-           <div class="grid grid-cols-5 gap-8 px-12 -mt-6 relative z-10 mb-4 text-sm ">
-            <div class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Air Conditioners</h2>
-                <img src="./public/images/categories/1.png" alt="Air Conditioners" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
-                
-            </div>
-            <div class="relative group overflow-hidden  shadow-lg hover:shadow-xl transition-all duration-300">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Audio & Video Equipments</h2>
-                <img src="./public/images/categories/2.png" alt="Electronics" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
-            </div>
-            <div class="relative group overflow-hidden  shadow-lg hover:shadow-xl transition-all duration-300">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Home Appliances</h2>
-                <img src="./public/images/categories/3.png" alt="Kitchen Appliances" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
-            </div>
-            <div class="relative group overflow-hidden  shadow-lg hover:shadow-xl transition-all duration-300">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-black font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]">Small Domestic Appliances</h2>
-                <img src="./public/images/categories/4.png" alt="Laundry Appliances" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
-            </div>
-            <div class="relative group overflow-hidden  shadow-lg hover:shadow-xl transition-all duration-300">
-                <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-black font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]">Furniture</h2>
-                <img src="./public/images/categories/5.png" alt="Appliance Accessories" class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300">
-            </div>
-           </div>
+            <!-- Hero Section -->
+            <section class="relative mb-1" aria-label="Hero banner">
+                <div class="w-full aspect-[16/8]">
+                    <img src="./public/images/landing-page/hero/hero-1.jpg" 
+                         alt="Quality Appliance Plaza Store Front" 
+                         class="w-full h-full object-cover object-top"
+                         loading="eager">
+                </div>
+                <!-- Gradient Overlays for Better Text Readability -->
+                <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/96 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/99 to-transparent"></div>
+            </section>
 
-           <!-- Position Statement -->
-            <div class="relative bg-brand mb-4  overflow-hidden shadow-xl">
+            <!-- Category Grid Section -->
+            <section class="grid grid-cols-5 gap-8 px-12 -mt-6 relative z-10 mb-4 text-sm" aria-label="Product categories">
+                <!-- Air Conditioners Category -->
+                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Air Conditioners</h2>
+                    <img src="./public/images/landing-page/categories/1.png" 
+                         alt="Air Conditioners" 
+                         class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
+                         loading="lazy">
+                </article>
+
+                <!-- Audio & Video Category -->
+                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Audio & Video Equipments</h2>
+                    <img src="./public/images/landing-page/categories/2.png" 
+                         alt="Electronics" 
+                         class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
+                         loading="lazy">
+                </article>
+
+                <!-- Home Appliances Category -->
+                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Home Appliances</h2>
+                    <img src="./public/images/landing-page/categories/3.png" 
+                         alt="Kitchen Appliances" 
+                         class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
+                         loading="lazy">
+                </article>
+
+                <!-- Small Domestic Appliances Category -->
+                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-black font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]">Small Domestic Appliances</h2>
+                    <img src="./public/images/landing-page/categories/4.png" 
+                         alt="Laundry Appliances" 
+                         class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
+                         loading="lazy">
+                </article>
+
+                <!-- Furniture Category -->
+                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-black font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]">Furniture</h2>
+                    <img src="./public/images/landing-page/categories/5.png" 
+                         alt="Appliance Accessories" 
+                         class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
+                         loading="lazy">
+                </article>
+            </section>
+
+            <!-- Position Statement Section -->
+            <section class="relative bg-brand mb-4 overflow-hidden shadow-xl" aria-label="Company position statement">
                 <div class="w-full max-w-screen-xl flex">
                     <div class="flex-1 p-12">
                         <div class="h-full flex flex-col items-center justify-center">
                             <h2 class="text-5xl font-extrabold tracking-tight text-white leading-tight text-center mb-8">Your trusted partner for quality home solutions at competitive prices.</h2>
                             <div class="flex items-center justify-center gap-6 mt-4">
-                                <a href="./contact-us.html" class="bg-black text-white px-8 py-4 text-lg font-bold shadow-lg cursor-pointer hover:scale-105 hover:shadow-xl transition-all duration-300">Inquire Now</a>
-                                <a href="./about-us.html" class="text-lg font-bold text-white transition-all cursor-pointer border-2 border-white px-8 py-4 hover:bg-white hover:text-brand duration-300">Learn More</a>
+                                <a href="./contact-us.html" 
+                                   class="bg-black text-white px-8 py-4 text-lg font-bold shadow-lg cursor-pointer hover:scale-105 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white rounded"
+                                   role="button">Inquire Now</a>
+                                <a href="./about-us.html" 
+                                   class="text-lg font-bold text-white transition-all cursor-pointer border-2 border-white px-8 py-4 hover:bg-white hover:text-brand duration-300 focus:outline-none focus:ring-2 focus:ring-white rounded"
+                                   role="button">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="h-full">
-                        <img src="./public/images/white-stripe-pattern.webp" alt="Decorative Pattern" class="h-full min-h-full max-h-128 ">
+                        <img src="./public/images/landing-page/white-stripe-pattern.webp" 
+                             alt="Decorative Pattern" 
+                             class="h-full min-h-full max-h-128"
+                             loading="lazy">
                     </div>
                     <div class="absolute bottom-0 left-0 w-full h-16 bg-black/50"></div>
                 </div>
-            </div>
+            </section>
 
-            <div class="mb-4  overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-                <img src="./public/images/current-promotion.jpg" alt="Current Promotion" class="aspect-[16/9] object-cover object-center hover:scale-105 transition-transform duration-500">
-            </div>
+            <!-- Promotion Banner Section -->
+            <section class="mb-4 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300" aria-label="Current promotion">
+                <img src="./public/images/landing-page/promotion-section.jpg" 
+                     alt="Current Promotion" 
+                     class="aspect-[16/9] object-cover object-center hover:scale-105 transition-transform duration-500"
+                     loading="lazy">
+            </section>
         </main>
-           
 
-        <!-- Footer -->
-        <footer class="w-full mt-auto bg-white">
+        <!-- Footer Section -->
+        <footer class="w-full shadow-sm border-t border-zinc-200 mt-auto bg-white" role="contentinfo">
             <div class="w-full flex flex-col items-center justify-center text-sm font-light text-zinc-800">
                 <!-- Newsletter Section -->
-                <div class="w-full max-w-2xl px-4 py-8 ">
+                <section class="w-full max-w-2xl px-4 py-8" aria-label="Newsletter subscription">
                     <div class="text-center">
                         <h3 class="text-lg font-semibold mb-2">Subscribe to our newsletter</h3>
                         <p class="text-sm text-zinc-600 mb-4">Stay updated with our latest products and offers</p>
-                        <form class="flex gap-2 max-w-md mx-auto">
-                            <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 border border-zinc-300 rounded-md focus:outline-none">
-                            <button type="submit" class="px-4 py-2 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 transition-colors">Subscribe</button>
+                        <form class="flex gap-2 max-w-md mx-auto" role="search">
+                            <input type="email" 
+                                   placeholder="Enter your email" 
+                                   class="flex-1 px-4 py-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
+                                   aria-label="Email address for newsletter"
+                                   required>
+                            <button type="submit" 
+                                    class="px-4 py-2 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Subscribe</button>
                         </form>
                     </div>
-                </div>
+                </section>
 
                 <!-- Social Media Links -->
-                <div class="w-full py-4 ">
+                <section class="w-full py-4" aria-label="Social media links">
                     <div class="flex justify-center gap-6">
-                        <a href="#" aria-label="Facebook" class="text-zinc-600 hover:text-zinc-900 transition-colors">
+                        <a href="#" 
+                           aria-label="Facebook" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
-                        <a href="#" aria-label="Instagram" class="text-zinc-600 hover:text-zinc-900 transition-colors">
+                        <a href="#" 
+                           aria-label="Instagram" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                         </a>
-                        <a href="#" aria-label="Twitter" class="text-zinc-600 hover:text-zinc-900 transition-colors">
+                        <a href="#" 
+                           aria-label="Twitter" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
                         </a>
                     </div>
-                </div>
+                </section>
 
-                <!-- Payment Methods -->
-                <div class="w-full py-6 border-y border-zinc-300">
+                <!-- Payment Methods Section -->
+                <section class="w-full py-6 border-y border-zinc-200" aria-label="Accepted payment methods">
                     <div class="flex justify-center gap-4">
                         <span class="text-zinc-600">We accept:</span>
-                        <div class="flex items-center gap-2 text-zinc-700 ">
+                        <div class="flex items-center gap-2 text-zinc-700">
                             <p>GCash</p>
                             <p>Cash</p>
                             <p>Credit Card</p>
@@ -134,50 +207,68 @@
                             <p>RD Pawnshop</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <!-- Footer Links -->
-                <ul class="grid grid-cols-4 p-8 my-4">
-                    <li class="flex flex-col gap-4">
-                        <h1 class="font-medium mb-1 text-zinc-800">Company</h1>
-                        <h2>About Us</h2>
-                        <h2>Why Choose Us</h2>
-                        <h2>Careers</h2>
-                        <h2>Vision & Mission</h2>
-                        <h2>Our Stores</h2>
-                    </li>
-                    <li class="flex flex-col gap-4">
-                        <h1 class="font-medium mb-1 text-zinc-800">Policies</h1>
-                        <h2>Data Protection</h2>
-                        <h2>User Agreement</h2>
-                        <h2>Returns & Refunds</h2>
-                        <h2>Shipping Policy</h2>
-                        <h2>Warranty Info</h2>
-                    </li>
-                    <li class="flex flex-col gap-4">
-                        <h1 class="font-medium mb-1 text-zinc-800">Customer Support</h1>
-                        <h2>Installation Guide</h2>
-                        <h2>Order Tracking</h2>
-                        <h2>FAQs</h2>
-                        <h2>Feedback</h2>
-                    </li>
-                    <li class="flex flex-col gap-4">
-                        <h1 class="font-medium mb-1 text-zinc-800">Get in Touch</h1>
-                        <h2>Telephone No: 894231-231</h2>
-                        <h2>Mobile: 98735642</h2>
-                        <h2>Overseas: +91 98735642</h2>
-                        <h2>qualityapplianceplaza@gmail.com</h2>
-                    </li>
-                </ul>
-                <hr class="w-full border-zinc-300">
-                <div class="my-4 flex gap-4 items-center justify-center">
-                    <p class="text-center text-xs font-light text-zinc-800">Copyright © 2025 Quality Appliance Plaza. All rights reserved.</p>
-                    <img src="./public/images/quality-appliance-icon.png" alt="Quality Appliance Plaza Icon Logo" class="h-10 w-auto">
-                    <h5 class="text-center text-xs font-light text-zinc-800">Privacy Policy</h5>
-                    <h5 class="text-center text-xs font-light text-zinc-800">Terms & Conditions</h5>
-                    <h5 class="text-center text-xs font-light text-zinc-800">Legal</h5>
-                    <h5 class="text-center text-xs font-light text-zinc-800">Sitemap</h5>
-                    <h5 class="text-center text-xs font-light text-zinc-800">Philippines</h5>
+                <!-- Footer Links Grid -->
+                <nav class="grid grid-cols-4 p-8 my-4" aria-label="Footer navigation">
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Company</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./about-us.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">About Us</a></li>
+                            <li><a href="./why-choose-us.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Why Choose Us</a></li>
+                            <li><a href="./careers.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Careers</a></li>
+                            <li><a href="./vision-mission.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Vision & Mission</a></li>
+                            <li><a href="./stores.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Our Stores</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Policies</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./data-protection.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Data Protection</a></li>
+                            <li><a href="./user-agreement.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">User Agreement</a></li>
+                            <li><a href="./returns-refunds.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Returns & Refunds</a></li>
+                            <li><a href="./shipping-policy.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Shipping Policy</a></li>
+                            <li><a href="./warranty-info.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Warranty Info</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Customer Support</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./installation-guide.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Installation Guide</a></li>
+                            <li><a href="./order-tracking.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Order Tracking</a></li>
+                            <li><a href="./faqs.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">FAQs</a></li>
+                            <li><a href="./feedback.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Get in Touch</h2>
+                        <address class="not-italic flex flex-col gap-4">
+                            <p>Telephone: <a href="tel:894231231" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">894231-231</a></p>
+                            <p>Mobile: <a href="tel:98735642" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">98735642</a></p>
+                            <p>Overseas: <a href="tel:+9198735642" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">+91 98735642</a></p>
+                            <p>Email: <a href="mailto:qualityapplianceplaza@gmail.com" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">qualityapplianceplaza@gmail.com</a></p>
+                        </address>
+                    </div>
+                </nav>
+
+                <!-- Copyright Section -->
+                <div class="w-full border-t border-zinc-200">
+                    <div class="my-4 flex gap-4 items-center justify-center flex-wrap">
+                        <p class="text-center text-xs font-light text-zinc-800">Copyright © 2025 Quality Appliance Plaza. All rights reserved.</p>
+                        <img src="./public/images/quality-appliance-icon.png" 
+                             alt="Quality Appliance Plaza Icon Logo" 
+                             class="h-10 w-auto"
+                             width="40"
+                             height="40"
+                             loading="lazy">
+                        <nav class="flex gap-4 items-center justify-center flex-wrap" aria-label="Legal links">
+                            <a href="./privacy-policy.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Privacy Policy</a>
+                            <a href="./terms-conditions.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Terms & Conditions</a>
+                            <a href="./legal.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Legal</a>
+                            <a href="./sitemap.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Sitemap</a>
+                            <span class="text-center text-xs font-light text-zinc-800">Philippines</span>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </footer>
