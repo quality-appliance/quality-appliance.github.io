@@ -59,343 +59,260 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="h-full w-full max-w-screen-xl flex flex-col items-center justify-center px-8 pt-8 pb-24 bg-white shadow-lg" x-data="{ showMap: false }">
-            <header class="text-center">
-                <h1 class="text-2xl font-medium text-zinc-900">Stores</h1>
-                <p class="text-lg font-light text-zinc-600">Find the nearest store to you</p>
+        <main class="h-full w-full flex flex-col items-center justify-center px-8 pt-12 pb-24 bg-white">
+            <header class="text-center mb-4">
+                <h1 class="text-5xl font-extrabold text-zinc-900 tracking-tight">Stores</h1>
+                <p class="text-lg font-light text-zinc-600 tracking-tighter mt-2">Find the nearest store to you</p>
             </header>
 
             <!-- Address Filter -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6 w-full max-w-screen-md">
-                <!-- Region Select -->
-                <div class="flex flex-col col-span-1">
-                    <label for="region" class="mb-1 text-sm text-zinc-700">Region</label>
-                    <select id="region" name="region"
-                        class="bg-white border border-zinc-200 text-sm text-zinc-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black transition">
-                        <option value="0" selected disabled>All Regions</option>
-                        <option value="1">Region I - Ilocos Region</option>
-                        <option value="2">Region II - Cagayan Valley</option>
-                        <option value="3">Region III - Central Luzon</option>
-                        <option value="4a">Region IV-A - CALABARZON</option>
-                        <option value="4b">Region IV-B - MIMAROPA</option>
-                        <option value="5">Region V - Bicol Region</option>
-                        <option value="6">Region VI - Western Visayas</option>
-                        <option value="7">Region VII - Central Visayas</option>
-                        <option value="8">Region VIII - Eastern Visayas</option>
-                        <option value="9">Region IX - Zamboanga Peninsula</option>
-                        <option value="10">Region X - Northern Mindanao</option>
-                        <option value="11">Region XI - Davao Region</option>
-                        <option value="12">Region XII - SOCCSKSARGEN</option>
-                        <option value="13">Region XIII - Caraga</option>
-                        <option value="ncr">National Capital Region (NCR)</option>
-                        <option value="car">Cordillera Administrative Region (CAR)</option>
-                        <option value="barmm">Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)</option>
-                    </select>
-                </div>
-
-                   <!-- Province Select -->
-                <div class="flex flex-col">
-                    <label for="province" class="mb-1 text-sm text-zinc-700">Province</label>
-                    <select id="province" name="province"
-                        class="bg-white border border-zinc-200 text-sm text-zinc-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black transition">
-                        <option value="0" selected disabled>All Provinces</option>
-                        <option value="1">Agusan del Norte</option>
-                        <option value="2">Agusan del Sur</option>
-                        <option value="3">Aklan</option>
-                        <option value="4">Albay</option>
-                        <option value="5">Antique</option>
-                        <option value="6">Apayao</option>
-                        <option value="7">Aurora</option>
-                        <option value="8">Bataan</option>
-                    </select>
-                </div>
-            
-                <!-- City Select -->
-                <div class="flex flex-col">
-                    <label for="city" class="mb-1 text-sm text-zinc-700">City</label>
-                    <select id="city" name="city"
-                        class="bg-white border border-zinc-200 text-sm text-zinc-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black transition">
-                        <option value="0" selected disabled>All Cities</option>
-                        <option value="1">Cagayan de Oro</option>
-                        <option value="2">Davao City</option>
-                        <option value="3">Zamboanga City</option>
-                    </select>
-                </div>
-            
-                <!-- Location Tracker Button -->
-                <div class="flex flex-col">
-                <label for="location-tracker" class="mb-1 text-sm f text-zinc-700">Location Tracker</label>
-                <button id="location-tracker"
-                    class="w-full flex items-center justify-start gap-2 px-3 py-2 text-sm text-white bg-black rounded-md cursor-pointer hover:bg-brand transition focus:outline-none focus:ring-2 focus:ring-brand">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="1.75">
-                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                    <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    Use My Location
-                </button>
-                </div>
-            
-            </div>
-              
-            <div class="w-full max-w-screen-md mx-auto mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Cagayan de Oro Store -->
-                <div class="relative h-[400px]">
-                    <img
-                        src="./public/images/stores/cdo.jpg"
-                        alt="Cagayan de Oro Store"
-                        class="w-full h-[300px] object-cover object-center rounded-lg"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-x-0 bottom-0 bg-black/60 text-white backdrop-blur-sm px-4 py-3 rounded-b-lg text-sm leading-snug">
-                        <h2 class="text-lg font-medium truncate">Cagayan de Oro Store</h2>
-                        <address class="mt-1 not-italic text-sm font-light leading-tight space-y-0.5">
-                            <p class="truncate">123 Main St, Cagayan de Oro</p>
-                            <p>9:00 AM – 6:00 PM</p>
-                            <p>0912 345 6789</p>
-                        </address>
-                        <button
-                            @click="showMap = true"
-                            class="mt-2 bg-black text-sm text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
-                            type="button"
-                            aria-label="Get directions to Cagayan de Oro Store"
-                        >
-                            Get Directions
-                        </button>
+            <section class="w-full max-w-screen-xl bg-white rounded-lg p-8 shadow-sm border border-zinc-100">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                    <!-- Region Select -->
+                    <div class="flex flex-col col-span-2">
+                        <label for="region" class="mb-2 text-sm font-medium text-zinc-700">Region</label>
+                        <select id="region" name="region"
+                            class="bg-white border border-zinc-200 text-sm text-zinc-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:border-transparent transition-all duration-200">
+                            <option value="0" selected disabled>All Regions</option>
+                            <option value="1">Region I - Ilocos Region</option>
+                            <option value="2">Region II - Cagayan Valley</option>
+                            <option value="3">Region III - Central Luzon</option>
+                            <option value="4a">Region IV-A - CALABARZON</option>
+                            <option value="4b">Region IV-B - MIMAROPA</option>
+                            <option value="5">Region V - Bicol Region</option>
+                            <option value="6">Region VI - Western Visayas</option>
+                            <option value="7">Region VII - Central Visayas</option>
+                            <option value="8">Region VIII - Eastern Visayas</option>
+                            <option value="9">Region IX - Zamboanga Peninsula</option>
+                            <option value="10">Region X - Northern Mindanao</option>
+                            <option value="11">Region XI - Davao Region</option>
+                            <option value="12">Region XII - SOCCSKSARGEN</option>
+                            <option value="13">Region XIII - Caraga</option>
+                            <option value="ncr">National Capital Region (NCR)</option>
+                            <option value="car">Cordillera Administrative Region (CAR)</option>
+                            <option value="barmm">Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)</option>
+                        </select>
                     </div>
 
-                    <!-- Full Screen Map Modal -->
-                    <div 
-                        x-show="showMap" 
-                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-                        @click.self="showMap = false"
-                    >
-                        <div class="relative w-full max-w-3xl h-[80vh] bg-white rounded-lg shadow-xl overflow-hidden">
-                            <!-- Close Button -->
+                    <!-- Province Select -->
+                    <div class="flex flex-col">
+                        <label for="province" class="mb-2 text-sm font-medium text-zinc-700">Province</label>
+                        <select id="province" name="province"
+                            class="bg-white border border-zinc-200 text-sm text-zinc-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:border-transparent transition-all duration-200">
+                            <option value="0" selected disabled>All Provinces</option>
+                            <option value="1">Agusan del Norte</option>
+                            <option value="2">Agusan del Sur</option>
+                            <option value="3">Aklan</option>
+                            <option value="4">Albay</option>
+                            <option value="5">Antique</option>
+                            <option value="6">Apayao</option>
+                            <option value="7">Aurora</option>
+                            <option value="8">Bataan</option>
+                        </select>
+                    </div>
+                
+                    <!-- City Select -->
+                    <div class="flex flex-col">
+                        <label for="city" class="mb-2 text-sm font-medium text-zinc-700">City</label>
+                        <select id="city" name="city"
+                            class="bg-white border border-zinc-200 text-sm text-zinc-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:border-transparent transition-all duration-200">
+                            <option value="0" selected disabled>All Cities</option>
+                            <option value="1">Cagayan de Oro</option>
+                            <option value="2">Davao City</option>
+                            <option value="3">Zamboanga City</option>
+                        </select>
+                    </div>
+                
+                    <!-- Location Tracker Button -->
+                    <div class="flex flex-col">
+                        <label for="location-tracker" class="mb-2 text-sm font-medium text-zinc-700">Location Tracker</label>
+                        <button id="location-tracker"
+                            class="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-white bg-zinc-900 rounded-lg cursor-pointer hover:bg-zinc-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="1.75">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Find My Location
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-                            <button 
-                                @click="showMap = false"
-                                class="absolute top-2 right-2 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-black"
-                                aria-label="Close map"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-900">
-                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                </svg>
-                            </button>
+            <!-- Store List -->
+            <section class="w-full max-w-screen-xl mt-8">
+                <div class="h-full w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-8 bg-white rounded-lg shadow-md border border-zinc-100 hover:shadow-md transition-all duration-300">
+                    <!-- Store Image -->
+                    <div class="relative overflow-hidden rounded-xl">
+                        <img src="./public/images/stores/bayugan.jpg" 
+                                alt="Bayugan Store" 
+                                class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                    </div>
 
-                            <!-- Map Container -->
-                            <div class="w-full h-full">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.217261156192!2d124.6451087750125!3d8.478243491562743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2d0b78efd97%3A0x611f849ae0c42c1f!2sQuality%20Appliance%20Plaza!5e0!3m2!1sen!2sph!4v1749799760516!5m2!1sen!2sph" 
-                                    class="w-full h-full"
-                                    style="border:0;" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                ></iframe>
+                    <!-- Store Information -->
+                    <div class="flex flex-col gap-4 h-full">
+                        <div>
+                            <h2 class="text-3xl font-semibold text-zinc-900 tracking-tight">Quality Appliance Plaza</h2>
+                            <p class="text-lg font-normal text-zinc-600 mt-1">Bayugan City</p>
+                        </div>
+
+                        <p class="text-base font-light text-zinc-500 leading-relaxed">
+                            Visit our store to find the best quality appliances for your home. We offer a wide selection of high-quality products from trusted brands, including refrigerators, washing machines, air conditioners, and more. Our knowledgeable staff is ready to assist you in finding the perfect solutions for your home needs.
+                        </p>
+
+                       <!-- Contact Information -->
+                       <div class="flex flex-col gap-3 mt-2">
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                                <span class="text-base font-light text-zinc-600">09123456789</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"/></svg>
+                                <span class="text-base font-light text-zinc-600">123 Main St, Cagayan de Oro, Misamis Oriental</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                <span class="text-base font-light text-zinc-600">qualityapplianceplaza@gmail.com</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Bayugan Store -->
-                <div class="relative h-[400px]">
-                    <img
-                        src="./public/images/stores/bayugan.jpg"
-                        alt="Bayugan Store"
-                        class="w-full h-[300px] object-cover object-center rounded-lg"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-x-0 bottom-0 bg-black/60 text-white backdrop-blur-sm px-4 py-3 rounded-b-lg text-sm leading-snug">
-                        <h2 class="text-lg font-medium truncate">Bayugan Store</h2>
-                        <address class="mt-1 not-italic text-sm font-light leading-tight space-y-0.5">
-                            <p class="truncate">123 Main St, Bayugan, Agusan del Sur</p>
-                            <p>9:00 AM – 6:00 PM</p>
-                            <p>0912 345 6789</p>
-                        </address>
-                        <button
-                            class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
-                            type="button"
-                            aria-label="Get directions to Bayugan Store"
-                            @click="showMap = true"
-                        >
-                            Get Directions 
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Davao Store -->
-                <div class="relative h-[400px]">
-                    <img
-                        src="./public/images/stores/davao.jpg"
-                        alt="Davao Store"
-                        class="w-full h-[300px] object-cover object-center rounded-lg"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-x-0 bottom-0 bg-black/60 text-white backdrop-blur-sm px-4 py-3 rounded-b-lg text-sm leading-snug">
-                        <h2 class="text-lg font-medium truncate">Davao Store</h2>
-                        <address class="mt-1 not-italic text-sm font-light leading-tight space-y-0.5">
-                            <p class="truncate">123 Main St, Davao City, Davao del Sur</p>
-                            <p>9:00 AM – 6:00 PM</p>
-                            <p>0912 345 6789</p>
-                        </address>
-                        <button
-                            class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
-                            type="button"
-                            aria-label="Get directions to Davao Store"
-                            @click="showMap = true"
-                        >
+                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
                             Get Directions
                         </button>
                     </div>
                 </div>
+            </section>
+            <!-- Store List -->
+            <section class="w-full max-w-screen-xl mt-8">
+                <div class="h-full w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-8 bg-white rounded-lg shadow-md border border-zinc-100 hover:shadow-md transition-all duration-300">
+                    <!-- Store Image -->
+                    <div class="relative overflow-hidden rounded-xl">
+                        <img src="./public/images/stores/cdo.jpg" 
+                                alt="Cagayan de Oro Store" 
+                                class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                    </div>
 
-                <!-- General Santos Store -->
-                <div class="relative h-[400px]">
-                    <img
-                        src="./public/images/stores/gensan.jpg"
-                        alt="General Santos Store"
-                        class="w-full h-[300px] object-cover object-center rounded-lg"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-x-0 bottom-0 bg-black/60 text-white backdrop-blur-sm px-4 py-3 rounded-b-lg text-sm leading-snug">
-                        <h2 class="text-lg font-medium truncate">General Santos Store</h2>
-                        <address class="mt-1 not-italic text-sm font-light leading-tight space-y-0.5">
-                            <p class="truncate">123 Main St, General Santos City, South Cotabato</p>
-                            <p>9:00 AM – 6:00 PM</p>
-                            <p>0912 345 6789</p>
-                        </address>
-                        <button
-                            class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
-                            type="button"
-                            aria-label="Get directions to General Santos Store"
-                            @click="showMap = true"
-                        >
+                    <!-- Store Information -->
+                    <div class="flex flex-col gap-4 h-full">
+                        <div>
+                            <h2 class="text-3xl font-semibold text-zinc-900 tracking-tight">Quality Appliance Plaza</h2>
+                            <p class="text-lg font-normal text-zinc-600 mt-1">Cagayan de Oro City</p>
+                        </div>
+
+                        <p class="text-base font-light text-zinc-500 leading-relaxed">
+                            Visit our store to find the best quality appliances for your home. We offer a wide selection of high-quality products from trusted brands, including refrigerators, washing machines, air conditioners, and more. Our knowledgeable staff is ready to assist you in finding the perfect solutions for your home needs.
+                        </p>
+
+                       <!-- Contact Information -->
+                       <div class="flex flex-col gap-3 mt-2">
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                                <span class="text-base font-light text-zinc-600">09123456789</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"/></svg>
+                                <span class="text-base font-light text-zinc-600">123 Main St, Cagayan de Oro, Misamis Occidental</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                <span class="text-base font-light text-zinc-600">qualityapplianceplaza@gmail.com</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
                             Get Directions
                         </button>
                     </div>
                 </div>
-                  <!-- Cagayan de Oro Store -->
-                  <div class="relative h-[400px]">
-                    <img
-                        src="./public/images/stores/cdo.jpg"
-                        alt="Cagayan de Oro Store"
-                        class="w-full h-[300px] object-cover object-center rounded-lg"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-x-0 bottom-0 bg-black/60 text-white backdrop-blur-sm px-4 py-3 rounded-b-lg text-sm leading-snug">
-                        <h2 class="text-lg font-medium truncate">Cagayan de Oro Store</h2>
-                        <address class="mt-1 not-italic text-sm font-light leading-tight space-y-0.5">
-                            <p class="truncate">123 Main St, Cagayan de Oro</p>
-                            <p>9:00 AM – 6:00 PM</p>
-                            <p>0912 345 6789</p>
-                        </address>
-                        <button
-                            class="mt-2 bg-black text-sm text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
-                            type="button"
-                            aria-label="Get directions to Cagayan de Oro Store"
-                        >
-                        Get Directions
-                        </button>
+            </section>
+            <section class="w-full max-w-screen-xl mt-8">
+                <div class="h-full w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-8 bg-white rounded-lg shadow-md border border-zinc-100 hover:shadow-md transition-all duration-300">
+                    <!-- Store Image -->
+                    <div class="relative overflow-hidden rounded-xl">
+                        <img src="./public/images/stores/gensan.jpg" 
+                                alt="Gensan Store" 
+                                class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
                     </div>
-                </div>
 
-                <!-- Bayugan Store -->
-                <div class="relative h-[400px]">
-                    <img
-                        src="./public/images/stores/bayugan.jpg"
-                        alt="Bayugan Store"
-                        class="w-full h-[300px] object-cover object-center rounded-lg"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-x-0 bottom-0 bg-black/60 text-white backdrop-blur-sm px-4 py-3 rounded-b-lg text-sm leading-snug">
-                        <h2 class="text-lg font-medium truncate">Bayugan Store</h2>
-                        <address class="mt-1 not-italic text-sm font-light leading-tight space-y-0.5">
-                            <p class="truncate">123 Main St, Bayugan, Agusan del Sur</p>
-                            <p>9:00 AM – 6:00 PM</p>
-                            <p>0912 345 6789</p>
-                        </address>
-                        <button
-                            class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
-                            type="button"
-                            aria-label="Get directions to Bayugan Store"
-                            @click="showMap = true"
-                        >
-                            Get Directions 
-                        </button>
-                    </div>
-                </div>
+                    <!-- Store Information -->
+                    <div class="flex flex-col gap-4 h-full">
+                        <div>
+                            <h2 class="text-3xl font-semibold text-zinc-900 tracking-tight">Quality Appliance Plaza</h2>
+                            <p class="text-lg font-normal text-zinc-600 mt-1">General Santos City</p>
+                        </div>
 
-                <!-- Davao Store -->
-                <div class="relative h-[400px]">
-                    <img
-                        src="./public/images/stores/davao.jpg"
-                        alt="Davao Store"
-                        class="w-full h-[300px] object-cover object-center rounded-lg"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-x-0 bottom-0 bg-black/60 text-white backdrop-blur-sm px-4 py-3 rounded-b-lg text-sm leading-snug">
-                        <h2 class="text-lg font-medium truncate">Davao Store</h2>
-                        <address class="mt-1 not-italic text-sm font-light leading-tight space-y-0.5">
-                            <p class="truncate">123 Main St, Davao City, Davao del Sur</p>
-                            <p>9:00 AM – 6:00 PM</p>
-                            <p>0912 345 6789</p>
-                        </address>
-                        <button
-                            class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
-                            type="button"
-                            aria-label="Get directions to Davao Store"
-                            @click="showMap = true"
-                        >
+                        <p class="text-base font-light text-zinc-500 leading-relaxed">
+                            Visit our store to find the best quality appliances for your home. We offer a wide selection of high-quality products from trusted brands, including refrigerators, washing machines, air conditioners, and more. Our knowledgeable staff is ready to assist you in finding the perfect solutions for your home needs.
+                        </p>
+
+                       <!-- Contact Information -->
+                       <div class="flex flex-col gap-3 mt-2">
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                                <span class="text-base font-light text-zinc-600">09123456789</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"/></svg>
+                                <span class="text-base font-light text-zinc-600">123 Main St, General Santos City, South Cotabato</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                <span class="text-base font-light text-zinc-600">qualityapplianceplaza@gmail.com</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
                             Get Directions
                         </button>
                     </div>
                 </div>
+            </section>
+            <section class="w-full max-w-screen-xl mt-8">
+                <div class="h-full w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-8 bg-white rounded-lg shadow-md border border-zinc-100 hover:shadow-md transition-all duration-300">
+                    <!-- Store Image -->
+                    <div class="relative overflow-hidden rounded-xl">
+                        <img src="./public/images/stores/surigao.jpg" 
+                                alt="Surigao Store" 
+                                class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                    </div>
 
-                <!-- General Santos Store -->
-                <div class="relative h-[400px]">
-                    <img
-                        src="./public/images/stores/gensan.jpg"
-                        alt="General Santos Store"
-                        class="w-full h-[300px] object-cover object-center rounded-lg"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-x-0 bottom-0 bg-black/60 text-white backdrop-blur-sm px-4 py-3 rounded-b-lg text-sm leading-snug">
-                        <h2 class="text-lg font-medium truncate">General Santos Store</h2>
-                        <address class="mt-1 not-italic text-sm font-light leading-tight space-y-0.5">
-                            <p class="truncate">123 Main St, General Santos City, South Cotabato</p>
-                            <p>9:00 AM – 6:00 PM</p>
-                            <p>0912 345 6789</p>
-                        </address>
-                        <button
-                            class="mt-2 bg-black text-sm font-medium text-white px-2 py-1 cursor-pointer rounded transition hover:bg-brand hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
-                            type="button"
-                            aria-label="Get directions to General Santos Store"
-                            @click="showMap = true"
-                        >
+                    <!-- Store Information -->
+                    <div class="flex flex-col gap-4 h-full">
+                        <div>
+                            <h2 class="text-3xl font-semibold text-zinc-900 tracking-tight">Quality Appliance Plaza</h2>
+                            <p class="text-lg font-normal text-zinc-600 mt-1">Surigao City</p>
+                        </div>
+
+                        <p class="text-base font-light text-zinc-500 leading-relaxed">
+                            Visit our store to find the best quality appliances for your home. We offer a wide selection of high-quality products from trusted brands, including refrigerators, washing machines, air conditioners, and more. Our knowledgeable staff is ready to assist you in finding the perfect solutions for your home needs.
+                        </p>
+
+                       <!-- Contact Information -->
+                       <div class="flex flex-col gap-3 mt-2">
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                                <span class="text-base font-light text-zinc-600">09123456789</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"/></svg>
+                                <span class="text-base font-light text-zinc-600">123 Main St, Surigao City, Surigao del Norte</span>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl hover:bg-zinc-100 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                                <span class="text-base font-light text-zinc-600">qualityapplianceplaza@gmail.com</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
                             Get Directions
                         </button>
                     </div>
                 </div>
-            </div>
-            <!-- Pagination -->
-            <div class="flex items-center justify-center gap-2 mt-16">
-                <button class="px-3 py-1 text-sm text-zinc-600 hover:text-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-black rounded" disabled>
-                    Previous
-                </button>
-                <div class="flex items-center gap-1">
-                    <button class="w-8 h-8 flex items-center justify-center text-sm bg-black text-white rounded hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-black">1</button>
-                    <button class="w-8 h-8 flex items-center justify-center text-sm text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded focus:outline-none focus:ring-2 focus:ring-black">2</button>
-                    <button class="w-8 h-8 flex items-center justify-center text-sm text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded focus:outline-none focus:ring-2 focus:ring-black">3</button>
-                    <span class="text-zinc-400">...</span>
-                    <button class="w-8 h-8 flex items-center justify-center text-sm text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded focus:outline-none focus:ring-2 focus:ring-black">8</button>
-                </div>
-                <button class="px-3 py-1 text-sm text-zinc-600 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-black rounded">
-                    Next
-                </button>
-            </div>
-               
+            </section>
         </main>
 
         <!-- Footer Section -->
