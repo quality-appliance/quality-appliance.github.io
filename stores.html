@@ -19,9 +19,14 @@
     <!-- Preload Critical Assets -->
     <link rel="preload" href="./public/images/quality-appliance-logo.png" as="image">
     <link rel="preload" href="./public/images/landing-page/hero/hero-1.jpg" as="image">
+    
+    <!-- Alpine.js x-cloak styles -->
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
 
-<body class="bg-zinc-50 antialiased">
+<body class="bg-zinc-50 antialiased" x-data="{ showMap: false }">
     <!-- Main Container -->
     <div class="flex flex-col items-center justify-center min-h-screen">
         <!-- Navigation Bar -->
@@ -177,7 +182,8 @@
                                 <span class="font-light text-zinc-600">qualityapplianceplaza@gmail.com</span>
                             </div>
                         </div>
-                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
+                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+                                @click="showMap = true">
                             Get Directions
                         </button>
                     </div>
@@ -221,7 +227,8 @@
                                 <span class="font-light text-zinc-600">qualityapplianceplaza@gmail.com</span>
                             </div>
                         </div>
-                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
+                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+                                @click="showMap = true">
                             Get Directions
                         </button>
                     </div>
@@ -264,7 +271,8 @@
                                 <span class="font-light text-zinc-600">qualityapplianceplaza@gmail.com</span>
                             </div>
                         </div>
-                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
+                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+                                @click="showMap = true">
                             Get Directions
                         </button>
                     </div>
@@ -308,12 +316,45 @@
                                 <span class="font-light text-zinc-600">qualityapplianceplaza@gmail.com</span>
                             </div>
                         </div>
-                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2">
+                        <button class="w-full mt-4 bg-zinc-900 text-white font-medium text-base py-4 rounded-lg hover:bg-zinc-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+                                @click="showMap = true">
                             Get Directions
                         </button>
                     </div>
                 </div>
             </section>
+
+            <!-- Map Modal -->
+            <div x-show="showMap" 
+                 x-cloak
+                 class="fixed inset-0 z-50 bg-black/60"
+                 @click.self="showMap = false">
+                <div class="fixed inset-0 flex items-center justify-center p-4">
+                    <div class="bg-white rounded-xl w-full max-w-5xl h-[700px] relative shadow-2xl">
+                        <!-- Modal Header -->
+                        <div class="flex items-center justify-between p-4 border-b border-zinc-200">
+                            <h3 class="text-xl font-semibold text-zinc-900">Store Location</h3>
+                            <button @click="showMap = false" 
+                                    class="text-zinc-500 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900 rounded-lg p-2 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Map Container -->
+                        <div class="p-4">
+                            <iframe 
+                                class="w-full h-[600px] rounded-lg"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d986.5543118642059!2d124.64703996954894!3d8.478244825922086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2d0b78efd97%3A0x611f849ae0c42c1f!2sQuality%20Appliance%20Plaza!5e0!3m2!1sen!2sph!4v1749871343325!5m2!1sen!2sph"
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Footer Section -->
