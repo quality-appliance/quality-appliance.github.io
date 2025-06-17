@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for SEO and Viewport -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions at competitive prices. Find the best appliances and furniture in the Philippines.">
+    <meta name="keywords" content="appliances, furniture, home solutions, Philippines, quality appliances">
+    <meta name="author" content="Quality Appliance Plaza">
+    
+    <!-- Favicon and Stylesheets -->
+    <title>Quality Appliance Plaza Official Website</title>
+    <link rel="icon" href="./public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./dist/assets/main.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Alpine.js x-cloak styles -->
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+
+<body class="bg-zinc-50 antialiased" x-data="{ showMap: false, showCategories: false }">
+    <!-- Main Container -->
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <!-- Navigation Bar -->
+        <nav class="w-full flex items-center justify-evenly bg-white py-4 text-sm shadow-sm sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+            <!-- Logo -->
+            <a href="./index.html" class="focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                <img src="./public/images/quality-appliance-logo.png" 
+                     alt="Quality Appliance Plaza Logo" 
+                     class="h-10 w-auto object-cover object-center hover:opacity-80 transition-opacity"
+                     width="120" 
+                     height="40">
+            </a>
+
+            <!-- Main Navigation Links -->
+            <ul class="flex font-light justify-center items-center gap-8 text-zinc-900 tracking-tighter" role="menubar">
+                <li role="none"><a href="./index.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Home</a></li>
+                <li role="none"><a href="./stores.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Stores</a></li>
+
+                <!-- Categories Dropdown -->
+                <li role="none" 
+                  x-data="{ showCategories: false }"
+                  x-cloak
+                  @mouseclick="showCategories = true" 
+                  @mouseleave="showCategories = false"
+                  class="relative">
+                  <button 
+                      class="cursor-pointer focus:outline-none px-2 py-1 hover:text-brand transition-colors border-b-2 border-brand" 
+                      role="menuitem" 
+                      aria-expanded="false"
+                      @click="showCategories = !showCategories">
+                      Categories
+                  </button>
+                  <div x-show="showCategories" 
+                       class="absolute left-0 mt-0 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                       role="menu"
+                       aria-orientation="vertical"
+                       aria-labelledby="categories-menu">
+                      <a href="air-conditioners.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Air Conditioners</a>
+                      <a href="audio-video.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Audio-Video Equipments</a>
+                      <a href="home-appliances.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Home Appliances</a>
+                      <a href="small-appliances.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Small Domestic Appliances</a>
+                      <a href="furniture.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Furniture</a>
+                  </div>
+              </li>
+
+                <li role="none"><a href="./about-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">About Us</a></li>
+                <li role="none"><a href="./careers.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Careers</a></li>
+                <li role="none"><a href="./promo.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Promo</a></li>
+                <li role="none"><a href="./contact-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Contact Us</a></li>
+                <li role="none"><a href="./application-portal.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Application Portal</a></li>
+            </ul>
+
+            <!-- User Actions -->
+            <div class="flex items-center gap-4 text-zinc-900" role="group" aria-label="User actions">
+                <button class="focus:outline-none focus:ring-2 focus:ring-brand rounded p-1" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search hover:text-brand transition-colors"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                </button>
+                <button class="focus:outline-none focus:ring-3 focus:ring-brand rounded p-1" aria-label="User account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round hover:text-brand transition-colors"><path d="m18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+                </button>
+            </div>
+        </nav> 
+
+        <!-- Main Content -->
+        <main class="h-full w-full flex flex-col items-center justify-center px-8 pt-8 pb-24 bg-white">
+            <header class="w-full max-w-screen-2xl text-center mb-4">
+                <h1 class="text-5xl font-extrabold text-zinc-900 tracking-tight">Furniture</h1>
+                <!-- Breadcrumb -->
+                <p class="text-sm font-light text-zinc-600 tracking-tighter mt-2">
+                    <a href="./index.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1">Home</a>
+                    <span class="text-zinc-600">></span>
+                    <span class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1">Categories</span>
+                    <span class="text-zinc-600">></span>
+                    <span class="text-zinc-600">Furniture</span>
+                </p>
+            </header>
+            <!-- Sidebar Filter -->
+            <section class="w-full max-w-screen-2xl">
+                <div class="w-full flex justify-between items-center px-8">
+                    <p class="font-medium text-zinc-900 tracking-tighter">Filters</p>
+                    <div class="flex items-center gap-1">
+                        <div class="flex items-center gap-1">
+                            <label for="brand-options" class="font-medium text-zinc-900 tracking-tighter">Brand:</label>
+                            <select id="brand-options" class="focus:outline-none text-zinc-700 font-medium bg-white tracking-tight">
+                                <option value="all">All Brands</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="lg">LG</option>
+                                <option value="panasonic">Panasonic</option>
+                                <option value="sharp">Sharp</option>
+                                <option value="whirlpool">Whirlpool</option>
+                                <option value="mitsubishi">Mitsubishi</option>
+                                <option value="carrier">Carrier</option>
+                                <option value="daikin">Daikin</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <label for="sort-options" class="font-medium text-zinc-900 tracking-tighter">Sort by:</label>
+                            <select id="sort-options" class="focus:outline-none text-zinc-700 font-medium bg-white tracking-tight">
+                                <option value="relevance">Relevance</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="rated">Highest Rated</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w-full border-zinc-200">
+                <div class="grid grid-cols-5 gap-4 px-8">
+                    <div class="col-span-1 flex flex-col py-4 gap-y-4">
+                        <div class="flex flex-col justify-center gap-2">
+                            <h1 class="text-lg font-medium text-zinc-900 tracking-tighter">TYPE</h1>
+                            <!--=== Sub-Category: Single Type ===-->
+                            <div class="flex flex-col gap-2">
+                                <label for="single-type" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="single-type" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Single Type
+                                </label>
+                           </div>
+                            <!--=== Sub-Category: Split Type ===-->
+                            <div class="flex items-center gap-2">
+                                <label for="split-type" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="split-type" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Split Type
+                                </label>
+                            </div>
+                            <!--=== Sub-Category: Wall Mounted ===-->
+                            <div class="flex items-center gap-2">
+                                <label for="wall-mounted" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="wall-mounted" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Wall Mounted
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center gap-2">
+                            <h1 class="text-lg font-medium text-zinc-900 tracking-tighter">FEATURES</h1>
+                            <!-- Group: Inverter -->
+                            <div class="flex flex-col gap-2">
+                                <label for="inverter" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="inverter" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Inverter
+                                </label>
+                            </div>
+                            <!-- Group: Non-Inverter -->
+                            <div class="flex flex-col gap-2">
+                                <label for="non-inverter" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="non-inverter" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Non-Inverter
+                                </label>
+                            </div>
+                             <!-- Group: Outdoor Unit -->
+                             <div class="flex flex-col gap-2">
+                                <label for="outdoor-unit" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="outdoor-unit" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Outdoor Unit
+                                </label>
+                            </div>
+                             <!-- Group: Indoor Unit -->
+                             <div class="flex flex-col gap-2">
+                                <label for="indoor-unit" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="indoor-unit" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Indoor Unit
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center gap-2">
+                            <h1 class="text-lg font-medium text-zinc-900 tracking-tighter">MOUNTING TYPE</h1>
+                            <!-- Group: Wall -->
+                            <div class="flex flex-col gap-2">
+                                <label for="wall" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="wall" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Wall
+                                </label>
+                            </div>
+                            <!-- Group: Ceiling -->
+                            <div class="flex flex-col gap-2">
+                                <label for="ceiling" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="ceiling" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Ceiling
+                                </label>
+                            </div>
+                             <!-- Group: Floor -->
+                             <div class="flex flex-col gap-2">
+                                <label for="floor" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="floor" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Floor
+                                </label>
+                            </div>
+                             <!-- Group: Cassette -->
+                             <div class="flex flex-col gap-2">
+                                <label for="cassette" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="cassette" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Cassette
+                                </label>
+                            </div>
+                            <!-- Group: Ducted -->
+                            <div class="flex flex-col gap-2">
+                                <label for="ducted" class="text-zinc-800 select-none cursor-pointer tracking-tight flex items-center gap-2">
+                                    <input type="checkbox" id="ducted" class="w-5 h-5 rounded-md border border-zinc-300 focus:outline-none accent-brand">
+                                    Ducted
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-span-4 border-l border-zinc-200 px-8 py-4">
+                        <div class="grid grid-cols-3 gap-12 gap-y-8">
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/air-fryer.png" alt="air fryer" class="w-full h-72 object-contain object-center p-6 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tight">Philips Air Fryer XXL</h3>
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: Black</p>
+                                        <div class="h-7 w-7 bg-zinc-900 rounded-full"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">4.5 (28)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 12,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/bed-king.png" alt="bed-king" class="w-full h-72 object-contain object-center p-4 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tighter">King Size Memory Foam Bed</h3>
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: Brown</p>
+                                        <div class="h-7 w-7 bg-orange-700 rounded-full"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">4.7 (57)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 48,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/bed-mattress.png" alt="bed-mattress" class="w-full h-72 object-contain object-center p-4 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tighter">Premium Orthopedic Mattress</h3>
+
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: White</p>
+                                        <div class="h-7 w-7 bg-white rounded-full border border-zinc-400"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">4.9 (123)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 23,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/blender.png" alt="blender" class="w-full h-72 object-contain object-center p-4 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tighter">Ninja Professional Blender</h3>
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: White</p>
+                                        <div class="h-7 w-7 bg-white rounded-full border border-zinc-400"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">4.2 (12)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 8,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/bluray.png" alt="bluray" class="w-full h-72 object-contain object-center p-4 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tighter">Sony 4K Blu-ray Player</h3>
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: Black</p>
+                                        <div class="h-7 w-7 bg-zinc-900 rounded-full"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">4.8 (43)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 22,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/cassette.png" alt="cassette" class="w-full h-72 object-contain object-center p-4 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tighter">Daikin Cassette Aircon</h3>
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: Grey</p>
+                                        <div class="h-7 w-7 bg-zinc-400 rounded-full"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">3.8 (23)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 59,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/ceiling-aircon.png" alt="ceiling-aircon" class="w-full h-72 object-contain object-center p-4 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tighter">Carrier Ceiling Aircon</h3>
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: Black</p>
+                                        <div class="h-7 w-7 bg-zinc-900 rounded-full"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">4.4 (83)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 119,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/cooking-range.png" alt="cooking-range" class="w-full h-72 object-contain object-center p-4 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tighter">Bosch Electric Range</h3>
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: Silver</p>
+                                        <div class="h-7 w-7 bg-zinc-600 rounded-full"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">4.8 (43)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 87,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-full w-full flex flex-col">
+                                <img src="./public/images/products/rice-cooker.png" alt="rice-cooker" class="w-full h-72 object-contain object-center p-4 bg-zinc-100 rounded-lg">
+                                <div class="mt-2 space-y-3">
+                                    <h3 class="text-xl font-semibold text-zinc-900 tracking-tighter">Panasonic Rice Cooker</h3>
+                                    <div class="flex flex-col justify-center ">
+                                        <p class="font-ight">Color: Pink</p>
+                                        <div class="h-7 w-7 bg-red-300 rounded-full"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                                        <span class="text-base text-zinc-700">3.5 (34)</span>
+                                    </div>
+                                    <p class="text-xl font-medium text-zinc-900 tracking-tight">₱ 4,999.00</p>
+                                    <div class="space-y-3 pt-2">
+                                        <button class="w-full px-6 py-3 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">View Product</button>
+                                        <button class="w-full px-6 py-3 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Where to Buy?</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="w-full shadow-sm border-t border-zinc-200 mt-auto bg-white" role="contentinfo">
+            <div class="w-full flex flex-col items-center justify-center text-sm font-light text-zinc-800">
+                <!-- Newsletter Section -->
+                <section class="w-full max-w-2xl px-4 py-8" aria-label="Newsletter subscription">
+                    <div class="text-center">
+                        <h3 class="text-lg font-semibold mb-2">Subscribe to our newsletter</h3>
+                        <p class="text-sm text-zinc-600 mb-4">Stay updated with our latest products and offers</p>
+                        <form class="flex gap-2 max-w-md mx-auto" role="search">
+                            <input type="email" 
+                                   placeholder="Enter your email" 
+                                   class="flex-1 px-4 py-2 border border-zinc-300 rounded-md focus:outline-none"
+                                   aria-label="Email address for newsletter"
+                                   required>
+                            <button type="submit" 
+                                    class="px-4 py-2 bg-zinc-900 text-white rounded-md hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Subscribe</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Social Media Links -->
+                <section class="w-full py-4" aria-label="Social media links">
+                    <div class="flex justify-center gap-6">
+                        <a href="#" 
+                           aria-label="Facebook" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" 
+                           aria-label="Instagram" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" 
+                           aria-label="Twitter" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Payment Methods Section -->
+                <section class="w-full py-6 border-y border-zinc-200" aria-label="Accepted payment methods">
+                    <div class="flex justify-center gap-4">
+                        <span class="text-zinc-600">We accept:</span>
+                        <div class="flex items-center gap-2 text-zinc-700">
+                            <p>GCash</p>
+                            <p>Cash</p>
+                            <p>Credit Card</p>
+                            <p>Palawan Pay</p>
+                            <p>RD Pawnshop</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer Links Grid -->
+                <nav class="grid grid-cols-4 p-8 my-4" aria-label="Footer navigation">
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Company</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./about-us.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">About Us</a></li>
+                            <li><a href="./why-choose-us.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Why Choose Us</a></li>
+                            <li><a href="./careers.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Careers</a></li>
+                            <li><a href="./vision-mission.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Vision & Mission</a></li>
+                            <li><a href="./stores.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Our Stores</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Policies</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./data-protection.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Data Protection</a></li>
+                            <li><a href="./user-agreement.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">User Agreement</a></li>
+                            <li><a href="./returns-refunds.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Returns & Refunds</a></li>
+                            <li><a href="./shipping-policy.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Shipping Policy</a></li>
+                            <li><a href="./warranty-info.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Warranty Info</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Customer Support</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./installation-guide.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Installation Guide</a></li>
+                            <li><a href="./order-tracking.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Order Tracking</a></li>
+                            <li><a href="./faqs.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">FAQs</a></li>
+                            <li><a href="./feedback.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Get in Touch</h2>
+                        <address class="not-italic flex flex-col gap-4">
+                            <p>Telephone: <a href="tel:894231231" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">894231-231</a></p>
+                            <p>Mobile: <a href="tel:98735642" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">98735642</a></p>
+                            <p>Overseas: <a href="tel:+9198735642" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">+91 98735642</a></p>
+                            <p>Email: <a href="mailto:qualityapplianceplaza@gmail.com" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">qualityapplianceplaza@gmail.com</a></p>
+                        </address>
+                    </div>
+                </nav>
+
+                <!-- Copyright Section -->
+                <div class="w-full border-t border-zinc-200">
+                    <div class="my-4 flex gap-4 items-center justify-center flex-wrap">
+                        <p class="text-center text-xs font-light text-zinc-800">Copyright © 2025 Quality Appliance Plaza. All rights reserved.</p>
+                        <img src="./public/images/quality-appliance-icon.png" 
+                             alt="Quality Appliance Plaza Icon Logo" 
+                             class="h-10 w-auto"
+                             width="40"
+                             height="40"
+                             loading="lazy">
+                        <nav class="flex gap-4 items-center justify-center flex-wrap" aria-label="Legal links">
+                            <a href="./privacy-policy.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Privacy Policy</a>
+                            <a href="./terms-conditions.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Terms & Conditions</a>
+                            <a href="./legal.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Legal</a>
+                            <a href="./sitemap.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Sitemap</a>
+                            <span class="text-center text-xs font-light text-zinc-800">Philippines</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

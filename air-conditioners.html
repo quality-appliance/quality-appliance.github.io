@@ -28,110 +28,63 @@
         <!-- Navigation Bar -->
         <nav class="w-full flex items-center justify-evenly bg-white py-4 text-sm shadow-sm sticky top-0 z-50" role="navigation" aria-label="Main navigation">
             <!-- Logo -->
-            <a href="./index.html" class="focus:outline-none focus:ring-2 focus:ring-brand rounded" aria-label="Go to homepage">
+            <a href="./index.html" class="focus:outline-none focus:ring-2 focus:ring-brand rounded">
                 <img src="./public/images/quality-appliance-logo.png" 
                      alt="Quality Appliance Plaza Logo" 
                      class="h-10 w-auto object-cover object-center hover:opacity-80 transition-opacity"
                      width="120" 
-                     height="40"
-                     loading="eager">
+                     height="40">
             </a>
 
             <!-- Main Navigation Links -->
             <ul class="flex font-light justify-center items-center gap-8 text-zinc-900 tracking-tighter" role="menubar">
-                <li role="none">
-                    <a href="./index.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Home</a>
-                </li>
-                <li role="none">
-                    <a href="./stores.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Stores</a>
-                </li>
+                <li role="none"><a href="./index.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Home</a></li>
+                <li role="none"><a href="./stores.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Stores</a></li>
 
                 <!-- Categories Dropdown -->
                 <li role="none" 
-                    x-data="{ showCategories: false }"
-                    x-cloak
-                    @mouseenter="showCategories = false" 
-                    @mouseleave="showCategories = false"
-                    class="relative">
-                    <button 
-                        class="cursor-pointer focus:outline-none px-2 py-1 border-b-2 border-brand hover:text-brand transition-colors" 
-                        role="menuitem" 
-                        aria-current="page"
-                        aria-expanded="false"
-                        @click="showCategories = !showCategories">
-                        Categories
-                    </button>
-                    <div x-show="showCategories" 
-                         class="absolute left-0 mt-0 w-56 bg-white rounded-md shadow-lg py-1 z-50"
-                         role="menu"
-                         aria-orientation="vertical"
-                         aria-labelledby="categories-menu">
-                        <a href="#" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Air Conditioners</a>
-                        <a href="#" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Audio-Video Equipments</a>
-                        <a href="#" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Home Appliances</a>
-                        <a href="#" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Small Domestic Appliances</a>
-                        <a href="#" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Furniture</a>
-                    </div>
-                </li>
+                  x-data="{ showCategories: false }"
+                  x-cloak
+                  @mouseclick="showCategories = true" 
+                  @mouseleave="showCategories = false"
+                  class="relative">
+                  <button 
+                      class="cursor-pointer focus:outline-none px-2 py-1 hover:text-brand transition-colors border-b-2 border-brand" 
+                      role="menuitem" 
+                      aria-expanded="false"
+                      @click="showCategories = !showCategories">
+                      Categories
+                  </button>
+                  <div x-show="showCategories" 
+                       class="absolute left-0 mt-0 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                       role="menu"
+                       aria-orientation="vertical"
+                       aria-labelledby="categories-menu">
+                      <a href="air-conditioners.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Air Conditioners</a>
+                      <a href="audio-video.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Audio-Video Equipments</a>
+                      <a href="home-appliances.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Home Appliances</a>
+                      <a href="small-appliances.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Small Domestic Appliances</a>
+                      <a href="furniture.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Furniture</a>
+                  </div>
+              </li>
 
-                <li role="none">
-                    <a href="./about-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">About Us</a>
-                </li>
-                <li role="none">
-                    <a href="./careers.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Careers</a>
-                </li>
-                <li role="none">
-                    <a href="./promo.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Promo</a>
-                </li>
-                <li role="none">
-                    <a href="./contact-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Contact Us</a>
-                </li>
-                <li role="none">
-                    <a href="./application-portal.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Application Portal</a>
-                </li>
+                <li role="none"><a href="./about-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">About Us</a></li>
+                <li role="none"><a href="./careers.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Careers</a></li>
+                <li role="none"><a href="./promo.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Promo</a></li>
+                <li role="none"><a href="./contact-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Contact Us</a></li>
+                <li role="none"><a href="./application-portal.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Application Portal</a></li>
             </ul>
 
             <!-- User Actions -->
             <div class="flex items-center gap-4 text-zinc-900" role="group" aria-label="User actions">
-                <button 
-                    class="focus:outline-none focus:ring-2 focus:ring-brand rounded p-1 hover:text-brand transition-colors" 
-                    aria-label="Search website"
-                    type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                         width="24" 
-                         height="24" 
-                         viewBox="0 0 24 24" 
-                         fill="none" 
-                         stroke="currentColor" 
-                         stroke-width="1.25" 
-                         stroke-linecap="round" 
-                         stroke-linejoin="round" 
-                         class="lucide lucide-search">
-                        <path d="m21 21-4.34-4.34"/>
-                        <circle cx="11" cy="11" r="8"/>
-                    </svg>
+                <button class="focus:outline-none focus:ring-2 focus:ring-brand rounded p-1" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search hover:text-brand transition-colors"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
                 </button>
-                <button 
-                    class="focus:outline-none focus:ring-2 focus:ring-brand rounded p-1 hover:text-brand transition-colors" 
-                    aria-label="User account"
-                    type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                         width="24" 
-                         height="24" 
-                         viewBox="0 0 24 24" 
-                         fill="none" 
-                         stroke="currentColor" 
-                         stroke-width="1.25" 
-                         stroke-linecap="round" 
-                         stroke-linejoin="round" 
-                         class="lucide lucide-circle-user-round">
-                        <path d="m18 20a6 6 0 0 0-12 0"/>
-                        <circle cx="12" cy="10" r="4"/>
-                        <circle cx="12" cy="12" r="10"/>
-                    </svg>
+                <button class="focus:outline-none focus:ring-3 focus:ring-brand rounded p-1" aria-label="User account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round hover:text-brand transition-colors"><path d="m18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
                 </button>
             </div>
-        </nav>
+        </nav> 
 
         <!-- Main Content -->
         <main class="h-full w-full flex flex-col items-center justify-center px-8 pt-8 pb-24 bg-white">
@@ -171,6 +124,8 @@
                                 <option value="relevance">Relevance</option>
                                 <option value="popular">Most Popular</option>
                                 <option value="rated">Highest Rated</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
                             </select>
                         </div>
                     </div>
@@ -515,30 +470,30 @@
                     <div class="flex flex-col gap-4">
                         <h2 class="font-medium mb-1 text-zinc-800">Company</h2>
                         <ul class="flex flex-col gap-4">
-                            <li><a href="./about-us.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">About Us</a></li>
-                            <li><a href="./why-choose-us.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Why Choose Us</a></li>
-                            <li><a href="./careers.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Careers</a></li>
-                            <li><a href="./vision-mission.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Vision & Mission</a></li>
-                            <li><a href="./stores.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Our Stores</a></li>
+                            <li><a href="./about-us.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">About Us</a></li>
+                            <li><a href="./why-choose-us.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Why Choose Us</a></li>
+                            <li><a href="./careers.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Careers</a></li>
+                            <li><a href="./vision-mission.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Vision & Mission</a></li>
+                            <li><a href="./stores.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Our Stores</a></li>
                         </ul>
                     </div>
                     <div class="flex flex-col gap-4">
                         <h2 class="font-medium mb-1 text-zinc-800">Policies</h2>
                         <ul class="flex flex-col gap-4">
-                            <li><a href="./data-protection.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Data Protection</a></li>
-                            <li><a href="./user-agreement.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">User Agreement</a></li>
-                            <li><a href="./returns-refunds.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Returns & Refunds</a></li>
-                            <li><a href="./shipping-policy.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Shipping Policy</a></li>
-                            <li><a href="./warranty-info.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Warranty Info</a></li>
+                            <li><a href="./data-protection.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Data Protection</a></li>
+                            <li><a href="./user-agreement.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">User Agreement</a></li>
+                            <li><a href="./returns-refunds.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Returns & Refunds</a></li>
+                            <li><a href="./shipping-policy.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Shipping Policy</a></li>
+                            <li><a href="./warranty-info.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Warranty Info</a></li>
                         </ul>
                     </div>
                     <div class="flex flex-col gap-4">
                         <h2 class="font-medium mb-1 text-zinc-800">Customer Support</h2>
                         <ul class="flex flex-col gap-4">
-                            <li><a href="./installation-guide.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Installation Guide</a></li>
-                            <li><a href="./order-tracking.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Order Tracking</a></li>
-                            <li><a href="./faqs.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">FAQs</a></li>
-                            <li><a href="./feedback.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Feedback</a></li>
+                            <li><a href="./installation-guide.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Installation Guide</a></li>
+                            <li><a href="./order-tracking.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Order Tracking</a></li>
+                            <li><a href="./faqs.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">FAQs</a></li>
+                            <li><a href="./feedback.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Feedback</a></li>
                         </ul>
                     </div>
                     <div class="flex flex-col gap-4">
