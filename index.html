@@ -12,6 +12,9 @@
     <title>Quality Appliance Plaza Official Website</title>
     <link rel="icon" href="./public/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./dist/assets/main.css">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
     
     <!-- Preload Critical Assets -->
     <link rel="preload" href="./public/images/quality-appliance-logo.png" as="image">
@@ -36,7 +39,35 @@
             <ul class="flex font-light justify-center items-center gap-8 text-zinc-900 tracking-tighter" role="menubar">
                 <li role="none"><a href="./index.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1 border-b-2 border-brand" role="menuitem" aria-current="page">Home</a></li>
                 <li role="none"><a href="./stores.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Stores</a></li>
-                <li role="none"><a href="./categories.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Categories</a></li>
+
+                <!-- Categories Dropdown -->
+                <li role="none" 
+                  x-data="{ showCategories: false }"
+                  x-cloak
+                  @mouseclick="showCategories = true" 
+                  @mouseleave="showCategories = false"
+                  class="relative">
+                  <button 
+                      class="cursor-pointer focus:outline-none px-2 py-1 hover:text-brand transition-colors" 
+                      role="menuitem" 
+                      aria-current="page"
+                      aria-expanded="false"
+                      @click="showCategories = !showCategories">
+                      Categories
+                  </button>
+                  <div x-show="showCategories" 
+                       class="absolute left-0 mt-0 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                       role="menu"
+                       aria-orientation="vertical"
+                       aria-labelledby="categories-menu">
+                      <a href="air-conditioners.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Air Conditioners</a>
+                      <a href="audio-video.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Audio-Video Equipments</a>
+                      <a href="home-appliances.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Home Appliances</a>
+                      <a href="small-appliances.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Small Domestic Appliances</a>
+                      <a href="furniture.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Furniture</a>
+                  </div>
+              </li>
+
                 <li role="none"><a href="./about-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">About Us</a></li>
                 <li role="none"><a href="./careers.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Careers</a></li>
                 <li role="none"><a href="./promo.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Promo</a></li>
@@ -74,49 +105,49 @@
             <!-- Category Grid Section -->
             <section class="grid grid-cols-5 gap-8 px-12 -mt-6 relative z-10 mb-4 text-sm" aria-label="Product categories">
                 <!-- Air Conditioners Category -->
-                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <a href="./air-conditioners.html" class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                     <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Air Conditioners</h2>
                     <img src="./public/images/landing-page/categories/1.png" 
                          alt="Air Conditioners" 
                          class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
                          loading="lazy">
-                </article>
+                </a>
 
                 <!-- Audio & Video Category -->
-                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <a href="./audio-video.html" class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                     <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Audio & Video Equipments</h2>
                     <img src="./public/images/landing-page/categories/2.png" 
                          alt="Electronics" 
                          class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
                          loading="lazy">
-                </article>
+                </a>
 
                 <!-- Home Appliances Category -->
-                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <a href="./home-appliances.html" class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                     <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-white font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Home Appliances</h2>
                     <img src="./public/images/landing-page/categories/3.png" 
                          alt="Kitchen Appliances" 
                          class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
                          loading="lazy">
-                </article>
+                </a>
 
                 <!-- Small Domestic Appliances Category -->
-                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <a href="./small-appliances.html" class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                     <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-black font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]">Small Domestic Appliances</h2>
                     <img src="./public/images/landing-page/categories/4.png" 
                          alt="Laundry Appliances" 
                          class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
                          loading="lazy">
-                </article>
+                </a>
 
                 <!-- Furniture Category -->
-                <article class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <a href="./furniture.html" class="relative group overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                     <h2 class="absolute top-0 left-0 right-0 mt-4 text-center tracking-tighter text-black font-medium z-50 group-hover:scale-105 transition-transform drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]">Furniture</h2>
                     <img src="./public/images/landing-page/categories/5.png" 
                          alt="Appliance Accessories" 
                          class="h-full object-cover object-center border-b-10 border-brand group-hover:scale-110 transition-transform duration-300"
                          loading="lazy">
-                </article>
+                </a>
             </section>
 
             <!-- Position Statement Section -->
@@ -214,30 +245,30 @@
                     <div class="flex flex-col gap-4">
                         <h2 class="font-medium mb-1 text-zinc-800">Company</h2>
                         <ul class="flex flex-col gap-4">
-                            <li><a href="./about-us.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">About Us</a></li>
-                            <li><a href="./why-choose-us.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Why Choose Us</a></li>
-                            <li><a href="./careers.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Careers</a></li>
-                            <li><a href="./vision-mission.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Vision & Mission</a></li>
-                            <li><a href="./stores.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Our Stores</a></li>
+                            <li><a href="./about-us.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">About Us</a></li>
+                            <li><a href="./why-choose-us.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Why Choose Us</a></li>
+                            <li><a href="./careers.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Careers</a></li>
+                            <li><a href="./vision-mission.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Vision & Mission</a></li>
+                            <li><a href="./stores.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Our Stores</a></li>
                         </ul>
                     </div>
                     <div class="flex flex-col gap-4">
                         <h2 class="font-medium mb-1 text-zinc-800">Policies</h2>
                         <ul class="flex flex-col gap-4">
-                            <li><a href="./data-protection.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Data Protection</a></li>
-                            <li><a href="./user-agreement.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">User Agreement</a></li>
-                            <li><a href="./returns-refunds.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Returns & Refunds</a></li>
-                            <li><a href="./shipping-policy.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Shipping Policy</a></li>
-                            <li><a href="./warranty-info.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Warranty Info</a></li>
+                            <li><a href="./data-protection.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Data Protection</a></li>
+                            <li><a href="./user-agreement.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">User Agreement</a></li>
+                            <li><a href="./returns-refunds.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Returns & Refunds</a></li>
+                            <li><a href="./shipping-policy.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Shipping Policy</a></li>
+                            <li><a href="./warranty-info.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Warranty Info</a></li>
                         </ul>
                     </div>
                     <div class="flex flex-col gap-4">
                         <h2 class="font-medium mb-1 text-zinc-800">Customer Support</h2>
                         <ul class="flex flex-col gap-4">
-                            <li><a href="./installation-guide.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Installation Guide</a></li>
-                            <li><a href="./order-tracking.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Order Tracking</a></li>
-                            <li><a href="./faqs.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">FAQs</a></li>
-                            <li><a href="./feedback.html" class="px-2 py-1 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Feedback</a></li>
+                            <li><a href="./installation-guide.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Installation Guide</a></li>
+                            <li><a href="./order-tracking.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Order Tracking</a></li>
+                            <li><a href="./faqs.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">FAQs</a></li>
+                            <li><a href="./feedback.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Feedback</a></li>
                         </ul>
                     </div>
                     <div class="flex flex-col gap-4">
