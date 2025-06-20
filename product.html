@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for SEO and Viewport -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Appliance Plaza - Your trusted partner for quality home solutions at competitive prices. Find the best appliances and furniture in the Philippines.">
+    <meta name="keywords" content="appliances, furniture, home solutions, Philippines, quality appliances">
+    <meta name="author" content="Quality Appliance Plaza">
+    
+    <!-- Favicon and Stylesheets -->
+     <title>Product View | Quality Appliance Plaza</title>
+    <link rel="icon" href="./public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./dist/assets/main.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine.js x-cloak styles -->
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+    
+</head>
+
+<body class="bg-white antialiased" x-data="{ showMap: false }">
+    <!-- Main coverer -->
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <!-- Navigation Bar -->
+        <nav class="w-full flex items-center justify-evenly bg-white py-4 text-sm shadow-sm sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+            <!-- Logo -->
+            <a href="./index.html" class="focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                <img src="./public/images/quality-appliance-logo.png" 
+                     alt="Quality Appliance Plaza Logo" 
+                     class="h-10 w-auto object-cover object-center hover:opacity-80 transition-opacity"
+                     width="120" 
+                     height="40">
+            </a>
+
+            <!-- Main Navigation Links -->
+            <ul class="flex font-light justify-center items-center gap-8 text-zinc-900 tracking-tighter" role="menubar">
+                <li role="none"><a href="./index.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Home</a></li>
+                <li role="none"><a href="./stores.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Stores</a></li>
+
+                <!-- Categories Dropdown -->
+                <li role="none" 
+                  x-data="{ showCategories: false }"
+                  x-cloak
+                  @mouseclick="showCategories = true" 
+                  @mouseleave="showCategories = false"
+                  class="relative">
+                  <button 
+                      class="cursor-pointer focus:outline-none px-2 py-1 hover:text-brand transition-colors border-b-2 border-brand" 
+                      role="menuitem" 
+                      aria-expanded="false"
+                      @click="showCategories = !showCategories">
+                      Categories
+                  </button>
+                  <div x-show="showCategories" 
+                       class="absolute left-0 mt-0 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                       role="menu"
+                       aria-orientation="vertical"
+                       aria-labelledby="categories-menu">
+                      <a href="air-conditioners.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Air Conditioners</a>
+                      <a href="audio-video.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Audio-Video Equipments</a>
+                      <a href="home-appliances.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Home Appliances</a>
+                      <a href="small-appliances.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Small Domestic Appliances</a>
+                      <a href="furniture.html" class="block px-4 py-2 font-normal text-zinc-700 hover:bg-zinc-100" role="menuitem">Furniture</a>
+                  </div>
+              </li>
+
+                <li role="none"><a href="./about-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">About Us</a></li>
+                <li role="none"><a href="./careers.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Careers</a></li>
+                <li role="none"><a href="./promo.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Promo</a></li>
+                <li role="none"><a href="./contact-us.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Contact Us</a></li>
+                <li role="none"><a href="./application-portal.html" class="hover:text-brand transition-colors cursor-pointer focus:outline-none px-2 py-1" role="menuitem">Application Portal</a></li>
+            </ul>
+
+            <!-- User Actions -->
+            <div class="flex items-center gap-4 text-zinc-900" role="group" aria-label="User actions">
+                <button class="focus:outline-none focus:ring-2 focus:ring-brand rounded p-1" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search hover:text-brand transition-colors"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                </button>
+                <button class="focus:outline-none focus:ring-3 focus:ring-brand rounded p-1" aria-label="User account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round hover:text-brand transition-colors"><path d="m18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="h-full w-full flex flex-col items-center justify-center pb-24 bg-white">
+            <div class="w-full max-w-screen-2xl grid grid-cols-2 gap-8 my-8 p-8">
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div class="w-full h-full bg-zinc-100 rounded-lg p-16">
+                        <img src="./public/images/products/air-fryer.png" alt="air fryer" class="w-full h-80 object-contain object-center">
+                    </div>
+                    <div class="w-full grid grid-cols-4 gap-4 mt-4">
+                        <img src="./public/images/products/air-fryer.png" alt="air fryer" class="p-4 bg-zinc-100 rounded-lg w-full h-32 object-contain object-center">
+                        <img src="./public/images/products/air-fryer-2.png" alt="air fryer" class="p-4 bg-zinc-100 rounded-lg w-full h-32 object-contain object-center">
+                        <img src="./public/images/products/air-fryer-3.png" alt="air fryer" class="p-4 bg-zinc-100 rounded-lg w-full h-32 object-contain object-center">
+                        <img src="./public/images/products/air-fryer-4.png" alt="air fryer" class="p-4 bg-zinc-100 rounded-lg w-full h-32 object-contain object-center">
+                    </div>
+                </div>
+                <div class="w-full h-full">
+                    <div class="w-full h-full flex flex-col">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="inline-flex items-center px-2.5 py-1.5 rounded text-xs font-medium bg-brand text-white gap-1.5">
+                                <svg class="h-4 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                                Best Seller
+                            </span>
+                            <span class="inline-flex items-center px-2.5 py-1.5 rounded text-xs font-medium text-brand border border-brand uppercase gap-1.5">
+                                <svg class="h-4 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag-icon lucide-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+                                Philips
+                            </span>
+                        </div>
+                        <h1 class="text-3xl font-extrabold text-zinc-900 tracking-tighter mb-4">Philips Smart Air Fryer XXL Pro Series with Digital Display and Multiple Cooking Modes</h1>
+
+                        <p class="text-lg font-light text-zinc-600 tracking-tight mb-1">Model: <u>RS63R5561M9</u></p>
+                        <div class="flex items-center gap-2 mb-4">
+                            <img src="./public/images/star.png" alt="star" class="w-5 h-5">
+                            <span class="text-base text-zinc-700">4.5 (8539 reviews)</span>
+                        </div>
+
+                        <h1 class="text-3xl font-extrabold text-brand tracking-tight mb-1">₱ 29,999.00</h1>
+                        <p class="font-light text-zinc-600 tracking-tight">As low as ₱1,800.00 × 24 Months (Installment)</p>
+                        <div class="flex items-center gap-4 mt-4">
+                            <button class="w-full px-4 py-2.5 bg-zinc-900 text-white text-base rounded-full hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand font-semibold">Inquire Now</button>
+                            <button class="w-full px-4 py-2.5 bg-white text-zinc-900 text-base border border-zinc-900 rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Apply Installment</button>
+                            <a class="flex gap-1 w-full underline bg-white text-zinc-900 text-base hover:text-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                Where to Buy?</a>
+                        </div>
+
+                        <div class="w-full gap-4 mt-4">
+                            <h3 class="text-lg font-semibold text-zinc-900 tracking-tighter">Key Features:</h3>
+                            <ul class="list-disc list-inside font-light text-zinc-600">
+                                <li>Smart Air Fryer with Digital Display</li>
+                                <li>Multiple Cooking Modes: Air Fry, Bake, Roast, and More</li>
+                                <li>1000W Power Output for Fast Cooking</li>
+                                <li>Non-Stick Interior for Easy Cleaning</li>
+                                <li>Auto Shut-Off and Timer Function</li>
+                                <li>Dishwasher Safe Components</li>
+                                <li>Philips Smart App Integration</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full bg-zinc-100 my-8">
+                <div class="max-w-screen-2xl mx-auto p-8">
+                    <h1 class="text-3xl text-zinc-900 font-extrabold tracking-tighter">Product Specifications</h1>
+                    <h2 class="font-light tracking-tight text-zinc-800">Download the product specifications in PDF format</h2>
+                    <div class="text-sm flex justify-start items-center gap-4 mt-2">
+                        <a href="./file/spech-sheet.pdf" class="text-brand underline flex items-center gap-1" download="spech-sheet.pdf">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download Specification Sheet
+                        </a>
+                        <a href="./file/measurement-guide.pdf" class="text-brand underline flex items-center gap-1" download="measurement-guide.pdf">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download Measurement Guide
+                        </a>
+                     </div>
+                     <div x-data="{open: false}" class="overflow-x-auto flex flex-col justify-center items-center py-4">
+                        <button x-on:click="open = ! open" class="flex items-center gap-2 mb-4 px-6 py-2.5 bg-black text-white rounded-full hover:bg-brand hover:border-brand hover:text-white cursor-pointer transition-colors focus:outline-none font-semibold">
+                          All Specifications
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-200" :class="{'rotate-180': open}" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <table x-show="open" class="bg-white w-full max-w-screen-lg text-sm border border-zinc-300 rounded-xl p-4">
+                          <thead>
+                            <tr>
+                              <th class="text-left font-semibold text-zinc-600 py-2 px-3 border border-zinc-200 tracking-tight">Feature</th>
+                              <th class="text-left font-semibold text-zinc-600 py-2 px-3 border border-zinc-200 tracking-tight">Value</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- Core Features -->
+                            <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Core Features</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Interior Material <span title="Durable, easy-to-clean interior">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Ceramic Enamel</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Built-In Design</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Eco Mode <span title="Reduces standby power consumption">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Control Panel</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Membrane</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Turntable</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes, Glass, 15.56"</td></tr>
+                            <!-- Design & Appearance -->
+                            <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Design & Appearance</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Color</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Stainless</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Type</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Countertop</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Display Color</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Ice Blue</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Ventilation Grill Design</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Exposed</td></tr>
+                            <!-- Performance -->
+                            <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Performance</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Heating Type</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Microwave</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Auto Defrost</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Cooking Power</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">950 W</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Sensor Cook <span title="Automatically adjusts cooking time">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Levels</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">10</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Auto Cook Presets</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Soften / Melt</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                            <!-- Power & Energy -->
+                            <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Power & Energy</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Supply</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">120V / 60Hz</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Amp Circuit</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">13.3A</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Consumption</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">1600W</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Power Cord Length</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">39.37"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Energy Consumption</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">645 kWh/year</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Volt/Amps</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">115V/60Hz/5.3A</td></tr>
+                            <!-- Size & Weight -->
+                            <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Size & Weight</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Product Weight</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">43.03 lbs.</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Product Dimensions (W x H x D)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">23 5/8" x 13 9/32" x 18 7/16"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Height (decimal)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">13.28"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Width (decimal)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">23.62"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Depth (decimal)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">18.4375"</td></tr>
+                            <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Dimensions</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">With Hinges, Handles and Door</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">35 3/4" W x 70" H x 35 3/8" D</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Without Hinges and Door</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">35 3/4" (W) x 68 7/8" (H) x 28 7/8" (D)</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">With Door, No Handles</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">35 3/4" (W) x 70" (H) x 32 7/8" (D)</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Shipping Dimensions</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">37 23/32" (W) x 75 5/16" (H) x 35 29/32" (D)</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Net Depth with Door Handle</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">36"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Net Height with Hinge</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">70"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Net Height without Hinge</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">68 7/8"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Net Depth w/o Door Handle</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">32 7/8"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Depth without Door (in)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">28 7/8"</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Width</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">35 3/4"</td></tr>
+                            <!-- Weight -->
+                            <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Weight</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Product Weight (lbs.)</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">276 lbs.</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Shipping Weight</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">284 lbs.</td></tr>
+                            <!-- Extended Warranty -->
+                            <tr class="border border-zinc-200"><td colspan="2" class="py-3 px-3 text-base font-semibold text-zinc-700 border border-zinc-200 bg-zinc-50">Extended Warranty</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">1-Year Parts and Labor on Refrigerator</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">5-year Parts and Labor on sealed Refrigeration system only <span title="Covers compressor, evaporator, condenser, drier, connecting tubing">🛈</span></td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                            <tr class="border border-zinc-200"><td class="border border-zinc-200 py-2 px-3 text-zinc-500">10-year Part and 5-year Labor on Digital Inverter Compressor</td><td class="border border-zinc-200 py-2 px-3 text-zinc-500">Yes</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+           </div>
+
+           <div class="w-full my-8 pt-8">
+            <div class="max-w-screen-2xl mx-auto mb-4 px-8">
+                <h1 class="font-extrabold text-3xl tracking-tighter">Reviews</h1>
+                <h2 class="font-light tracking-tight text-zinc-800">See what our customers are saying about our products</h2>
+            </div>
+            <div class="w-full max-w-screen-2xl mx-auto grid grid-cols-3 justify-center items-center gap-8 px-8">
+                <!-- Rating Snapshot -->
+                <div>
+                  <h2 class="text-lg font-semibold mb-1 tracking-tight">Rating Snapshot</h2>
+                  <div class="space-y-2">
+                    <!-- Star Bars -->
+                    <div class="flex items-center space-x-2">
+                      <span class="w-12 text-sm">5 stars</span>
+                      <div class="flex-1 h-3 bg-gray-200 rounded">
+                        <div class="w-85 h-full bg-yellow-400 rounded"></div>
+                      </div>
+                      <span class="text-sm w-10 text-right">7269</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <span class="w-12 text-sm">4 stars</span>
+                      <div class="flex-1 h-3 bg-gray-200 rounded">
+                        <div class="w-9 h-full bg-yellow-400 rounded"></div>
+                      </div>
+                      <span class="text-sm w-10 text-right">743</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <span class="w-12 text-sm">3 stars</span>
+                      <div class="flex-1 h-3 bg-gray-200 rounded">
+                        <div class="w-2.5 h-full bg-yellow-400 rounded"></div>
+                      </div>
+                      <span class="text-sm w-10 text-right">213</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <span class="w-12 text-sm">2 stars</span>
+                      <div class="flex-1 h-3 bg-gray-200 rounded">
+                        <div class="w-1.5 h-full bg-yellow-400 rounded"></div>
+                      </div>
+                      <span class="text-sm w-10 text-right">104</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <span class="w-12 text-sm">1 star</span>
+                      <div class="flex-1 h-3 bg-gray-200 rounded">
+                        <div class="w-2.5 h-full bg-yellow-400 rounded"></div>
+                      </div>
+                      <span class="text-sm w-10 text-right">210</span>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Overall Rating -->
+                <div class="flex flex-col items-center justify-center">
+                  <div class="text-5xl font-bold text-gray-900 tracking-tighter leading-none">4.5</div>
+                  <div class="flex items-center text-yellow-400">
+                    <!-- 4.5 stars -->
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.8 12.18 1 7.91l6.06-.88L10 2l2.94 5.03L19 7.91l-4.8 4.27 1.68 5.91z"/></svg>
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.8 12.18 1 7.91l6.06-.88L10 2l2.94 5.03L19 7.91l-4.8 4.27 1.68 5.91z"/></svg>
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.8 12.18 1 7.91l6.06-.88L10 2l2.94 5.03L19 7.91l-4.8 4.27 1.68 5.91z"/></svg>
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.8 12.18 1 7.91l6.06-.88L10 2l2.94 5.03L19 7.91l-4.8 4.27 1.68 5.91z"/></svg>
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.8 12.18 1 7.91l6.06-.88L10 2l2.94 5.03L19 7.91l-4.8 4.27 1.68 5.91z"/></svg>
+                  </div>
+                  <div class="text-sm mt-1">
+                    <a href="#" class="text-zinc-700 underline">8539 Reviews</a>
+                    <span class="text-gray-500">, 89% recommend this product</span>
+                  </div>
+                </div>
+              
+                <!-- Review this Product -->
+                <div class="text-center">
+                  <div class="flex justify-center space-x-1 mt-8">
+                    <!-- Empty Stars for Review -->
+                    <template x-for="i in 5">
+                        <svg class="w-8 h-8 text-gray-300 hover:text-yellow-400 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg>
+                    </template>
+                  </div>
+                  <p class="text-sm text-gray-500 mt-2">Share your thoughts with other customers.</p>
+                </div>
+              </div>
+              
+              <div class="mt-12 mb-4 w-full max-w-screen-2xl mx-auto flex flex-col items-start justify-start text-left px-8">
+                <img src="./public/images/user-icon.png" alt="User icon" class="h-16 w-16 rounded-full object-contain object-center mb-2 shadow-sm">
+                <h5 class="font-semibold text-zinc-900 mb-1">Jane S.</h5>
+                <p class="text-xs text-zinc-500 mb-2">2025-05-20</p>
+                <div class="flex items-center gap-0.5 mb-2">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="w-full max-w-screen-2xl text-sm text-zinc-700 font-normal">I'm happy with the fridge so far. It's spacious and the shelves are easy to adjust. The only thing I noticed is the doors need a firm push to close completely, but otherwise, it's working well for my family.</p>
+                <div class="flex items-center gap-4 mt-2">
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                        <path d="M7 10v12"/>
+                        <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                        </svg>
+                        Helpful (12)
+                    </button>
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down">
+                        <path d="M17 14V2"/>
+                        <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                        </svg>
+                        Not Helpful (1)
+                    </button>
+                </div>
+            </div>
+            <div class="my-4 w-full max-w-screen-2xl mx-auto flex flex-col items-start justify-start text-left px-8">
+                <img src="./public/images/user-icon.png" alt="User icon" class="h-16 w-16 rounded-full object-contain object-center mb-2 shadow-sm">
+                <h5 class="font-semibold text-zinc-900 mb-1">Carlos D.</h5>
+                <p class="text-xs text-zinc-500 mb-2">2025-05-18</p>
+                <div class="flex items-center gap-0.5 mb-2">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="w-full max-w-screen-2xl text-sm text-zinc-700 font-normal ">Great product! The digital display is very easy to use and the air fryer cooks food evenly. Delivery was fast and the packaging was secure.</p>
+                <div class="flex items-center gap-4 mt-1">
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                        <path d="M7 10v12"/>
+                        <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                        </svg>
+                        Helpful (8)
+                    </button>
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down">
+                        <path d="M17 14V2"/>
+                        <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                        </svg>
+                        Not Helpful (0)
+                    </button>
+                </div>
+            </div>
+            <div class="my-4 w-full max-w-screen-2xl mx-auto flex flex-col items-start justify-start text-left px-8">
+                <img src="./public/images/user-icon.png" alt="User icon" class="h-16 w-16 rounded-full object-contain object-center mb-2 shadow-sm">
+                <h5 class="font-semibold text-zinc-900 mb-1">Maria L.</h5>
+                <p class="text-xs text-zinc-500 mb-2">2025-05-15</p>
+                <div class="flex items-center gap-0.5 mb-2">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="w-full max-w-screen-2xl text-sm text-zinc-700 font-normal">The fryer is good but a bit bulky for my small kitchen. It works as described and the app integration is a nice touch. Would recommend for bigger families.</p>
+                <div class="flex items-center gap-4 mt-1">
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                        <path d="M7 10v12"/>
+                        <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                        </svg>
+                        Helpful (3)
+                    </button>
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down">
+                        <path d="M17 14V2"/>
+                        <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                        </svg>
+                        Not Helpful (2)
+                    </button>
+                </div>
+            </div>
+            <div class="my-4 w-full max-w-screen-2xl mx-auto flex flex-col items-start justify-start text-left px-8">
+                <img src="./public/images/user-icon.png" alt="User icon" class="h-16 w-16 rounded-full object-contain object-center mb-2 shadow-sm">
+                <h5 class="font-semibold text-zinc-900 mb-1">Liza P.</h5>
+                <p class="text-xs text-zinc-500 mb-2">2025-05-10</p>
+                <div class="flex items-center gap-0.5 mb-2">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="w-full max-w-screen-2xl text-sm text-zinc-700 font-normal ">I love the multiple cooking modes! I use it almost every day. Cleaning is easy and the non-stick interior is a big plus. Highly recommended.</p>
+                <div class="flex items-center gap-4 mt-2">
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                        <path d="M7 10v12"/>
+                        <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                        </svg>
+                        Helpful (15)
+                    </button>
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down">
+                        <path d="M17 14V2"/>
+                        <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                        </svg>
+                        Not Helpful (1)
+                    </button>
+                </div>
+            </div>
+            <div class="my-4 w-full max-w-screen-2xl mx-auto flex flex-col items-start justify-start text-left px-8">
+                <img src="./public/images/user-icon.png" alt="User icon" class="h-16 w-16 rounded-full object-contain object-center mb-2 shadow-sm">
+                <h5 class="font-semibold text-zinc-900 mb-1">Ramon T.</h5>
+                <p class="text-xs text-zinc-500 mb-2">2025-05-08</p>
+                <div class="flex items-center gap-0.5 mb-2">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="w-full max-w-screen-2xl text-sm text-zinc-700 font-normal">Decent air fryer for the price. It does the job but I wish it came with more accessories. The timer function is very handy though.</p>
+                <div class="flex items-center gap-4 mt-1">
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                        <path d="M7 10v12"/>
+                        <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>
+                        </svg>
+                        Helpful (2)
+                    </button>
+                    <button class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-zinc-100 rounded-full shadow hover:bg-zinc-50 transition-colors text-zinc-500 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down-icon lucide-thumbs-down">
+                        <path d="M17 14V2"/>
+                        <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>
+                        </svg>
+                        Not Helpful (3)
+                    </button>
+                </div>
+            </div>
+           </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="w-full shadow-sm border-t border-zinc-200 mt-auto bg-white" role="contentinfo">
+            <div class="w-full flex flex-col items-center justify-center text-sm font-light text-zinc-800">
+                <!-- Newsletter Section -->
+                <section class="w-full max-w-2xl px-4 py-8" aria-label="Newsletter subscription">
+                    <div class="text-center">
+                        <h3 class="text-lg font-semibold mb-2">Subscribe to our newsletter</h3>
+                        <p class="text-sm text-zinc-600 mb-4">Stay updated with our latest products and offers</p>
+                        <form class="flex gap-2 max-w-md mx-auto" role="search">
+                            <input type="email" 
+                                   placeholder="Enter your email" 
+                                   class="flex-1 px-4 py-2 border border-zinc-300 rounded-md focus:outline-none"
+                                   aria-label="Email address for newsletter"
+                                   required>
+                            <button type="submit" 
+                                    class="px-4 py-2 bg-zinc-900 text-white rounded-md hover:bg-brand cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-brand">Subscribe</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Social Media Links -->
+                <section class="w-full py-4" aria-label="Social media links">
+                    <div class="flex justify-center gap-6">
+                        <a href="#" 
+                           aria-label="Facebook" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" 
+                           aria-label="Instagram" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" 
+                           aria-label="Twitter" 
+                           class="text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-brand rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Payment Methods Section -->
+                <section class="w-full py-6 border-y border-zinc-200" aria-label="Accepted payment methods">
+                    <div class="flex justify-center gap-4">
+                        <span class="text-zinc-600">We accept:</span>
+                        <div class="flex items-center gap-2 text-zinc-700">
+                            <p>GCash</p>
+                            <p>Cash</p>
+                            <p>Credit Card</p>
+                            <p>Palawan Pay</p>
+                            <p>RD Pawnshop</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer Links Grid -->
+                <nav class="grid grid-cols-4 p-8 my-4" aria-label="Footer navigation">
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Company</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./about-us.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">About Us</a></li>
+                            <li><a href="./why-choose-us.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Why Choose Us</a></li>
+                            <li><a href="./careers.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Careers</a></li>
+                            <li><a href="./vision-mission.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Vision & Mission</a></li>
+                            <li><a href="./stores.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Our Stores</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Policies</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./data-protection.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Data Protection</a></li>
+                            <li><a href="./user-agreement.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">User Agreement</a></li>
+                            <li><a href="./returns-refunds.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Returns & Refunds</a></li>
+                            <li><a href="./shipping-policy.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Shipping Policy</a></li>
+                            <li><a href="./warranty-info.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Warranty Info</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Customer Support</h2>
+                        <ul class="flex flex-col gap-4">
+                            <li><a href="./installation-guide.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Installation Guide</a></li>
+                            <li><a href="./order-tracking.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Order Tracking</a></li>
+                            <li><a href="./faqs.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">FAQs</a></li>
+                            <li><a href="./feedback.html" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h2 class="font-medium mb-1 text-zinc-800">Get in Touch</h2>
+                        <address class="not-italic flex flex-col gap-4">
+                            <p>Telephone: <a href="tel:894231231" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">894231-231</a></p>
+                            <p>Mobile: <a href="tel:98735642" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">98735642</a></p>
+                            <p>Overseas: <a href="tel:+9198735642" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">+91 98735642</a></p>
+                            <p>Email: <a href="mailto:qualityapplianceplaza@gmail.com" class="hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">qualityapplianceplaza@gmail.com</a></p>
+                        </address>
+                    </div>
+                </nav>
+
+                <!-- Copyright Section -->
+                <div class="w-full border-t border-zinc-200">
+                    <div class="my-4 flex gap-4 items-center justify-center flex-wrap">
+                        <p class="text-center text-xs font-light text-zinc-800">Copyright © 2025 Quality Appliance Plaza. All rights reserved.</p>
+                        <img src="./public/images/quality-appliance-icon.png" 
+                             alt="Quality Appliance Plaza Icon Logo" 
+                             class="h-10 w-auto"
+                             width="40"
+                             height="40"
+                             loading="lazy">
+                        <nav class="flex gap-4 items-center justify-center flex-wrap" aria-label="Legal links">
+                            <a href="./privacy-policy.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Privacy Policy</a>
+                            <a href="./terms-conditions.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Terms & Conditions</a>
+                            <a href="./legal.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Legal</a>
+                            <a href="./sitemap.html" class="text-center text-xs font-light text-zinc-800 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand rounded">Sitemap</a>
+                            <span class="text-center text-xs font-light text-zinc-800">Philippines</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
